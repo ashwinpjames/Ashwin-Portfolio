@@ -342,13 +342,22 @@
       .signature { display: block; width: clamp(9rem, 17vw, 12.5rem); height: auto; filter: drop-shadow(0 4px 12px rgba(96,165,250,.15)); }
       #services a.group { border-color: rgba(255,255,255,.025); }
       #services a.group:hover { border-color: rgba(96,165,250,.8); }
-      @media (prefers-reduced-motion: reduce), (pointer: coarse) { .cursor-glow { display: none; } .platform-track, .testimonial-track { animation: none; } }
+      /* FIX: pointer:coarse (touch devices) no longer disables the marquee animations —
+         only prefers-reduced-motion does now, which is the correct accessibility signal. */
+      @media (pointer: coarse) {
+        .cursor-glow { display: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .cursor-glow { display: none; }
+        .platform-track, .testimonial-track { animation: none; }
+      }
       ::selection { background: rgba(37,99,235,.42); color: white; }
 
-      /* Mobile-specific: place the platform marquee behind the profile portrait and add the sticky action bar */
+      /* Mobile-specific: sticky action bar. The platform marquee now stays in normal
+         document flow (same as desktop) so it's visible, scrolling, and sits right in
+         the landing/hero section instead of being absolutely positioned/hidden behind
+         the profile portrait further down the page. */
       @media (max-width: 767px) {
-        .platform-marquee { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; opacity: .10; pointer-events: none; z-index: 10; }
-        .profile-portrait { position: relative; z-index: 20; }
         main { padding-bottom: 92px; }
 
         /* Mobile sticky action bar - EXACT same as resources page */
