@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../2026-07-14"
+		}
+	],
+	"settings": {
+		"geminicodeassist.outlines.automaticOutlineGeneration": true
+	}
+}

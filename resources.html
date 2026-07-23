@@ -1,0 +1,1526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Free practical tools, calculators and checklists for performance marketers and growth teams, created by Ashwin James."
+    />
+    <meta name="theme-color" content="#050816" />
+    <title>Growth Resources — Ashwin James</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Manrope", "sans-serif"],
+            },
+            colors: { ink: "#050816", panel: "#0B0F19", blue: "#2563EB" },
+            boxShadow: { glow: "0 24px 70px rgba(37,99,235,.16)" },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="assets/site-pages.css" />
+    <style>
+      .resources-hero {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        min-height: 100svh;
+        place-items: center;
+        overflow: hidden;
+        padding: 7.25rem 1.25rem 2.75rem;
+        background: #050816;
+      }
+      .resources-bg-container,
+      .resources-bg-container > * {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .resources-bg-container {
+        z-index: -1;
+        overflow: hidden;
+      }
+      .resources-bg-base {
+        background:
+          radial-gradient(
+            ellipse 90% 75% at 50% -12%,
+            #15285a 0%,
+            transparent 58%
+          ),
+          linear-gradient(180deg, #0b1023 0%, #050816 68%);
+      }
+      .resources-gradient-mesh {
+        inset: -20% !important;
+        opacity: 0.7;
+        background:
+          radial-gradient(
+            circle at 18% 24%,
+            rgba(59, 130, 246, 0.25) 0,
+            transparent 25%
+          ),
+          radial-gradient(
+            circle at 75% 20%,
+            rgba(139, 92, 246, 0.2) 0,
+            transparent 27%
+          ),
+          radial-gradient(
+            circle at 51% 82%,
+            rgba(30, 64, 175, 0.22) 0,
+            transparent 30%
+          );
+        background-size: 145% 145%;
+        animation: resource-mesh 34s ease-in-out infinite alternate;
+        will-change: background-position, opacity;
+      }
+      .resources-grid-pattern {
+        opacity: 0.52;
+        background-image:
+          linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+        background-size: 56px 56px;
+        mask-image: radial-gradient(
+          ellipse 72% 70% at 50% 45%,
+          #000 24%,
+          transparent 88%
+        );
+      }
+      .resources-orbs {
+        position: absolute !important;
+        inset: -10% !important;
+      }
+      .orb {
+        position: absolute !important;
+        inset: auto;
+        border-radius: 999px;
+        filter: blur(70px);
+        opacity: 0.28;
+        will-change: transform, opacity;
+      }
+      .orb-1 {
+        top: 6%;
+        left: 7%;
+        width: 32rem;
+        height: 32rem;
+        background: #2563eb;
+        animation: resource-orb-a 24s ease-in-out infinite;
+      }
+      .orb-2 {
+        top: 18%;
+        right: 2%;
+        width: 26rem;
+        height: 26rem;
+        background: #7c3aed;
+        animation: resource-orb-b 31s ease-in-out infinite -5s;
+      }
+      .orb-3 {
+        bottom: -18%;
+        left: 27%;
+        width: 30rem;
+        height: 30rem;
+        background: #1d4ed8;
+        animation: resource-orb-c 28s ease-in-out infinite -11s;
+      }
+      .orb-4 {
+        bottom: 10%;
+        right: 20%;
+        width: 16rem;
+        height: 16rem;
+        background: #4f46e5;
+        opacity: 0.16;
+        animation: resource-orb-d 22s ease-in-out infinite -7s;
+      }
+      .resources-particles::before,
+      .resources-particles::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: rgba(191, 219, 254, 0.7);
+        box-shadow:
+          8vw 8vh 0 rgba(191, 219, 254, 0.25),
+          19vw 74vh 0 rgba(167, 139, 250, 0.35),
+          31vw 31vh 0 rgba(191, 219, 254, 0.45),
+          47vw 14vh 0 rgba(191, 219, 254, 0.2),
+          63vw 67vh 0 rgba(167, 139, 250, 0.38),
+          74vw 35vh 0 rgba(191, 219, 254, 0.3),
+          89vw 82vh 0 rgba(191, 219, 254, 0.42),
+          94vw 9vh 0 rgba(167, 139, 250, 0.3);
+        animation: resource-particles 20s linear infinite;
+        will-change: transform, opacity;
+      }
+      .resources-particles::after {
+        left: 14vw;
+        top: 27vh;
+        opacity: 0.55;
+        transform: scale(0.8);
+        animation-duration: 27s;
+        animation-delay: -12s;
+      }
+      .resources-noise {
+        opacity: 0.035;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+        background-size: 120px 120px;
+      }
+      .resources-vignette {
+        background: radial-gradient(
+          ellipse 72% 65% at 50% 44%,
+          transparent 38%,
+          rgba(5, 8, 22, 0.45) 100%
+        );
+      }
+      .resources-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: min(100%, 72rem);
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .resources-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid rgba(191, 219, 254, 0.16);
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.45);
+        box-shadow:
+          inset 0 1px rgba(255, 255, 255, 0.06),
+          0 10px 30px rgba(2, 6, 23, 0.18);
+        padding: 0.55rem 0.85rem;
+        color: #dbeafe;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        backdrop-filter: blur(14px);
+        opacity: 0;
+        animation: resource-enter 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.08s
+          forwards;
+      }
+      .badge-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.15rem;
+        height: 1.15rem;
+        color: #93c5fd;
+      }
+      .badge-icon svg {
+        width: 100%;
+        height: 100%;
+      }
+      .resources-heading {
+        margin: 1.35rem 0 0;
+        max-width: 62rem;
+        color: #fff;
+        font-family: Manrope, sans-serif;
+        font-size: clamp(2.65rem, 6.2vw, 5.7rem);
+        font-weight: 800;
+        letter-spacing: -0.065em;
+        line-height: 0.98;
+      }
+      .heading-line {
+        display: block;
+        opacity: 0;
+        transform: translate3d(0, 26px, 0);
+        animation: resource-enter 0.62s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+      .heading-line:nth-child(1) {
+        animation-delay: 0.16s;
+      }
+      .heading-line:nth-child(2) {
+        animation-delay: 0.27s;
+      }
+      .heading-gradient {
+        display: inline-block;
+        background: linear-gradient(
+          100deg,
+          #60a5fa 6%,
+          #a78bfa 55%,
+          #c4b5fd 92%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .resources-description {
+        max-width: 44rem;
+        margin: 1.4rem auto 0;
+        color: rgba(226, 232, 240, 0.75);
+        font-size: clamp(0.96rem, 1.55vw, 1.08rem);
+        line-height: 1.75;
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+        animation: resource-enter 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) 0.43s
+          forwards;
+      }
+      .resources-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-top: 1.55rem;
+        opacity: 0;
+        transform: scale(0.96);
+        animation: resource-scale 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.55s
+          forwards;
+      }
+      .cta-primary,
+      .cta-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3.15rem;
+        border-radius: 0.85rem;
+        padding: 0 1.15rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease,
+          background 0.25s ease;
+      }
+      .cta-primary {
+        background: linear-gradient(105deg, #2563eb, #6366f1 54%, #8b5cf6);
+        box-shadow: 0 14px 38px rgba(37, 99, 235, 0.28);
+        color: white;
+      }
+      .cta-primary .arrow {
+        margin-left: 0.65rem;
+        transition: transform 0.25s ease;
+      }
+      .cta-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 46px rgba(99, 102, 241, 0.4);
+      }
+      .cta-primary:hover .arrow {
+        transform: translateX(4px);
+      }
+      .cta-secondary {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.025);
+        color: #e2e8f0;
+        backdrop-filter: blur(12px);
+      }
+      .cta-secondary:hover {
+        transform: translateY(-3px);
+        border-color: rgba(147, 197, 253, 0.55);
+        background: rgba(59, 130, 246, 0.12);
+      }
+      .resources-features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.55rem;
+        margin-top: 1.6rem;
+      }
+      .feature-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.38);
+        padding: 0.42rem 0.7rem 0.42rem 0.45rem;
+        color: #cbd5e1;
+        font-size: 0.74rem;
+        font-weight: 600;
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transform: translate3d(0, 14px, 0);
+        animation: resource-enter 0.44s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        transition:
+          transform 0.24s ease,
+          border-color 0.24s ease,
+          background 0.24s ease;
+      }
+      .feature-chip:nth-child(1) {
+        animation-delay: 0.68s;
+      }
+      .feature-chip:nth-child(2) {
+        animation-delay: 0.75s;
+      }
+      .feature-chip:nth-child(3) {
+        animation-delay: 0.82s;
+      }
+      .feature-chip:nth-child(4) {
+        animation-delay: 0.89s;
+      }
+      .feature-chip:hover {
+        transform: translateY(-3px);
+        border-color: rgba(96, 165, 250, 0.55);
+        background: rgba(37, 99, 235, 0.12);
+      }
+      .feature-icon {
+        display: inline-flex;
+        width: 1.55rem;
+        height: 1.55rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.28),
+          rgba(139, 92, 246, 0.25)
+        );
+        font-size: 0.78rem;
+      }
+      .feature-label {
+        white-space: nowrap;
+      }
+      .resources-stats {
+        display: grid;
+        width: min(100%, 56rem);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.65rem;
+        margin-top: 1.4rem;
+      }
+      .stat-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 6.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 1rem;
+        background: linear-gradient(
+          145deg,
+          rgba(30, 41, 59, 0.44),
+          rgba(15, 23, 42, 0.25)
+        );
+        padding: 0.8rem;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(14px);
+        opacity: 0;
+        transform: translate3d(0, 16px, 0);
+        animation: resource-enter 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .stat-card:nth-child(1) {
+        animation-delay: 0.92s;
+      }
+      .stat-card:nth-child(2) {
+        animation-delay: 0.99s;
+      }
+      .stat-card:nth-child(3) {
+        animation-delay: 1.06s;
+      }
+      .stat-card:nth-child(4) {
+        animation-delay: 1.13s;
+      }
+      .stat-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(96, 165, 250, 0.62);
+        box-shadow:
+          0 16px 42px rgba(37, 99, 235, 0.16),
+          inset 0 1px rgba(255, 255, 255, 0.08);
+      }
+      .stat-icon {
+        position: absolute;
+        top: 0.65rem;
+        right: 0.65rem;
+        width: 1.1rem;
+        height: 1.1rem;
+        color: rgba(147, 197, 253, 0.55);
+      }
+      .stat-number {
+        color: white;
+        font-family: Manrope, sans-serif;
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        line-height: 1.1;
+      }
+      .stat-suffix {
+        color: #93c5fd;
+      }
+      .stat-label {
+        margin-top: 0.35rem;
+        color: #94a3b8;
+        font-size: 0.66rem;
+        font-weight: 600;
+        line-height: 1.35;
+      }
+      .resources-scroll-indicator {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        margin-top: 1.3rem;
+        color: rgba(203, 213, 225, 0.64);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: resource-enter 0.4s ease 1.25s forwards;
+      }
+      .scroll-icon {
+        width: 1.3rem;
+        height: 1.3rem;
+        animation: resource-bounce 2.2s ease-in-out infinite 1.4s;
+      }
+      .scroll-icon svg {
+        width: 100%;
+        height: 100%;
+      }
+      @keyframes resource-enter {
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @keyframes resource-scale {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes resource-mesh {
+        from {
+          background-position: 0% 12%;
+          opacity: 0.55;
+        }
+        to {
+          background-position: 100% 84%;
+          opacity: 0.8;
+        }
+      }
+      @keyframes resource-orb-a {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        50% {
+          transform: translate3d(12%, 8%, 0) scale(1.1);
+        }
+      }
+      @keyframes resource-orb-b {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) scale(0.95);
+        }
+        50% {
+          transform: translate3d(-14%, 6%, 0) scale(1.1);
+        }
+      }
+      @keyframes resource-orb-c {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        50% {
+          transform: translate3d(-8%, -12%, 0) scale(1.08);
+        }
+      }
+      @keyframes resource-orb-d {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) scale(1);
+          opacity: 0.12;
+        }
+        50% {
+          transform: translate3d(5%, -15%, 0) scale(1.15);
+          opacity: 0.23;
+        }
+      }
+      @keyframes resource-particles {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+          opacity: 0.25;
+        }
+        50% {
+          transform: translate3d(2vw, -5vh, 0);
+          opacity: 0.7;
+        }
+      }
+      @keyframes resource-bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(5px);
+        }
+      }
+      @media (max-width: 640px) {
+        .resources-hero {
+          min-height: 100svh;
+          padding: 6.5rem 1rem 1.7rem;
+        }
+        .resources-grid-pattern {
+          background-size: 40px 40px;
+        }
+        .resources-heading {
+          font-size: clamp(2.3rem, 11.5vw, 3.6rem);
+        }
+        .resources-description {
+          font-size: 0.92rem;
+          line-height: 1.65;
+        }
+        .resources-ctas {
+          width: 100%;
+          flex-direction: column;
+        }
+        .cta-primary,
+        .cta-secondary {
+          width: 100%;
+        }
+        .resources-features {
+          gap: 0.42rem;
+        }
+        .feature-chip {
+          font-size: 0.68rem;
+        }
+        .resources-stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0.5rem;
+        }
+        .stat-card {
+          min-height: 5.55rem;
+          padding: 0.7rem;
+        }
+        .resources-scroll-indicator {
+          margin-top: 1rem;
+        }
+        .orb {
+          filter: blur(52px);
+        }
+        .orb-1 {
+          width: 18rem;
+          height: 18rem;
+        }
+        .orb-2 {
+          width: 16rem;
+          height: 16rem;
+        }
+        .orb-3 {
+          width: 17rem;
+          height: 17rem;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .resources-hero *,
+        .resources-hero *::before,
+        .resources-hero *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+        }
+        .resources-badge,
+        .heading-line,
+        .resources-description,
+        .resources-ctas,
+        .feature-chip,
+        .stat-card,
+        .resources-scroll-indicator {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @media (max-width: 767px) {
+        main {
+          padding-bottom: 92px;
+        }
+        .mobile-action-bar {
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 60;
+          display: flex;
+          gap: 0.75rem;
+          padding: 0.75rem;
+          justify-content: center;
+          background: linear-gradient(
+            180deg,
+            rgba(5, 8, 22, 0),
+            rgba(5, 8, 22, 0.02)
+          );
+          opacity: 0;
+          transform: translateY(12px);
+          pointer-events: none;
+          transition:
+            opacity 0.32s ease,
+            transform 0.32s cubic-bezier(0.2, 0.9, 0.2, 1);
+        }
+        .mobile-action-bar.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+        .mobile-action-bar .btn {
+          flex: 1;
+          display: inline-flex;
+          gap: 0.6rem;
+          align-items: center;
+          justify-content: center;
+          padding: 0.95rem 1rem;
+          border-radius: 9999px;
+          font-weight: 700;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(255, 255, 255, 0.12);
+          color: #fff;
+          text-decoration: none;
+          box-shadow: 0 8px 30px rgba(2, 6, 23, 0.55);
+          backdrop-filter: blur(6px);
+        }
+        .mobile-action-bar .btn i {
+          font-size: 1.02rem;
+        }
+        .mobile-action-bar .btn:hover {
+          background: rgba(255, 255, 255, 0.18);
+        }
+
+        /* Hide the floating bottom-right bubble on mobile to avoid duplication */
+        .fixed.bottom-5.right-5 {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased">
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <a
+      class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-4 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-slate-950"
+      href="#main"
+      >Skip to content</a
+    >
+    <header
+      class="fixed inset-x-0 top-0 z-40 border-b border-white/[.07] bg-[#050816]/72 backdrop-blur-xl"
+    >
+      <div
+        class="relative mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8"
+      >
+        <a
+          href="index.html"
+          class="font-display text-[15px] font-bold tracking-tight text-white"
+          aria-label="Ashwin James home"
+          >ASHWIN<span class="text-blue-500">.</span></a
+        >
+        <nav
+          class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-4 whitespace-nowrap text-sm text-slate-300 lg:flex"
+          aria-label="Primary navigation"
+        >
+          <a class="transition hover:text-white" href="index.html">Home</a
+          ><a class="transition hover:text-white" href="about.html">About</a
+          ><a class="transition hover:text-white" href="services.html"
+            >Services</a
+          ><a class="transition hover:text-white" href="case-studies.html"
+            >Case Studies</a
+          ><a class="text-white" href="resources.html" aria-current="page"
+            >Resources</a
+          ><a class="transition hover:text-white" href="blog.html">Blogs</a
+          ><a class="transition hover:text-white" href="contact.html"
+            >Contact</a
+          >
+        </nav>
+        <a
+          data-whatsapp
+          class="hidden rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-blue-50 lg:inline-flex"
+          href="contact.html"
+          >Get a free consultation <span class="ml-2 text-blue-600">↗</span></a
+        ><button
+          id="menu-button"
+          class="rounded-lg p-2 text-white lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-white/10 bg-[#050816]/95 px-5 pb-6 pt-3 backdrop-blur-xl lg:hidden"
+      >
+        <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="index.html"
+            >Home</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="about.html"
+            >About</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="services.html"
+            >Services</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="case-studies.html"
+            >Case Studies</a
+          ><a
+            class="rounded-lg bg-white/5 px-3 py-3 text-white"
+            href="resources.html"
+            >Resources</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="blog.html"
+            >Blogs</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="contact.html"
+            >Contact</a
+          ><a
+            data-whatsapp
+            class="mt-3 rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-slate-950"
+            href="contact.html"
+            >Get a free consultation</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section id="resources-hero" class="resources-hero">
+        <!-- Animated Background Layers -->
+        <div class="resources-bg-container">
+          <!-- Base gradient -->
+          <div class="resources-bg-base"></div>
+
+          <!-- Animated gradient mesh -->
+          <div class="resources-gradient-mesh" data-parallax="0.15"></div>
+
+          <!-- Grid pattern -->
+          <div class="resources-grid-pattern"></div>
+
+          <!-- Floating orbs -->
+          <div class="resources-orbs">
+            <div class="orb orb-1" data-parallax="0.08"></div>
+            <div class="orb orb-2" data-parallax="0.12"></div>
+            <div class="orb orb-3" data-parallax="0.06"></div>
+            <div class="orb orb-4" data-parallax="0.10"></div>
+          </div>
+
+          <!-- Particles -->
+          <div class="resources-particles"></div>
+
+          <!-- Subtle noise -->
+          <div class="resources-noise"></div>
+
+          <!-- Vignette -->
+          <div class="resources-vignette"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="resources-content">
+          <!-- Hero Badge -->
+          <div class="resources-badge">
+            <span class="badge-icon"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+              >
+                <path
+                  d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2Z"
+                />
+                <path
+                  d="m19 16 .7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7L19 16Z"
+                /></svg
+            ></span>
+            <span>Growth Resources</span>
+          </div>
+
+          <!-- Main Heading with gradient highlight -->
+          <h1 class="resources-heading">
+            <span class="heading-line">Useful tools for people</span>
+            <span class="heading-line"
+              >who take
+              <span class="heading-gradient">Growth</span> seriously.</span
+            >
+          </h1>
+
+          <!-- Supporting Text -->
+          <p class="resources-description">
+            A growing collection of practical calculators, templates, scorecards
+            and frameworks built for marketers, founders and growth teams.
+            Everything here is designed to help you make smarter marketing
+            decisions.
+          </p>
+
+          <!-- CTAs -->
+          <div class="resources-ctas">
+            <a href="#resources-grid" class="cta-primary">
+              <span>Explore Resources</span>
+              <span class="arrow">→</span>
+            </a>
+            <button
+              class="cta-secondary"
+              onclick="
+                document
+                  .querySelector('#resources-grid')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              <span>Browse Categories</span>
+            </button>
+          </div>
+
+          <!-- Feature Chips -->
+          <div class="resources-features">
+            <div class="feature-chip">
+              <span class="feature-icon">📊</span>
+              <span class="feature-label">Smart Calculators</span>
+            </div>
+            <div class="feature-chip">
+              <span class="feature-icon">📄</span>
+              <span class="feature-label">Ready-to-Use Templates</span>
+            </div>
+            <div class="feature-chip">
+              <span class="feature-icon">📈</span>
+              <span class="feature-label">Growth Frameworks</span>
+            </div>
+            <div class="feature-chip">
+              <span class="feature-icon">🎯</span>
+              <span class="feature-label">Built for Marketers</span>
+            </div>
+          </div>
+
+          <!-- Stats Cards -->
+          <div class="resources-stats">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"
+                  />
+                </svg>
+              </div>
+              <div class="stat-number">
+                <span data-count="15">0</span><span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Resources Available</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 11l3 3L22 4" />
+                  <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="stat-number">
+                <span data-count="100">0</span
+                ><span class="stat-suffix">%</span>
+              </div>
+              <div class="stat-label">Practical frameworks</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="12" cy="5" r="1" />
+                  <circle cx="12" cy="19" r="1" />
+                  <line x1="12" y1="12" x2="12" y2="6" />
+                  <line x1="12" y1="12" x2="12" y2="18" />
+                </svg>
+              </div>
+              <div class="stat-number">
+                <span data-count="7">0</span
+                ><span class="stat-suffix"> days</span>
+              </div>
+              <div class="stat-label">Between new drops</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"
+                  />
+                </svg>
+              </div>
+              <div class="stat-number">
+                <span class="stat-suffix">AED </span
+                ><span data-count="0">0</span>
+              </div>
+              <div class="stat-label">Free forever</div>
+            </div>
+          </div>
+
+          <!-- Scroll Indicator -->
+          <div class="resources-scroll-indicator">
+            <div class="scroll-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
+                <path d="M12 5v14M5 12l7 7 7-7" />
+              </svg>
+            </div>
+            <span>Scroll to explore</span>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div
+            class="reveal flex flex-col justify-between gap-4 sm:flex-row sm:items-end"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+              >
+                Free interactive tool
+              </p>
+              <h2
+                class="mt-4 font-display text-3xl font-bold tracking-[-.045em] text-white sm:text-4xl"
+              >
+                Growth maths calculator.
+              </h2>
+            </div>
+            <p class="max-w-md text-sm leading-6 text-slate-400">
+              A simple way to see how small conversion changes move the number
+              of qualified leads, customers and acquisition cost.
+            </p>
+          </div>
+          <form
+            id="growth-calculator"
+            class="surface reveal mt-10 grid gap-7 rounded-2xl p-5 sm:p-7 lg:grid-cols-[.9fr_1.1fr]"
+            style="transition-delay: 0.06s"
+          >
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="text-sm text-slate-300"
+                >Monthly visits<input
+                  name="visits"
+                  type="number"
+                  min="0"
+                  value="5000"
+                  class="mt-2 w-full rounded-lg border border-white/10 bg-white/[.04] px-3 py-3 text-white outline-none transition focus:border-blue-400" /></label
+              ><label class="text-sm text-slate-300"
+                >Cost per click (AED)<input
+                  name="cpc"
+                  type="number"
+                  min="0"
+                  step="0.1"
+                  value="8"
+                  class="mt-2 w-full rounded-lg border border-white/10 bg-white/[.04] px-3 py-3 text-white outline-none transition focus:border-blue-400" /></label
+              ><label class="text-sm text-slate-300"
+                >Landing-page conversion %<input
+                  name="conversion"
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  value="4"
+                  class="mt-2 w-full rounded-lg border border-white/10 bg-white/[.04] px-3 py-3 text-white outline-none transition focus:border-blue-400" /></label
+              ><label class="text-sm text-slate-300"
+                >Qualified lead rate %<input
+                  name="qualified"
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  value="60"
+                  class="mt-2 w-full rounded-lg border border-white/10 bg-white/[.04] px-3 py-3 text-white outline-none transition focus:border-blue-400" /></label
+              ><label class="text-sm text-slate-300 sm:col-span-2"
+                >Lead-to-customer rate %<input
+                  name="close"
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  value="15"
+                  class="mt-2 w-full rounded-lg border border-white/10 bg-white/[.04] px-3 py-3 text-white outline-none transition focus:border-blue-400"
+              /></label>
+            </div>
+            <div class="grid content-center gap-3 sm:grid-cols-2">
+              <div
+                class="rounded-xl border border-blue-400/15 bg-blue-400/[.06] p-5"
+              >
+                <p
+                  class="text-xs font-bold uppercase tracking-[.14em] text-slate-500"
+                >
+                  Leads
+                </p>
+                <p
+                  data-output="leads"
+                  class="mt-3 font-display text-4xl font-extrabold tracking-[-.05em] text-white"
+                >
+                  0
+                </p>
+              </div>
+              <div
+                class="rounded-xl border border-blue-400/15 bg-blue-400/[.06] p-5"
+              >
+                <p
+                  class="text-xs font-bold uppercase tracking-[.14em] text-slate-500"
+                >
+                  Qualified leads
+                </p>
+                <p
+                  data-output="qualified"
+                  class="mt-3 font-display text-4xl font-extrabold tracking-[-.05em] text-white"
+                >
+                  0
+                </p>
+              </div>
+              <div
+                class="rounded-xl border border-emerald-400/15 bg-emerald-400/[.05] p-5"
+              >
+                <p
+                  class="text-xs font-bold uppercase tracking-[.14em] text-slate-500"
+                >
+                  Customers
+                </p>
+                <p
+                  data-output="customers"
+                  class="mt-3 font-display text-4xl font-extrabold tracking-[-.05em] text-white"
+                >
+                  0
+                </p>
+              </div>
+              <div
+                class="rounded-xl border border-emerald-400/15 bg-emerald-400/[.05] p-5"
+              >
+                <p
+                  class="text-xs font-bold uppercase tracking-[.14em] text-slate-500"
+                >
+                  Estimated CAC
+                </p>
+                <p
+                  data-output="cac"
+                  class="mt-3 font-display text-4xl font-extrabold tracking-[-.05em] text-white"
+                >
+                  —
+                </p>
+              </div>
+              <p class="sm:col-span-2 text-xs leading-5 text-slate-500">
+                Indicative only. It helps frame the conversation; it is not a
+                forecast.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section
+        id="resources-grid"
+        class="border-y border-white/[.06] bg-panel/45 py-20 sm:py-28"
+      >
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div
+            class="reveal flex flex-col justify-between gap-4 sm:flex-row sm:items-end"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+              >
+                The library
+              </p>
+              <h2
+                class="mt-4 font-display text-3xl font-bold tracking-[-.045em] text-white sm:text-4xl"
+              >
+                Practical resources, made for use.
+              </h2>
+            </div>
+            <p class="max-w-md text-sm leading-6 text-slate-400">
+              New tools will be added here as they are released.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <article class="surface surface-hover reveal rounded-2xl p-6">
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-400/10 text-blue-300"
+                  >01</span
+                ><a
+                  class="text-sm font-semibold text-blue-300"
+                  href="campaign-budget-calculator.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Daily Ad Budget Calculator
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Estimate the right daily ad spend for your campaigns using
+                contribution margin, learning phase and risk buffer.
+              </p>
+            </article>
+            <article
+              class="surface surface-hover reveal rounded-2xl p-6"
+              style="transition-delay: 0.06s"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-violet-400/10 text-violet-300"
+                  >02</span
+                ><a
+                  class="text-sm font-semibold text-violet-300"
+                  href="break-even-cpa-calculator.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Break Even CPA Calculator
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Work out the break-even cost per acquisition for your ideal
+                campaign economics.
+              </p>
+            </article>
+            <article
+              class="surface surface-hover reveal rounded-2xl p-6"
+              style="transition-delay: 0.12s"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-400/10 text-emerald-300"
+                  >03</span
+                ><a
+                  class="text-sm font-semibold text-emerald-300"
+                  href="break-even-roas-calculator.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Break Even ROAS Calculator
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Calculate the minimum return on ad spend needed to cover your
+                product and marketing costs.
+              </p>
+            </article>
+            <article class="surface surface-hover reveal rounded-2xl p-6">
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-sky-400/10 text-sky-300"
+                  >04</span
+                ><a
+                  class="text-sm font-semibold text-sky-300"
+                  href="roas-calculator.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                ROAS Calculator
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Quickly estimate your return on ad spend for different budget
+                and revenue scenarios.
+              </p>
+            </article>
+            <article
+              class="surface surface-hover reveal rounded-2xl p-6"
+              style="transition-delay: 0.06s"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-fuchsia-400/10 text-fuchsia-300"
+                  >05</span
+                ><a
+                  class="text-sm font-semibold text-fuchsia-300"
+                  href="cac-calculator.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                CAC Calculator
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Compare costs against customer acquisition to understand how
+                efficiently you are acquiring new buyers.
+              </p>
+            </article>
+            <article
+              class="surface surface-hover reveal rounded-2xl p-6"
+              style="transition-delay: 0.18s"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-orange-400/10 text-orange-300"
+                  >06</span
+                ><a
+                  class="text-sm font-semibold text-orange-300"
+                  href="profit-projection-calculator.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Profit Projection Calculator
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Project future profit from campaign spend, revenue and margin
+                assumptions.
+              </p>
+            </article>
+            <article class="surface surface-hover reveal rounded-2xl p-6">
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-400/10 text-slate-300"
+                  >07</span
+                ><a
+                  class="text-sm font-semibold text-slate-300"
+                  href="utm-builder.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                UTM Builder
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Create clean campaign tracking links for paid ads, email and
+                social channels.
+              </p>
+            </article>
+            <article
+              class="surface surface-hover reveal rounded-2xl p-6"
+              style="transition-delay: 0.06s"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-400/10 text-cyan-300"
+                  >08</span
+                ><a
+                  class="text-sm font-semibold text-cyan-300"
+                  href="marketing-budget-allocator.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Marketing Budget Allocator
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Split your marketing investment across channels, campaigns and
+                stages with better balance.
+              </p>
+            </article>
+            <article
+              class="surface surface-hover reveal rounded-2xl p-6"
+              style="transition-delay: 0.12s"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-400/10 text-emerald-300"
+                  >09</span
+                ><a
+                  class="text-sm font-semibold text-emerald-300"
+                  href="landing-page-cro-checklist.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Landing Page CRO Checklist
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Use a structured checklist to improve message match, friction,
+                proof and conversion opportunity.
+              </p>
+            </article>
+            <article class="surface surface-hover reveal rounded-2xl p-6">
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-400/10 text-blue-300"
+                  >10</span
+                ><a
+                  class="text-sm font-semibold text-blue-300"
+                  href="campaign-launch-checklist.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Campaign Launch Checklist
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                A practical launch checklist to reduce risk and catch the
+                details that matter before your campaign goes live.
+              </p>
+            </article>
+            <article
+              class="surface surface-hover reveal rounded-2xl p-6"
+              style="transition-delay: 0.06s"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-violet-400/10 text-violet-300"
+                  >11</span
+                ><a
+                  class="text-sm font-semibold text-violet-300"
+                  href="creative-testing-planner.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Creative Testing Planner
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Plan your creative experiments with a simple framework for
+                hypothesis, variables and results.
+              </p>
+            </article>
+            <article
+              class="surface surface-hover reveal rounded-2xl p-6"
+              style="transition-delay: 0.18s"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-400/10 text-emerald-300"
+                  >12</span
+                ><a
+                  class="text-sm font-semibold text-emerald-300"
+                  href="lead-quality-scoring-calculator.html"
+                  >Open tool →</a
+                >
+              </div>
+              <h3 class="mt-8 font-display text-xl font-bold text-white">
+                Lead Quality Scoring Calculator
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400">
+                Score leads quickly so your team can prioritise the
+                highest-quality enquiries first.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 text-center sm:py-28">
+        <div class="mx-auto max-w-2xl px-5">
+          <p
+            class="reveal text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+          >
+            Want a useful tool built?
+          </p>
+          <h2
+            class="reveal mt-4 font-display text-3xl font-bold tracking-[-.045em] text-white sm:text-4xl"
+          >
+            Tell me what you would use every week.
+          </h2>
+          <p class="reveal mt-5 text-base leading-8 text-slate-400">
+            I’m building this library around the calculations and checklists
+            that actually make a marketer’s work better.
+          </p>
+          <a
+            class="reveal mt-8 inline-flex rounded-xl border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-1 hover:border-blue-300/70 hover:bg-blue-400/10"
+            href="contact.html"
+            >Suggest a resource <span class="ml-2 text-blue-300">→</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-white/[.07] bg-[#040611] py-10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between lg:px-8"
+      >
+        <p>© 2026 Ashwin James. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a class="hover:text-slate-300" href="services.html">Services</a
+          ><a class="hover:text-slate-300" href="blog.html">Blogs</a
+          ><a class="hover:text-slate-300" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <div class="mobile-action-bar" aria-hidden="false">
+      <a
+        class="btn"
+        href="https://wa.me/97105227704142"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        ><i class="fa-brands fa-whatsapp"></i
+        ><span class="hidden sm:inline">WhatsApp</span></a
+      >
+      <a class="btn" href="mailto:your@email.com" aria-label="Send email"
+        ><i class="fa-solid fa-envelope"></i
+        ><span class="hidden sm:inline">Email</span></a
+      >
+    </div>
+    <a
+      data-whatsapp
+      class="fixed bottom-5 right-5 z-30 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-bold text-[#062b14] shadow-xl shadow-emerald-950/60 transition hover:-translate-y-0.5 hover:bg-[#37e476]"
+      href="contact.html"
+      aria-label="Start a WhatsApp consultation"
+      ><span>WhatsApp</span></a
+    >
+    <script src="assets/site-pages.js"></script>
+    <script>
+      (() => {
+        const hero = document.getElementById("resources-hero");
+        const counters = [
+          ...document.querySelectorAll(".stat-number [data-count]"),
+        ];
+        if (!hero || !counters.length) return;
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        const finish = () =>
+          counters.forEach((counter) => {
+            counter.textContent = counter.dataset.count;
+          });
+        if (reduceMotion) {
+          finish();
+          return;
+        }
+        const start = performance.now() + 700;
+        const duration = 720;
+        const tick = (now) => {
+          const progress = Math.min(1, Math.max(0, (now - start) / duration));
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counters.forEach((counter) => {
+            counter.textContent = Math.round(
+              Number(counter.dataset.count) * eased,
+            );
+          });
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      })();
+    </script>
+  </body>
+</html>

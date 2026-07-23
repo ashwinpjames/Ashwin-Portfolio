@@ -1,0 +1,1782 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Google Ads, Meta Ads, SEO, web development, lead generation, HubSpot and growth marketing services for businesses in Dubai and the UAE."
+    />
+    <meta name="theme-color" content="#050816" />
+    <title>Growth Services — Ashwin James, Dubai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Manrope", "sans-serif"],
+            },
+            colors: { ink: "#050816", panel: "#0B0F19", blue: "#2563EB" },
+            boxShadow: { glow: "0 24px 70px rgba(37, 99, 235, .16)" },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: #050816;
+        color: #cbd5e1;
+      }
+      .mesh {
+        background:
+          radial-gradient(
+            52% 60% at 76% 0%,
+            rgba(37, 99, 235, 0.24),
+            transparent 70%
+          ),
+          radial-gradient(
+            38% 35% at 5% 30%,
+            rgba(124, 58, 237, 0.1),
+            transparent 70%
+          );
+      }
+      .grid-mask {
+        background-image:
+          linear-gradient(rgba(148, 163, 184, 0.065) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(148, 163, 184, 0.065) 1px,
+            transparent 1px
+          );
+        background-size: 48px 48px;
+        mask-image: linear-gradient(to bottom, black, transparent 85%);
+      }
+      .line {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(148, 163, 184, 0.32),
+          transparent
+        );
+      }
+      .surface {
+        background: linear-gradient(
+          145deg,
+          rgba(17, 24, 39, 0.88),
+          rgba(11, 15, 25, 0.92)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .service-card {
+        scroll-margin-top: 7rem;
+      }
+      .service-card:target {
+        border-color: rgba(96, 165, 250, 0.65);
+        box-shadow:
+          0 0 0 1px rgba(96, 165, 250, 0.15),
+          0 20px 55px rgba(37, 99, 235, 0.12);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.in-view {
+        opacity: 1;
+        transform: none;
+      }
+      .menu-open {
+        overflow: hidden;
+      }
+      ::selection {
+        background: rgba(37, 99, 235, 0.42);
+        color: white;
+      }
+      .cursor-glow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        pointer-events: none;
+        mix-blend-mode: screen;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.2) 0%,
+          rgba(124, 58, 237, 0.09) 34%,
+          transparent 70%
+        );
+        filter: blur(10px);
+        transition: opacity 0.28s ease;
+      }
+      .cursor-glow.active {
+        opacity: 1;
+      }
+      @media (prefers-reduced-motion: reduce), (pointer: coarse) {
+        .cursor-glow {
+          display: none;
+        }
+      }
+
+      /* Mobile sticky action bar and small-screen layout */
+      @media (max-width: 767px) {
+        main {
+          padding-bottom: 92px;
+        }
+        .mobile-action-bar {
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 60;
+          display: flex;
+          gap: 0.75rem;
+          padding: 0.75rem;
+          justify-content: center;
+          background: linear-gradient(
+            180deg,
+            rgba(5, 8, 22, 0),
+            rgba(5, 8, 22, 0.02)
+          );
+          opacity: 0;
+          transform: translateY(12px);
+          pointer-events: none;
+          transition:
+            opacity 0.32s ease,
+            transform 0.32s cubic-bezier(0.2, 0.9, 0.2, 1);
+        }
+        .mobile-action-bar.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+        .mobile-action-bar .btn {
+          flex: 1;
+          display: inline-flex;
+          gap: 0.6rem;
+          align-items: center;
+          justify-content: center;
+          padding: 0.95rem 1rem;
+          border-radius: 9999px;
+          font-weight: 700;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(255, 255, 255, 0.12);
+          color: #fff;
+          text-decoration: none;
+          box-shadow: 0 8px 30px rgba(2, 6, 23, 0.55);
+          backdrop-filter: blur(6px);
+        }
+        .mobile-action-bar .btn i {
+          font-size: 1.02rem;
+        }
+        .mobile-action-bar .btn:hover {
+          background: rgba(255, 255, 255, 0.18);
+        }
+
+        /* Hide the floating bottom-right bubble on mobile to avoid duplication */
+        .fixed.bottom-5.right-5 {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased">
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <a
+      class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-4 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-slate-950"
+      href="#main"
+      >Skip to services</a
+    >
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-0 z-40 border-b border-transparent bg-[#050816]/80 backdrop-blur-xl transition-all duration-300"
+    >
+      <div
+        class="relative mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8"
+      >
+        <a
+          href="index.html"
+          class="font-display text-[15px] font-bold tracking-tight text-white"
+          aria-label="Ashwin James home"
+          >ASHWIN<span class="text-blue-500">.</span></a
+        >
+        <nav
+          class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-4 whitespace-nowrap text-sm text-slate-300 lg:flex"
+          aria-label="Primary navigation"
+        >
+          <a class="transition hover:text-white" href="index.html">Home</a>
+          <a class="transition hover:text-white" href="about.html">About</a>
+          <a class="text-white" href="services.html" aria-current="page"
+            >Services</a
+          >
+          <a class="transition hover:text-white" href="case-studies.html"
+            >Case Studies</a
+          >
+          <a class="transition hover:text-white" href="resources.html"
+            >Resources</a
+          >
+          <a class="transition hover:text-white" href="blog.html">Blogs</a>
+          <a class="transition hover:text-white" href="contact.html">Contact</a>
+        </nav>
+        <a
+          data-whatsapp
+          class="hidden rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-blue-50 lg:inline-flex"
+          href="index.html#consultation"
+          >Get a free consultation <span class="ml-2 text-blue-600">↗</span></a
+        >
+        <button
+          id="menu-button"
+          class="rounded-lg p-2 text-white lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-white/10 bg-[#050816]/95 px-5 pb-6 pt-3 backdrop-blur-xl lg:hidden"
+      >
+        <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="index.html"
+            >Home</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="about.html"
+            >About</a
+          ><a
+            class="rounded-lg bg-white/5 px-3 py-3 text-white"
+            href="services.html"
+            >Services</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="case-studies.html"
+            >Case Studies</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="resources.html"
+            >Resources</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="blog.html"
+            >Blogs</a
+          ><a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="contact.html"
+            >Contact</a
+          ><a
+            data-whatsapp
+            class="mt-3 rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-slate-950"
+            href="index.html#consultation"
+            >Get a free consultation</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="bg-panel/35 py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8 text-center">
+          <p
+            class="mb-3 text-xs font-bold uppercase tracking-[.17em] text-blue-400"
+          >
+            Services
+          </p>
+          <h1
+            class="font-display text-4xl font-extrabold text-white sm:text-5xl"
+          >
+            Services
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-base leading-8 text-slate-300">
+            The services UAE businesses ask for most.
+          </p>
+        </div>
+      </section>
+      <section
+        class="mesh relative isolate overflow-hidden pb-20 pt-32 sm:pb-24 sm:pt-40"
+      >
+        <div class="grid-mask absolute inset-0 -z-10"></div>
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <a
+            class="reveal inline-flex items-center text-sm font-medium text-slate-400 transition hover:text-white"
+            href="index.html#services"
+            ><span class="mr-2 text-blue-400">←</span> Back to overview</a
+          >
+          <div
+            class="reveal mt-9 grid gap-10 lg:grid-cols-[1.25fr_.75fr] lg:items-end"
+          >
+            <div>
+              <p
+                class="mb-5 text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+              >
+                Services
+              </p>
+              <h1
+                class="font-display max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-[-.055em] text-white sm:text-5xl lg:text-6xl"
+              >
+                The work that turns attention into
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400"
+                  >qualified demand.</span
+                >
+              </h1>
+            </div>
+            <p class="max-w-md text-base leading-8 text-slate-300">
+              From urgent, high-intent acquisition to the infrastructure that
+              makes growth repeatable, every service is built around a
+              commercial outcome.
+            </p>
+          </div>
+          <div
+            class="reveal mt-14 grid gap-4 rounded-2xl border border-white/10 bg-white/[.025] p-5 sm:grid-cols-3"
+          >
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-[.14em] text-slate-500"
+              >
+                How to choose
+              </p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">
+                Start with the bottleneck that is costing your business the most
+                momentum.
+              </p>
+            </div>
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-[.14em] text-slate-500"
+              >
+                How I work
+              </p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">
+                Project scopes and retained partnerships, shaped around the
+                results you need.
+              </p>
+            </div>
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-[.14em] text-slate-500"
+              >
+                Where
+              </p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">
+                Dubai and the UAE, with a practical understanding of competitive
+                service markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div
+            class="reveal flex flex-col justify-between gap-4 sm:flex-row sm:items-end"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+              >
+                Most requested in the UAE
+              </p>
+              <h2
+                class="mt-4 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-4xl"
+              >
+                Six routes to immediate growth.
+              </h2>
+            </div>
+            <p class="max-w-sm text-sm leading-6 text-slate-400">
+              Prioritised around the services that most directly combine demand
+              capture, visibility and conversion.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <article
+              id="google-ads"
+              class="service-card surface reveal rounded-2xl p-6"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >01</span
+                ><span
+                  class="rounded-full bg-blue-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-blue-300"
+                  >High intent</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Google Ads
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                Search, Performance Max and local campaigns designed to put your
+                offer in front of people actively looking for it.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Search intent and keyword strategy</li>
+                <li>• Conversion tracking and lead quality signals</li>
+                <li>• Ongoing budget and CPL optimisation</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: immediate demand capture
+              </p>
+            </article>
+            <article
+              id="meta-ads"
+              class="service-card surface reveal rounded-2xl p-6"
+              style="transition-delay: 0.05s"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >02</span
+                ><span
+                  class="rounded-full bg-violet-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-violet-300"
+                  >Demand creation</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Meta Ads
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                Facebook and Instagram campaigns that build awareness, create
+                demand and turn the right audience into conversations.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Audience and offer strategy</li>
+                <li>• Creative direction for conversion</li>
+                <li>• Lead qualification and campaign testing</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: building a predictable lead flow
+              </p>
+            </article>
+            <article
+              id="seo"
+              class="service-card surface reveal rounded-2xl p-6"
+              style="transition-delay: 0.1s"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >03</span
+                ><span
+                  class="rounded-full bg-emerald-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-emerald-300"
+                  >Compounding</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                SEO
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                Build durable visibility for the local and commercial searches
+                that matter to your buyers—not traffic for traffic’s sake.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Technical and on-page foundations</li>
+                <li>• Local SEO for Dubai and UAE searches</li>
+                <li>• Content planned around commercial intent</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: stronger long-term acquisition
+              </p>
+            </article>
+            <article
+              id="website-development"
+              class="service-card surface reveal rounded-2xl p-6"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >04</span
+                ><span
+                  class="rounded-full bg-blue-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-blue-300"
+                  >Credibility</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Website development
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                A fast, premium website that makes a complex value proposition
+                simple, credible and easy to act on.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Strategic structure and conversion copy</li>
+                <li>• Responsive, performance-led builds</li>
+                <li>• Analytics-ready lead journeys</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: a website that earns enquiries
+              </p>
+            </article>
+            <article
+              id="lead-generation"
+              class="service-card surface reveal rounded-2xl p-6"
+              style="transition-delay: 0.05s"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >05</span
+                ><span
+                  class="rounded-full bg-violet-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-violet-300"
+                  >Pipeline</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Lead generation
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                A connected lead system that brings the right people in,
+                qualifies them intelligently and supports a faster sales
+                response.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Offer and funnel design</li>
+                <li>• Multi-channel acquisition planning</li>
+                <li>• Qualification and attribution setup</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: a healthier sales pipeline
+              </p>
+            </article>
+            <article
+              id="landing-page-optimisation"
+              class="service-card surface reveal rounded-2xl p-6"
+              style="transition-delay: 0.1s"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >06</span
+                ><span
+                  class="rounded-full bg-emerald-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-emerald-300"
+                  >Conversion</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Landing page optimisation
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                Make paid traffic more profitable by reducing friction,
+                sharpening the message and improving the decision journey.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Page, offer and message audits</li>
+                <li>• Conversion copy and UX improvements</li>
+                <li>• Structured testing priorities</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: improving conversion without more spend
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-panel py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div
+            class="reveal flex flex-col justify-between gap-4 sm:flex-row sm:items-end"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+              >
+                More ways to grow
+              </p>
+              <h2
+                class="mt-4 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-4xl"
+              >
+                The systems behind sustained performance.
+              </h2>
+            </div>
+            <p class="max-w-sm text-sm leading-6 text-slate-400">
+              Use these services to connect campaign performance with the
+              experience and follow-up that convert a lead into revenue.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-4 md:grid-cols-2">
+            <article
+              id="performance-growth-marketing"
+              class="service-card surface reveal rounded-2xl p-7"
+            >
+              <span
+                class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                >07</span
+              >
+              <h3 class="mt-9 font-display text-2xl font-bold text-white">
+                Performance & growth marketing
+              </h3>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                An integrated programme across paid media, conversion, analytics
+                and prioritisation—built around the one or two growth levers
+                that will matter most to your business.
+              </p>
+              <p class="mt-6 text-sm font-semibold text-blue-300">
+                Outcome: a sharper growth roadmap and stronger execution
+              </p>
+            </article>
+            <article
+              id="whatsapp-marketing"
+              class="service-card surface reveal rounded-2xl p-7"
+              style="transition-delay: 0.06s"
+            >
+              <span
+                class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                >08</span
+              >
+              <h3 class="mt-9 font-display text-2xl font-bold text-white">
+                WhatsApp marketing
+              </h3>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                Create a useful, compliant WhatsApp journey for high-intent
+                leads, including response flows, re-engagement and hand-off to
+                your sales team.
+              </p>
+              <p class="mt-6 text-sm font-semibold text-blue-300">
+                Outcome: faster follow-up and more conversations completed
+              </p>
+            </article>
+            <article
+              id="hubspot"
+              class="service-card surface reveal rounded-2xl p-7"
+            >
+              <span
+                class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                >09</span
+              >
+              <h3 class="mt-9 font-display text-2xl font-bold text-white">
+                HubSpot CRM & automation
+              </h3>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                Set up lifecycle stages, source tracking, lead routing and
+                automation that give marketing and sales one reliable view of
+                the pipeline.
+              </p>
+              <p class="mt-6 text-sm font-semibold text-blue-300">
+                Outcome: fewer missed leads and clearer attribution
+              </p>
+            </article>
+            <article
+              id="wordpress"
+              class="service-card surface reveal rounded-2xl p-7"
+              style="transition-delay: 0.06s"
+            >
+              <span
+                class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                >10</span
+              >
+              <h3 class="mt-9 font-display text-2xl font-bold text-white">
+                WordPress development
+              </h3>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                Conversion-led WordPress builds and improvements that give your
+                team a dependable, easy-to-manage foundation for marketing
+                activity.
+              </p>
+              <p class="mt-6 text-sm font-semibold text-blue-300">
+                Outcome: a flexible website built to support growth
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-3xl px-5 text-center">
+          <p
+            class="reveal text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+          >
+            Not sure where to start?
+          </p>
+          <h2
+            class="reveal mt-5 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-4xl"
+          >
+            Start with the constraint, not a channel.
+          </h2>
+          <p
+            class="reveal mx-auto mt-5 max-w-xl text-base leading-8 text-slate-400"
+          >
+            In a free consultation, we can identify the change most likely to
+            improve your lead quality, conversion or customer follow-up.
+          </p>
+          <a
+            data-whatsapp
+            class="reveal mt-8 inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:bg-blue-500"
+            href="index.html#consultation"
+            >Get a free consultation <span class="ml-2">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/8 bg-[#040611] py-10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between lg:px-8"
+      >
+        <p>© 2026 Ashwin James. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a class="hover:text-slate-300" href="index.html#services"
+            >Services overview</a
+          ><a class="hover:text-slate-300" href="index.html#consultation"
+            >Contact</a
+          ><a class="hover:text-slate-300" href="index.html#faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
+    <div class="mobile-action-bar" aria-hidden="false">
+      <a
+        class="btn"
+        href="https://wa.me/97105227704142"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        ><i class="fa-brands fa-whatsapp"></i
+        ><span class="hidden sm:inline">WhatsApp</span></a
+      >
+      <a class="btn" href="mailto:your@email.com" aria-label="Send email"
+        ><i class="fa-solid fa-envelope"></i
+        ><span class="hidden sm:inline">Email</span></a
+      >
+    </div>
+    <a
+      data-whatsapp
+      href="index.html#consultation"
+      class="fixed bottom-5 right-5 z-30 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-bold text-[#062b14] shadow-xl shadow-emerald-950/60 transition hover:-translate-y-0.5 hover:bg-[#37e476] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink"
+      aria-label="Start a WhatsApp consultation"
+      ><svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.7 11.7 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.6-8.4zM12.2 21.7h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7zm5.4-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.5-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5 0-.1-.2-.2-.5-.3z"
+        /></svg
+      ><span class="hidden sm:inline">WhatsApp</span></a
+    >
+    <script>
+      const whatsappNumber = "97105227704142";
+      const whatsappMessage =
+        "Hello Ashwin, I would like to discuss generating more qualified leads for my business.";
+      const whatsappUrl = whatsappNumber
+        ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+        : `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+      document.querySelectorAll("[data-whatsapp]").forEach((link) => {
+        link.href = whatsappUrl;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      });
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuButton.addEventListener("click", () => {
+        const opened = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden", opened);
+        menuButton.setAttribute("aria-expanded", String(!opened));
+        document.body.classList.toggle("menu-open", !opened);
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        }),
+      );
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          }),
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+      if (
+        window.matchMedia(
+          "(pointer:fine) and (prefers-reduced-motion:no-preference)",
+        ).matches
+      ) {
+        const glow = document.querySelector(".cursor-glow");
+        window.addEventListener(
+          "pointermove",
+          (event) => {
+            glow.style.left = `${event.clientX}px`;
+            glow.style.top = `${event.clientY}px`;
+            glow.classList.add("active");
+          },
+          { passive: true },
+        );
+      }
+    </script>
+    <script src="assets/site-pages.js"></script>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Google Ads, Meta Ads, SEO, web development, lead generation, HubSpot and growth marketing services for businesses in Dubai and the UAE."
+    />
+    <meta name="theme-color" content="#050816" />
+    <title>Growth Services — Ashwin James, Dubai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Manrope", "sans-serif"],
+            },
+            colors: { ink: "#050816", panel: "#0B0F19", blue: "#2563EB" },
+            boxShadow: { glow: "0 24px 70px rgba(37, 99, 235, .16)" },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: #050816;
+        color: #cbd5e1;
+      }
+      .mesh {
+        background:
+          radial-gradient(
+            52% 60% at 76% 0%,
+            rgba(37, 99, 235, 0.24),
+            transparent 70%
+          ),
+          radial-gradient(
+            38% 35% at 5% 30%,
+            rgba(124, 58, 237, 0.1),
+            transparent 70%
+          );
+      }
+      .grid-mask {
+        background-image:
+          linear-gradient(rgba(148, 163, 184, 0.065) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(148, 163, 184, 0.065) 1px,
+            transparent 1px
+          );
+        background-size: 48px 48px;
+        mask-image: linear-gradient(to bottom, black, transparent 85%);
+      }
+      .line {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(148, 163, 184, 0.32),
+          transparent
+        );
+      }
+      .surface {
+        background: linear-gradient(
+          145deg,
+          rgba(17, 24, 39, 0.88),
+          rgba(11, 15, 25, 0.92)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .service-card {
+        scroll-margin-top: 7rem;
+      }
+      .service-card:target {
+        border-color: rgba(96, 165, 250, 0.65);
+        box-shadow:
+          0 0 0 1px rgba(96, 165, 250, 0.15),
+          0 20px 55px rgba(37, 99, 235, 0.12);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.in-view {
+        opacity: 1;
+        transform: none;
+      }
+      .menu-open {
+        overflow: hidden;
+      }
+      ::selection {
+        background: rgba(37, 99, 235, 0.42);
+        color: white;
+      }
+      .cursor-glow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        pointer-events: none;
+        mix-blend-mode: screen;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.2) 0%,
+          rgba(124, 58, 237, 0.09) 34%,
+          transparent 70%
+        );
+        filter: blur(10px);
+        transition: opacity 0.28s ease;
+      }
+      .cursor-glow.active {
+        opacity: 1;
+      }
+      @media (prefers-reduced-motion: reduce), (pointer: coarse) {
+        .cursor-glow {
+          display: none;
+        }
+      }
+
+      /* Mobile sticky action bar - exactly like about page */
+      @media (max-width: 767px) {
+        .mobile-action-bar {
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 60;
+          display: flex;
+          gap: 0.75rem;
+          padding: 0.75rem;
+          justify-content: center;
+          background: linear-gradient(
+            180deg,
+            rgba(5, 8, 22, 0),
+            rgba(5, 8, 22, 0.02)
+          );
+          opacity: 0;
+          transform: translateY(12px);
+          pointer-events: none;
+          transition:
+            opacity 0.32s ease,
+            transform 0.32s cubic-bezier(0.2, 0.9, 0.2, 1);
+        }
+        .mobile-action-bar.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+        .mobile-action-bar .btn {
+          flex: 1;
+          display: inline-flex;
+          gap: 0.6rem;
+          align-items: center;
+          justify-content: center;
+          padding: 0.95rem 1rem;
+          border-radius: 9999px;
+          font-weight: 700;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(255, 255, 255, 0.12);
+          color: #fff;
+          text-decoration: none;
+          box-shadow: 0 8px 30px rgba(2, 6, 23, 0.55);
+          backdrop-filter: blur(6px);
+        }
+        .mobile-action-bar .btn i {
+          font-size: 1.02rem;
+        }
+        .mobile-action-bar .btn:hover {
+          background: rgba(255, 255, 255, 0.18);
+        }
+        .fixed.bottom-5.right-5 {
+          display: none !important;
+        }
+        main {
+          padding-bottom: 92px;
+        }
+      }
+      #site-header.is-scrolled {
+        border-color: rgba(255, 255, 255, 0.08);
+        background: rgba(5, 8, 22, 0.72);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 12px 38px rgba(0, 0, 0, 0.16);
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased">
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <a
+      class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-4 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-slate-950"
+      href="#main"
+      >Skip to services</a
+    >
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-0 z-40 border-b border-transparent bg-[#050816]/72 backdrop-blur-xl transition-all duration-300"
+    >
+      <div
+        class="relative mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8"
+      >
+        <a
+          href="index.html"
+          class="font-display text-[15px] font-bold tracking-tight text-white"
+          aria-label="Ashwin James home"
+          >ASHWIN<span class="text-blue-500">.</span></a
+        >
+        <nav
+          class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-4 whitespace-nowrap text-sm text-slate-300 lg:flex"
+          aria-label="Primary navigation"
+        >
+          <a class="transition hover:text-white" href="index.html">Home</a>
+          <a class="transition hover:text-white" href="about.html">About</a>
+          <a class="transition hover:text-white" href="resume.html">Resume</a>
+          <a class="text-white" href="services.html" aria-current="page">Services</a>
+          <a class="transition hover:text-white" href="case-studies.html">Case Studies</a>
+          <a class="transition hover:text-white" href="resources.html">Resources</a>
+          <a class="transition hover:text-white" href="blog.html">Blogs</a>
+          <a class="transition hover:text-white" href="contact.html">Contact</a>
+        </nav>
+        <a
+          data-whatsapp
+          class="hidden rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-blue-50 lg:inline-flex"
+          href="contact.html"
+          >Get a free consultation <span class="ml-2 text-blue-600">↗</span></a
+        >
+        <button
+          id="menu-button"
+          class="rounded-lg p-2 text-white lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-white/10 bg-[#050816]/95 px-5 pb-6 pt-3 backdrop-blur-xl lg:hidden"
+      >
+        <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="resume.html"
+            >Resume</a
+          >
+          <a
+            class="rounded-lg bg-white/5 px-3 py-3 text-white"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="case-studies.html"
+            >Case Studies</a
+          >
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="resources.html"
+            >Resources</a
+          >
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="blog.html"
+            >Blogs</a
+          >
+          <a
+            class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+            href="contact.html"
+            >Contact</a
+          >
+          <a
+            data-whatsapp
+            class="mt-3 rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-slate-950"
+            href="contact.html"
+            >Get a free consultation</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="bg-panel/35 py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8 text-center">
+          <p
+            class="mb-3 text-xs font-bold uppercase tracking-[.17em] text-blue-400"
+          >
+            Services
+          </p>
+          <h1
+            class="font-display text-4xl font-extrabold text-white sm:text-5xl"
+          >
+            Services
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-base leading-8 text-slate-300">
+            The services UAE businesses ask for most.
+          </p>
+        </div>
+      </section>
+      <section
+        class="mesh relative isolate overflow-hidden pb-20 pt-32 sm:pb-24 sm:pt-40"
+      >
+        <div class="grid-mask absolute inset-0 -z-10"></div>
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <a
+            class="reveal inline-flex items-center text-sm font-medium text-slate-400 transition hover:text-white"
+            href="index.html#services"
+            ><span class="mr-2 text-blue-400">←</span> Back to overview</a
+          >
+          <div
+            class="reveal mt-9 grid gap-10 lg:grid-cols-[1.25fr_.75fr] lg:items-end"
+          >
+            <div>
+              <p
+                class="mb-5 text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+              >
+                Services
+              </p>
+              <h1
+                class="font-display max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-[-.055em] text-white sm:text-5xl lg:text-6xl"
+              >
+                The work that turns attention into
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400"
+                  >qualified demand.</span
+                >
+              </h1>
+            </div>
+            <p class="max-w-md text-base leading-8 text-slate-300">
+              From urgent, high-intent acquisition to the infrastructure that
+              makes growth repeatable, every service is built around a
+              commercial outcome.
+            </p>
+          </div>
+          <div
+            class="reveal mt-14 grid gap-4 rounded-2xl border border-white/10 bg-white/[.025] p-5 sm:grid-cols-3"
+          >
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-[.14em] text-slate-500"
+              >
+                How to choose
+              </p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">
+                Start with the bottleneck that is costing your business the most
+                momentum.
+              </p>
+            </div>
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-[.14em] text-slate-500"
+              >
+                How I work
+              </p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">
+                Project scopes and retained partnerships, shaped around the
+                results you need.
+              </p>
+            </div>
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-[.14em] text-slate-500"
+              >
+                Where
+              </p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">
+                Dubai and the UAE, with a practical understanding of competitive
+                service markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div
+            class="reveal flex flex-col justify-between gap-4 sm:flex-row sm:items-end"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+              >
+                Most requested in the UAE
+              </p>
+              <h2
+                class="mt-4 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-4xl"
+              >
+                Six routes to immediate growth.
+              </h2>
+            </div>
+            <p class="max-w-sm text-sm leading-6 text-slate-400">
+              Prioritised around the services that most directly combine demand
+              capture, visibility and conversion.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <article
+              id="google-ads"
+              class="service-card surface reveal rounded-2xl p-6"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >01</span
+                ><span
+                  class="rounded-full bg-blue-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-blue-300"
+                  >High intent</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Google Ads
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                Search, Performance Max and local campaigns designed to put your
+                offer in front of people actively looking for it.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Search intent and keyword strategy</li>
+                <li>• Conversion tracking and lead quality signals</li>
+                <li>• Ongoing budget and CPL optimisation</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: immediate demand capture
+              </p>
+            </article>
+            <article
+              id="meta-ads"
+              class="service-card surface reveal rounded-2xl p-6"
+              style="transition-delay: 0.05s"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >02</span
+                ><span
+                  class="rounded-full bg-violet-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-violet-300"
+                  >Demand creation</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Meta Ads
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                Facebook and Instagram campaigns that build awareness, create
+                demand and turn the right audience into conversations.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Audience and offer strategy</li>
+                <li>• Creative direction for conversion</li>
+                <li>• Lead qualification and campaign testing</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: building a predictable lead flow
+              </p>
+            </article>
+            <article
+              id="seo"
+              class="service-card surface reveal rounded-2xl p-6"
+              style="transition-delay: 0.1s"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >03</span
+                ><span
+                  class="rounded-full bg-emerald-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-emerald-300"
+                  >Compounding</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                SEO
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                Build durable visibility for the local and commercial searches
+                that matter to your buyers—not traffic for traffic's sake.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Technical and on-page foundations</li>
+                <li>• Local SEO for Dubai and UAE searches</li>
+                <li>• Content planned around commercial intent</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: stronger long-term acquisition
+              </p>
+            </article>
+            <article
+              id="website-development"
+              class="service-card surface reveal rounded-2xl p-6"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >04</span
+                ><span
+                  class="rounded-full bg-blue-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-blue-300"
+                  >Credibility</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Website development
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                A fast, premium website that makes a complex value proposition
+                simple, credible and easy to act on.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Strategic structure and conversion copy</li>
+                <li>• Responsive, performance-led builds</li>
+                <li>• Analytics-ready lead journeys</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: a website that earns enquiries
+              </p>
+            </article>
+            <article
+              id="lead-generation"
+              class="service-card surface reveal rounded-2xl p-6"
+              style="transition-delay: 0.05s"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >05</span
+                ><span
+                  class="rounded-full bg-violet-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-violet-300"
+                  >Pipeline</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Lead generation
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                A connected lead system that brings the right people in,
+                qualifies them intelligently and supports a faster sales
+                response.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Offer and funnel design</li>
+                <li>• Multi-channel acquisition planning</li>
+                <li>• Qualification and attribution setup</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: a healthier sales pipeline
+              </p>
+            </article>
+            <article
+              id="landing-page-optimisation"
+              class="service-card surface reveal rounded-2xl p-6"
+              style="transition-delay: 0.1s"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                  >06</span
+                ><span
+                  class="rounded-full bg-emerald-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-emerald-300"
+                  >Conversion</span
+                >
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold text-white">
+                Landing page optimisation
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-slate-400">
+                Make paid traffic more profitable by reducing friction,
+                sharpening the message and improving the decision journey.
+              </p>
+              <ul class="mt-6 space-y-2 text-sm text-slate-300">
+                <li>• Page, offer and message audits</li>
+                <li>• Conversion copy and UX improvements</li>
+                <li>• Structured testing priorities</li>
+              </ul>
+              <p
+                class="mt-7 border-t border-white/8 pt-4 text-sm font-semibold text-white"
+              >
+                Best for: improving conversion without more spend
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-panel py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div
+            class="reveal flex flex-col justify-between gap-4 sm:flex-row sm:items-end"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+              >
+                More ways to grow
+              </p>
+              <h2
+                class="mt-4 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-4xl"
+              >
+                The systems behind sustained performance.
+              </h2>
+            </div>
+            <p class="max-w-sm text-sm leading-6 text-slate-400">
+              Use these services to connect campaign performance with the
+              experience and follow-up that convert a lead into revenue.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-4 md:grid-cols-2">
+            <article
+              id="performance-growth-marketing"
+              class="service-card surface reveal rounded-2xl p-7"
+            >
+              <span
+                class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                >07</span
+              >
+              <h3 class="mt-9 font-display text-2xl font-bold text-white">
+                Performance & growth marketing
+              </h3>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                An integrated programme across paid media, conversion, analytics
+                and prioritisation—built around the one or two growth levers
+                that will matter most to your business.
+              </p>
+              <p class="mt-6 text-sm font-semibold text-blue-300">
+                Outcome: a sharper growth roadmap and stronger execution
+              </p>
+            </article>
+            <article
+              id="whatsapp-marketing"
+              class="service-card surface reveal rounded-2xl p-7"
+              style="transition-delay: 0.06s"
+            >
+              <span
+                class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                >08</span
+              >
+              <h3 class="mt-9 font-display text-2xl font-bold text-white">
+                WhatsApp marketing
+              </h3>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                Create a useful, compliant WhatsApp journey for high-intent
+                leads, including response flows, re-engagement and hand-off to
+                your sales team.
+              </p>
+              <p class="mt-6 text-sm font-semibold text-blue-300">
+                Outcome: faster follow-up and more conversations completed
+              </p>
+            </article>
+            <article
+              id="hubspot"
+              class="service-card surface reveal rounded-2xl p-7"
+            >
+              <span
+                class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                >09</span
+              >
+              <h3 class="mt-9 font-display text-2xl font-bold text-white">
+                HubSpot CRM & automation
+              </h3>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                Set up lifecycle stages, source tracking, lead routing and
+                automation that give marketing and sales one reliable view of
+                the pipeline.
+              </p>
+              <p class="mt-6 text-sm font-semibold text-blue-300">
+                Outcome: fewer missed leads and clearer attribution
+              </p>
+            </article>
+            <article
+              id="wordpress"
+              class="service-card surface reveal rounded-2xl p-7"
+              style="transition-delay: 0.06s"
+            >
+              <span
+                class="font-display text-3xl font-extrabold tracking-[-.07em] text-white/15"
+                >10</span
+              >
+              <h3 class="mt-9 font-display text-2xl font-bold text-white">
+                WordPress development
+              </h3>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                Conversion-led WordPress builds and improvements that give your
+                team a dependable, easy-to-manage foundation for marketing
+                activity.
+              </p>
+              <p class="mt-6 text-sm font-semibold text-blue-300">
+                Outcome: a flexible website built to support growth
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-3xl px-5 text-center">
+          <p
+            class="reveal text-xs font-bold uppercase tracking-[.18em] text-blue-400"
+          >
+            Not sure where to start?
+          </p>
+          <h2
+            class="reveal mt-5 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-4xl"
+          >
+            Start with the constraint, not a channel.
+          </h2>
+          <p
+            class="reveal mx-auto mt-5 max-w-xl text-base leading-8 text-slate-400"
+          >
+            In a free consultation, we can identify the change most likely to
+            improve your lead quality, conversion or customer follow-up.
+          </p>
+          <a
+            data-whatsapp
+            class="reveal mt-8 inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:bg-blue-500"
+            href="contact.html"
+            >Get a free consultation <span class="ml-2">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/8 bg-[#040611] py-10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between lg:px-8"
+      >
+        <p>© 2026 Ashwin James. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a class="hover:text-slate-300" href="services.html">Services</a>
+          <a class="hover:text-slate-300" href="resources.html">Resources</a>
+          <a class="hover:text-slate-300" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Action Bar - exactly like about page -->
+    <div class="mobile-action-bar" aria-hidden="false">
+      <a
+        class="btn"
+        href="https://wa.me/97105227704142"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        ><i class="fa-brands fa-whatsapp"></i
+        ><span class="hidden sm:inline">WhatsApp</span></a
+      >
+      <a class="btn" href="mailto:your@email.com" aria-label="Send email"
+        ><i class="fa-solid fa-envelope"></i
+        ><span class="hidden sm:inline">Email</span></a
+      >
+    </div>
+
+    <!-- Floating WhatsApp button (desktop) -->
+    <a
+      data-whatsapp
+      href="contact.html"
+      class="fixed bottom-5 right-5 z-30 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-bold text-[#062b14] shadow-xl shadow-emerald-950/60 transition hover:-translate-y-0.5 hover:bg-[#37e476] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink"
+      aria-label="Start a WhatsApp consultation"
+      ><svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.7 11.7 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.6-8.4zM12.2 21.7h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7zm5.4-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.5-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5 0-.1-.2-.2-.5-.3z"
+        /></svg
+      ><span class="hidden sm:inline">WhatsApp</span></a
+    >
+
+    <script>
+      // Header scroll effect
+      const header = document.getElementById('site-header');
+      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 12);
+      updateHeader();
+      window.addEventListener('scroll', updateHeader, { passive: true });
+
+      // Mobile action bar visibility
+      (function() {
+        const actionBar = document.querySelector('.mobile-action-bar');
+        if (!actionBar) return;
+        let ticking = false;
+        const updateBar = () => {
+          const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+          if (scrollY > 120) {
+            actionBar.classList.add('is-visible');
+          } else {
+            actionBar.classList.remove('is-visible');
+          }
+          ticking = false;
+        };
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(updateBar);
+            ticking = true;
+          }
+        }, { passive: true });
+        actionBar.classList.remove('is-visible');
+        setTimeout(updateBar, 100);
+      })();
+
+      // WhatsApp links
+      const whatsappNumber = "97105227704142";
+      const whatsappMessage =
+        "Hello Ashwin, I would like to discuss generating more qualified leads for my business.";
+      const whatsappUrl = whatsappNumber
+        ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+        : `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+      document.querySelectorAll("[data-whatsapp]").forEach((link) => {
+        link.href = whatsappUrl;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      });
+
+      // Mobile menu toggle
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuButton.addEventListener("click", () => {
+        const opened = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden", opened);
+        menuButton.setAttribute("aria-expanded", String(!opened));
+        document.body.classList.toggle("menu-open", !opened);
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        }),
+      );
+
+      // Reveal animations
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          }),
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Cursor glow
+      if (
+        window.matchMedia(
+          "(pointer:fine) and (prefers-reduced-motion:no-preference)",
+        ).matches
+      ) {
+        const glow = document.querySelector(".cursor-glow");
+        window.addEventListener(
+          "pointermove",
+          (event) => {
+            glow.style.left = `${event.clientX}px`;
+            glow.style.top = `${event.clientY}px`;
+            glow.classList.add("active");
+          },
+          { passive: true },
+        );
+      }
+    </script>
+    <script src="assets/site-pages.js"></script>
+  </body>
+</html>

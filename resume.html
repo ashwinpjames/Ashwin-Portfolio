@@ -1,0 +1,1607 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashwin James — Resume | Performance Marketing Specialist</title>
+<meta name="description" content="Resume of Ashwin James, Performance Marketing Specialist — paid media, lead generation, analytics and conversion optimization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#050816;
+    --bg-elevated:#0B0F19;
+    --bg-card:#101827;
+    --bg-card-hover:#13213d;
+    --border:rgba(255,255,255,0.08);
+    --border-strong:rgba(255,255,255,0.16);
+    --text-primary:#f8fafc;
+    --text-body:#cbd5e1;
+    --text-secondary:#94a3b8;
+    --accent-blue:#2563EB;
+    --accent-violet:#7C3AED;
+    --gradient:linear-gradient(120deg,var(--accent-blue) 0%,var(--accent-violet) 100%);
+    --shadow:0 20px 60px -20px rgba(0,0,0,0.6);
+    --maxw:880px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text-body);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  ::selection{background:var(--accent-violet);color:#fff;}
+
+  a{color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+
+  /* ambient background */
+  .glow{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:
+      radial-gradient(650px 420px at 18% -6%, rgba(37,99,235,0.20), transparent 60%),
+      radial-gradient(600px 460px at 85% 8%, rgba(124,58,237,0.16), transparent 60%),
+      radial-gradient(500px 500px at 50% 100%, rgba(37,99,235,0.08), transparent 60%);
+  }
+
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent-blue);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ---------- reveal-on-scroll ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+
+  /* ---------- header ---------- */
+  header.hero{
+    padding:88px 0 32px;
+    text-align:center;
+  }
+  .eyebrow-line{
+    width:36px;height:2px;
+    background:var(--gradient);
+    margin:0 auto 22px;
+  }
+  h1.name{
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:clamp(2.6rem, 7vw, 4.6rem);
+    letter-spacing:0.02em;
+    margin:0;
+    line-height:1.02;
+    background:var(--gradient);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .title{
+    margin:14px 0 0;
+    font-family:'Manrope',sans-serif;
+    font-weight:500;
+    font-size:clamp(1rem,2.4vw,1.25rem);
+    color:var(--text-primary);
+    letter-spacing:0.03em;
+  }
+
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:18px;
+  }
+  @media (min-width:900px){
+    .contact-row{flex-wrap:nowrap;}
+  }
+  .contact-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 16px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    background:rgba(255,255,255,0.02);
+    color:var(--text-body);
+    font-size:0.88rem;
+    font-weight:500;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:border-color .25s ease, color .25s ease, background .25s ease, transform .25s ease;
+  }
+  .contact-pill:hover{
+    border-color:var(--border-strong);
+    color:var(--text-primary);
+    background:rgba(255,255,255,0.05);
+    transform:translateY(-2px);
+  }
+  .contact-pill svg{width:15px;height:15px;flex:none;opacity:0.85;}
+
+  .divider{
+    margin:32px auto 0;
+    height:1px;
+    max-width:var(--maxw);
+    background:linear-gradient(90deg, transparent, var(--border-strong) 20%, var(--border-strong) 80%, transparent);
+  }
+
+  /* ---------- section shell ---------- */
+  section{padding:76px 0;}
+  section + section{border-top:1px solid var(--border);}
+  .section-head{margin-bottom:40px;}
+  .kicker{
+    display:block;
+    font-family:'Manrope',sans-serif;
+    font-weight:700;
+    font-size:0.78rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--accent-blue);
+    margin-bottom:10px;
+  }
+  h2.section-title{
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:clamp(1.5rem,3.2vw,2rem);
+    color:var(--text-primary);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  /* ---------- summary ---------- */
+  .summary p{
+    font-size:1.06rem;
+    color:var(--text-body);
+    max-width:72ch;
+  }
+  .summary strong{color:var(--text-primary);font-weight:600;}
+
+  /* ---------- competency grid ---------- */
+  .comp-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+  }
+  @media (max-width:1000px){ .comp-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:760px){ .comp-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .comp-grid{grid-template-columns:1fr;} }
+
+  .comp-card{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px 16px;
+    transition:transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease;
+  }
+  .comp-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--border-strong);
+    background:var(--bg-card-hover);
+    box-shadow:var(--shadow);
+  }
+  .comp-card h3{
+    font-family:'Manrope',sans-serif;
+    font-size:0.86rem;
+    font-weight:700;
+    color:var(--text-primary);
+    margin:0 0 12px;
+    line-height:1.3;
+  }
+  .comp-card ul li{
+    font-size:0.84rem;
+    color:var(--text-secondary);
+    padding-left:14px;
+    position:relative;
+    margin-bottom:6px;
+  }
+  .comp-card ul li::before{
+    content:"";
+    position:absolute;left:0;top:0.55em;
+    width:5px;height:5px;border-radius:50%;
+    background:var(--gradient);
+  }
+  .comp-card ul li:last-child{margin-bottom:0;}
+
+  /* ---------- experience timeline ---------- */
+  .timeline{position:relative;}
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:9px;top:6px;bottom:6px;
+    width:1px;
+    background:linear-gradient(var(--border-strong), var(--border) 85%, transparent);
+  }
+  .exp-item{
+    position:relative;
+    padding-left:36px;
+    margin-bottom:22px;
+  }
+  .exp-item:last-child{margin-bottom:0;}
+  .exp-dot{
+    position:absolute;
+    left:2px;top:6px;
+    width:16px;height:16px;
+    border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--accent-blue);
+    box-shadow:0 0 0 4px rgba(37,99,235,0.12);
+  }
+  .exp-card{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:26px 26px 22px;
+    transition:transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease;
+  }
+  .exp-card:hover{
+    transform:translateY(-3px);
+    border-color:var(--border-strong);
+    background:var(--bg-card-hover);
+    box-shadow:var(--shadow);
+  }
+  .exp-company{
+    font-family:'Manrope',sans-serif;
+    font-weight:700;
+    font-size:1.05rem;
+    color:var(--text-primary);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .exp-role-line{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    margin-top:3px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .exp-role{
+    font-size:0.94rem;
+    color:var(--text-secondary);
+  }
+  .exp-sep{color:var(--border-strong);}
+  .exp-dates{
+    font-size:0.84rem;
+    color:var(--accent-blue);
+    font-weight:600;
+    font-variant-numeric:tabular-nums;
+  }
+  .exp-brands{
+    font-size:0.86rem;
+    color:var(--text-secondary);
+    font-style:normal;
+    margin:12px 0 0;
+    padding:10px 12px;
+    border-left:2px solid var(--accent-violet);
+    background:rgba(155,92,246,0.06);
+    border-radius:0 8px 8px 0;
+  }
+  .exp-brands b{color:var(--text-body);font-weight:600;}
+  .exp-list{margin-top:12px;}
+  @media (max-width:640px){
+    .exp-company, .exp-role-line{white-space:normal;}
+  }
+  .exp-list li{
+    position:relative;
+    padding-left:18px;
+    font-size:0.92rem;
+    color:var(--text-body);
+    margin-bottom:9px;
+  }
+  .exp-list li:last-child{margin-bottom:0;}
+  .exp-list li::before{
+    content:"";
+    position:absolute;left:0;top:0.6em;
+    width:6px;height:6px;
+    background:var(--gradient);
+    border-radius:1px;
+    transform:rotate(45deg);
+  }
+  .exp-list .stat{
+    color:var(--accent-blue);
+    font-weight:600;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- personal project ---------- */
+  .project-card{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:30px 30px;
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .project-card:hover{
+    transform:translateY(-3px);
+    border-color:var(--border-strong);
+    box-shadow:var(--shadow);
+  }
+  .project-icon{
+    flex:none;
+    width:44px;height:44px;
+    border-radius:12px;
+    background:var(--gradient);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .project-icon svg{width:22px;height:22px;color:#fff;}
+  .project-card p{
+    margin:0;
+    font-size:0.98rem;
+    color:var(--text-body);
+  }
+  .project-card .rank{
+    color:var(--text-primary);
+    font-weight:600;
+  }
+
+  /* ---------- certifications ---------- */
+  .cert-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+  @media (max-width:700px){ .cert-grid{grid-template-columns:1fr;} }
+  .cert-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:16px 18px;
+    font-size:0.9rem;
+    color:var(--text-body);
+    font-weight:500;
+    transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .cert-card:hover{
+    transform:translateY(-3px);
+    border-color:var(--border-strong);
+    background:var(--bg-card-hover);
+  }
+  .cert-card svg{flex:none;width:20px;height:20px;color:var(--accent-blue);}
+
+  /* ---------- education timeline ---------- */
+  .edu-timeline{position:relative;}
+  .edu-timeline::before{
+    content:"";
+    position:absolute;
+    left:9px;top:6px;bottom:6px;
+    width:1px;
+    background:linear-gradient(var(--border-strong), var(--border) 85%, transparent);
+  }
+  .edu-item{
+    position:relative;
+    padding-left:36px;
+    margin-bottom:26px;
+  }
+  .edu-item:last-child{margin-bottom:0;}
+  .edu-dot{
+    position:absolute;
+    left:2px;top:4px;
+    width:16px;height:16px;
+    border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--accent-violet);
+    box-shadow:0 0 0 4px rgba(124,58,237,0.12);
+  }
+  .edu-degree{
+    font-family:'Manrope',sans-serif;
+    font-weight:700;
+    font-size:0.98rem;
+    color:var(--text-primary);
+  }
+  .edu-meta{
+    font-size:0.88rem;
+    color:var(--text-secondary);
+    margin-top:3px;
+  }
+  .edu-dates{
+    color:var(--accent-violet);
+    font-weight:600;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:48px 0 64px;
+    text-align:center;
+  }
+  .back-home{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.88rem;
+    font-weight:600;
+    color:var(--text-secondary);
+    text-decoration:none;
+    padding:10px 18px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    transition:color .25s ease, border-color .25s ease;
+  }
+  .back-home:hover{color:var(--text-primary);border-color:var(--border-strong);}
+  .fine-print{margin-top:22px;font-size:0.78rem;color:var(--text-secondary);opacity:0.7;}
+</style>
+</head>
+<body>
+
+<div class="glow" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <header class="hero reveal">
+    <div class="eyebrow-line"></div>
+    <h1 class="name">ASHWIN JAMES</h1>
+    <p class="title">Performance Marketing Specialist</p>
+
+    <nav class="contact-row" aria-label="Contact links">
+      <a class="contact-pill" href="tel:+971527704142">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+971 52 770 4142</span>
+      </a>
+      <a class="contact-pill" href="mailto:ashwinjames2720@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        <span>ashwinjames2720@gmail.com</span>
+      </a>
+      <a class="contact-pill" href="https://www.linkedin.com/in/ashwin-james/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM5 8h4v12H5zM14 8h-3.5v12H14v-6.2c0-1.5.8-2.4 2-2.4s1.8.9 1.8 2.4V20H21v-6.7c0-3.2-1.7-4.7-4-4.7-1.85 0-2.6 1-3 1.7z"/></svg>
+        <span>linkedin.com/in/ashwin-james</span>
+      </a>
+      <a class="contact-pill" href="https://ashwinjames.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>ashwinjames.com</span>
+      </a>
+    </nav>
+  </header>
+
+  <div class="divider"></div>
+
+  <section class="summary reveal" id="summary">
+    <div class="section-head">
+      <span class="kicker">Professional Summary</span>
+      <h2 class="section-title">Overview</h2>
+    </div>
+    <p>Marketing Specialist with over <strong>2 years</strong> of experience in performance marketing, paid media, lead generation, analytics, and conversion optimization. Currently managing digital marketing initiatives across multiple business brands within the Reliance Group, coordinating campaign execution with SEO and design teams while optimizing marketing performance through Meta Ads, Google Ads, GA4, Google Tag Manager, HubSpot CRM, and WordPress.</p>
+  </section>
+
+  <section class="reveal" id="competencies">
+    <div class="section-head">
+      <span class="kicker">Core Competencies</span>
+      <h2 class="section-title">Where I operate</h2>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card reveal">
+        <h3>CRM &amp; Lead Management</h3>
+        <ul>
+          <li>HubSpot CRM</li>
+          <li>Lead Lifecycle Management</li>
+        </ul>
+      </div>
+      <div class="comp-card reveal">
+        <h3>Reporting &amp; Visualization</h3>
+        <ul>
+          <li>Microsoft Excel</li>
+          <li>Microsoft Office Suite</li>
+        </ul>
+      </div>
+      <div class="comp-card reveal">
+        <h3>Performance Marketing</h3>
+        <ul>
+          <li>Meta Ads</li>
+          <li>Google Ads</li>
+          <li>Campaign Optimization</li>
+          <li>ROAS Improvement</li>
+        </ul>
+      </div>
+      <div class="comp-card reveal">
+        <h3>Analytics &amp; Tracking</h3>
+        <ul>
+          <li>GA4</li>
+          <li>Google Tag Manager</li>
+          <li>Facebook Pixel</li>
+          <li>Conversion Tracking</li>
+          <li>Google Search Console</li>
+        </ul>
+      </div>
+      <div class="comp-card reveal">
+        <h3>SEO &amp; SEM</h3>
+        <ul>
+          <li>On-Page &amp; Off-Page SEO</li>
+          <li>Keyword Research</li>
+          <li>Technical SEO</li>
+          <li>Link Building</li>
+          <li>Google Keyword Planner</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="experience">
+    <div class="section-head">
+      <span class="kicker">Professional Experience</span>
+      <h2 class="section-title">Career timeline</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="exp-item reveal">
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-card">
+          <div class="exp-company">Reliance Human Resources Consultancy | Dubai, UAE</div>
+          <div class="exp-role-line">
+            <span class="exp-role">Marketing Specialist</span>
+            <span class="exp-sep">|</span>
+            <span class="exp-dates">August 2025 – Present</span>
+          </div>
+          <div class="exp-brands">
+            <b>Supporting Performance Marketing for:</b> Reliance Immigration Services | World Attestation Services | Prakriti Ayurvedic Clinic
+          </div>
+          <ul class="exp-list">
+            <li>Develop and execute digital marketing strategies across Meta Ads and Google Ads for multiple business brands.</li>
+            <li>Manage campaign budgets, audience targeting, creative testing, and continuous campaign optimization.</li>
+            <li>Drive qualified lead generation for immigration, document attestation, and healthcare services.</li>
+            <li>Configure and manage conversion tracking using Google Analytics 4, Google Tag Manager, and Meta Events Manager.</li>
+            <li>Manage HubSpot CRM workflows, lead distribution, and lead lifecycle processes.</li>
+            <li>Conduct weekly sales review meetings to evaluate lead quality, conversion trends, and campaign performance.</li>
+            <li>Coordinate the daily activities of the SEO Executive and Graphic Designer by assigning tasks, reviewing deliverables, and monitoring performance.</li>
+            <li>Review and approve marketing creatives, SEO content, and campaign assets before publication.</li>
+            <li>Build and optimize WordPress landing pages to improve user experience and conversion rates.</li>
+            <li>Prepare marketing dashboards and performance reports to support business decisions.</li>
+            <li>Collaborate with management to align marketing initiatives with business objectives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-card">
+          <div class="exp-company">Brandnmark Global, Calicut</div>
+          <div class="exp-role-line">
+            <span class="exp-role">Performance Marketing Specialist</span>
+            <span class="exp-sep">|</span>
+            <span class="exp-dates">June 2024 – July 2025</span>
+          </div>
+          <ul class="exp-list">
+            <li>Develop and execute comprehensive performance marketing strategies to achieve lead generation, customer acquisition, and revenue growth.</li>
+            <li>Manage end-to-end campaign execution across Google Ads, social media advertising, and display networks.</li>
+            <li>Optimize campaigns through continuous A/B testing, audience segmentation, and performance analysis, improving <span class="stat">ROAS from 4.8 to 11</span>.</li>
+            <li>Monitor campaign metrics using GA4, Google Tag Manager, and Facebook Ads Manager to generate actionable insights and maximize ROI.</li>
+            <li>Collaborate with creative and analytics teams to align digital campaigns with brand guidelines and business objectives.</li>
+            <li>Prepare and present detailed performance reports for stakeholders, including key findings and recommendations for improvement.</li>
+            <li>Support budget planning and manage campaign spend to ensure cost efficiency and ROI optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-card">
+          <div class="exp-company">Dotcom Creativez, Thrissur</div>
+          <div class="exp-role-line">
+            <span class="exp-role">Digital Marketing Intern</span>
+            <span class="exp-sep">|</span>
+            <span class="exp-dates">Jan 2024 – Jun 2024</span>
+          </div>
+          <ul class="exp-list">
+            <li>Assisted in developing and executing PPC and social media campaigns, managing budgets to drive customer acquisition.</li>
+            <li>Conducted keyword research, audience targeting, and A/B testing for SEO and paid ad campaigns.</li>
+            <li>Analyzed performance data and provided actionable insights for campaign optimization.</li>
+            <li>Coordinated with content and design teams to produce marketing assets aligned with campaign objectives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-card">
+          <div class="exp-company">People Per Hour</div>
+          <div class="exp-role-line">
+            <span class="exp-role">Freelance Graphic Designer</span>
+            <span class="exp-sep">|</span>
+            <span class="exp-dates">Apr 2017 – Jun 2024</span>
+          </div>
+          <ul class="exp-list">
+            <li>Designed marketing collateral including banners, social posts, email creatives, and presentations using Photoshop, Canva, and Figma.</li>
+            <li>Supported client performance marketing efforts with clear, brand-aligned visuals and conversion-focused design.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="reveal" id="projects">
+    <div class="section-head">
+      <span class="kicker">Personal Projects</span>
+      <h2 class="section-title">Built &amp; ranked independently</h2>
+    </div>
+    <div class="project-card">
+      <span class="project-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </span>
+      <p>Developed and managed a personal portfolio website (WordPress), integrating SEO and responsive design. Ranked <span class="rank">#1</span> for the keyword "Best Digital Marketer in Thrissur" through advanced content optimization and backlink building.</p>
+    </div>
+  </section>
+
+  <section class="reveal" id="certifications">
+    <div class="section-head">
+      <span class="kicker">Other Certifications</span>
+      <h2 class="section-title">Continued learning</h2>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 14 7 21l5-3 5 3-1.5-7"/></svg>
+        <span>Google Analytics Certification</span>
+      </div>
+      <div class="cert-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 14 7 21l5-3 5 3-1.5-7"/></svg>
+        <span>Google Fundamentals of Digital Marketing</span>
+      </div>
+      <div class="cert-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 14 7 21l5-3 5 3-1.5-7"/></svg>
+        <span>HubSpot Social Media Certification</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="education">
+    <div class="section-head">
+      <span class="kicker">Education</span>
+      <h2 class="section-title">Academic background</h2>
+    </div>
+    <div class="edu-timeline">
+      <div class="edu-item reveal">
+        <span class="edu-dot" aria-hidden="true"></span>
+        <div class="edu-degree">Advanced Diploma in Digital Marketing</div>
+        <div class="edu-meta">Dotin Digital Academy, Thrissur | <span class="edu-dates">Jan 2024 – Jun 2024</span></div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="edu-dot" aria-hidden="true"></span>
+        <div class="edu-degree">B.Tech in Electrical &amp; Electronics Engineering</div>
+        <div class="edu-meta">MILM University, Kaithal | <span class="edu-dates">2017 – 2021</span></div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="edu-dot" aria-hidden="true"></span>
+        <div class="edu-degree">Plus Two (Biology Science)</div>
+        <div class="edu-meta">CJMAHSS, Varandarappilly | <span class="edu-dates">2011 – 2013</span></div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="edu-dot" aria-hidden="true"></span>
+        <div class="edu-degree">Tenth Grade (SSLC)</div>
+        <div class="edu-meta">CJMAHSS, Varandarappilly | <span class="edu-dates">2013</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="reveal">
+    <a class="back-home" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
+      Back to home
+    </a>
+    <p class="fine-print">Ashwin James — Performance Marketing Specialist</p>
+  </footer>
+
+</div>
+
+<script>
+  // Scroll-reveal (fade-up), respects prefers-reduced-motion
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = document.querySelectorAll('.reveal');
+
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => io.observe(el));
+  }
+</script>
+<script src="assets/site-pages.js"></script>
+
+</body>
+</html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume of Ashwin James, Performance Marketing Specialist — paid media, lead generation, analytics and conversion optimization." />
+  <meta name="theme-color" content="#050816" />
+  <title>Ashwin James — Resume | Performance Marketing Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif'],display:['Manrope','sans-serif']},colors:{ink:'#050816',panel:'#0B0F19',blue:'#2563EB'},boxShadow:{glow:'0 24px 70px rgba(37,99,235,.16)'}}}};</script>
+  <style>
+    /* --- global reset & variables --- */
+    :root{
+      --bg:#050816;
+      --bg-elevated:#0B0F19;
+      --bg-card:#101827;
+      --bg-card-hover:#13213d;
+      --border:rgba(255,255,255,0.08);
+      --border-strong:rgba(255,255,255,0.16);
+      --text-primary:#f8fafc;
+      --text-body:#cbd5e1;
+      --text-secondary:#94a3b8;
+      --accent-blue:#2563EB;
+      --accent-violet:#7C3AED;
+      --gradient:linear-gradient(120deg,var(--accent-blue) 0%,var(--accent-violet) 100%);
+      --shadow:0 20px 60px -20px rgba(0,0,0,0.6);
+      --maxw:880px;
+    }
+
+    *,*::before,*::after{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text-body);
+      font-family:'Inter',system-ui,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      padding-bottom: 100px;
+    }
+
+    ::selection{background:var(--accent-violet);color:#fff;}
+    a{color:inherit;}
+    ul{margin:0;padding:0;list-style:none;}
+
+    .glow{
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      background:
+        radial-gradient(650px 420px at 18% -6%, rgba(37,99,235,0.20), transparent 60%),
+        radial-gradient(600px 460px at 85% 8%, rgba(124,58,237,0.16), transparent 60%),
+        radial-gradient(500px 500px at 50% 100%, rgba(37,99,235,0.08), transparent 60%);
+    }
+
+    .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+    a:focus-visible, button:focus-visible{
+      outline:2px solid var(--accent-blue);
+      outline-offset:3px;
+      border-radius:4px;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto;}
+      *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(22px);
+      transition:opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1);
+    }
+    .reveal.is-visible{opacity:1;transform:translateY(0);}
+
+    /* --- header (hero) --- */
+    header.hero{
+      padding:88px 0 32px;
+      text-align:center;
+    }
+    .eyebrow-line{
+      width:36px;height:2px;
+      background:var(--gradient);
+      margin:0 auto 22px;
+    }
+    h1.name{
+      font-family:'Manrope',sans-serif;
+      font-weight:800;
+      font-size:clamp(2.6rem, 7vw, 4.6rem);
+      letter-spacing:0.02em;
+      margin:0;
+      line-height:1.02;
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .title{
+      margin:14px 0 0;
+      font-family:'Manrope',sans-serif;
+      font-weight:500;
+      font-size:clamp(1rem,2.4vw,1.25rem);
+      color:var(--text-primary);
+      letter-spacing:0.03em;
+    }
+
+    .contact-row{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin-top:18px;
+    }
+    @media (min-width:900px){
+      .contact-row{flex-wrap:nowrap;}
+    }
+    .contact-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 16px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:rgba(255,255,255,0.02);
+      color:var(--text-body);
+      font-size:0.88rem;
+      font-weight:500;
+      text-decoration:none;
+      white-space:nowrap;
+      transition:border-color .25s ease, color .25s ease, background .25s ease, transform .25s ease;
+    }
+    .contact-pill:hover{
+      border-color:var(--border-strong);
+      color:var(--text-primary);
+      background:rgba(255,255,255,0.05);
+      transform:translateY(-2px);
+    }
+    .contact-pill svg{width:15px;height:15px;flex:none;opacity:0.85;}
+
+    .divider{
+      margin:32px auto 0;
+      height:1px;
+      max-width:var(--maxw);
+      background:linear-gradient(90deg, transparent, var(--border-strong) 20%, var(--border-strong) 80%, transparent);
+    }
+
+    /* --- sections --- */
+    section{padding:76px 0;}
+    section + section{border-top:1px solid var(--border);}
+    .section-head{margin-bottom:40px;}
+    .kicker{
+      display:block;
+      font-family:'Manrope',sans-serif;
+      font-weight:700;
+      font-size:0.78rem;
+      letter-spacing:0.16em;
+      text-transform:uppercase;
+      color:var(--accent-blue);
+      margin-bottom:10px;
+    }
+    h2.section-title{
+      font-family:'Manrope',sans-serif;
+      font-weight:800;
+      font-size:clamp(1.5rem,3.2vw,2rem);
+      color:var(--text-primary);
+      margin:0;
+      letter-spacing:-0.01em;
+    }
+    .summary p{
+      font-size:1.06rem;
+      color:var(--text-body);
+      max-width:72ch;
+    }
+    .summary strong{color:var(--text-primary);font-weight:600;}
+    .comp-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+    }
+    @media (max-width:1000px){ .comp-grid{grid-template-columns:repeat(3,1fr);} }
+    @media (max-width:760px){ .comp-grid{grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:520px){ .comp-grid{grid-template-columns:1fr;} }
+    .comp-card{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:20px 16px;
+      transition:transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease;
+    }
+    .comp-card:hover{
+      transform:translateY(-4px);
+      border-color:var(--border-strong);
+      background:var(--bg-card-hover);
+      box-shadow:var(--shadow);
+    }
+    .comp-card h3{
+      font-family:'Manrope',sans-serif;
+      font-size:0.86rem;
+      font-weight:700;
+      color:var(--text-primary);
+      margin:0 0 12px;
+      line-height:1.3;
+    }
+    .comp-card ul li{
+      font-size:0.84rem;
+      color:var(--text-secondary);
+      padding-left:14px;
+      position:relative;
+      margin-bottom:6px;
+    }
+    .comp-card ul li::before{
+      content:"";
+      position:absolute;left:0;top:0.55em;
+      width:5px;height:5px;border-radius:50%;
+      background:var(--gradient);
+    }
+    .comp-card ul li:last-child{margin-bottom:0;}
+    .timeline{position:relative;}
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:9px;top:6px;bottom:6px;
+      width:1px;
+      background:linear-gradient(var(--border-strong), var(--border) 85%, transparent);
+    }
+    .exp-item{
+      position:relative;
+      padding-left:36px;
+      margin-bottom:22px;
+    }
+    .exp-item:last-child{margin-bottom:0;}
+    .exp-dot{
+      position:absolute;
+      left:2px;top:6px;
+      width:16px;height:16px;
+      border-radius:50%;
+      background:var(--bg);
+      border:2px solid var(--accent-blue);
+      box-shadow:0 0 0 4px rgba(37,99,235,0.12);
+    }
+    .exp-card{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:26px 26px 22px;
+      transition:transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease;
+    }
+    .exp-card:hover{
+      transform:translateY(-3px);
+      border-color:var(--border-strong);
+      background:var(--bg-card-hover);
+      box-shadow:var(--shadow);
+    }
+    .exp-company{
+      font-family:'Manrope',sans-serif;
+      font-weight:700;
+      font-size:1.05rem;
+      color:var(--text-primary);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .exp-role-line{
+      display:flex;
+      align-items:baseline;
+      gap:8px;
+      margin-top:3px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .exp-role{
+      font-size:0.94rem;
+      color:var(--text-secondary);
+    }
+    .exp-sep{color:var(--border-strong);}
+    .exp-dates{
+      font-size:0.84rem;
+      color:var(--accent-blue);
+      font-weight:600;
+      font-variant-numeric:tabular-nums;
+    }
+    .exp-brands{
+      font-size:0.86rem;
+      color:var(--text-secondary);
+      font-style:normal;
+      margin:12px 0 0;
+      padding:10px 12px;
+      border-left:2px solid var(--accent-violet);
+      background:rgba(155,92,246,0.06);
+      border-radius:0 8px 8px 0;
+    }
+    .exp-brands b{color:var(--text-body);font-weight:600;}
+    .exp-list{margin-top:12px;}
+    @media (max-width:640px){
+      .exp-company, .exp-role-line{white-space:normal;}
+    }
+    .exp-list li{
+      position:relative;
+      padding-left:18px;
+      font-size:0.92rem;
+      color:var(--text-body);
+      margin-bottom:9px;
+    }
+    .exp-list li:last-child{margin-bottom:0;}
+    .exp-list li::before{
+      content:"";
+      position:absolute;left:0;top:0.6em;
+      width:6px;height:6px;
+      background:var(--gradient);
+      border-radius:1px;
+      transform:rotate(45deg);
+    }
+    .exp-list .stat{
+      color:var(--accent-blue);
+      font-weight:600;
+      font-variant-numeric:tabular-nums;
+    }
+    .project-card{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:30px 30px;
+      display:flex;
+      gap:20px;
+      align-items:flex-start;
+      transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .project-card:hover{
+      transform:translateY(-3px);
+      border-color:var(--border-strong);
+      box-shadow:var(--shadow);
+    }
+    .project-icon{
+      flex:none;
+      width:44px;height:44px;
+      border-radius:12px;
+      background:var(--gradient);
+      display:flex;align-items:center;justify-content:center;
+    }
+    .project-icon svg{width:22px;height:22px;color:#fff;}
+    .project-card p{
+      margin:0;
+      font-size:0.98rem;
+      color:var(--text-body);
+    }
+    .project-card .rank{
+      color:var(--text-primary);
+      font-weight:600;
+    }
+    .cert-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    @media (max-width:700px){ .cert-grid{grid-template-columns:1fr;} }
+    .cert-card{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:16px 18px;
+      font-size:0.9rem;
+      color:var(--text-body);
+      font-weight:500;
+      transition:transform .3s ease, border-color .3s ease, background .3s ease;
+    }
+    .cert-card:hover{
+      transform:translateY(-3px);
+      border-color:var(--border-strong);
+      background:var(--bg-card-hover);
+    }
+    .cert-card svg{flex:none;width:20px;height:20px;color:var(--accent-blue);}
+    .edu-timeline{position:relative;}
+    .edu-timeline::before{
+      content:"";
+      position:absolute;
+      left:9px;top:6px;bottom:6px;
+      width:1px;
+      background:linear-gradient(var(--border-strong), var(--border) 85%, transparent);
+    }
+    .edu-item{
+      position:relative;
+      padding-left:36px;
+      margin-bottom:26px;
+    }
+    .edu-item:last-child{margin-bottom:0;}
+    .edu-dot{
+      position:absolute;
+      left:2px;top:4px;
+      width:16px;height:16px;
+      border-radius:50%;
+      background:var(--bg);
+      border:2px solid var(--accent-violet);
+      box-shadow:0 0 0 4px rgba(124,58,237,0.12);
+    }
+    .edu-degree{
+      font-family:'Manrope',sans-serif;
+      font-weight:700;
+      font-size:0.98rem;
+      color:var(--text-primary);
+    }
+    .edu-meta{
+      font-size:0.88rem;
+      color:var(--text-secondary);
+      margin-top:3px;
+    }
+    .edu-dates{
+      color:var(--accent-violet);
+      font-weight:600;
+      font-variant-numeric:tabular-nums;
+    }
+    footer{
+      padding:48px 0 64px;
+      text-align:center;
+    }
+    .back-home{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:0.88rem;
+      font-weight:600;
+      color:var(--text-secondary);
+      text-decoration:none;
+      padding:10px 18px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      transition:color .25s ease, border-color .25s ease;
+    }
+    .back-home:hover{color:var(--text-primary);border-color:var(--border-strong);}
+    .fine-print{margin-top:22px;font-size:0.78rem;color:var(--text-secondary);opacity:0.7;}
+
+    /* --- mobile action bar (same as about) --- */
+    @media (max-width: 767px) {
+      .mobile-action-bar {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: .75rem; padding: .75rem; justify-content: center;
+        background: linear-gradient(180deg, rgba(5,8,22,0), rgba(5,8,22,0.02));
+        opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .32s ease, transform .32s cubic-bezier(.2,.9,.2,1);
+      }
+      .mobile-action-bar.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+      .mobile-action-bar .btn { 
+        flex: 1; display: inline-flex; gap: .6rem; align-items: center; justify-content: center; padding: .95rem 1rem; border-radius: 9999px; font-weight: 700; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.12); color: #fff; text-decoration: none; box-shadow: 0 8px 30px rgba(2,6,23,.55); backdrop-filter: blur(6px); 
+      }
+      .mobile-action-bar .btn i { font-size: 1.02rem; }
+      .mobile-action-bar .btn:hover { background: rgba(255,255,255,.18); }
+      .fixed.bottom-5.right-5 { display: none !important; }
+    }
+
+    /* --- header scroll effect (matches about) --- */
+    #site-header.is-scrolled { border-color: rgba(255,255,255,.08); background: rgba(5,8,22,.72); backdrop-filter: blur(18px); box-shadow: 0 12px 38px rgba(0,0,0,.16); }
+
+    /* mobile nav active state for resume (same as about) */
+    #mobile-menu a[href="resume.html"] {
+      background-color: rgba(255,255,255,0.08) !important;
+      color: #ffffff !important;
+    }
+    .menu-open { overflow: hidden; }
+  </style>
+</head>
+<body>
+
+<div class="glow" aria-hidden="true"></div>
+
+<!-- ====== HEADER (EXACTLY LIKE ABOUT & SERVICES PAGES - SAME SIZE, SAME STRUCTURE) ====== -->
+<header id="site-header" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-all duration-300 bg-[#050816]/72 backdrop-blur-xl">
+  <div class="relative mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8">
+    <a href="index.html" class="font-display text-[15px] font-bold tracking-tight text-white" aria-label="Ashwin James home">ASHWIN<span class="text-blue-500">.</span></a>
+    <nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-4 whitespace-nowrap text-sm text-slate-300 lg:flex" aria-label="Primary navigation">
+      <a class="transition hover:text-white" href="index.html">Home</a>
+      <a class="transition hover:text-white" href="about.html">About</a>
+      <a class="text-white" href="resume.html" aria-current="page">Resume</a>
+      <a class="transition hover:text-white" href="services.html">Services</a>
+      <a class="transition hover:text-white" href="case-studies.html">Case Studies</a>
+      <a class="transition hover:text-white" href="resources.html">Resources</a>
+      <a class="transition hover:text-white" href="blog.html">Blogs</a>
+      <a class="transition hover:text-white" href="contact.html">Contact</a>
+    </nav>
+    <a data-whatsapp class="hidden rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-blue-50 lg:inline-flex" href="contact.html">Get a free consultation <span class="ml-2 text-blue-600">↗</span></a>
+    <button id="menu-button" class="rounded-lg p-2 text-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <!-- mobile menu -->
+  <div id="mobile-menu" class="hidden border-t border-white/10 bg-[#050816]/95 px-5 pb-6 pt-3 backdrop-blur-xl lg:hidden">
+    <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
+      <a class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5" href="index.html">Home</a>
+      <a class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5" href="about.html">About</a>
+      <a class="rounded-lg bg-white/5 px-3 py-3 text-white" href="resume.html">Resume</a>
+      <a class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5" href="services.html">Services</a>
+      <a class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5" href="case-studies.html">Case Studies</a>
+      <a class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5" href="resources.html">Resources</a>
+      <a class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5" href="blog.html">Blogs</a>
+      <a class="rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5" href="contact.html">Contact</a>
+      <a data-whatsapp class="mt-3 rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-slate-950" href="contact.html">Get a free consultation</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ====== RESUME CONTENT ====== -->
+<div class="wrap" style="padding-top: 100px;">
+
+  <header class="hero reveal">
+    <div class="eyebrow-line"></div>
+    <h1 class="name">ASHWIN JAMES</h1>
+    <p class="title">Performance Marketing Specialist</p>
+
+    <nav class="contact-row" aria-label="Contact links">
+      <a class="contact-pill" href="tel:+971527704142">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+971 52 770 4142</span>
+      </a>
+      <a class="contact-pill" href="mailto:ashwinjames2720@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        <span>ashwinjames2720@gmail.com</span>
+      </a>
+      <a class="contact-pill" href="https://www.linkedin.com/in/ashwin-james/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM5 8h4v12H5zM14 8h-3.5v12H14v-6.2c0-1.5.8-2.4 2-2.4s1.8.9 1.8 2.4V20H21v-6.7c0-3.2-1.7-4.7-4-4.7-1.85 0-2.6 1-3 1.7z"/></svg>
+        <span>linkedin.com/in/ashwin-james</span>
+      </a>
+      <a class="contact-pill" href="https://ashwinjames.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>ashwinjames.com</span>
+      </a>
+    </nav>
+  </header>
+
+  <div class="divider"></div>
+
+  <section class="summary reveal" id="summary">
+    <div class="section-head">
+      <span class="kicker">Professional Summary</span>
+      <h2 class="section-title">Overview</h2>
+    </div>
+    <p>Marketing Specialist with over <strong>2 years</strong> of experience in performance marketing, paid media, lead generation, analytics, and conversion optimization. Currently managing digital marketing initiatives across multiple business brands within the Reliance Group, coordinating campaign execution with SEO and design teams while optimizing marketing performance through Meta Ads, Google Ads, GA4, Google Tag Manager, HubSpot CRM, and WordPress.</p>
+  </section>
+
+  <section class="reveal" id="competencies">
+    <div class="section-head">
+      <span class="kicker">Core Competencies</span>
+      <h2 class="section-title">Where I operate</h2>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card reveal">
+        <h3>CRM &amp; Lead Management</h3>
+        <ul>
+          <li>HubSpot CRM</li>
+          <li>Lead Lifecycle Management</li>
+        </ul>
+      </div>
+      <div class="comp-card reveal">
+        <h3>Reporting &amp; Visualization</h3>
+        <ul>
+          <li>Microsoft Excel</li>
+          <li>Microsoft Office Suite</li>
+        </ul>
+      </div>
+      <div class="comp-card reveal">
+        <h3>Performance Marketing</h3>
+        <ul>
+          <li>Meta Ads</li>
+          <li>Google Ads</li>
+          <li>Campaign Optimization</li>
+          <li>ROAS Improvement</li>
+        </ul>
+      </div>
+      <div class="comp-card reveal">
+        <h3>Analytics &amp; Tracking</h3>
+        <ul>
+          <li>GA4</li>
+          <li>Google Tag Manager</li>
+          <li>Facebook Pixel</li>
+          <li>Conversion Tracking</li>
+          <li>Google Search Console</li>
+        </ul>
+      </div>
+      <div class="comp-card reveal">
+        <h3>SEO &amp; SEM</h3>
+        <ul>
+          <li>On-Page &amp; Off-Page SEO</li>
+          <li>Keyword Research</li>
+          <li>Technical SEO</li>
+          <li>Link Building</li>
+          <li>Google Keyword Planner</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="experience">
+    <div class="section-head">
+      <span class="kicker">Professional Experience</span>
+      <h2 class="section-title">Career timeline</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="exp-item reveal">
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-card">
+          <div class="exp-company">Reliance Human Resources Consultancy | Dubai, UAE</div>
+          <div class="exp-role-line">
+            <span class="exp-role">Marketing Specialist</span>
+            <span class="exp-sep">|</span>
+            <span class="exp-dates">August 2025 – Present</span>
+          </div>
+          <div class="exp-brands">
+            <b>Supporting Performance Marketing for:</b> Reliance Immigration Services | World Attestation Services | Prakriti Ayurvedic Clinic
+          </div>
+          <ul class="exp-list">
+            <li>Develop and execute digital marketing strategies across Meta Ads and Google Ads for multiple business brands.</li>
+            <li>Manage campaign budgets, audience targeting, creative testing, and continuous campaign optimization.</li>
+            <li>Drive qualified lead generation for immigration, document attestation, and healthcare services.</li>
+            <li>Configure and manage conversion tracking using Google Analytics 4, Google Tag Manager, and Meta Events Manager.</li>
+            <li>Manage HubSpot CRM workflows, lead distribution, and lead lifecycle processes.</li>
+            <li>Conduct weekly sales review meetings to evaluate lead quality, conversion trends, and campaign performance.</li>
+            <li>Coordinate the daily activities of the SEO Executive and Graphic Designer by assigning tasks, reviewing deliverables, and monitoring performance.</li>
+            <li>Review and approve marketing creatives, SEO content, and campaign assets before publication.</li>
+            <li>Build and optimize WordPress landing pages to improve user experience and conversion rates.</li>
+            <li>Prepare marketing dashboards and performance reports to support business decisions.</li>
+            <li>Collaborate with management to align marketing initiatives with business objectives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-card">
+          <div class="exp-company">Brandnmark Global, Calicut</div>
+          <div class="exp-role-line">
+            <span class="exp-role">Performance Marketing Specialist</span>
+            <span class="exp-sep">|</span>
+            <span class="exp-dates">June 2024 – July 2025</span>
+          </div>
+          <ul class="exp-list">
+            <li>Develop and execute comprehensive performance marketing strategies to achieve lead generation, customer acquisition, and revenue growth.</li>
+            <li>Manage end-to-end campaign execution across Google Ads, social media advertising, and display networks.</li>
+            <li>Optimize campaigns through continuous A/B testing, audience segmentation, and performance analysis, improving <span class="stat">ROAS from 4.8 to 11</span>.</li>
+            <li>Monitor campaign metrics using GA4, Google Tag Manager, and Facebook Ads Manager to generate actionable insights and maximize ROI.</li>
+            <li>Collaborate with creative and analytics teams to align digital campaigns with brand guidelines and business objectives.</li>
+            <li>Prepare and present detailed performance reports for stakeholders, including key findings and recommendations for improvement.</li>
+            <li>Support budget planning and manage campaign spend to ensure cost efficiency and ROI optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-card">
+          <div class="exp-company">Dotcom Creativez, Thrissur</div>
+          <div class="exp-role-line">
+            <span class="exp-role">Digital Marketing Intern</span>
+            <span class="exp-sep">|</span>
+            <span class="exp-dates">Jan 2024 – Jun 2024</span>
+          </div>
+          <ul class="exp-list">
+            <li>Assisted in developing and executing PPC and social media campaigns, managing budgets to drive customer acquisition.</li>
+            <li>Conducted keyword research, audience targeting, and A/B testing for SEO and paid ad campaigns.</li>
+            <li>Analyzed performance data and provided actionable insights for campaign optimization.</li>
+            <li>Coordinated with content and design teams to produce marketing assets aligned with campaign objectives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-card">
+          <div class="exp-company">People Per Hour</div>
+          <div class="exp-role-line">
+            <span class="exp-role">Freelance Graphic Designer</span>
+            <span class="exp-sep">|</span>
+            <span class="exp-dates">Apr 2017 – Jun 2024</span>
+          </div>
+          <ul class="exp-list">
+            <li>Designed marketing collateral including banners, social posts, email creatives, and presentations using Photoshop, Canva, and Figma.</li>
+            <li>Supported client performance marketing efforts with clear, brand-aligned visuals and conversion-focused design.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="reveal" id="projects">
+    <div class="section-head">
+      <span class="kicker">Personal Projects</span>
+      <h2 class="section-title">Built &amp; ranked independently</h2>
+    </div>
+    <div class="project-card">
+      <span class="project-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </span>
+      <p>Developed and managed a personal portfolio website (WordPress), integrating SEO and responsive design. Ranked <span class="rank">#1</span> for the keyword "Best Digital Marketer in Thrissur" through advanced content optimization and backlink building.</p>
+    </div>
+  </section>
+
+  <section class="reveal" id="certifications">
+    <div class="section-head">
+      <span class="kicker">Other Certifications</span>
+      <h2 class="section-title">Continued learning</h2>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 14 7 21l5-3 5 3-1.5-7"/></svg>
+        <span>Google Analytics Certification</span>
+      </div>
+      <div class="cert-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 14 7 21l5-3 5 3-1.5-7"/></svg>
+        <span>Google Fundamentals of Digital Marketing</span>
+      </div>
+      <div class="cert-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 14 7 21l5-3 5 3-1.5-7"/></svg>
+        <span>HubSpot Social Media Certification</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="education">
+    <div class="section-head">
+      <span class="kicker">Education</span>
+      <h2 class="section-title">Academic background</h2>
+    </div>
+    <div class="edu-timeline">
+      <div class="edu-item reveal">
+        <span class="edu-dot" aria-hidden="true"></span>
+        <div class="edu-degree">Advanced Diploma in Digital Marketing</div>
+        <div class="edu-meta">Dotin Digital Academy, Thrissur | <span class="edu-dates">Jan 2024 – Jun 2024</span></div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="edu-dot" aria-hidden="true"></span>
+        <div class="edu-degree">B.Tech in Electrical &amp; Electronics Engineering</div>
+        <div class="edu-meta">MILM University, Kaithal | <span class="edu-dates">2017 – 2021</span></div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="edu-dot" aria-hidden="true"></span>
+        <div class="edu-degree">Plus Two (Biology Science)</div>
+        <div class="edu-meta">CJMAHSS, Varandarappilly | <span class="edu-dates">2011 – 2013</span></div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="edu-dot" aria-hidden="true"></span>
+        <div class="edu-degree">Tenth Grade (SSLC)</div>
+        <div class="edu-meta">CJMAHSS, Varandarappilly | <span class="edu-dates">2013</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="reveal">
+    <a class="back-home" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
+      Back to home
+    </a>
+    <p class="fine-print">Ashwin James — Performance Marketing Specialist</p>
+  </footer>
+
+</div>
+
+<!-- ====== MOBILE ACTION BAR (same as about) ====== -->
+<div class="mobile-action-bar" aria-hidden="false">
+  <a class="btn" href="https://wa.me/97105227704142" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i><span class="hidden sm:inline">WhatsApp</span></a>
+  <a class="btn" href="mailto:ashwinjames2720@gmail.com" aria-label="Send email"><i class="fa-solid fa-envelope"></i><span class="hidden sm:inline">Email</span></a>
+</div>
+
+<!-- ====== FLOATING WHATSAPP (desktop) ====== -->
+<a data-whatsapp class="fixed bottom-5 right-5 z-30 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-bold text-[#062b14] shadow-xl shadow-emerald-950/60 transition hover:-translate-y-0.5 hover:bg-[#37e476]" href="contact.html" aria-label="Start a WhatsApp consultation"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.7 11.7 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.6-8.4zM12.2 21.7h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7zm5.4-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.5-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5 0-.1-.2-.2-.5-.3z"/></svg><span class="hidden sm:inline">WhatsApp</span></a>
+
+<!-- ====== SCRIPTS ====== -->
+<script>
+  // Scroll-reveal
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = document.querySelectorAll('.reveal');
+
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => io.observe(el));
+  }
+
+  // --- mobile menu (same as about) ---
+  (function() {
+    const menuBtn = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      const newBtn = menuBtn.cloneNode(true);
+      menuBtn.parentNode.replaceChild(newBtn, menuBtn);
+      const newMenu = mobileMenu.cloneNode(true);
+      mobileMenu.parentNode.replaceChild(newMenu, mobileMenu);
+
+      const finalBtn = document.getElementById('menu-button');
+      const finalMenu = document.getElementById('mobile-menu');
+
+      finalBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        finalMenu.classList.toggle('hidden');
+        document.body.classList.toggle('menu-open', !expanded);
+      });
+
+      finalMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          finalMenu.classList.add('hidden');
+          finalBtn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('menu-open');
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!finalMenu.classList.contains('hidden') && !finalMenu.contains(e.target) && !finalBtn.contains(e.target)) {
+          finalMenu.classList.add('hidden');
+          finalBtn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('menu-open');
+        }
+      });
+    }
+  })();
+
+  // mobile action bar
+  (function() {
+    const actionBar = document.querySelector('.mobile-action-bar');
+    if (!actionBar) return;
+    let ticking = false;
+    const updateBar = () => {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollY > 120) {
+        actionBar.classList.add('is-visible');
+      } else {
+        actionBar.classList.remove('is-visible');
+      }
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateBar);
+        ticking = true;
+      }
+    }, { passive: true });
+    actionBar.classList.remove('is-visible');
+    setTimeout(updateBar, 100);
+  })();
+
+  // header scroll effect
+  const header = document.getElementById('site-header');
+  const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 12);
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+
+  // WhatsApp links
+  const whatsappNumber = '97105227704142';
+  const whatsappMessage = 'Hello Ashwin, I would like to discuss generating more qualified leads for my business.';
+  const whatsappUrl = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}` : `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+  document.querySelectorAll('[data-whatsapp]').forEach((link) => { link.href = whatsappUrl; link.target = '_blank'; link.rel = 'noopener noreferrer'; });
+</script>
+</body>
+</html>
