@@ -342,8 +342,6 @@
       .signature { display: block; width: clamp(9rem, 17vw, 12.5rem); height: auto; filter: drop-shadow(0 4px 12px rgba(96,165,250,.15)); }
       #services a.group { border-color: rgba(255,255,255,.025); }
       #services a.group:hover { border-color: rgba(96,165,250,.8); }
-      /* FIX: pointer:coarse (touch devices) no longer disables the marquee animations —
-         only prefers-reduced-motion does now, which is the correct accessibility signal. */
       @media (pointer: coarse) {
         .cursor-glow { display: none; }
       }
@@ -353,14 +351,9 @@
       }
       ::selection { background: rgba(37,99,235,.42); color: white; }
 
-      /* Mobile-specific: sticky action bar. The platform marquee now stays in normal
-         document flow (same as desktop) so it's visible, scrolling, and sits right in
-         the landing/hero section instead of being absolutely positioned/hidden behind
-         the profile portrait further down the page. */
+      /* Mobile-specific: platform banner now visible right inside hero bottom */
       @media (max-width: 767px) {
         main { padding-bottom: 92px; }
-
-        /* Mobile sticky action bar - EXACT same as resources page */
         .mobile-action-bar {
           position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: .75rem; padding: .75rem; justify-content: center;
           background: linear-gradient(180deg, rgba(5,8,22,0), rgba(5,8,22,0.02));
@@ -372,8 +365,6 @@
         }
         .mobile-action-bar .btn i { font-size: 1.02rem; }
         .mobile-action-bar .btn:hover { background: rgba(255,255,255,.18); }
-
-        /* Hide floating bottom-right bubble on small screens to avoid duplication */
         .fixed.bottom-5.right-5 { display: none !important; }
       }
     </style>
@@ -428,7 +419,7 @@
     <main id="main">
       <section id="top" class="mesh relative isolate flex min-h-screen flex-col overflow-hidden pt-24 sm:pt-28">
         <div class="grid-mask absolute inset-0 -z-10"></div>
-        <div class="mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center px-5 pb-10 text-center lg:px-8 lg:pb-12">
+        <div class="mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center px-5 pb-6 text-center lg:px-8 lg:pb-10">
           <div class="reveal flex flex-col items-center">
             <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.035] px-3.5 py-2 text-xs"><span class="tracking-[.12em] text-amber-300" aria-label="Rated 4.8 out of 5">★★★★★</span><span class="font-semibold text-white">4.8/5</span><span class="text-slate-400">client rating</span></div>
             <h1 class="font-display max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-[-.055em] text-white sm:text-5xl md:text-6xl xl:text-7xl">Performance Marketing That <span class="text-blue-300">Drives Growth.</span></h1>
@@ -440,7 +431,31 @@
             <div class="mt-10 flex flex-wrap justify-center gap-x-7 gap-y-3 text-xs text-slate-400"><span class="inline-flex items-center"><svg class="mr-2 h-4 w-4 text-emerald-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.29a1 1 0 010 1.414l-7.1 7.1a1 1 0 01-1.414 0l-3.3-3.3A1 1 0 016.304 8.09l2.593 2.593 6.393-6.393a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Based in UAE</span><span class="inline-flex items-center"><svg class="mr-2 h-4 w-4 text-emerald-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.29a1 1 0 010 1.414l-7.1 7.1a1 1 0 01-1.414 0l-3.3-3.3A1 1 0 016.304 8.09l2.593 2.593 6.393-6.393a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Meta &amp; Google Ads Specialist</span><span class="inline-flex items-center"><svg class="mr-2 h-4 w-4 text-emerald-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.29a1 1 0 010 1.414l-7.1 7.1a1 1 0 01-1.414 0l-3.3-3.3A1 1 0 016.304 8.09l2.593 2.593 6.393-6.393a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Data Driven Performance Marketing</span><span class="inline-flex items-center"><svg class="mr-2 h-4 w-4 text-emerald-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.29a1 1 0 010 1.414l-7.1 7.1a1 1 0 01-1.414 0l-3.3-3.3A1 1 0 016.304 8.09l2.593 2.593 6.393-6.393a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>End to End Funnel Strategy</span></div>
           </div>
         </div>
-        <div class="mt-auto w-full"><div class="mx-auto max-w-7xl px-5 lg:px-8"><div class="line"></div><div class="platform-marquee overflow-hidden py-7" role="region" aria-label="Growth platforms and tools"><div class="platform-track"><div class="platform-set"><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">META</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">GOOGLE ADS</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">GA4</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">HUBSPOT</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">NOTION</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">LOOKER STUDIO</p></div><div class="platform-set" aria-hidden="true"><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">META</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">GOOGLE ADS</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">GA4</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">HUBSPOT</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">NOTION</p><p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-500">LOOKER STUDIO</p></div></div></div><div class="line"></div></div></div>
+
+        <!-- PLATFORM BANNER - always visible in the hero bottom (desktop & mobile) -->
+        <div class="w-full px-5 pb-4 lg:pb-6">
+          <div class="mx-auto max-w-7xl"><div class="line"></div>
+            <div class="platform-marquee overflow-hidden py-5" role="region" aria-label="Growth platforms and tools">
+              <div class="platform-track">
+                <div class="platform-set">
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">GOOGLE ADS</span></p>
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">GA4</span></p>
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">HUBSPOT</span></p>
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">NOTION</span></p>
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">LOOKER STUDIO</span></p>
+                </div>
+                <div class="platform-set" aria-hidden="true">
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">GOOGLE ADS</span></p>
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">GA4</span></p>
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">HUBSPOT</span></p>
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">NOTION</span></p>
+                  <p class="platform-item text-xs font-semibold tracking-[.13em] text-slate-400"><span class="bg-white/5 px-4 py-2 rounded-full border border-white/5">LOOKER STUDIO</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="line"></div>
+          </div>
+        </div>
       </section>
 
       <section class="bg-panel/35 py-20 sm:py-28">
@@ -527,13 +542,11 @@
 
     <footer class="border-t border-white/8 bg-[#040611] py-12"><div class="mx-auto max-w-7xl px-5 lg:px-8"><div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]"><div><a href="#top" class="font-display text-[15px] font-bold tracking-tight text-white">ASHWIN<span class="text-blue-500">.</span></a><p class="mt-4 max-w-sm text-sm leading-6 text-slate-500">Performance marketing and growth systems for businesses ready to create a more predictable pipeline.</p><div class="mt-5 flex gap-4 text-sm"><a class="text-slate-400 hover:text-white" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a><a class="text-slate-400 hover:text-white" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a></div></div><div><p class="text-xs font-bold uppercase tracking-[.14em] text-slate-400">Explore</p><ul class="mt-4 space-y-3 text-sm text-slate-500"><li><a class="hover:text-white" href="#about">About</a></li><li><a class="hover:text-white" href="#services">Services</a></li><li><a class="hover:text-white" href="#case-studies">Case studies</a></li><li><a class="hover:text-white" href="#insights">Insights</a></li></ul></div><div><p class="text-xs font-bold uppercase tracking-[.14em] text-slate-400">Services</p><ul class="mt-4 space-y-3 text-sm text-slate-500"><li><a class="hover:text-white" href="#services">Performance marketing</a></li><li><a class="hover:text-white" href="#services">Landing pages & CRO</a></li><li><a class="hover:text-white" href="#services">Analytics</a></li><li><a class="hover:text-white" href="#services">CRM automation</a></li></ul></div><div><p class="text-xs font-bold uppercase tracking-[.14em] text-slate-400">Stay in the loop</p><p class="mt-4 text-sm leading-6 text-slate-500">Occasional notes on lead quality, conversion and growth.</p><a class="mt-4 inline-flex text-sm font-semibold text-white hover:text-blue-300" href="#insights">Join the newsletter <span class="ml-2">→</span></a></div></div><div class="mt-12 flex flex-col gap-4 border-t border-white/8 pt-6 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between"><p>© 2026 Ashwin James. All rights reserved.</p><div class="flex gap-5"><a class="hover:text-slate-300" href="#">Privacy policy</a><a class="hover:text-slate-300" href="#">Terms & conditions</a></div></div></div></footer>
 
-    <!-- Mobile Action Bar - EXACT same as resources page (hidden initially, shown on scroll) -->
     <div class="mobile-action-bar" aria-hidden="false">
       <a class="btn" href="https://wa.me/97105227704142" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i><span class="hidden sm:inline">WhatsApp</span></a>
       <a class="btn" href="mailto:your@email.com" aria-label="Send email"><i class="fa-solid fa-envelope"></i><span class="hidden sm:inline">Email</span></a>
     </div>
 
-    <!-- Floating WhatsApp Button - Visible on desktop only -->
     <a data-whatsapp href="#consultation" class="fixed bottom-5 right-5 z-30 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-bold text-[#062b14] shadow-xl shadow-emerald-950/60 transition hover:-translate-y-0.5 hover:bg-[#37e476] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink" aria-label="Start a WhatsApp consultation">
       <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.7 11.7 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.6-8.4zM12.2 21.7h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7zm5.4-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.5-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5 0-.1-.2-.2-.5-.3z"/>
@@ -542,7 +555,6 @@
     </a>
 
     <script>
-      // Mobile action bar: show only after scrolling down a bit (same as resources page)
       (function() {
         const actionBar = document.querySelector('.mobile-action-bar');
         if (!actionBar) return;
@@ -565,13 +577,10 @@
           }
         }, { passive: true });
 
-        // Initial state (hidden)
         actionBar.classList.remove('is-visible');
-        // Check after a tiny delay in case page loads with scroll
         setTimeout(updateBar, 100);
       })();
 
-      // Replace this with Ashwin's WhatsApp Business number before publishing, digits only, e.g. 971501234567.
       const whatsappNumber = '97105227704142';
       const whatsappMessage = 'Hello Ashwin, I would like to discuss generating more qualified leads for my business.';
       const whatsappUrl = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}` : `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
