@@ -1,34 +1,12 @@
 const services = [
-  { title: 'Performance Marketing', text: 'Paid acquisition across Meta and Google with a focus on qualified demand, efficient spend and scalable testing.' },
-  { title: 'Conversion Optimisation', text: 'Landing pages and funnels designed to reduce friction and improve the percentage of traffic that becomes a useful enquiry.' },
-  { title: 'Analytics & Reporting', text: 'Measurement systems that connect campaign data with the metrics that matter to sales and management.' },
-  { title: 'CRM & Automation', text: 'Lead routing, lifecycle stages and automation that help marketing and sales work from the same operating system.' },
+  ['Google Ads', 'Capture high intent searches from people already looking for what your business offers.', 'More sales ready enquiries', '#google-ads'],
+  ['Meta Ads', 'Build demand on Facebook and Instagram with campaigns that earn attention and action.', 'A stronger flow of leads', '#meta-ads'],
+  ['SEO', 'Increase visibility for the high value local searches that bring customers to your door.', 'Durable organic demand', '#seo'],
+  ['Website development', 'Create a fast, credible website that makes the value clear and turns visits into enquiries.', 'A conversion ready presence', '#website-development'],
+  ['Lead generation', 'Connect media, messaging and qualification into a predictable path to new conversations.', 'A more dependable pipeline', '#lead-generation'],
+  ['Landing page optimisation', 'Reduce hesitation and make every paid click work harder for your business.', 'A better conversion rate', '#landing-page-optimisation'],
 ]
 
 export default function ServicesPreview() {
-  return (
-    <section className="home-section services-preview" id="services">
-      <div className="container">
-        <div className="section-heading split-heading reveal-home">
-          <div>
-            <p className="home-eyebrow">What I do</p>
-            <h2>Growth work across the whole funnel.</h2>
-          </div>
-          <p>Instead of treating advertising, websites, analytics and CRM as separate problems, I connect them into one measurable system.</p>
-        </div>
-        <div className="services-grid">
-          {services.map((service, index) => (
-            <a className="service-card reveal-home" href="/services" key={service.title}>
-              <span className="service-number">0{index + 1}</span>
-              <div>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-              </div>
-              <span className="service-arrow">↗</span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
+  return <section id="services" className="home-section services-preview"><div className="container"><div className="section-heading split-heading reveal-home"><div><p className="home-eyebrow">Growth services</p><h2>The services UAE businesses ask for most.</h2></div><div><p>Start with the service that removes your biggest growth constraint. Each engagement is connected to lead quality, conversion and commercial outcomes.</p><a className="text-link" href="/services">View all services <span>→</span></a></div></div><div className="services-grid six">{services.map(([title, text, outcome, anchor], index) => <a className="service-card reveal-home" href={`/services${anchor}`} key={title}><span className="service-number">0{index + 1}</span><div><span className="service-icon">↗</span><h3>{title}</h3><p>{text}</p><strong>Outcome: {outcome} <span>→</span></strong></div><span className="service-arrow">↗</span></a>)}</div><div className="service-footer"><a className="home-button secondary" href="/services">See all services <span>→</span></a><p>Explore all 10 services, outcomes and engagement options.</p></div></div></section>
 }
