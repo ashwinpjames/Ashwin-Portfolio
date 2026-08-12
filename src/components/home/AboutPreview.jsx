@@ -1,19 +1,6 @@
 import portrait from '../../../assets/ashwin-james-portrait.png'
+import signature from '../../../assets/ashwin-signature.png'
 
 export default function AboutPreview() {
-  return (
-    <section className="home-section about-preview">
-      <div className="container about-preview-grid">
-        <div className="portrait-frame reveal-home">
-          <img src={portrait} alt="Ashwin James" loading="lazy" />
-        </div>
-        <div className="about-preview-copy reveal-home">
-          <p className="home-eyebrow">How I think</p>
-          <h2>Acquisition is only useful when the business can absorb the demand.</h2>
-          <p>I work at the intersection of paid acquisition, conversion, analytics and CRM operations. The goal is not simply more leads. It is a system where better leads can be measured, routed and converted.</p>
-          <a className="text-link" href="/about">More about my approach <span>↗</span></a>
-        </div>
-      </div>
-    </section>
-  )
+  return <section id="about" className="home-section about-preview"><div className="container about-preview-grid"><div className="portrait-frame reveal-home"><div className="portrait-glow" /><div className="portrait-inner"><img src={portrait} alt="Editorial portrait of Ashwin James" loading="lazy" /><span className="availability">● Available to work</span><div className="portrait-caption"><strong>Ashwin James</strong><span>Performance Marketing & Growth Systems</span></div></div><div className="quote-card">“Build the system, not just the campaign.”</div></div><div className="about-preview-copy reveal-home"><p className="home-eyebrow">A practical growth partner</p><h2>A disciplined way to turn marketing spend into commercial momentum.</h2><div className="about-copy"><p>Good growth work starts by understanding the business behind the brief: your market, the buying decision, your sales reality, and where revenue is currently leaking.</p><p>I bring the strategic view and hands on execution together. The aim is straightforward: fewer assumptions, better conversations with potential customers, and a marketing engine your business can confidently invest in.</p></div><div className="about-actions"><a className="text-link" href="/about">Work with Ashwin <span>→</span></a><img src={signature} alt="Ashwin signature" loading="lazy" /></div></div></div></section>
 }
