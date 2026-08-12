@@ -1,15 +1,6 @@
 import { Link } from 'react-router-dom'
+import { emailAddress } from '../../utils/contact.js'
 
 export default function Footer() {
-  return (
-    <footer className="site-footer">
-      <div className="container footer-inner">
-        <div>
-          <Link to="/" className="footer-brand">ASHWIN<span>.</span></Link>
-          <p>Performance marketing, analytics and growth systems.</p>
-        </div>
-        <p>© {new Date().getFullYear()} Ashwin James. All rights reserved.</p>
-      </div>
-    </footer>
-  )
+  return <footer className="site-footer"><div className="container footer-grid"><div><Link to="/" className="footer-brand">ASHWIN<span>.</span></Link><p>Performance marketing and growth systems for businesses ready to create a more predictable pipeline.</p><div className="footer-social"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a></div></div><div><h3>Explore</h3><Link to="/about">About</Link><Link to="/services">Services</Link><Link to="/case-studies">Case studies</Link><Link to="/blog">Insights</Link></div><div><h3>Services</h3><Link to="/services">Performance marketing</Link><Link to="/services">Landing pages & CRO</Link><Link to="/services">Analytics</Link><Link to="/services">CRM automation</Link></div><div><h3>Stay in the loop</h3><p>Occasional notes on lead quality, conversion and growth.</p><a href={`mailto:${emailAddress}`}>Get in touch →</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Ashwin James. All rights reserved.</span><span><a href="#">Privacy policy</a><a href="#">Terms & conditions</a></span></div></footer>
 }
