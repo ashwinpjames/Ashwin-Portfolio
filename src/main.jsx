@@ -8,6 +8,7 @@ import './styles/about.css'
 import './styles/resume.css'
 import './styles/services.css'
 import './styles/case-studies.css'
+import './styles/resources.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
