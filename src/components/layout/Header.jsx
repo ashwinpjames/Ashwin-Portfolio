@@ -1,20 +1,14 @@
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { navigation } from '../../data/navigation.js'
+import { useScroll } from '../../hooks/useScroll.js'
 import { whatsappUrl } from '../../utils/contact.js'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const scrolled = useScroll(24)
   const { pathname } = useLocation()
   const isHome = pathname === '/'
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 24)
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   useEffect(() => {
     setMenuOpen(false)
