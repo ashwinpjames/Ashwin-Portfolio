@@ -1,0 +1,5 @@
+export const blogPosts = [
+  { slug: 'how-to-think-about-performance-marketing', category: 'Performance Marketing', title: 'How to think about performance marketing beyond the dashboard', excerpt: 'A practical framework for connecting acquisition metrics to business outcomes instead of optimising isolated platform numbers.', date: 'Coming soon', readTime: '5 min read' },
+  { slug: 'why-lead-quality-matters-more-than-cheap-cpl', category: 'Lead Generation', title: 'Why lead quality matters more than a cheap CPL', excerpt: 'A low cost lead can still be an expensive acquisition. Here is how to think about quality, qualification and downstream value.', date: 'Coming soon', readTime: '6 min read' },
+  { slug: 'building-a-better-marketing-measurement-system', category: 'Analytics', title: 'Building a better marketing measurement system', excerpt: 'The practical layers between ad platform reporting, CRM data and the commercial outcome your team actually cares about.', date: 'Coming soon', readTime: '7 min read' },
+]
