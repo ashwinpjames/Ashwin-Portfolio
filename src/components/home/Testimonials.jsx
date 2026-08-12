@@ -6,10 +6,10 @@ const testimonials = [
   ['OD', 'Operations Director', 'Recruitment, UAE', 'The process was calm, direct and genuinely helpful. We left each review knowing exactly what to improve next.'],
 ]
 
-function Cards() {
-  return <div className="testimonial-set">{testimonials.map(([initials, role, company, quote]) => <figure className="testimonial-card surface" key={`${initials}-${company}`}><div><div className="stars" aria-label="Five out of five stars">★★★★★</div><blockquote>“{quote}”</blockquote></div><figcaption><span>{initials}</span><div><strong>{role}</strong><small>{company}</small></div></figcaption></figure>)}</div>
+function Cards({ hidden = false }) {
+  return <div className="testimonial-set" aria-hidden={hidden}>{testimonials.map(([initials, role, company, quote]) => <figure className="testimonial-card surface" key={`${initials}-${company}`}><div><div className="stars" aria-label="Five out of five stars">★★★★★</div><blockquote>“{quote}”</blockquote></div><figcaption><span>{initials}</span><div><strong>{role}</strong><small>{company}</small></div></figcaption></figure>)}</div>
 }
 
 export default function Testimonials() {
-  return <section id="testimonials" className="home-section testimonials-section"><div className="container"><div className="section-heading split-heading reveal-home"><div><p className="home-eyebrow">Client perspectives</p><h2>Results matter. So does the way we get there.</h2></div><p>A few words from growth minded teams.</p></div></div><div className="testimonial-marquee" aria-label="Client reviews"><div className="testimonial-track"><Cards /><div aria-hidden="true"><Cards /></div></div></div></section>
+  return <section id="testimonials" className="home-section testimonials-section"><div className="container"><div className="section-heading split-heading reveal-home"><div><p className="home-eyebrow">Client perspectives</p><h2>Results matter. So does the way we get there.</h2></div><p>A few words from growth minded teams.</p></div></div><div className="testimonial-marquee" aria-label="Client reviews"><div className="testimonial-track"><Cards /><Cards hidden /></div></div></section>
 }
