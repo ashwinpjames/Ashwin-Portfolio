@@ -1,14 +1,5 @@
 import { whatsappUrl } from '../../utils/contact.js'
 
 export default function HomeCTA() {
-  return (
-    <section className="home-cta" id="consultation">
-      <div className="container home-cta-inner reveal-home">
-        <p className="home-eyebrow">Start with the problem</p>
-        <h2>Have a growth problem worth solving?</h2>
-        <p>Tell me what you are trying to improve, where the funnel is breaking and what the business needs next.</p>
-        <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Start a conversation <span>↗</span></a>
-      </div>
-    </section>
-  )
+  return <section id="consultation" className="home-cta"><div className="home-cta-glow" /><div className="container home-cta-inner"><p className="home-eyebrow reveal-home">A focused first conversation</p><h2 className="reveal-home">Ready to generate better leads?</h2><p className="reveal-home">Let’s discuss your business, identify the clearest growth opportunities, and build a marketing system that delivers measurable results.</p><div className="home-cta-actions reveal-home"><a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation <span>↗</span></a><a className="home-button secondary" href={whatsappUrl} target="_blank" rel="noreferrer">Chat on WhatsApp <span>●</span></a></div><small className="reveal-home">No hard sell. Just a useful conversation about what is possible.</small></div></section>
 }
