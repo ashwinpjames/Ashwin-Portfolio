@@ -1,14 +1,40 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import { navigation } from '../../data/navigation.js'
-
-const whatsappUrl = 'https://wa.me/97105227704142?text=Hello%20Ashwin%2C%20I%20would%20like%20to%20discuss%20generating%20more%20qualified%20leads%20for%20my%20business.'
+import { whatsappUrl } from '../../utils/contact.js'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 24)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', menuOpen)
+    return () => document.body.classList.remove('menu-open')
+  }, [menuOpen])
+
+  const headerClassName = [
+    'site-header',
+    isHome && !scrolled ? 'is-transparent' : '',
+    scrolled ? 'is-scrolled' : '',
+  ].filter(Boolean).join(' ')
+
+  const linkClassName = ({ isActive }) => isActive ? 'active' : undefined
 
   return (
-    <header className="site-header">
+    <header className={headerClassName}>
       <div className="nav-wrap">
         <NavLink className="brand" to="/" aria-label="Ashwin James home">
           ASHWIN<span>.</span>
@@ -16,7 +42,7 @@ export default function Header() {
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navigation.map((item) => (
-            <NavLink key={item.path} to={item.path} end={item.path === '/'}>
+            <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>
               {item.label}
             </NavLink>
           ))}
@@ -40,10 +66,10 @@ export default function Header() {
         </button>
       </div>
 
-      {menuOpen && (
-        <nav id="mobile-menu" className="mobile-menu" aria-label="Mobile navigation">
+      <div id="mobile-menu" className={`mobile-menu${menuOpen ? ' open' : ''}`}>
+        <nav aria-label="Mobile navigation">
           {navigation.map((item) => (
-            <NavLink key={item.path} to={item.path} end={item.path === '/'} onClick={() => setMenuOpen(false)}>
+            <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>
               {item.label}
             </NavLink>
           ))}
@@ -51,7 +77,7 @@ export default function Header() {
             Get a free consultation
           </a>
         </nav>
-      )}
+      </div>
     </header>
   )
 }
