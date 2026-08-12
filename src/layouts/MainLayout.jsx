@@ -5,5 +5,5 @@ import MobileActionBar from '../components/layout/MobileActionBar.jsx'
 import RouteMeta from '../components/layout/RouteMeta.jsx'
 
 export default function MainLayout() {
-  return <><RouteMeta /><a className="skip-link" href="#main">Skip to content</a><Header /><Outlet /><MobileActionBar /><Footer /></>
+  return <><RouteMeta /><a className="skip-link" href="#page-content">Skip to content</a><Header /><div id="page-content"><Outlet /></div><MobileActionBar /><Footer /></>
 }
