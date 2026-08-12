@@ -3,10 +3,10 @@ import MainLayout from './layouts/MainLayout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Resume from './pages/Resume.jsx'
+import Services from './pages/Services.jsx'
 import PlaceholderPage from './pages/PlaceholderPage.jsx'
 
 const placeholderRoutes = [
-  '/services',
   '/case-studies',
   '/case-studies/crm-sales-qualified-lead',
   '/resources',
@@ -16,5 +16,5 @@ const placeholderRoutes = [
 ]
 
 export default function App() {
-  return <Routes><Route element={<MainLayout />}><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/resume" element={<Resume />} />{placeholderRoutes.map((path) => <Route key={path} path={path} element={<PlaceholderPage />} />)}<Route path="*" element={<PlaceholderPage />} /></Route></Routes>
+  return <Routes><Route element={<MainLayout />}><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/resume" element={<Resume />} /><Route path="/services" element={<Services />} />{placeholderRoutes.map((path) => <Route key={path} path={path} element={<PlaceholderPage />} />)}<Route path="*" element={<PlaceholderPage />} /></Route></Routes>
 }
