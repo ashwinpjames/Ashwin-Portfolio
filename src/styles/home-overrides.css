@@ -1,0 +1,3 @@
+.problem-grid{border-color:rgba(148,163,184,.13)}
+.problem-grid article{border-right-color:rgba(148,163,184,.13)}
+@media(max-width:800px){.problem-grid article{border-right:0;border-bottom:1px solid rgba(148,163,184,.13)}.problem-grid article:last-child{border-bottom:0}}
