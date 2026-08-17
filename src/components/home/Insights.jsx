@@ -5,5 +5,5 @@ const insights = [
 ]
 
 export default function Insights() {
-  return <section id="insights" className="home-section insights-section"><div className="container"><div className="section-heading split-heading reveal-home"><div><p className="home-eyebrow">Insights</p><h2>Useful thinking for better growth decisions.</h2></div><a className="text-link" href="/blog">View all insights <span>→</span></a></div><div className="insights-grid">{insights.map(([tag, title, text]) => <article className="insight-card reveal-home" key={title}><p>{tag}</p><h3>{title}</h3><span>{text}</span><a href="/blog">Read article <span>→</span></a></article>)}</div></div></section>
+  return <section id="insights" className="home-section insights-section"><div className="container"><div className="section-heading split-heading reveal-home"><div className="insights-heading"><p className="home-eyebrow">Insights</p><h2>Useful thinking for better growth decisions.</h2><a className="text-link insights-all-link" href="/blog">View all insights <span>→</span></a></div></div><div className="insights-grid">{insights.map(([tag, title, text]) => <article className="insight-card reveal-home" key={title}><p>{tag}</p><h3>{title}</h3><span>{text}</span><a href="/blog">Read article <span>→</span></a></article>)}</div></div></section>
 }
