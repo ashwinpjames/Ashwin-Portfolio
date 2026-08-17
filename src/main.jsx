@@ -12,6 +12,7 @@ import './styles/case-studies.css'
 import './styles/resources.css'
 import './styles/blog.css'
 import './styles/contact.css'
+import './styles/insights.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
