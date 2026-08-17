@@ -1,3 +1,5 @@
+import '../../styles/services-preview.css'
+
 const services = [
   ['Google Ads', 'Capture high intent searches from people already looking for what your business offers.', 'More sales ready enquiries', '#google-ads'],
   ['Meta Ads', 'Build demand on Facebook and Instagram with campaigns that earn attention and action.', 'A stronger flow of leads', '#meta-ads'],
