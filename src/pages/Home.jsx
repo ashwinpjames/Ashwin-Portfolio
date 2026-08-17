@@ -1,5 +1,4 @@
 import Hero from '../components/home/Hero.jsx'
-import PlatformMarquee from '../components/home/PlatformMarquee.jsx'
 import ProblemSection from '../components/home/ProblemSection.jsx'
 import BestFit from '../components/home/BestFit.jsx'
 import Results from '../components/home/Results.jsx'
@@ -15,5 +14,5 @@ import ResourceLead from '../components/home/ResourceLead.jsx'
 import HomeCTA from '../components/home/HomeCTA.jsx'
 
 export default function Home() {
-  return <main><Hero /><PlatformMarquee /><ProblemSection /><BestFit /><Results /><AboutPreview /><Approach /><ServicesPreview /><Process /><CaseStudiesPreview /><Testimonials /><FAQ /><Insights /><ResourceLead /><HomeCTA /></main>
+  return <main><Hero /><ProblemSection /><BestFit /><Results /><AboutPreview /><Approach /><ServicesPreview /><Process /><CaseStudiesPreview /><Testimonials /><FAQ /><Insights /><ResourceLead /><HomeCTA /></main>
 }
