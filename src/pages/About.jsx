@@ -16,6 +16,28 @@ const expectations = [
   ['Measured', 'A shared view of performance and what changes next.'],
 ]
 
+const industries = [
+  ['Immigration & visa services', 'Lead generation, demand capture and qualification for high consideration services.'],
+  ['Healthcare & wellness', 'Performance marketing and conversion systems for clinics and wellness businesses.'],
+  ['Attestation & professional services', 'Search demand, local acquisition and enquiry focused landing experiences.'],
+  ['Recruitment & HR', 'Lead acquisition and campaign systems built around business enquiries and candidate demand.'],
+  ['Business services & SMEs', 'Practical acquisition systems for UAE businesses looking to create a more dependable pipeline.'],
+  ['B2B & high consideration services', 'Paid media, tracking and conversion optimisation where lead quality matters more than volume.'],
+]
+
+const brandLogos = [
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969724/Vector-1.png', alt: 'Business brand logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969724/Vector_2.png', alt: 'Business brand logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969724/notespaedia_logo_white_1.png', alt: 'Notespaedia logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969724/Vector.png', alt: 'Business brand logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969723/BOISIA.png', alt: 'BOISIA logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969723/Humns.png', alt: 'Humns logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969359/Dotcom_Logo_white_1.png', alt: 'Dotcom logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786972789/attestation_LOGO_white_1.png', alt: 'World Attestation logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786972790/prakriti_ayurveda-logo_white_2.png', alt: 'Prakriti Ayurveda logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786972852/attestationLOGO_1.png', alt: 'Attestation logo' },
+]
+
 function useAboutMotion() {
   const rootRef = useRef(null)
 
@@ -100,6 +122,10 @@ export default function About() {
         </div>
       </div>
     </section>
+
+    <section className="about-section about-experience-section"><div className="container"><div className="about-section-heading about-reveal"><p className="home-eyebrow">Experience across industries</p><h2>Different businesses. The same focus on qualified growth.</h2><p>I have worked across service businesses where acquisition, trust, lead quality and conversion have to work together.</p></div><div className="about-industry-grid">{industries.map(([title, text], index) => <article className="about-industry-card about-surface about-reveal" style={{ transitionDelay: `${index * 45}ms` }} key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+    <section className="about-section about-brands-section"><div className="container"><div className="about-brands-heading about-reveal"><div><p className="home-eyebrow">Selected experience</p><h2>Businesses and brands I have worked with.</h2></div><p>A selection of the businesses represented in my professional experience across acquisition, lead generation, websites and growth systems.</p></div><div className="about-brand-grid">{brandLogos.map((logo, index) => <div className="about-brand-card about-reveal" style={{ transitionDelay: `${index * 35}ms` }} key={`${logo.src}-${index}`}><img src={logo.src} alt={logo.alt} loading="lazy" /></div>)}</div></div></section>
 
     <section className="about-section about-work-section"><div className="container"><div className="about-section-heading about-reveal"><p className="home-eyebrow">How I work</p><h2>Senior thinking. Hands on delivery. Clear accountability.</h2><p>You work directly with the person shaping the strategy and improving the work, not a chain of account managers.</p></div><div className="about-principles-grid">{principles.map((item, index) => <PrincipleCard key={item[0]} item={item} index={index} />)}</div></div></section>
 
