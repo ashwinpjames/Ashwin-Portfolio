@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import { coreServices, growthServices } from '../data/services.js'
+import '../styles/services-hero.css'
 
 const allServices = [...coreServices, ...growthServices]
 
@@ -35,9 +36,7 @@ function GrowthServiceCard({ service, index }) {
 function ServiceConstellation() {
   return <div className="service-constellation" aria-label="Explore services">
     {allServices.map((service, index) => <Link key={service.id} to={`/services/${service.id}`} className={`service-orbit service-orbit-${index + 1}`} style={{ '--service-delay': `${index * 90}ms` }}>
-      <span className="service-orbit-dot" aria-hidden="true" />
-      <span>{service.title}</span>
-      <span className="service-orbit-arrow" aria-hidden="true">↗</span>
+      <span className="service-orbit-dot" aria-hidden="true" /><span>{service.title}</span><span className="service-orbit-arrow" aria-hidden="true">↗</span>
     </Link>)}
     <div className="service-orbit-core" aria-hidden="true"><span>10</span><small>services</small></div>
   </div>
