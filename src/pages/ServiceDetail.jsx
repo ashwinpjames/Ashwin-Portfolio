@@ -6,6 +6,7 @@ import MetaAdsService from './MetaAdsService.jsx'
 import SEOService from './SEOService.jsx'
 import WebsiteDevelopmentService from './WebsiteDevelopmentService.jsx'
 import LeadGenerationService from './LeadGenerationService.jsx'
+import CROService from './CROService.jsx'
 import ServiceLanding from './ServiceLanding.jsx'
 
 const allServices = [...coreServices, ...growthServices]
@@ -24,6 +25,7 @@ export default function ServiceDetail() {
   if (slug === 'seo') return <SEOService />
   if (slug === 'website-development') return <WebsiteDevelopmentService />
   if (slug === 'lead-generation') return <LeadGenerationService />
+  if (slug === 'cro') return <CROService />
   if (landingServiceSlugs.has(slug)) return <ServiceLanding />
 
   const service = allServices.find((item) => item.id === slug)
