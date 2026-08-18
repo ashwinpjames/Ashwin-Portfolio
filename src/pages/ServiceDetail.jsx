@@ -2,11 +2,12 @@ import { Link, useParams } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import { coreServices, growthServices } from '../data/services.js'
 import GoogleAdsDetail from './GoogleAdsDetail.jsx'
+import MetaAdsService from './MetaAdsService.jsx'
+import SEOService from './SEOService.jsx'
 import ServiceLanding from './ServiceLanding.jsx'
 
 const allServices = [...coreServices, ...growthServices]
 const landingServiceSlugs = new Set([
-  'seo',
   'website-development',
   'lead-generation',
   'landing-page-optimisation',
@@ -19,6 +20,8 @@ const landingServiceSlugs = new Set([
 export default function ServiceDetail() {
   const { slug } = useParams()
   if (slug === 'google-ads') return <GoogleAdsDetail />
+  if (slug === 'meta-ads') return <MetaAdsService />
+  if (slug === 'seo') return <SEOService />
   if (landingServiceSlugs.has(slug)) return <ServiceLanding />
 
   const service = allServices.find((item) => item.id === slug)
