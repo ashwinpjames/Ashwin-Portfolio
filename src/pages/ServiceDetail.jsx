@@ -4,12 +4,12 @@ import { coreServices, growthServices } from '../data/services.js'
 import GoogleAdsDetail from './GoogleAdsDetail.jsx'
 import MetaAdsService from './MetaAdsService.jsx'
 import SEOService from './SEOService.jsx'
+import WebsiteDevelopmentService from './WebsiteDevelopmentService.jsx'
+import LeadGenerationService from './LeadGenerationService.jsx'
 import ServiceLanding from './ServiceLanding.jsx'
 
 const allServices = [...coreServices, ...growthServices]
 const landingServiceSlugs = new Set([
-  'website-development',
-  'lead-generation',
   'landing-page-optimisation',
   'performance-growth-marketing',
   'whatsapp-marketing',
@@ -22,6 +22,8 @@ export default function ServiceDetail() {
   if (slug === 'google-ads') return <GoogleAdsDetail />
   if (slug === 'meta-ads') return <MetaAdsService />
   if (slug === 'seo') return <SEOService />
+  if (slug === 'website-development') return <WebsiteDevelopmentService />
+  if (slug === 'lead-generation') return <LeadGenerationService />
   if (landingServiceSlugs.has(slug)) return <ServiceLanding />
 
   const service = allServices.find((item) => item.id === slug)
