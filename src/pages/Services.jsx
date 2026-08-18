@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import { coreServices, growthServices } from '../data/services.js'
 
@@ -18,11 +19,15 @@ function CoreServiceCard({ service, index }) {
     <div className="service-card-top"><span className="service-number">{service.number}</span><span className="service-badge">{service.badge}</span></div>
     <div className="service-card-main"><h3>{service.title}</h3><p className="service-description">{service.description}</p></div>
     <div className="service-card-footer"><ul>{service.points.map((point) => <li key={point}>{point}</li>)}</ul><p className="service-best"><span>Best for</span>{service.bestFor}</p></div>
+    <Link className="service-card-button" to={`/services/${service.id}`}>Explore this service <span>→</span></Link>
   </article>
 }
 
 function GrowthServiceCard({ service, index }) {
-  return <article id={service.id} className="growth-service-card surface services-reveal" style={{ transitionDelay: `${(index % 2) * 60}ms` }}><span className="service-number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><p className="service-outcome">Outcome: {service.outcome}</p></article>
+  return <article id={service.id} className="growth-service-card surface services-reveal" style={{ transitionDelay: `${(index % 2) * 60}ms` }}>
+    <span className="service-number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><p className="service-outcome">Outcome: {service.outcome}</p>
+    <Link className="service-card-button" to={`/services/${service.id}`}>Explore this service <span>→</span></Link>
+  </article>
 }
 
 export default function Services() {
