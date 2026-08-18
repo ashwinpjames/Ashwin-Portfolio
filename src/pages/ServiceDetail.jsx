@@ -10,10 +10,11 @@ import CROService from './CROService.jsx'
 import PerformanceGrowthService from './PerformanceGrowthService.jsx'
 import WhatsAppMarketingService from './WhatsAppMarketingService.jsx'
 import WordPressDevelopmentService from './WordPressDevelopmentService.jsx'
+import HubSpotCRMService from './HubSpotCRMService.jsx'
 import ServiceLanding from './ServiceLanding.jsx'
 
 const allServices = [...coreServices, ...growthServices]
-const landingServiceSlugs = new Set(['landing-page-optimisation','hubspot'])
+const landingServiceSlugs = new Set(['landing-page-optimisation'])
 
 export default function ServiceDetail() {
   const { slug } = useParams()
@@ -26,6 +27,7 @@ export default function ServiceDetail() {
   if (slug === 'performance-growth-marketing') return <PerformanceGrowthService />
   if (slug === 'whatsapp-marketing') return <WhatsAppMarketingService />
   if (slug === 'wordpress') return <WordPressDevelopmentService />
+  if (slug === 'hubspot') return <HubSpotCRMService />
   if (landingServiceSlugs.has(slug)) return <ServiceLanding />
 
   const service = allServices.find((item) => item.id === slug)
