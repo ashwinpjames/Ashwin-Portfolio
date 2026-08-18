@@ -2,12 +2,24 @@ import { Link, useParams } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import { coreServices, growthServices } from '../data/services.js'
 import GoogleAdsDetail from './GoogleAdsDetail.jsx'
+import ServiceLanding from './ServiceLanding.jsx'
 
 const allServices = [...coreServices, ...growthServices]
+const landingServiceSlugs = new Set([
+  'seo',
+  'website-development',
+  'lead-generation',
+  'landing-page-optimisation',
+  'performance-growth-marketing',
+  'whatsapp-marketing',
+  'hubspot',
+  'wordpress',
+])
 
 export default function ServiceDetail() {
   const { slug } = useParams()
   if (slug === 'google-ads') return <GoogleAdsDetail />
+  if (landingServiceSlugs.has(slug)) return <ServiceLanding />
 
   const service = allServices.find((item) => item.id === slug)
   if (!service) return <main className="service-detail-page"><div className="container"><h1>Service not found.</h1><Link to="/services">Back to services</Link></div></main>
