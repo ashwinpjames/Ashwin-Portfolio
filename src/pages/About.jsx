@@ -33,9 +33,9 @@ const brandLogos = [
   { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969723/BOISIA.png', alt: 'BOISIA logo' },
   { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969723/Humns.png', alt: 'Humns logo' },
   { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786969359/Dotcom_Logo_white_1.png', alt: 'Dotcom logo' },
-  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786972789/attestation_LOGO_white_1.png', alt: 'World Attestation logo' },
-  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786972790/prakriti_ayurveda-logo_white_2.png', alt: 'Prakriti Ayurveda logo' },
-  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1786972852/attestationLOGO_1.png', alt: 'Attestation logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1787038702/attestation_LOGO_white_1_1.png', alt: 'World Attestation logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1787038701/prakriti_ayurveda-logo_white_2_1.png', alt: 'Prakriti Ayurveda logo' },
+  { src: 'https://res.cloudinary.com/fo4xyppd/image/upload/v1787038702/attestationLOGO_1_1.png', alt: 'Attestation logo' },
 ]
 
 function useAboutMotion() {
