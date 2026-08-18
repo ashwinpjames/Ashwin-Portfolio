@@ -1,0 +1,69 @@
+import { Link } from 'react-router-dom'
+import { whatsappUrl } from '../utils/contact.js'
+import './google-ads-detail.css'
+
+const faq = [
+  ['Is Google Ads worth it for a small business in Dubai?', 'It can be when people are already searching for the service you sell. I look at search demand, competition, customer value and acceptable acquisition cost before recommending a budget.'],
+  ['How much should a UAE business spend on Google Ads?', 'There is no useful universal minimum. The right test budget depends on search volume, customer value, competition and your target acquisition cost. I would rather calculate a realistic starting point from your numbers than recommend an arbitrary monthly spend.'],
+  ['Why are my Google Ads generating leads but not customers?', 'A lead is not automatically a qualified opportunity. The problem can sit in keyword intent, ad messaging, landing page experience, qualification, sales follow up or conversion tracking.'],
+  ['Can you audit my existing Google Ads account?', 'Yes. I review campaign structure, keywords, search terms, bidding, conversion actions, budget allocation, ad messaging and landing page alignment, then turn the findings into a practical priority list.'],
+  ['Do you manage Google Ads yourself?', 'Yes. The work is hands on. You deal directly with the person analysing the campaigns and making optimisation decisions.'],
+  ['Can you fix Google Ads conversion tracking?', 'Yes. I can review whether forms, calls, WhatsApp enquiries and other meaningful actions are tracked correctly and whether the conversion signals are useful for optimisation.'],
+  ['How quickly can Google Ads generate results?', 'Search campaigns can start generating relevant traffic soon after launch when demand exists. Reliable optimisation takes enough meaningful data to separate useful patterns from noise.'],
+]
+
+const included = [
+  ['Search intent', 'Map the searches that indicate a real need, buying intent and commercial relevance.'],
+  ['Keyword strategy', 'Build keyword groups around intent, match types, locations and negative keyword opportunities.'],
+  ['Campaign structure', 'Structure campaigns around intent, service, geography, budget and the conversion goal.'],
+  ['Ad relevance', 'Write search ads that match what the user searched and what the landing page actually offers.'],
+  ['Negative keywords', 'Continuously remove irrelevant searches that consume budget without creating useful demand.'],
+  ['Search terms', 'Review actual searches to find waste, new opportunities and changes in user intent.'],
+  ['Conversion tracking', 'Track meaningful actions such as forms, calls, WhatsApp enquiries and qualified lead signals.'],
+  ['Landing page alignment', 'Make the promise from the search and ad continue naturally into the landing experience.'],
+  ['Budget optimisation', 'Move spend toward campaigns and search themes producing stronger commercial signals.'],
+  ['CPL and qualified lead rate', 'Measure both acquisition cost and lead quality instead of treating every conversion as equal.'],
+]
+
+const whoFor = [
+  ['UAE service businesses', 'Businesses where a customer enquiry has meaningful commercial value.'],
+  ['High intent offers', 'Services people actively search for when they are ready to compare, enquire or buy.'],
+  ['Businesses with a sales process', 'Teams that can connect advertising leads with qualified opportunities and customers.'],
+  ['Businesses already spending', 'Accounts where improving intent, structure, tracking or optimisation can make existing budget work harder.'],
+]
+
+export default function GoogleAdsDetail() {
+  return <main className="google-ads-page" id="main">
+    <section className="ga-hero"><div className="ga-hero-grid" aria-hidden="true"/><div className="container ga-hero-inner">
+      <Link className="ga-back" to="/services">← Back to services</Link>
+      <div className="ga-hero-content">
+        <div className="ga-hero-copy"><p className="services-eyebrow">Google Ads Management · Dubai, UAE</p><h1>Turn Search Demand Into <span>Qualified Leads.</span></h1><p className="ga-lead ga-lead-small">I manage Google Ads around search intent, relevance, tracking and lead quality so your budget is focused on people who are actually looking for what you sell.</p><a className="ga-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute Google Ads Audit <span>↗</span></a><p className="ga-trust">No obligation · Dubai based · Hands on management · Conversion tracking</p></div>
+        <div className="ga-hero-visual"><div className="ga-visual-ring"/><div className="ga-visual-core"><span>GOOGLE</span><strong>ADS</strong><small>SEARCH → DEMAND → LEADS</small></div><span className="ga-orbit ga-orbit-1">SEARCH INTENT</span><span className="ga-orbit ga-orbit-2">TRACKING</span><span className="ga-orbit ga-orbit-3">LEAD QUALITY</span></div>
+      </div>
+    </div></section>
+
+    <section className="ga-section"><div className="container"><div className="ga-section-heading"><p className="services-eyebrow">The problem</p><h2>You do not need more clicks. You need more useful demand.</h2><p>Google Ads can produce impressive dashboards while the sales team receives weak enquiries. The gap usually starts before the lead ever reaches the CRM.</p></div><div className="ga-pain-grid">{[['01','Irrelevant searches','Budget gets consumed by people looking for something adjacent to your offer.'],['02','Weak lead quality','The account optimises for conversions even when many conversions have little commercial value.'],['03','Poor message match','The search, ad and landing page tell different stories, creating friction after the click.'],['04','Unclear measurement','Google reports conversions, but the business cannot see which campaigns create qualified opportunities.']].map(([n,title,text]) => <article className="ga-pain" key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+    <section className="ga-section ga-included"><div className="container"><div className="ga-section-heading"><p className="services-eyebrow">Strategic insight</p><h2>Google Ads is a demand capture system, not a click buying machine.</h2><p>The account should answer one question at every stage: how do we turn people already searching for your service into qualified enquiries?</p></div><div className="ga-outcome"><span>Core question</span><strong>Where does commercial intent exist, how do we capture it, and which conversion signals tell us whether that demand is valuable?</strong></div></div></section>
+
+    <section className="ga-section"><div className="container"><div className="ga-section-heading"><p className="services-eyebrow">The solution</p><h2>Build the account around intent, relevance and business outcomes.</h2><p>The solution starts with the searcher and works backwards. High intent searches get the clearest path to the right offer, while irrelevant demand is filtered out before it consumes budget.</p></div><div className="ga-process">{[['01','Capture intent','Identify the searches where someone is actively looking for your service or a close commercial alternative.'],['02','Control relevance','Use keyword structure, ad messaging and negative keywords to keep traffic aligned with the offer.'],['03','Complete the journey','Make the landing page and conversion path continue the promise created by the search and ad.'],['04','Feed better signals','Track meaningful actions and, where possible, connect lead quality information back to acquisition.']].map(([n,title,text]) => <article className="ga-process-item" key={n}><span>{n}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
+
+    <section className="ga-section ga-included"><div className="container"><div className="ga-section-heading"><p className="services-eyebrow">Methodology</p><h2>How I actually execute the work.</h2><p>Optimisation is a repeated decision process, not a once a month account check.</p></div><div className="ga-process">{[['01','Audit','Review account structure, search terms, keywords, bidding, budgets, ads, landing pages and conversion actions.'],['02','Map demand','Group searches by intent and identify where commercial demand is strong, weak or irrelevant.'],['03','Build or restructure','Create the right campaign and keyword structure, ad messaging, negative keyword logic and conversion setup.'],['04','Optimise','Review search terms, CPL, conversion rate, budget distribution, ad performance and lead quality signals.'],['05','Learn and repeat','Use performance and downstream sales information to decide what to scale, cut or test next.']].map(([n,title,text]) => <article className="ga-process-item" key={n}><span>{n}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
+
+    <section className="ga-section"><div className="container"><div className="ga-section-heading"><p className="services-eyebrow">Deliverables</p><h2>What you actually receive.</h2></div><div className="ga-included-grid">{included.map(([title,text]) => <div className="ga-included-item" key={title}><span>✓</span><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></div></section>
+
+    <section className="ga-proof"><div className="container"><div className="ga-proof-grid"><div><p className="services-eyebrow">Measurement</p><h2>Measure the quality of demand, not just the volume.</h2><p>The account is evaluated through a hierarchy of signals. Search terms and clicks show what is happening at the top. CPL and conversion rate show acquisition efficiency. Qualified lead rate and downstream sales signals show whether the traffic is commercially useful.</p></div><div className="ga-proof-card"><span>Core metrics</span><strong>Search intent · CPL · Conversion rate · Qualified lead rate · Lead to opportunity · Budget efficiency</strong><p>The exact measurement framework depends on the business, CRM and available conversion data.</p></div></div></div></section>
+
+    <section className="ga-section"><div className="container"><div className="ga-section-heading"><p className="services-eyebrow">Who it is for</p><h2>Best suited to businesses where one good enquiry is worth more than a hundred cheap clicks.</h2></div><div className="ga-pain-grid">{whoFor.map(([title,text], i) => <article className="ga-pain" key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+    <section className="ga-proof"><div className="container"><div className="ga-proof-grid"><div><p className="services-eyebrow">Proof</p><h2>Experience across high consideration lead generation.</h2><p>I have worked across immigration and visa services, attestation and professional services, healthcare and wellness, recruitment and HR, business services and other offers where lead quality matters.</p></div><div className="ga-proof-card"><span>Relevant experience</span><strong>Immigration · Attestation · Healthcare · Recruitment · B2B</strong><p>Verified campaign figures can be added as the evidence base grows. I will not publish unsupported numbers just to make the page look stronger.</p></div></div></div></section>
+
+    <section className="ga-section"><div className="container ga-diff"><div><p className="services-eyebrow">Why Ashwin</p><h2>You work directly with the person managing the campaigns.</h2></div><div><p>I work across <strong>Google Ads → Landing Page → Tracking → CRM → Lead Quality</strong>. That means the optimisation question is not simply whether Google generated a conversion. It is whether the acquisition system generated the type of demand the business actually wants.</p></div></div></section>
+
+    <section className="ga-section ga-faq"><div className="container"><div className="ga-section-heading"><p className="services-eyebrow">FAQ</p><h2>Questions business owners ask before handing over ad budget.</h2></div><div className="ga-faq-list">{faq.map(([q,a]) => <details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div></section>
+
+    <section className="ga-section ga-social"><div className="container"><p className="services-eyebrow">Keep the system connected</p><h2>Google Ads works better when the rest of the journey is measured.</h2><div className="ga-related-grid"><Link to="/services/landing-page-optimisation"><span>01</span><strong>Landing Page Optimisation</strong><small>Reduce friction after the click →</small></Link><Link to="/services/lead-generation"><span>02</span><strong>Lead Generation</strong><small>Connect traffic to a healthier pipeline →</small></Link><Link to="/services/hubspot"><span>03</span><strong>HubSpot CRM & Automation</strong><small>Track what happens after the lead →</small></Link></div></div></section>
+
+    <section className="ga-final"><div className="container"><p className="services-eyebrow">Ready to inspect your Google Ads?</p><h2>Let's spend 15 minutes looking at the account.</h2><p>I will identify the biggest potential constraint and explain what I would prioritise first.</p><a className="ga-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute Google Ads Audit <span>↗</span></a><small>No long presentation. No obligation. Just a practical review.</small></div></section>
+  </main>
+}
