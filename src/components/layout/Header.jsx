@@ -8,7 +8,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const scrolled = useScroll(24)
   const { pathname } = useLocation()
-  const isHome = pathname === '/'
 
   useEffect(() => {
     setMenuOpen(false)
@@ -21,7 +20,7 @@ export default function Header() {
     return () => { document.removeEventListener('keydown', onKeyDown); document.body.classList.remove('menu-open') }
   }, [menuOpen])
 
-  const headerClassName = ['site-header', isHome && !scrolled ? 'is-transparent' : '', scrolled ? 'is-scrolled' : ''].filter(Boolean).join(' ')
+  const headerClassName = ['site-header', !scrolled ? 'is-transparent' : '', scrolled ? 'is-scrolled' : ''].filter(Boolean).join(' ')
   const linkClassName = ({ isActive }) => isActive ? 'active' : undefined
 
   return <header className={headerClassName}>
