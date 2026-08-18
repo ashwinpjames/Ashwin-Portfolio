@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import portrait from '../../assets/ashwin-james-portrait.png'
+import '../styles/about-brands.css'
 
 const principles = [
   ['01', 'Start with the business', 'The market, the sales process, unit economics and the real constraint all come before a channel recommendation.', 'blue'],
@@ -93,6 +94,11 @@ function PrincipleCard({ item, index }) {
   return <article className={`about-principle about-surface about-reveal tone-${tone}`} style={{ transitionDelay: `${index * 60}ms` }}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>
 }
 
+function BrandRow({ logos, direction }) {
+  const renderSet = (suffix) => <div className="about-brand-marquee-set" key={suffix}>{logos.map((logo, index) => <div className="about-brand-card" key={`${logo.src}-${suffix}-${index}`}><img src={logo.src} alt={logo.alt} loading="lazy" /></div>)}</div>
+  return <div className={`about-brand-marquee-row ${direction}`}>{renderSet('a')}{renderSet('b')}</div>
+}
+
 export default function About() {
   const rootRef = useAboutMotion()
 
@@ -125,7 +131,7 @@ export default function About() {
 
     <section className="about-section about-experience-section"><div className="container"><div className="about-section-heading about-reveal"><p className="home-eyebrow">Experience across industries</p><h2>Different businesses. The same focus on qualified growth.</h2><p>I have worked across service businesses where acquisition, trust, lead quality and conversion have to work together.</p></div><div className="about-industry-grid">{industries.map(([title, text], index) => <article className="about-industry-card about-surface about-reveal" style={{ transitionDelay: `${index * 45}ms` }} key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
-    <section className="about-section about-brands-section"><div className="container"><div className="about-brands-heading about-reveal"><div><p className="home-eyebrow">Selected experience</p><h2>Businesses and brands I have worked with.</h2></div><p>A selection of the businesses represented in my professional experience across acquisition, lead generation, websites and growth systems.</p></div><div className="about-brand-grid">{brandLogos.map((logo, index) => <div className="about-brand-card about-reveal" style={{ transitionDelay: `${index * 35}ms` }} key={`${logo.src}-${index}`}><img src={logo.src} alt={logo.alt} loading="lazy" /></div>)}</div></div></section>
+    <section className="about-section about-brands-section"><div className="container"><div className="about-brands-heading about-reveal"><div><p className="home-eyebrow">Selected experience</p><h2>Businesses and brands I have worked with.</h2></div><p>A selection of the businesses represented in my professional experience across acquisition, lead generation, websites and growth systems.</p></div><div className="about-brand-marquee" aria-label="Businesses and brands I have worked with"><BrandRow logos={brandLogos} direction="left" /><BrandRow logos={[...brandLogos].reverse()} direction="right" /></div></div></section>
 
     <section className="about-section about-work-section"><div className="container"><div className="about-section-heading about-reveal"><p className="home-eyebrow">How I work</p><h2>Senior thinking. Hands on delivery. Clear accountability.</h2><p>You work directly with the person shaping the strategy and improving the work, not a chain of account managers.</p></div><div className="about-principles-grid">{principles.map((item, index) => <PrincipleCard key={item[0]} item={item} index={index} />)}</div></div></section>
 
