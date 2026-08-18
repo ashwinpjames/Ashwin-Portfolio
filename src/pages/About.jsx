@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import portrait from '../../assets/ashwin-james-portrait.png'
 import '../styles/about-brands.css'
+import '../styles/about-availability.css'
 
 const principles = [
   ['01', 'Start with the business', 'The market, the sales process, unit economics and the real constraint all come before a channel recommendation.'],
