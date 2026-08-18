@@ -14,7 +14,11 @@ function useReveal() {
 }
 
 function CoreServiceCard({ service, index }) {
-  return <article id={service.id} className={`service-card surface services-reveal tone-${service.tone}`} style={{ transitionDelay: `${(index % 3) * 60}ms` }}><div className="service-card-top"><span className="service-number">{service.number}</span><span className="service-badge">{service.badge}</span></div><h3>{service.title}</h3><p>{service.description}</p><ul>{service.points.map((point) => <li key={point}>{point}</li>)}</ul><p className="service-best">Best for: {service.bestFor}</p></article>
+  return <article id={service.id} className={`service-card surface services-reveal tone-${service.tone}`} style={{ transitionDelay: `${(index % 3) * 60}ms` }}>
+    <div className="service-card-top"><span className="service-number">{service.number}</span><span className="service-badge">{service.badge}</span></div>
+    <div className="service-card-main"><h3>{service.title}</h3><p className="service-description">{service.description}</p></div>
+    <div className="service-card-footer"><ul>{service.points.map((point) => <li key={point}>{point}</li>)}</ul><p className="service-best"><span>Best for</span>{service.bestFor}</p></div>
+  </article>
 }
 
 function GrowthServiceCard({ service, index }) {
