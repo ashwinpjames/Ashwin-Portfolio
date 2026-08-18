@@ -4,14 +4,12 @@ import { whatsappUrl } from '../utils/contact.js'
 import { coreServices, growthServices } from '../data/services.js'
 import '../styles/services-hero.css'
 
-const allServices = [...coreServices, ...growthServices]
-
 const growthTools = [
   { name: 'Google Ads', icon: 'https://cdn.simpleicons.org/googleads/4285F4', serviceId: 'google-ads' },
   { name: 'Meta Ads', icon: 'https://cdn.simpleicons.org/meta/1877F2', serviceId: 'meta-ads' },
   { name: 'GA4', icon: 'https://cdn.simpleicons.org/googleanalytics/F9AB00', serviceId: 'seo' },
-  { name: 'HubSpot', icon: 'https://cdn.simpleicons.org/hubspot/FF7A59', serviceId: 'hubspot-crm-automation' },
-  { name: 'WordPress', icon: 'https://cdn.simpleicons.org/wordpress/21759B', serviceId: 'wordpress-development' },
+  { name: 'HubSpot', icon: 'https://cdn.simpleicons.org/hubspot/FF7A59', serviceId: 'hubspot' },
+  { name: 'WordPress', icon: 'https://cdn.simpleicons.org/wordpress/21759B', serviceId: 'wordpress' },
   { name: 'WhatsApp', icon: 'https://cdn.simpleicons.org/whatsapp/25D366', serviceId: 'whatsapp-marketing' },
   { name: 'GTM', icon: 'https://cdn.simpleicons.org/googletagmanager/246FDB', serviceId: 'google-ads' },
   { name: 'Looker Studio', icon: 'https://cdn.simpleicons.org/looker/4285F4', serviceId: 'performance-growth-marketing' }
@@ -49,7 +47,7 @@ function GrowthEcosystem() {
     <div className="growth-ecosystem-orbits" aria-hidden="true" />
     <div className="growth-ecosystem-core"><strong>GROWTH</strong><strong>SYSTEM</strong><span>Built around<br />your bottleneck</span></div>
     <div className="growth-ecosystem-tools">
-      {growthTools.map((tool, index) => <Link key={tool.name} to={`/services/${tool.serviceId}`} className={`growth-tool growth-tool-${index + 1}`} aria-label={tool.name} style={{ '--tool-delay': `${index * -420}ms` }}>
+      {growthTools.map((tool, index) => <Link key={tool.name} to={`/services/${tool.serviceId}`} className={`growth-tool growth-tool-${index + 1}`} style={{ '--tool-delay': `${index * -420}ms` }} aria-label={tool.name}>
         <span className="growth-tool-icon"><img src={tool.icon} alt="" /></span>
         <span className="growth-tool-label">{tool.name}</span>
       </Link>)}
