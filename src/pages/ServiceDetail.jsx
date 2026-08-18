@@ -8,12 +8,12 @@ import WebsiteDevelopmentService from './WebsiteDevelopmentService.jsx'
 import LeadGenerationService from './LeadGenerationService.jsx'
 import CROService from './CROService.jsx'
 import PerformanceGrowthService from './PerformanceGrowthService.jsx'
+import WhatsAppMarketingService from './WhatsAppMarketingService.jsx'
 import ServiceLanding from './ServiceLanding.jsx'
 
 const allServices = [...coreServices, ...growthServices]
 const landingServiceSlugs = new Set([
   'landing-page-optimisation',
-  'whatsapp-marketing',
   'hubspot',
   'wordpress',
 ])
@@ -27,6 +27,7 @@ export default function ServiceDetail() {
   if (slug === 'lead-generation') return <LeadGenerationService />
   if (slug === 'cro') return <CROService />
   if (slug === 'performance-growth-marketing') return <PerformanceGrowthService />
+  if (slug === 'whatsapp-marketing') return <WhatsAppMarketingService />
   if (landingServiceSlugs.has(slug)) return <ServiceLanding />
 
   const service = allServices.find((item) => item.id === slug)
