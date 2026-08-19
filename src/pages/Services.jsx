@@ -35,14 +35,14 @@ function GrowthServiceCard({ service, index }) {
 }
 
 const ecosystemTools = [
-  { name: 'Google Ads', icon: 'https://api.iconify.design/logos:google-ads.svg' },
-  { name: 'Meta Ads', icon: 'https://api.iconify.design/logos:meta-icon.svg' },
-  { name: 'Google Analytics', icon: 'https://api.iconify.design/logos:google-analytics.svg' },
-  { name: 'Google Tag Manager', icon: 'https://api.iconify.design/logos:google-tag-manager.svg' },
-  { name: 'HubSpot', icon: 'https://api.iconify.design/logos:hubspot.svg' },
-  { name: 'WordPress', icon: 'https://api.iconify.design/logos:wordpress-icon.svg' },
-  { name: 'WhatsApp', icon: 'https://api.iconify.design/logos:whatsapp-icon.svg' },
-  { name: 'Google Search Console', icon: 'https://api.iconify.design/logos:google-search-console.svg' },
+  { name: 'Google Ads', icon: 'https://cdn.simpleicons.org/googleads?viewbox=auto' },
+  { name: 'Meta Ads', icon: 'https://cdn.simpleicons.org/meta?viewbox=auto' },
+  { name: 'Google Analytics', icon: 'https://cdn.simpleicons.org/googleanalytics?viewbox=auto' },
+  { name: 'Google Tag Manager', icon: 'https://cdn.simpleicons.org/googletagmanager?viewbox=auto' },
+  { name: 'HubSpot', icon: 'https://cdn.simpleicons.org/hubspot?viewbox=auto' },
+  { name: 'WordPress', icon: 'https://cdn.simpleicons.org/wordpress?viewbox=auto' },
+  { name: 'WhatsApp', icon: 'https://cdn.simpleicons.org/whatsapp?viewbox=auto' },
+  { name: 'Google Search Console', icon: 'https://cdn.simpleicons.org/googlesearchconsole?viewbox=auto' },
 ]
 
 function GrowthEcosystem() {
