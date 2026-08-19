@@ -10,10 +10,11 @@ import CaseStudies from './pages/CaseStudies.jsx'
 import CrmCaseStudy from './pages/CrmCaseStudy.jsx'
 import Resources from './pages/Resources.jsx'
 import CampaignBudgetCalculator from './pages/CampaignBudgetCalculator.jsx'
+import UtmBuilder from './pages/UtmBuilder.jsx'
 import Blog from './pages/Blog.jsx'
 import Contact from './pages/Contact.jsx'
 import PlaceholderPage from './pages/PlaceholderPage.jsx'
 
 export default function App() {
-  return <Routes><Route element={<MainLayout />}><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/resume" element={<Resume />} /><Route path="/services" element={<Services />} /><Route path="/services/meta-ads" element={<MetaAdsService />} /><Route path="/services/:slug" element={<ServiceDetail />} /><Route path="/case-studies" element={<CaseStudies />} /><Route path="/case-studies/crm-sales-qualified-lead" element={<CrmCaseStudy />} /><Route path="/resources" element={<Resources />} /><Route path="/resources/campaign-budget-calculator" element={<CampaignBudgetCalculator />} /><Route path="/blog" element={<Blog />} /><Route path="/contact" element={<Contact />} /><Route path="*" element={<PlaceholderPage />} /></Route></Routes>
+  return <Routes><Route element={<MainLayout />}><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/resume" element={<Resume />} /><Route path="/services" element={<Services />} /><Route path="/services/meta-ads" element={<MetaAdsService />} /><Route path="/services/:slug" element={<ServiceDetail />} /><Route path="/case-studies" element={<CaseStudies />} /><Route path="/case-studies/crm-sales-qualified-lead" element={<CrmCaseStudy />} /><Route path="/resources" element={<Resources />} /><Route path="/resources/campaign-budget-calculator" element={<CampaignBudgetCalculator />} /><Route path="/resources/utm-builder" element={<UtmBuilder />} /><Route path="/blog" element={<Blog />} /><Route path="/contact" element={<Contact />} /><Route path="*" element={<PlaceholderPage />} /></Route></Routes>
 }
