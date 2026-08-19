@@ -15,6 +15,15 @@ const fields = [
   ['utm_term', 'Term', false, 'residency-consultant'],
 ]
 
+const QUICK_PARAMS = [
+  ['audience', 'business-owners'],
+  ['location', 'dubai'],
+  ['creative', 'video-01'],
+  ['offer', 'free-consultation'],
+  ['placement', 'instagram-stories'],
+  ['variant', 'a'],
+]
+
 function slug(value) { return String(value || '').trim().toLowerCase().replace(/[^a-z0-9_.{}-]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') }
 
 export default function UtmBuilder() {
@@ -65,15 +74,19 @@ export default function UtmBuilder() {
     setCustomValue('')
   }
 
+  const addQuickParam = ([key, value]) => {
+    setCustom((current) => current.some(([existingKey]) => existingKey === key) ? current : [...current, [key, value]])
+  }
+
   return <main className="utm-builder-page"><div className="container">
     <Link className="utm-back" to="/resources">← Back to resources</Link>
     <section className="utm-hero"><p className="resources-eyebrow">Free marketing tool</p><h1>Build cleaner <span>UTM links.</span></h1><p>Create consistent campaign URLs for Meta, Google and other channels without manually building query strings.</p></section>
     <section className="utm-tool">
       <div className="utm-section"><div className="utm-heading"><span>01</span><div><h2>Choose your platform</h2><p>Sets sensible source and medium defaults.</p></div></div><div className="utm-platforms">{Object.entries(PLATFORMS).map(([id, item]) => <button type="button" key={id} className={platform === id ? 'active' : ''} onClick={() => changePlatform(id)}><strong>{item.label}</strong><small>{id === 'meta' ? 'Facebook & Instagram' : id === 'google' ? 'Search, Display, PMax & YouTube' : 'Email, organic, referral and more'}</small></button>)}</div></div>
       <div className="utm-section"><div className="utm-heading"><span>02</span><div><h2>Destination URL</h2><p>Use the exact live landing page URL.</p></div></div><input className="utm-input full" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://example.com/landing-page" /></div>
-      <div className="utm-section"><div className="utm-heading"><span>03</span><div><h2>Campaign parameters</h2><p>Required fields are marked. Values are normalised automatically.</p></div></div><div className="utm-fields">{fields.map(([key, label, required, placeholder]) => <label key={key}><span>{label} {required && <b>required</b>}</span><input className="utm-input" value={values[key] || ''} onChange={(e) => setValues((current) => ({ ...current, [key]: e.target.value }))} placeholder={placeholder} /></label>)}</div></div>
+      <div className="utm-section"><div className="utm-heading"><span>03</span><div><h2>Campaign parameters</h2><p>Required fields are marked. Values are normalised automatically.</p></div></div><div className="utm-fields">{fields.map(([key, label, required, placeholder]) => <label className="utm-field" key={key}><span>{label} {required && <b>required</b>}</span><input className="utm-input" value={values[key] || ''} onChange={(e) => setValues((current) => ({ ...current, [key]: e.target.value }))} placeholder={placeholder} /></label>)}</div></div>
       {PLATFORMS[platform].dynamic.length > 0 && <div className="utm-section"><div className="utm-heading"><span>04</span><div><h2>Platform dynamic parameters</h2><p>Optional tokens can populate values automatically when the ad runs.</p></div></div><div className="utm-chips">{PLATFORMS[platform].dynamic.map(([key, value]) => <label key={key} className={dynamic.includes(key) ? 'checked' : ''}><input type="checkbox" checked={dynamic.includes(key)} onChange={(e) => setDynamic((current) => e.target.checked ? [...current, key] : current.filter((item) => item !== key))} />{key} <code>{value}</code></label>)}</div></div>}
-      <div className="utm-section"><div className="utm-heading"><span>05</span><div><h2>Custom parameters</h2><p>Add another key and value when your reporting needs more context.</p></div></div><div className="utm-custom"><input className="utm-input" value={customKey} onChange={(e) => setCustomKey(e.target.value)} placeholder="key, e.g. audience" /><input className="utm-input" value={customValue} onChange={(e) => setCustomValue(e.target.value)} placeholder="value, e.g. lookalike-1pct" /><button type="button" onClick={addCustom}>Add</button></div>{custom.length > 0 && <div className="utm-custom-list">{custom.map(([key, value], index) => <span key={`${key}-${index}`}>{key}={value}<button type="button" onClick={() => setCustom((current) => current.filter((_, i) => i !== index))}>×</button></span>)}</div>}</div>
+      <div className="utm-section"><div className="utm-heading"><span>05</span><div><h2>Custom parameters</h2><p>Add useful reporting context instantly, or create your own parameter.</p></div></div><div className="utm-quick"><div className="utm-quick-label">Quick add</div><div className="utm-quick-grid">{QUICK_PARAMS.map((item) => <button type="button" key={item[0]} onClick={() => addQuickParam(item)} disabled={custom.some(([key]) => key === item[0])}><strong>{item[0]}</strong><span>{item[1]}</span><i>+</i></button>)}</div></div><div className="utm-custom"><input className="utm-input" value={customKey} onChange={(e) => setCustomKey(e.target.value)} placeholder="custom key, e.g. sales_rep" /><input className="utm-input" value={customValue} onChange={(e) => setCustomValue(e.target.value)} placeholder="custom value, e.g. ashwin" /><button type="button" onClick={addCustom}>Add custom</button></div>{custom.length > 0 && <div className="utm-custom-list">{custom.map(([key, value], index) => <span key={`${key}-${index}`}>{key}={value}<button type="button" onClick={() => setCustom((current) => current.filter((_, i) => i !== index))}>×</button></span>)}</div>}</div>
       <div className="utm-output"><div className="utm-output-top"><span><i className={result.full ? 'ready' : ''} />{result.full ? 'Ready to copy' : result.warnings[0] || 'Waiting for your URL'}</span>{result.full && <small>{result.full.length} chars</small>}</div><div className="utm-url">{result.full || 'Your tagged URL will appear here.'}</div>{result.warnings.length > 0 && <ul>{result.warnings.map((warning) => <li key={warning}>{warning}</li>)}</ul>}<div className="utm-actions"><button className="primary" type="button" disabled={!result.full} onClick={copy}>{copied ? 'Copied ✓' : 'Copy link'}</button><button type="button" onClick={() => { setUrl(''); setValues({ utm_source: PLATFORMS[platform].source, utm_medium: PLATFORMS[platform].medium }); setDynamic([]); setCustom([]) }}>Reset</button></div></div>
     </section>
     <section className="utm-note"><strong>Remember:</strong> UTMs identify campaign traffic. They do not replace GA4, Google Ads conversion tracking, Meta Pixel, Conversions API or CRM attribution.</section>
