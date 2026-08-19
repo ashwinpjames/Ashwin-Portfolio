@@ -1,9 +1,101 @@
-import { crmMonthlyData } from '../data/caseStudies.js'
+import { Link } from 'react-router-dom'
+import { caseStudies, crmMonthlyData } from '../data/caseStudies.js'
 
 export default function CrmCaseStudy() {
-  const total = crmMonthlyData.reduce((sum, item) => sum + item.total, 0)
-  const qualified = crmMonthlyData.reduce((sum, item) => sum + item.qualified, 0)
-  const rate = (qualified / total * 100).toFixed(1)
+  const study = caseStudies.find((item) => item.slug === 'crm-sales-qualified-lead')
+  const [totalLeads, totalLabel] = study.metrics[0]
+  const [sqlLeads] = study.metrics[1]
+  const [sqlRate] = study.metrics[2]
+  const [bestRate] = study.metrics[3]
   const max = Math.max(...crmMonthlyData.map((item) => item.total))
-  return <main className="crm-case-page"><div className="crm-container"><nav className="crm-nav"><strong>Ashwin James</strong><a href="/case-studies">Case Studies</a></nav><header className="crm-hero"><span className="crm-tag">CRM Analytics · Portfolio Case Study</span><h1>Turning 4,499 CRM leads into actionable marketing insights.</h1><p>A 12 month HubSpot analysis designed to move performance measurement beyond lead volume and understand how acquisition translated into sales qualified opportunities.</p><div className="crm-meta"><span>HubSpot CRM</span><span>Aug 2025 — Jul 2026</span><span>Lead Quality Analysis</span><span>Performance Marketing</span></div></header><div className="crm-kpis"><div><b>{total.toLocaleString()}</b><span>Total leads analyzed</span></div><div><b>{qualified}</b><span>Sales Qualified Leads</span></div><div><b>{rate}%</b><span>Overall SQL rate</span></div><div><b>25.1%</b><span>Best monthly SQL rate</span></div></div><section className="crm-section"><div className="crm-section-head"><h2>Monthly performance</h2><p>Compare acquisition volume against downstream sales qualification. The important question is not simply how many leads entered the CRM, but what happened after acquisition.</p></div><div className="crm-panel"><div className="crm-chart">{crmMonthlyData.map((item) => <div className="crm-bar-wrap" key={item.month} title={`${item.month}: ${item.total} leads, ${item.qualified} SQLs`}><div className="crm-bar" style={{ height: `${Math.max(2, item.total / max * 100)}%` }} /><label>{item.month.replace(' 20', ' ')}</label></div>)}</div></div></section><section className="crm-section"><div className="crm-section-head"><h2>Volume vs quality</h2><p>March produced the largest top of funnel number. July produced a stronger commercial outcome from substantially lower volume.</p></div><div className="crm-compare"><div><span className="crm-tag">Peak volume</span><h3>March 2026</h3><strong>747</strong><p>Total leads</p><p><b>121 qualified</b><br/>16.2% SQL rate</p></div><span className="crm-vs">VS</span><div><span className="crm-tag">Best quality</span><h3>July 2026</h3><strong>25.1%</strong><p>Qualification rate</p><p><b>139 qualified from 553 leads</b><br/>18 more sales qualified leads than March despite 194 fewer total leads.</p></div></div></section><section className="crm-story"><aside className="crm-toc"><span className="crm-tag">Case Study</span><a href="#challenge">01 · Challenge</a><a href="#approach">02 · Approach</a><a href="#finding">03 · Key finding</a><a href="#framework">04 · Measurement framework</a><a href="#context">05 · External context</a><a href="#quality">06 · CRM data quality</a><a href="#next">07 · Next layer</a></aside><div className="crm-content"><article id="challenge"><h3>The challenge</h3><p>Marketing performance was highly visible at the top of the funnel, but lead volume alone could not answer whether acquisition was producing commercially useful prospects. A campaign could generate hundreds of inexpensive leads while creating little value for sales.</p><p>The CRM contained outcomes including Qualified Hot, Qualified, Converted, Not Responding, On Hold, Wrong Number, Not Interested, Call Back, Not Qualified and Offer Sent. The goal was to turn this operational CRM history into a performance view that connected acquisition with sales readiness.</p></article><article id="approach"><h3>The approach</h3><div className="crm-note"><b>Metric definition:</b> This case study measures <b>Sales Qualified Leads (SQLs)</b>, not Marketing Qualified Leads (MQLs). MQL rates represent an earlier funnel stage.</div><p>Contacts were grouped by CRM creation month and compared by total acquisition volume and current lead status. Qualified and Qualified Hot were treated as the Sales Qualified Lead outcome, while Not Qualified was tracked independently.</p></article><article id="finding"><h3>The key finding</h3><p className="crm-quote">The month generating the most leads was not the month generating the strongest lead quality.</p><p>March generated 747 leads and 121 sales qualified contacts, a 16.2% SQL rate. July generated only 553 leads but produced 139 sales qualified contacts, resulting in a 25.1% SQL rate.</p><p>July therefore generated approximately 26% fewer total leads than March while producing 18 more sales qualified leads. Qualification efficiency improved by roughly 55% on a relative basis.</p></article><article id="framework"><h3>Moving beyond CPL</h3><p>Cost Per Lead is useful for acquisition efficiency, but it can become misleading when treated as the primary success metric.</p><div className="crm-flow"><span>Ad Spend</span><i>→</i><span>Leads</span><i>→</i><span>SQL</span><i>→</i><span>Opportunity</span><i>→</i><span>Customer</span><i>→</i><span>Revenue</span></div><p>The more useful optimization metrics become SQL Rate, Cost Per Sales Qualified Lead, Lead to Customer Rate, Cost Per Conversion and ultimately revenue based efficiency.</p></article><article id="context"><h3>External context and correlation</h3><p>The reporting period also overlapped with significant regional geopolitical developments around the end of February 2026. CRM volume increased from 271 leads in February to 747 in March, approximately 176% month over month.</p><div className="crm-note"><b>Important:</b> this should not be presented as proof that geopolitical events caused the increase. Media spend, campaign launches, targeting, creative performance, market demand and lead capture changes could also explain the movement.</div></article><article id="quality"><h3>CRM data quality insight</h3><p>The analysis also exposed a measurement dependency: historical reporting is only as reliable as CRM discipline. August 2025 contains 86 contacts but no contacts currently classified as Sales Qualified. This may reflect genuine outcomes, but it could also reflect incomplete historical status updates.</p><p className="crm-quote">CRM discipline is part of marketing measurement.</p></article><article id="next"><h3>What I would analyze next</h3><p>The next stage is to join CRM outcomes with advertising spend and attribution data at channel, campaign, audience, creative and month level. This would allow performance to be evaluated through Cost Per Sales Qualified Lead and customer outcomes rather than lead volume alone.</p><p>The objective changes from <b>generate more leads</b> to <b>generate more commercially valuable outcomes from each unit of marketing investment.</b></p></article></div></section><section className="crm-section"><div className="crm-section-head"><h2>12 month dataset</h2><p>The complete monthly cohort used for the analysis.</p></div><div className="crm-table-wrap"><table><thead><tr><th>Month</th><th>Total</th><th>Sales Qualified</th><th>Not Qualified</th><th>Other</th><th>SQL Rate</th></tr></thead><tbody>{crmMonthlyData.map((item) => <tr key={item.month}><td>{item.month}</td><td>{item.total}</td><td>{item.qualified}</td><td>{item.notQualified}</td><td>{item.other}</td><td>{item.rate}%</td></tr>)}</tbody></table></div></section><footer className="crm-footer">CRM Lead Performance Analysis · Portfolio case study · Data reflects current CRM lead statuses applied to historical contact cohorts.</footer></div></main>
+
+  return (
+    <main className="crm-case-page">
+      <div className="crm-case-shell">
+        <header className="crm-case-header">
+          <Link to="/case-studies" className="crm-back">← Case studies</Link>
+          <span>CRM ANALYTICS · UAE</span>
+        </header>
+
+        <section className="crm-case-hero">
+          <div className="crm-case-hero-copy">
+            <p className="crm-kicker">HubSpot CRM · Aug 2025 — Jul 2026</p>
+            <h1>{study.title}</h1>
+            <p className="crm-hero-summary">{study.summary}</p>
+            <div className="crm-tags"><span>Lead quality</span><span>Performance marketing</span><span>Marketing measurement</span></div>
+          </div>
+          <aside className="crm-hero-result">
+            <small>DATASET</small>
+            <strong>{totalLeads}</strong>
+            <span>{totalLabel}</span>
+            <div><b>{sqlLeads}</b> Sales Qualified Leads</div>
+          </aside>
+        </section>
+
+        <section className="crm-stat-strip" aria-label="Key metrics">
+          <div><strong>{totalLeads}</strong><span>Total leads analyzed</span></div>
+          <div><strong>{sqlLeads}</strong><span>Sales Qualified Leads</span></div>
+          <div><strong>{sqlRate}</strong><span>Overall SQL rate</span></div>
+          <div><strong>{bestRate}</strong><span>Best monthly SQL rate</span></div>
+        </section>
+
+        <section className="crm-simple-section">
+          <div className="crm-section-label">01 · THE QUESTION</div>
+          <div className="crm-two-col">
+            <h2>Lead volume was visible. Lead quality was harder to see.</h2>
+            <div>
+              <p>Marketing performance could show how many leads entered the CRM, but volume alone could not show whether acquisition was producing commercially useful prospects.</p>
+              <p>The analysis connected monthly CRM cohorts with their current lead status to create a clearer view of sales qualification.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="crm-simple-section">
+          <div className="crm-section-label">02 · MONTHLY VIEW</div>
+          <div className="crm-section-heading"><h2>Volume changed. Quality changed with it.</h2><p>The chart shows monthly lead volume from the CRM cohort data.</p></div>
+          <div className="crm-chart-card">
+            <div className="crm-clean-chart">
+              {crmMonthlyData.map((item) => (
+                <div className="crm-clean-bar-wrap" key={item.month} title={`${item.month}: ${item.total} leads, ${item.qualified} SQLs`}>
+                  <div className="crm-clean-bar" style={{ height: `${Math.max(3, item.total / max * 100)}%` }} />
+                  <span>{item.month.slice(0, 3)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="crm-simple-section">
+          <div className="crm-section-label">03 · KEY FINDING</div>
+          <div className="crm-finding">
+            <div><span>March 2026</span><strong>747</strong><small>total leads · 121 SQLs</small></div>
+            <div className="crm-finding-arrow">vs</div>
+            <div><span>July 2026</span><strong>25.1%</strong><small>SQL rate · 139 SQLs</small></div>
+          </div>
+          <p className="crm-finding-text">The highest lead volume was not the strongest quality outcome. July generated fewer total leads than March but more Sales Qualified Leads, showing why acquisition should be evaluated beyond CPL.</p>
+        </section>
+
+        <section className="crm-simple-section">
+          <div className="crm-section-label">04 · THE FRAMEWORK</div>
+          <div className="crm-framework">
+            {['Ad spend', 'Leads', 'SQL', 'Opportunity', 'Customer', 'Revenue'].map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, '0')}</span><strong>{item}</strong>{index < 5 && <i>→</i>}</div>)}
+          </div>
+          <div className="crm-two-col crm-framework-copy"><h2>Move the question from “how many leads?” to “how much commercial value?”</h2><p>Useful downstream measures include SQL rate, cost per Sales Qualified Lead, lead to customer rate, cost per conversion and revenue based efficiency.</p></div>
+        </section>
+
+        <section className="crm-simple-section">
+          <div className="crm-section-label">05 · DATA QUALITY</div>
+          <div className="crm-two-col"><h2>CRM discipline is part of marketing measurement.</h2><p>Historical reporting depends on consistent CRM status updates. The dataset contains operational outcomes such as Qualified Hot, Qualified, Converted, Not Responding, On Hold, Wrong Number, Not Interested, Call Back and Not Qualified. Those classifications determine how useful the downstream analysis becomes.</p></div>
+        </section>
+
+        <section className="crm-simple-section crm-dataset-section">
+          <div className="crm-section-label">06 · DATASET</div>
+          <div className="crm-section-heading"><h2>12 month cohort view</h2><p>The monthly CRM records used for the analysis.</p></div>
+          <div className="crm-table-card"><table><thead><tr><th>Month</th><th>Total</th><th>SQL</th><th>Not qualified</th><th>SQL rate</th></tr></thead><tbody>{crmMonthlyData.map((item) => <tr key={item.month}><td>{item.month}</td><td>{item.total}</td><td>{item.qualified}</td><td>{item.notQualified}</td><td>{item.rate}%</td></tr>)}</tbody></table></div>
+        </section>
+
+        <footer className="crm-case-footer"><Link to="/case-studies">← Back to all case studies</Link><span>CRM Lead Performance Analysis</span></footer>
+      </div>
+    </main>
+  )
 }
