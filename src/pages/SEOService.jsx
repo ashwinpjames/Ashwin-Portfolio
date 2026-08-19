@@ -1,0 +1,62 @@
+import { Link } from 'react-router-dom'
+import { whatsappUrl } from '../utils/contact.js'
+import '../styles/seo-service.css'
+
+const included = [
+  ['Search intent research', 'Map what potential customers are actually trying to find and separate informational searches from commercial buying intent.'],
+  ['Keyword strategy', 'Build keyword themes around services, locations, problems and buyer stages instead of chasing volume for its own sake.'],
+  ['Technical SEO', 'Review crawlability, indexation, site structure, metadata, page performance and technical issues that can limit visibility.'],
+  ['On page SEO', 'Improve headings, copy, page structure, internal links and relevance so important pages better match the searches they should win.'],
+  ['Content strategy', 'Prioritise useful commercial content that answers real search demand and supports the pages that can generate enquiries.'],
+  ['Internal linking', 'Connect related pages so users and search engines can understand the relationship between services, topics and priority pages.'],
+  ['Local SEO', 'Where relevant, strengthen Dubai and UAE local visibility through location relevance, service and location pages and supporting search signals.'],
+  ['Measurement', 'Track search visibility, organic traffic, landing page behaviour and conversions so SEO is evaluated as an acquisition channel.'],
+]
+
+const process = [
+  ['01', 'Audit', 'Review technical health, current visibility, search intent, important pages, competitors and existing conversion paths.'],
+  ['02', 'Map demand', 'Group search themes by intent and identify which pages should capture each commercially relevant opportunity.'],
+  ['03', 'Fix the foundation', 'Address technical and on page issues that prevent search engines and users from understanding the site clearly.'],
+  ['04', 'Build relevance', 'Improve existing pages, create priority content and strengthen internal linking around the search themes that matter.'],
+  ['05', 'Measure and refine', 'Track visibility, organic behaviour and conversions, then adjust priorities based on evidence rather than publishing volume.'],
+]
+
+const faqs = [
+  ['How long does SEO take to work in Dubai?', 'SEO is a compounding acquisition channel, not an instant lead source. The timeline depends on competition, site condition, authority, search demand and how quickly relevant improvements can be implemented.'],
+  ['Can you guarantee first place on Google?', 'No credible SEO specialist can guarantee a specific ranking. The goal is to make the site more relevant, technically sound and competitive for searches that have genuine business value.'],
+  ['Is SEO worth it for a UAE service business?', 'It can be, particularly when customers repeatedly search for the service, problem or location before making contact. The first step is confirming that meaningful search demand exists and that the economics make sense.'],
+  ['Do you focus on local SEO in Dubai?', 'Yes, where local intent matters. The strategy can include location relevance, service and location pages, internal linking and other local search signals appropriate to the business.'],
+  ['Do you create SEO content?', 'I can plan and optimise the content system around search intent, commercial relevance and conversion. Production can be handled directly or coordinated with your existing content resources.'],
+  ['How do you measure SEO results?', 'Rankings and traffic are useful diagnostic signals, but the important measures are relevant landing pages, organic enquiries, conversion behaviour and the commercial value of the demand generated.'],
+  ['Can you audit my existing SEO instead of starting from scratch?', 'Yes. An audit can identify technical problems, search visibility gaps, page relevance issues, internal linking opportunities, local SEO gaps and conversion problems before deciding what actually needs to change.'],
+]
+
+export default function SEOService() {
+  return <main className="seo-service-page" id="main">
+    <section className="seo-service-hero"><div className="seo-service-grid" aria-hidden="true"/><div className="container seo-service-hero-inner">
+      <Link className="seo-service-back" to="/services">← Back to services</Link>
+      <div className="seo-service-hero-content">
+        <div className="seo-service-copy"><p className="seo-service-eyebrow">SEO Management · Dubai & UAE</p><h1>SEO That Makes Your Business Easier to Find</h1><p className="seo-service-hero-lead">I build sustainable organic acquisition around the searches your customers already make. The focus is simple: improve visibility for relevant demand, bring the right people to the right pages and turn organic traffic into enquiries.</p><a className="seo-service-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute SEO Audit <span>↗</span></a><p className="seo-service-trust">No obligation · Dubai based · Search intent · Technical SEO · Local SEO · Conversion measurement</p></div>
+        <div className="seo-service-visual"><div className="seo-ring seo-ring-one"/><div className="seo-ring seo-ring-two"/><div className="seo-core"><span>SEO</span><strong>SEARCH</strong><small>VISIBILITY → DEMAND → LEADS</small></div><span className="seo-node seo-node-one">INTENT</span><span className="seo-node seo-node-two">CONTENT</span><span className="seo-node seo-node-three">TECHNICAL</span></div>
+      </div>
+    </div></section>
+
+    <section className="seo-service-section"><div className="container"><div className="seo-service-heading"><div><p className="seo-service-eyebrow">The problem</p><h2>More traffic is not the same as more business.</h2></div><p>Ranking for broad keywords can look impressive while doing little for revenue. The goal is to build visibility around searches with commercial relevance.</p></div><div className="seo-pain-grid">{[['“We get traffic, but few enquiries.”','Traffic without relevant intent is not a useful acquisition channel. The page needs to match what the searcher is actually trying to accomplish.'],['“We do not know what to fix first.”','Technical issues, content gaps and page optimisation can all compete for attention. Priorities should be based on search opportunity and business impact.'],['“Competitors keep appearing above us.”','Search visibility depends on relevance, technical health, content depth, internal structure and the strength of the pages competing for the same demand.'],['“SEO feels impossible to measure.”','Rankings are only one signal. The useful question is whether organic visibility is producing relevant visits, enquiries and conversions.']].map(([title,text]) => <article className="seo-pain-card" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+    <section className="seo-service-section seo-service-dark"><div className="container"><div className="seo-service-heading"><div><p className="seo-service-eyebrow">Strategic insight</p><h2>SEO works when search intent, relevance and conversion are connected.</h2></div><p>Search engines need to understand what a page is about. Searchers need to see that it answers their problem. Your business needs the visit to have a realistic path toward an enquiry. Optimising only one layer leaves the acquisition system incomplete.</p></div><div className="seo-strategy-grid">{[['Search intent','Understand the reason behind the query before choosing the page or keyword.'],['Keyword strategy','Prioritise demand that is commercially relevant to the business.'],['Technical foundation','Make the site easy to crawl, understand and navigate.'],['Useful content','Answer real questions while supporting commercial pages.'],['Internal linking','Build clear relationships between related pages and topics.'],['Conversion','Give organic visitors a logical next step once they arrive.']].map(([title,text],index)=><article className="seo-included-card" key={title}><span>0{index+1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+    <section className="seo-service-section"><div className="container"><div className="seo-service-heading"><div><p className="seo-service-eyebrow">What's included</p><h2>Specific SEO work built around sustainable organic acquisition.</h2></div><p>Every component has a purpose. The aim is not to publish more pages or collect more keywords. It is to build useful search visibility around demand that matters.</p></div><div className="seo-included-grid">{included.map(([title,text],index)=><article className="seo-included-card" key={title}><span>0{index+1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+    <section className="seo-service-section seo-service-dark"><div className="container"><div className="seo-service-heading"><div><p className="seo-service-eyebrow">The process</p><h2>From search audit to measurable organic growth.</h2></div><p>Each stage has a clear job. The process is designed to avoid random optimisation and focus effort on the areas most likely to improve relevant visibility.</p></div><div className="seo-process">{process.map(([number,title,text]) => <article className="seo-process-row" key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+    <section className="seo-service-proof"><div className="container seo-proof-grid"><div><p className="seo-service-eyebrow">Measurement & proof</p><h2>Measure search visibility against the business outcome.</h2></div><div><p>SEO should be evaluated through more than keyword positions. The measurement layer connects search visibility with organic traffic, important landing pages, engagement, enquiries and conversions where the available data supports it.</p><p>Relevant experience spans high consideration services including immigration, attestation, healthcare and wellness, recruitment and professional services.</p><div className="seo-proof-note">No invented traffic or ranking claims. Verified Search Console, analytics and CRM results should be added when the evidence is available.</div></div></div></section>
+
+    <section className="seo-service-section"><div className="container seo-differentiator"><div><p className="seo-service-eyebrow">Why Ashwin</p><h2>SEO is treated as an acquisition system, not a checklist.</h2></div><p>I look at search intent, the page experience, conversion paths and the wider acquisition system together. That matters because a ranking is not the final objective. The objective is to make relevant demand easier to discover, easier to trust and easier to convert.</p></div></section>
+
+    <section className="seo-service-section seo-service-dark"><div className="container"><div className="seo-service-heading"><div><p className="seo-service-eyebrow">FAQ</p><h2>Questions worth answering before investing in SEO.</h2></div><p>Direct answers to the concerns a careful business owner should have before committing time and budget.</p></div><div className="seo-faq">{faqs.map(([question,answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>
+
+    <section className="seo-service-cta"><div className="container"><p className="seo-service-eyebrow">Ready to look at your search visibility?</p><h2>Find out where your biggest organic growth opportunity is.</h2><p>Book 15 minutes. I will review the current search position, identify the biggest constraint and explain what I would prioritise first.</p><a className="seo-service-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute SEO Audit <span>↗</span></a><small>No long presentation. No obligation. Just a practical review.</small></div></section>
+
+    <section className="seo-related"><div className="container"><p className="seo-service-eyebrow">Related services</p><div className="seo-related-grid"><Link to="/services/website-development"><span>Website Development</span><b>→</b></Link><Link to="/services/landing-page-optimisation"><span>Landing Page Optimisation</span><b>→</b></Link><Link to="/services/lead-generation"><span>Lead Generation</span><b>→</b></Link></div></div></section>
+  </main>
+}

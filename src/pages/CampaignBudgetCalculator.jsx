@@ -1,0 +1,6 @@
+import { Link } from 'react-router-dom'
+import BudgetCalculator from '../components/resources/BudgetCalculator.jsx'
+
+export default function CampaignBudgetCalculator() {
+  return <main className="calculator-page"><div className="container"><Link className="calculator-back" to="/resources">← Back to resources</Link><section className="calculator-hero"><p className="resources-eyebrow">Free marketing tool</p><h1>Campaign Budget <span>Calculator.</span></h1><p>Estimate a sensible starting advertising budget from your economics and growth objective. Use the result as a planning baseline, then validate it against real campaign data.</p></section><BudgetCalculator/><section className="calculator-explanation"><div><p className="resources-eyebrow">The logic</p><h2>A budget is a business decision, not just an ad platform setting.</h2></div><div><p>The calculator combines contribution economics with your target acquisition cost and intended conversion volume. It is deliberately conservative because the correct budget depends on what the business can afford to learn while the campaign proves itself.</p><p><strong>Important:</strong> the output is an estimate. It does not predict revenue, conversion rate or campaign performance.</p></div></section></div></main>
+}

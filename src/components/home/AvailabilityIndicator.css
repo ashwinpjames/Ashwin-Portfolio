@@ -1,0 +1,57 @@
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+}
+
+.availability-dot {
+  position: relative;
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  flex: 0 0 .5rem;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, .55), 0 0 8px rgba(52, 211, 153, .45);
+  animation: availability-pulse 1.8s ease-out infinite;
+}
+
+.availability-dot::after {
+  content: '';
+  position: absolute;
+  inset: -.25rem;
+  border: 1px solid rgba(52, 211, 153, .45);
+  border-radius: 50%;
+  animation: availability-ring 1.8s ease-out infinite;
+}
+
+@keyframes availability-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, .5), 0 0 8px rgba(52, 211, 153, .45);
+  }
+  45% {
+    opacity: .72;
+    transform: scale(.88);
+    box-shadow: 0 0 0 5px rgba(52, 211, 153, 0), 0 0 14px rgba(52, 211, 153, .7);
+  }
+}
+
+@keyframes availability-ring {
+  0% {
+    opacity: .8;
+    transform: scale(.65);
+  }
+  70%, 100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .availability-dot,
+  .availability-dot::after {
+    animation: none;
+  }
+}

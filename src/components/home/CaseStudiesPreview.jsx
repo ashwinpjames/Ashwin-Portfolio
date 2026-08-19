@@ -1,0 +1,9 @@
+const studies = [
+  ['Healthcare', '90 day engagement', '+68%', 'Qualified leads', '−36%', 'Cost / lead', 'Multi specialty clinic · Dubai', 'From expensive enquiries to a clearer patient pipeline.', 'Rebuilt campaign structure, conversion pages and lead qualification around high value treatments.'],
+  ['Education', '120 day engagement', '+54%', 'Enrolment enquiries', '+22%', 'Show up rate', 'Education provider · UAE', 'A lead journey that improved both volume and intent.', 'Mapped decision friction, then paired a sharper offer with an automated nurturing sequence.'],
+  ['Professional services', '60 day sprint', '5.7x', 'ROAS', '+41%', 'Sales ready leads', 'Advisory firm · Dubai', 'More of the right conversations from the same market.', 'Tightened demand capture and added attribution that showed which enquiries became clients.'],
+]
+
+export default function CaseStudiesPreview() {
+  return <section id="case-studies" className="home-section case-studies-preview"><div className="container"><div className="section-heading split-heading reveal-home"><div><p className="home-eyebrow">Selected case studies</p><h2>Work measured in business impact.</h2></div><a className="text-link" href="/case-studies">Discuss a similar challenge <span>→</span></a></div><div className="case-grid">{studies.map(([tag, period, metric1, label1, metric2, label2, meta, title, text]) => <article className="case-card reveal-home" key={title}><div className="case-graph"><div><span>{tag}</span><small>{period}</small></div><div className="graph-line" aria-hidden="true"><i /></div><div className="case-metrics"><div><small>{label1}</small><strong>{metric1}</strong></div><div><small>{label2}</small><strong>{metric2}</strong></div></div></div><div className="case-body"><p>{meta}</p><h3>{title}</h3><span>{text}</span><a href="/case-studies">View case study <span>→</span></a></div></article>)}</div></div></section>
+}
