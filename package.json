@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest"
