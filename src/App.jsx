@@ -11,7 +11,7 @@ import CrmCaseStudy from './pages/CrmCaseStudy.jsx'
 import Resources from './pages/Resources.jsx'
 import CampaignBudgetCalculator from './pages/CampaignBudgetCalculator.jsx'
 import UTMBuilder from './pages/UTMBuilder.jsx'
-import MetaAdsLaunchChecklist from './pages/MetaAdsLaunchChecklist.jsx'
+import MetaAdsChecklist from './pages/MetaAdsChecklist.jsx'
 import LeadQualityFramework from './pages/LeadQualityFramework.jsx'
 import Blog from './pages/Blog.jsx'
 import Contact from './pages/Contact.jsx'
@@ -31,7 +31,7 @@ export default function App() {
       <Route path="/resources" element={<Resources />} />
       <Route path="/resources/campaign-budget-calculator" element={<CampaignBudgetCalculator />} />
       <Route path="/resources/utm-builder" element={<UTMBuilder />} />
-      <Route path="/resources/meta-ads-launch-checklist" element={<MetaAdsLaunchChecklist />} />
+      <Route path="/resources/meta-ads-launch-checklist" element={<MetaAdsChecklist />} />
       <Route path="/resources/lead-quality-framework" element={<LeadQualityFramework />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
