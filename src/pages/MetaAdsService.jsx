@@ -32,7 +32,6 @@ const faqs = [
 export default function MetaAdsService() {
   return <main className="meta-service-page" id="main">
     <section className="meta-service-hero"><div className="meta-service-grid" aria-hidden="true"/><div className="container meta-service-hero-inner">
-      <Link className="meta-service-back" to="/services">← Back to services</Link>
       <div className="meta-hero-layout">
         <div className="meta-hero-copy">
           <p className="meta-service-eyebrow">Meta Ads Management · Dubai & UAE</p>
@@ -64,7 +63,7 @@ export default function MetaAdsService() {
 
     <section className="meta-service-section meta-service-dark"><div className="container"><div className="meta-service-heading"><div><p className="meta-service-eyebrow">FAQ</p><h2>Questions to answer before handing over your ad budget.</h2></div><p>Clear answers to the concerns a skeptical business owner should have before starting.</p></div><div className="meta-faq">{faqs.map(([question,answer])=><details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>
 
-    <section className="meta-service-cta"><div className="container"><p className="meta-service-eyebrow">Ready to look at the account?</p><h2>Find out whether your Meta Ads are attracting the right demand.</h2><p>Book 15 minutes. I will review the biggest potential issues in your current setup and explain what I would prioritise.</p><a className="meta-service-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute Meta Ads Audit <span>↗</span></a></div></section>
+    <section className="meta-service-cta"><div className="container"><p className="meta-service-eyebrow">Ready to look at the account?</p><h2>Find out whether your Meta Ads are attracting the right demand.</h2><p>Book 15 minutes. I will review the biggest potential issues in your current setup and explain what I would prioritise.</p><div className="meta-service-final-actions"><a className="meta-service-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute Meta Ads Audit <span>↗</span></a><Link className="meta-service-back-button" to="/services">← Back to Services</Link></div></div></section>
 
     <section className="meta-related"><div className="container"><p className="meta-service-eyebrow">Related services</p><div className="meta-related-grid"><Link to="/services/landing-page-optimisation"><span>Landing Page Optimisation</span><b>→</b></Link><Link to="/services/lead-generation"><span>Lead Generation</span><b>→</b></Link><Link to="/services/hubspot"><span>HubSpot CRM & Automation</span><b>→</b></Link></div></div></section>
   </main>
