@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import { coreServices, growthServices } from '../data/services.js'
+import '../styles/services.css'
 import '../styles/services-hero.css'
 
 const allServices = [...coreServices, ...growthServices]
