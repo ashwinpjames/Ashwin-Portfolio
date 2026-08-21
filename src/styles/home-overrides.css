@@ -1,3 +1,24 @@
 .problem-grid{border-color:rgba(148,163,184,.13)}
 .problem-grid article{border-right-color:rgba(148,163,184,.13)}
 @media(max-width:800px){.problem-grid article{border-right:0;border-bottom:1px solid rgba(148,163,184,.13)}.problem-grid article:last-child{border-bottom:0}}
+
+/* Portrait card inspired by the supplied reference */
+.about-preview .portrait-frame{max-width:28rem;padding:.55rem;border:1px solid rgba(148,163,184,.16);border-radius:1.6rem;background:linear-gradient(145deg,#171d43,#070b1d);box-shadow:0 28px 80px rgba(0,0,0,.28)}
+.about-preview .portrait-inner{height:565px;border:1px solid rgba(255,255,255,.08);border-radius:1.25rem;background:#080d22}
+.about-preview .portrait-image{position:absolute;inset:0;width:100%;height:100%!important;object-fit:cover;object-position:center top;opacity:.86}
+.about-preview .portrait-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,17,43,.08) 20%,rgba(7,11,29,.18) 42%,rgba(7,11,29,.96) 79%,#070b1d 100%);pointer-events:none}
+.about-preview .portrait-glow{inset:-4rem;background:radial-gradient(circle,rgba(83,92,220,.25),transparent 68%);filter:blur(2.5rem)}
+.about-preview .availability{left:1.25rem;top:1.25rem;z-index:2;padding:.5rem .75rem;border-color:rgba(255,255,255,.16);background:rgba(8,13,34,.82);color:#48e0d0;backdrop-filter:blur(12px);letter-spacing:.08em}
+.about-preview .availability-dot{background:#34d9cb;box-shadow:0 0 0 4px rgba(52,217,203,.1)}
+.about-preview .portrait-info{position:absolute;left:1.25rem;right:1.25rem;bottom:1.2rem;z-index:2}
+.about-preview .portrait-quote{margin-bottom:.85rem;color:#f8fafc;font-size:.88rem;font-style:italic;font-weight:700;line-height:1.5}
+.about-preview .portrait-divider{height:1px;background:rgba(255,255,255,.09);margin-bottom:1rem}
+.about-preview .portrait-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
+.about-preview .portrait-caption{position:static;padding:0;background:none}
+.about-preview .portrait-caption strong{font-size:1.25rem;letter-spacing:-.03em}
+.about-preview .portrait-caption span{max-width:15rem;color:#a9b4d1;font-size:.82rem;line-height:1.45}
+.linkedin-button{display:grid;place-items:center;width:2.5rem;height:2.5rem;flex:0 0 2.5rem;border:1px solid rgba(255,255,255,.1);border-radius:.7rem;background:rgba(255,255,255,.055);color:#aeb7d0;text-decoration:none;transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease}
+.linkedin-button span{font-size:.9rem;font-weight:800;line-height:1}
+.linkedin-button:hover{transform:translateY(-2px);border-color:rgba(96,165,250,.55);background:rgba(10,102,194,.22);color:#fff}
+@media(max-width:800px){.about-preview .portrait-inner{height:500px}.about-preview .portrait-frame{max-width:32rem;margin:0 auto}.about-preview-grid{grid-template-columns:1fr;gap:3rem}}
+@media(max-width:480px){.about-preview .portrait-inner{height:520px}.about-preview .portrait-info{left:1rem;right:1rem;bottom:1rem}.about-preview .portrait-quote{font-size:.82rem}.about-preview .portrait-caption strong{font-size:1.1rem}.about-preview .portrait-caption span{font-size:.75rem}}
