@@ -19,6 +19,7 @@ import './styles/insights.css'
 import './styles/utm-builder.css'
 import './styles/meta-checklist.css'
 import './styles/lead-quality.css'
+import './styles/algorithm-blog.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
