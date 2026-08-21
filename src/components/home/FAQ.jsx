@@ -18,7 +18,20 @@ const faqs = [
   ['How do I get started?', 'Book a free consultation and we will discuss your goals, challenges and whether we are the right fit.'],
 ]
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer,
+    },
+  })),
+}
+
 export default function FAQ() {
   const [open, setOpen] = useState(0)
-  return <section id="faq" className="home-section faq-section"><div className="container"><div className="section-heading reveal-home"><p className="home-eyebrow">Frequently asked questions</p><h2>A clear start to a considered partnership.</h2><p>Clear answers to the questions that matter before you invest in a growth partnership.</p><a className="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">Ask a question on WhatsApp <span>→</span></a></div><div className="faq-grid reveal-home">{faqs.map(([question, answer], index) => <div className={`faq-item${open === index ? ' active' : ''}`} key={question}><button type="button" aria-expanded={open === index} onClick={() => setOpen(open === index ? -1 : index)}><span>{question}</span><span className="faq-icon">+</span></button><div className="faq-answer"><div><p>{answer}</p></div></div></div>)}</div></div></section>
+  return <section id="faq" className="home-section faq-section"><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><div className="container"><div className="section-heading reveal-home"><p className="home-eyebrow">Frequently asked questions</p><h2>A clear start to a considered partnership.</h2><p>Clear answers to the questions that matter before you invest in a growth partnership.</p><a className="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">Ask a question on WhatsApp <span>→</span></a></div><div className="faq-grid reveal-home">{faqs.map(([question, answer], index) => <div className={`faq-item${open === index ? ' active' : ''}`} key={question}><button type="button" aria-expanded={open === index} onClick={() => setOpen(open === index ? -1 : index)}><span>{question}</span><span className="faq-icon">+</span></button><div className="faq-answer"><div><p>{answer}</p></div></div></div>)}</div></div></section>
 }
