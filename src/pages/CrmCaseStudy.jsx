@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { caseStudies, crmMonthlyData } from '../data/caseStudies.js'
+import CaseStudyLeadForm from '../components/case-studies/CaseStudyLeadForm.jsx'
 
 export default function CrmCaseStudy() {
   const study = caseStudies.find((item) => item.slug === 'crm-sales-qualified-lead')
@@ -53,33 +54,18 @@ export default function CrmCaseStudy() {
         <section className="crm-simple-section">
           <div className="crm-section-label">02 · MONTHLY VIEW</div>
           <div className="crm-section-heading"><h2>Volume changed. Quality changed with it.</h2><p>The chart shows monthly lead volume from the CRM cohort data.</p></div>
-          <div className="crm-chart-card">
-            <div className="crm-clean-chart">
-              {crmMonthlyData.map((item) => (
-                <div className="crm-clean-bar-wrap" key={item.month} title={`${item.month}: ${item.total} leads, ${item.qualified} SQLs`}>
-                  <div className="crm-clean-bar" style={{ height: `${Math.max(3, item.total / max * 100)}%` }} />
-                  <span>{item.month.slice(0, 3)}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="crm-chart-card"><div className="crm-clean-chart">{crmMonthlyData.map((item) => <div className="crm-clean-bar-wrap" key={item.month} title={`${item.month}: ${item.total} leads, ${item.qualified} SQLs`}><div className="crm-clean-bar" style={{ height: `${Math.max(3, item.total / max * 100)}%` }} /><span>{item.month.slice(0, 3)}</span></div>)}</div></div>
         </section>
 
         <section className="crm-simple-section">
           <div className="crm-section-label">03 · KEY FINDING</div>
-          <div className="crm-finding">
-            <div><span>March 2026</span><strong>747</strong><small>total leads · 121 SQLs</small></div>
-            <div className="crm-finding-arrow">vs</div>
-            <div><span>July 2026</span><strong>25.1%</strong><small>SQL rate · 139 SQLs</small></div>
-          </div>
+          <div className="crm-finding"><div><span>March 2026</span><strong>747</strong><small>total leads · 121 SQLs</small></div><div className="crm-finding-arrow">vs</div><div><span>July 2026</span><strong>25.1%</strong><small>SQL rate · 139 SQLs</small></div></div>
           <p className="crm-finding-text">The highest lead volume was not the strongest quality outcome. July generated fewer total leads than March but more Sales Qualified Leads, showing why acquisition should be evaluated beyond CPL.</p>
         </section>
 
         <section className="crm-simple-section">
           <div className="crm-section-label">04 · THE FRAMEWORK</div>
-          <div className="crm-framework">
-            {['Ad spend', 'Leads', 'SQL', 'Opportunity', 'Customer', 'Revenue'].map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, '0')}</span><strong>{item}</strong>{index < 5 && <i>→</i>}</div>)}
-          </div>
+          <div className="crm-framework">{['Ad spend', 'Leads', 'SQL', 'Opportunity', 'Customer', 'Revenue'].map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, '0')}</span><strong>{item}</strong>{index < 5 && <i>→</i>}</div>)}</div>
           <div className="crm-two-col crm-framework-copy"><h2>Move the question from “how many leads?” to “how much commercial value?”</h2><p>Useful downstream measures include SQL rate, cost per Sales Qualified Lead, lead to customer rate, cost per conversion and revenue based efficiency.</p></div>
         </section>
 
@@ -93,6 +79,8 @@ export default function CrmCaseStudy() {
           <div className="crm-section-heading"><h2>12 month cohort view</h2><p>The monthly CRM records used for the analysis.</p></div>
           <div className="crm-table-card"><table><thead><tr><th>Month</th><th>Total</th><th>SQL</th><th>Not qualified</th><th>SQL rate</th></tr></thead><tbody>{crmMonthlyData.map((item) => <tr key={item.month}><td>{item.month}</td><td>{item.total}</td><td>{item.qualified}</td><td>{item.notQualified}</td><td>{item.rate}%</td></tr>)}</tbody></table></div>
         </section>
+
+        <CaseStudyLeadForm eyebrow="Want a detailed CRM audit?" title="Is your lead volume hiding your real marketing performance?" description="I can help you connect ad acquisition, CRM outcomes and lead quality so you can see which campaigns are producing commercially useful opportunities." buttonLabel="Request a CRM audit" />
 
         <footer className="crm-case-footer"><Link to="/case-studies">← Back to all case studies</Link><span>CRM Lead Performance Analysis</span></footer>
       </div>
