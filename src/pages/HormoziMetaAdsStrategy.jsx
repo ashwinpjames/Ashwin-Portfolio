@@ -15,8 +15,28 @@ const faq = [
   ['What does Andromeda actually do?', 'Meta describes Andromeda as a personalized ads retrieval system. Retrieval is an early stage that narrows a very large candidate pool before later ranking stages determine which ads are ultimately shown.'],
 ]
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Steal Like an Artist: What Alex Hormozi’s Meta Ads Strategy Reveals About Creative Targeting',
+  description: 'An analysis of Alex Hormozi’s Meta Ads creative strategy, business specific callouts, creative volume, format diversity and the role of Andromeda.',
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  publisher: { '@type': 'Person', name: 'Ashwin James' },
+  datePublished: '2026-08-21',
+  dateModified: '2026-08-21',
+  mainEntityOfPage: 'https://ashwinjames.com/blog/hormozi-meta-ads-strategy'
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } }))
+}
+
 export default function HormoziMetaAdsStrategy() {
   return <main className="hormozi-blog-page">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <article className="hormozi-blog-shell">
       <header className="hormozi-hero">
         <Link to="/blog" className="hormozi-back">← Back to all insights</Link>
@@ -44,7 +64,7 @@ export default function HormoziMetaAdsStrategy() {
         <p>That creates a strong relevance cue. A commercial real estate broker can immediately recognise that the ad is meant for someone like them. The same logic can be repeated for another vertical without forcing one generic creative to speak to everyone.</p>
 
         <h2>This is where Andromeda matters</h2>
-        <p>Meta describes Andromeda as a personalized ads retrieval engine. Retrieval is an early stage of the recommendation system that narrows tens of millions of possible ad candidates into a much smaller set of relevant candidates before later ranking stages. citeturn0search1</p>
+        <p>Meta describes Andromeda as a personalized ads retrieval engine. Retrieval is an early stage of the recommendation system that narrows tens of millions of possible ad candidates into a much smaller set of relevant candidates before later ranking stages. <a href="https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/" target="_blank" rel="noopener noreferrer">Read Meta’s engineering explanation of Andromeda</a>.</p>
         <p>That supports an important strategic shift: creative can carry more contextual information about who an ad is relevant to. It does not mean the creative literally replaces targeting, but it does make the message itself a more important signal in the system.</p>
         <div className="hormozi-model"><span>OLD MENTAL MODEL</span><strong>Choose the audience first → make a generic ad</strong><span>CREATIVE LED MODEL</span><strong>Build a specific message → let the system find relevant people</strong></div>
         <p>This is the part worth stealing. Not the exact wording. Not the exact design. The principle that specificity can be built into the creative itself.</p>
@@ -75,7 +95,7 @@ export default function HormoziMetaAdsStrategy() {
         <h2>The bigger lesson for performance marketers</h2>
         <p>The lesson is not “copy Alex Hormozi”. The lesson is to stop thinking about creative as decoration placed on top of targeting.</p>
         <p>In a more automated Meta ads environment, creative can communicate the audience, problem, offer and context at the same time. That gives the recommendation system richer information to work with while giving the user a message that feels immediately relevant.</p>
-        <p>Meta’s own description of Andromeda emphasises the scale of creative candidates and the role of AI in retrieving relevant ads. citeturn0search1</p>
+        <p>Meta’s own description of Andromeda emphasises the scale of creative candidates and the role of AI in retrieving relevant ads. <a href="https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/" target="_blank" rel="noopener noreferrer">Meta Engineering explains the retrieval system here</a>.</p>
         <p>For advertisers, that points toward a different testing question:</p>
         <blockquote>What different versions of the market can my creative clearly describe?</blockquote>
         <p>That is a much more interesting question than simply asking which interest targeting option to select.</p>
