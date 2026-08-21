@@ -9,6 +9,7 @@ import MetaAdsService from './pages/MetaAdsService.jsx'
 import CaseStudies from './pages/CaseStudies.jsx'
 import CrmCaseStudy from './pages/CrmCaseStudy.jsx'
 import MetaTrackingCaseStudy from './pages/MetaTrackingCaseStudy.jsx'
+import MetaAdsAlgorithmBlog from './pages/MetaAdsAlgorithmBlog.jsx'
 import Resources from './pages/Resources.jsx'
 import CampaignBudgetCalculator from './pages/CampaignBudgetCalculator.jsx'
 import UTMBuilder from './pages/UTMBuilder.jsx'
@@ -36,6 +37,7 @@ export default function App() {
       <Route path="/resources/meta-ads-launch-checklist" element={<MetaAdsChecklist />} />
       <Route path="/resources/lead-quality-framework" element={<LeadQualityFramework />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/how-meta-ads-algorithm-works" element={<MetaAdsAlgorithmBlog />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<PlaceholderPage />} />
     </Route>
