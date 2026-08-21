@@ -11,6 +11,7 @@ const meta = {
   '/resources': ['Marketing Resources for Performance Marketers | Ashwin James', 'Access practical marketing tools, calculators, checklists and frameworks for paid advertising, lead generation, analytics and conversion optimisation.'],
   '/resources/campaign-budget-calculator': ['Campaign Budget Calculator | Performance Marketing UAE', 'Calculate a practical advertising budget using your target leads, conversion rate, cost per lead and business acquisition goals.'],
   '/blog': ['Performance Marketing Insights | Ashwin James UAE', 'Read practical insights on performance marketing, Google Ads, Meta Ads, lead generation, analytics, CRO and digital growth in the UAE.'],
+  '/blog/how-meta-ads-algorithm-works': ["How Meta's Ad Algorithm Works in 2026 | Ashwin James", "Learn how Meta Ads ranking works through retrieval, light ranking, heavy ranking and the ad auction, plus what Total Value means for advertisers."],
   '/contact': ['Contact a Performance Marketing Specialist in UAE | Ashwin James', 'Contact Ashwin James to discuss performance marketing, Google Ads, Meta Ads, lead generation, conversion optimisation and measurable business growth.'],
 }
 
