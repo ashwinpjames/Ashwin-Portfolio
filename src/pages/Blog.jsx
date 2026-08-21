@@ -43,11 +43,6 @@ export default function Blog() {
             <div className="blog-latest-meta"><span>{latestPost.date}</span><span>{latestPost.readTime}</span></div>
           </Link>
         </div>}
-
-        <div className="blog-scroll-cue" aria-hidden="true">
-          <span>Scroll to explore</span>
-          <svg width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M7 1V17M7 17L1 11M7 17L13 11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-        </div>
       </div>
     </section>
 
