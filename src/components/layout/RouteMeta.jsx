@@ -2,16 +2,16 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const meta = {
-  '/': ['Ashwin James — Performance Marketing Specialist', 'Performance marketing, lead generation, analytics and growth systems for businesses in Dubai and the UAE.'],
-  '/about': ['About Ashwin James — Performance Marketing & Growth', 'Learn how Ashwin approaches performance marketing, growth systems and practical delivery for UAE businesses.'],
-  '/resume': ['Resume — Ashwin James', 'Experience, skills, education and selected work from Ashwin James, a performance marketing specialist in the UAE.'],
-  '/services': ['Performance Marketing Services — Ashwin James', 'Google Ads, Meta Ads, SEO, lead generation, websites, CRO and growth systems for UAE businesses.'],
-  '/case-studies': ['Case Studies — Ashwin James', 'Selected performance marketing, lead generation, analytics and growth case studies.'],
-  '/case-studies/crm-sales-qualified-lead': ['CRM & Sales Qualified Lead Case Study — Ashwin James', 'A detailed analysis of lead quality, sales qualification and CRM performance.'],
-  '/resources': ['Marketing Resources — Ashwin James', 'Free practical marketing tools, checklists and frameworks for better growth decisions.'],
-  '/resources/campaign-budget-calculator': ['Campaign Budget Calculator — Ashwin James', 'Estimate a practical starting advertising budget from your business economics and acquisition goals.'],
-  '/blog': ['Marketing Insights — Ashwin James', 'Practical insights on performance marketing, lead quality, analytics and growth.'],
-  '/contact': ['Contact Ashwin James — Performance Marketing', 'Start a conversation about performance marketing, lead generation, conversion or growth systems.'],
+  '/': ['Performance Marketing Specialist in UAE | Ashwin James', 'Ashwin James is a performance marketing specialist in the UAE helping businesses grow with Google Ads, Meta Ads, lead generation, analytics and conversion optimisation.'],
+  '/about': ['About Ashwin James | Performance Marketing Specialist in UAE', 'Learn about Ashwin James, a performance marketing specialist in the UAE focused on Google Ads, Meta Ads, lead generation, analytics, CRO and measurable business growth.'],
+  '/resume': ['Resume | Ashwin James | Performance Marketing Specialist UAE', 'Explore the experience, skills, certifications and selected work of Ashwin James, a performance marketing specialist focused on paid advertising, lead generation and growth.'],
+  '/services': ['Performance Marketing Services in UAE | Ashwin James', 'Explore performance marketing services in the UAE including Google Ads, Meta Ads, lead generation, SEO, CRO, analytics and growth systems for businesses.'],
+  '/case-studies': ['Performance Marketing Case Studies | Ashwin James UAE', 'Explore performance marketing case studies covering paid advertising, lead generation, CRM, analytics, conversion optimisation and measurable growth.'],
+  '/case-studies/crm-sales-qualified-lead': ['CRM & Sales Qualified Lead Case Study | Ashwin James', 'See how CRM processes, lead qualification and sales data can improve lead quality, marketing performance and revenue opportunities.'],
+  '/resources': ['Marketing Resources for Performance Marketers | Ashwin James', 'Access practical marketing tools, calculators, checklists and frameworks for paid advertising, lead generation, analytics and conversion optimisation.'],
+  '/resources/campaign-budget-calculator': ['Campaign Budget Calculator | Performance Marketing UAE', 'Calculate a practical advertising budget using your target leads, conversion rate, cost per lead and business acquisition goals.'],
+  '/blog': ['Performance Marketing Insights | Ashwin James UAE', 'Read practical insights on performance marketing, Google Ads, Meta Ads, lead generation, analytics, CRO and digital growth in the UAE.'],
+  '/contact': ['Contact a Performance Marketing Specialist in UAE | Ashwin James', 'Contact Ashwin James to discuss performance marketing, Google Ads, Meta Ads, lead generation, conversion optimisation and measurable business growth.'],
 }
 
 function setMeta(name, content) {
@@ -23,7 +23,7 @@ function setMeta(name, content) {
 export default function RouteMeta() {
   const { pathname } = useLocation()
   useEffect(() => {
-    const [title, description] = meta[pathname] || ['Ashwin James — Performance Marketing Specialist', 'Performance marketing and growth systems for businesses in Dubai and the UAE.']
+    const [title, description] = meta[pathname] || ['Performance Marketing Specialist in UAE | Ashwin James', 'Ashwin James is a performance marketing specialist in the UAE focused on paid advertising, lead generation, analytics, conversion optimisation and measurable business growth.']
     document.title = title
     setMeta('description', description)
     setMeta('theme-color', '#050816')
