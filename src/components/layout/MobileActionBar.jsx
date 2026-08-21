@@ -4,7 +4,7 @@ import { emailAddress, whatsappUrl } from '../../utils/contact.js'
 export default function MobileActionBar() {
   const [visible, setVisible] = useState(false)
   useEffect(() => {
-    const update = () => setVisible(window.innerWidth <= 767 && window.scrollY > Math.max(90, window.innerHeight * 0.12))
+    const update = () => setVisible(window.innerWidth <= 767 && window.scrollY > Math.max(90, window.innerHeight * 0.2))
     update()
     window.addEventListener('scroll', update, { passive: true })
     window.addEventListener('resize', update, { passive: true })
