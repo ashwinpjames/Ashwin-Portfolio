@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { caseStudies } from '../data/caseStudies.js'
 
+const detailSlugs = new Set(['crm-sales-qualified-lead', 'meta-pixel-capi-signal-loss'])
+
 export default function CaseStudies() {
   return <main className="case-studies-page">
     <section className="case-hero case-hero-minimal">
@@ -27,7 +29,7 @@ export default function CaseStudies() {
                 <div className="case-minimal-focus"><span>Focus</span>{study.focus.split(' · ').map(item => <em key={item}>{item}</em>)}</div>
               </div>
               <div className="case-minimal-result"><strong>{metric}</strong><small>{label}</small></div>
-              <div className="case-minimal-action">{study.slug === 'crm-sales-qualified-lead' ? <Link to={`/case-studies/${study.slug}`}>View case study <span>↗</span></Link> : <span>Selected work</span>}</div>
+              <div className="case-minimal-action">{detailSlugs.has(study.slug) ? <Link to={`/case-studies/${study.slug}`}>View case study <span>↗</span></Link> : <span>Selected work</span>}</div>
             </article>
           })}
         </div>
