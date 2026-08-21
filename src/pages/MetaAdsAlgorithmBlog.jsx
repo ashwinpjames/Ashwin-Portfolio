@@ -7,8 +7,50 @@ const faq = [
   ['Is the Total Value formula public?', 'Meta has confirmed the key inputs, but the source article notes that there is no single fixed arithmetic formula published.'],
 ]
 
+const steps = [
+  ['01', 'Retrieval', 'Meta narrows the eligible pool using relevance signals, including creative content.', 'Millions → thousands'],
+  ['02', 'Light ranking', 'A fast model reduces the pool using simplified signals.', 'Thousands → hundreds'],
+  ['03', 'Heavy ranking', 'A deeper model predicts the likelihood of the desired action for the user and ad pairing.', 'Hundreds → finalists'],
+  ['04', 'The auction', 'Finalists compete using Total Value, combining bid, estimated action rate and ad quality.', 'One winner'],
+]
+
+const diagnostics = [
+  ['Quality Ranking', 'How perceived ad quality compares with competing ads.'],
+  ['Engagement Rate Ranking', 'Expected engagement rate compared with competing ads.'],
+  ['Conversion Rate Ranking', 'Expected conversion rate compared with ads optimising for the same action.'],
+]
+
+const takeaways = [
+  ['Stop over engineering targeting.', 'Give the system clear, specific creative and audience signals.'],
+  ['Creative diversity beats minor variations.', 'Distinct concepts give the system different signals to learn from.'],
+  ['Do not chase the bid when quality tanks.', 'Weak diagnostics usually point toward a creative or relevance problem.'],
+  ['Protect the user experience.', 'Strong hooks still need a credible landing page and offer.'],
+  ['Give campaigns enough time to learn.', 'Early performance can be noisy before useful patterns emerge.'],
+]
+
 export default function MetaAdsAlgorithmBlog() {
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: "How Meta's Ad Algorithm Actually Works in 2026",
+    description: "A structured breakdown of Meta Ads retrieval, ranking and auction mechanics for performance marketers.",
+    author: { '@type': 'Person', name: 'Ashwin James' },
+    mainEntityOfPage: 'https://ashwinjames.com/blog/how-meta-ads-algorithm-works',
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(([question, answer]) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  }
+
   return <main className="algorithm-blog-page">
+    <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+    <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     <article className="algorithm-blog-shell">
       <header className="algorithm-blog-hero">
         <Link to="/blog" className="algorithm-blog-back">← Back to all blogs</Link>
@@ -24,10 +66,7 @@ export default function MetaAdsAlgorithmBlog() {
 
         <h2>The short version: four steps, one impression, 200 milliseconds</h2>
         <p>Every time someone opens Instagram or Facebook, Meta runs a four step process to decide which ad, if any, reaches that person.</p>
-        <div className="algorithm-pipeline">
-          {[['01','Retrieval','Meta narrows the eligible pool using relevance signals, including creative content.','Millions → thousands'],['02','Light ranking','A fast model reduces the pool using simplified signals.','Thousands → hundreds'],['03','Heavy ranking','A deeper model predicts the likelihood of the desired action for the user and ad pairing.','Hundreds → finalists'],['04','The auction','Finalists compete using Total Value, combining bid, estimated action rate and ad quality.','One winner']].map(([n,t,d,c]) => <div className="algorithm-step" key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div><strong>{c}</strong></div>)}
-        </div>
-
+        <div className="algorithm-pipeline">{steps.map(([number, title, description, count]) => <div className="algorithm-step" key={number}><span>{number}</span><div><h3>{title}</h3><p>{description}</p></div><strong>{count}</strong></div>)}</div>
         <p>The sequence runs continuously as people use the platform. The important point is that the auction is only the final stage. Creative and relevance affect which ads make it through the earlier stages.</p>
 
         <h2>Step 1: Retrieval — your creative is your targeting</h2>
@@ -44,13 +83,13 @@ export default function MetaAdsAlgorithmBlog() {
         <p className="algorithm-note">The source article explicitly notes that Meta has not published one fixed arithmetic equation with fixed coefficients. Treat this as a directional model rather than a formula to reverse engineer.</p>
 
         <h3>The three diagnostics you can actually see</h3>
-        <div className="algorithm-diagnostics">{[['Quality Ranking','How perceived ad quality compares with competing ads.'],['Engagement Rate Ranking','Expected engagement rate compared with competing ads.'],['Conversion Rate Ranking','Expected conversion rate compared with ads optimising for the same action.']].map(([t,d]) => <div key={t}><h3>{t}</h3><p>{d}</p></div>)}</div>
+        <div className="algorithm-diagnostics">{diagnostics.map(([title, description]) => <div key={title}><h3>{title}</h3><p>{description}</p></div>)}</div>
 
         <h2>What this means for how you run Meta ads</h2>
-        <div className="algorithm-takeaways"><h3>Practical takeaways</h3><ul><li><strong>Stop over engineering targeting.</strong> Give the system clear, specific creative and audience signals.</li><li><strong>Creative diversity beats minor variations.</strong> Distinct concepts give the system different signals to learn from.</li><li><strong>Do not chase the bid when quality tanks.</strong> Weak diagnostics usually point toward a creative or relevance problem.</li><li><strong>Protect the user experience.</strong> Strong hooks still need a credible landing page and offer.</li><li><strong>Give campaigns enough time to learn.</strong> Early performance can be noisy before useful patterns emerge.</li></ul></div>
+        <div className="algorithm-takeaways"><h3>Practical takeaways</h3><ul>{takeaways.map(([title, description]) => <li key={title}><strong>{title}</strong> {description}</li>)}</ul></div>
 
         <h2>Frequently asked questions</h2>
-        <div className="algorithm-faq">{faq.map(([q,a]) => <details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div>
+        <div className="algorithm-faq">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
 
         <section className="algorithm-cta"><p className="algorithm-blog-eyebrow">Want a stronger Meta Ads system?</p><h2>Get a practical Meta Ads audit focused on creative, signals and conversion quality.</h2><p>I can review your current setup and identify the highest priority areas to improve.</p><Link to="/contact">Request a Meta Ads audit ↗</Link></section>
       </div>
