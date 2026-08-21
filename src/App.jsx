@@ -8,6 +8,7 @@ import ServiceDetail from './pages/ServiceDetail.jsx'
 import MetaAdsService from './pages/MetaAdsService.jsx'
 import CaseStudies from './pages/CaseStudies.jsx'
 import CrmCaseStudy from './pages/CrmCaseStudy.jsx'
+import MetaTrackingCaseStudy from './pages/MetaTrackingCaseStudy.jsx'
 import Resources from './pages/Resources.jsx'
 import CampaignBudgetCalculator from './pages/CampaignBudgetCalculator.jsx'
 import UTMBuilder from './pages/UTMBuilder.jsx'
@@ -28,6 +29,7 @@ export default function App() {
       <Route path="/services/:slug" element={<ServiceDetail />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/case-studies/crm-sales-qualified-lead" element={<CrmCaseStudy />} />
+      <Route path="/case-studies/meta-pixel-capi-signal-loss" element={<MetaTrackingCaseStudy />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/resources/campaign-budget-calculator" element={<CampaignBudgetCalculator />} />
       <Route path="/resources/utm-builder" element={<UTMBuilder />} />
