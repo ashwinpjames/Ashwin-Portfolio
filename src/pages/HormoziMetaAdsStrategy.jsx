@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { hormoziAdsContactSheet } from '../data/hormoziAds.js'
+import { hormoziAds } from '../data/hormoziAdsExternal.js'
 
 const observations = [
   ['Creative volume', 'A large number of active ads creates more opportunities for Meta’s system to learn which creative concepts fit different people and situations.'],
@@ -89,8 +89,11 @@ export default function HormoziMetaAdsStrategy() {
         </ol>
 
         <h2>The examples</h2>
-        <p>Below is a contact sheet built from the sample ads supplied for this analysis. It includes the business specific callouts and the broader creative formats discussed above.</p>
-        <figure className="hormozi-gallery"><img src={hormoziAdsContactSheet} alt="Sample Alex Hormozi Meta ad creatives showing business specific callouts and different creative formats" loading="lazy" /><figcaption>Sample creative references supplied for this analysis.</figcaption></figure>
+        <p>Below are the sample ads supplied for this analysis. They are displayed individually so the reader can inspect the business specific callouts and the broader creative formats without relying on a single contact sheet.</p>
+        <div className="hormozi-gallery-grid">
+          {hormoziAds.map((ad) => <figure className="hormozi-gallery-item" key={ad.src}><img src={ad.src} alt={ad.alt} loading="lazy" decoding="async" /><figcaption>{ad.caption}</figcaption></figure>)}
+        </div>
+        <p className="hormozi-gallery-caption">Sample creative references supplied for this analysis. Images are hosted on Cloudinary.</p>
 
         <h2>The bigger lesson for performance marketers</h2>
         <p>The lesson is not “copy Alex Hormozi”. The lesson is to stop thinking about creative as decoration placed on top of targeting.</p>
