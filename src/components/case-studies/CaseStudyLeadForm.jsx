@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { emailjsConfig } from '../../config/emailjs.js'
 
 const initial = { name: '', email: '', phone: '', company: '', message: '' }
-const EMAILJS_PUBLIC_KEY = 'RjE2W0GjtX8CR4F7x'
-const EMAILJS_SERVICE_ID = 'service_8ctr8rf'
-const EMAILJS_TEMPLATE_ID = 'template_fnhfcfn'
 
 export default function CaseStudyLeadForm({ eyebrow = 'Get the next step', title = 'Want a deeper look at your marketing?', description = 'Tell me what you want to improve and I’ll point you toward the most useful next step.', buttonLabel = 'Request a consultation' }) {
   const [form, setForm] = useState(initial)
@@ -15,7 +13,7 @@ export default function CaseStudyLeadForm({ eyebrow = 'Get the next step', title
     event.preventDefault()
     setStatus('sending')
     try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { ...form, service: 'Case study enquiry' }, { publicKey: EMAILJS_PUBLIC_KEY })
+      await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, { ...form, service: 'Case study enquiry' }, { publicKey: emailjsConfig.publicKey })
       setStatus('success')
       setForm(initial)
     } catch (error) {
