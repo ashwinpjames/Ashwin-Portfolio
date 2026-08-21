@@ -21,7 +21,7 @@ export default function Blog() {
             <span className="blog-hero-count">· {articleCount} {articleCount === 1 ? 'article' : 'articles'} · updated as published</span>
           </div>
 
-          <h1>Thinking clearly about<br /><span>growth and marketing.</span></h1>
+          <h1><span>Thinking clearly about</span><br />growth and marketing.</h1>
           <p className="blog-hero-sub">Practical notes on performance marketing, analytics, lead generation, conversion and the systems that connect them.</p>
 
           <div className="blog-hero-pills" aria-label="Blog topics">
