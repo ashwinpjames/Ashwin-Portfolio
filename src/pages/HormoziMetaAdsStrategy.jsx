@@ -89,11 +89,18 @@ export default function HormoziMetaAdsStrategy() {
         </ol>
 
         <h2>The examples</h2>
-        <p>Below are the sample ads supplied for this analysis. They are displayed individually so the reader can inspect the business specific callouts and the broader creative formats without relying on a single contact sheet.</p>
-        <div className="hormozi-gallery-grid">
-          {hormoziAds.map((ad) => <figure className="hormozi-gallery-item" key={ad.src}><img src={ad.src} alt={ad.alt} loading="lazy" decoding="async" /><figcaption>{ad.caption}</figcaption></figure>)}
+        <p>Now we can look at the creative system one ad at a time. Each example shows what the ad is doing, why the structure matters and how the message is built.</p>
+        <div className="hormozi-creative-breakdown">
+          {hormoziAds.map((ad, index) => <article className={`hormozi-creative-row ${index % 2 ? 'reverse' : ''}`} key={ad.src}>
+            <figure className="hormozi-creative-image"><img src={ad.src} alt={ad.alt} loading="lazy" decoding="async" /><figcaption>{ad.caption}</figcaption></figure>
+            <div className="hormozi-creative-analysis">
+              <span className="hormozi-creative-number">CREATIVE {String(index + 1).padStart(2, '0')}</span>
+              <h3>{ad.title}</h3>
+              <p>{ad.analysis}</p>
+              <div className="hormozi-creative-structure"><span>CREATIVE STRUCTURE</span><strong>{ad.structure}</strong></div>
+            </div>
+          </article>)}
         </div>
-        <p className="hormozi-gallery-caption">Sample creative references supplied for this analysis. Images are hosted on Cloudinary.</p>
 
         <h2>The bigger lesson for performance marketers</h2>
         <p>The lesson is not “copy Alex Hormozi”. The lesson is to stop thinking about creative as decoration placed on top of targeting.</p>
