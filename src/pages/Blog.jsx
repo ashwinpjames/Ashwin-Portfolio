@@ -5,7 +5,6 @@ import BlogCard from '../components/blog/BlogCard.jsx'
 export default function Blog() {
   const publishedPosts = blogPosts.filter((post) => post.date !== 'Coming soon')
   const latestPost = publishedPosts[0]
-  const articleCount = publishedPosts.length
   const categories = ['Performance Marketing', 'Analytics', 'Lead Gen', 'CRO']
 
   return <main className="blog-page">
@@ -18,7 +17,6 @@ export default function Blog() {
           <div className="blog-hero-eyebrow">
             <span className="blog-pulse-dot" aria-hidden="true" />
             <span>INSIGHTS</span>
-            <span className="blog-hero-count">· {articleCount} {articleCount === 1 ? 'article' : 'articles'} · updated as published</span>
           </div>
 
           <h1>
@@ -33,17 +31,12 @@ export default function Blog() {
         </div>
 
         {latestPost && <div className="blog-post-stack" aria-label="Latest article">
-          <div className="blog-stack-count">
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1" y="4" width="9" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.1" /><path d="M3.5 4V2.5C3.5 1.94772 3.94772 1.5 4.5 1.5H10.5C11.0523 1.5 11.5 1.94772 11.5 2.5V9.5C11.5 10.0523 11.0523 10.5 10.5 10.5H10" stroke="currentColor" strokeWidth="1.1" /></svg>
-            {articleCount} {articleCount === 1 ? 'article' : 'articles'}
-          </div>
           <div className="blog-stack-card blog-stack-back-two" aria-hidden="true" />
           <div className="blog-stack-card blog-stack-back-one" aria-hidden="true" />
           <Link to={`/blog/${latestPost.slug}`} className="blog-stack-card blog-stack-front">
             <div className="blog-latest-tag"><span />LATEST POST</div>
             <h3>{latestPost.title}</h3>
             <p>{latestPost.excerpt}</p>
-            <div className="blog-latest-meta"><span>{latestPost.date}</span><span>{latestPost.readTime}</span></div>
           </Link>
         </div>}
       </div>
