@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { emailjsConfig } from '../../config/emailjs.js'
 
 const initial = { name: '', email: '', phone: '', company: '', service: '', message: '' }
-const EMAILJS_PUBLIC_KEY = 'RjE2W0GjtX8CR4F7x'
-const EMAILJS_SERVICE_ID = 'service_8ctr8rf'
-const EMAILJS_TEMPLATE_ID = 'template_fnhfcfn'
 
 export default function ContactForm() {
   const [form, setForm] = useState(initial)
@@ -16,8 +14,8 @@ export default function ContactForm() {
     setStatus('sending')
 
     try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, {
-        publicKey: EMAILJS_PUBLIC_KEY,
+      await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, form, {
+        publicKey: emailjsConfig.publicKey,
       })
       setStatus('success')
       setForm(initial)
