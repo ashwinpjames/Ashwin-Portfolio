@@ -1,0 +1,267 @@
+/* Mobile quality pass */
+@media (max-width: 767px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  .container {
+    width: min(100% - 2rem, 80rem);
+  }
+
+  main {
+    padding-bottom: calc(5.25rem + env(safe-area-inset-bottom));
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 10vw, 3.1rem);
+    line-height: 1.06;
+  }
+
+  .home-actions,
+  .home-cta-actions,
+  .about-hero-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .65rem;
+  }
+
+  .home-button {
+    width: 100%;
+    max-width: 22rem;
+    min-height: 44px;
+    margin-inline: auto;
+    padding: .78rem 1rem;
+    text-align: center;
+  }
+
+  .about-fit-button,
+  .services-cta-button {
+    min-height: 44px;
+    padding: .78rem 1rem;
+  }
+
+  .site-header {
+    width: 100%;
+  }
+
+  .nav-wrap {
+    width: 100%;
+    height: 72px;
+    padding-inline: 1rem;
+  }
+
+  .menu-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .mobile-menu {
+    max-height: calc(100svh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-menu a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-consultation {
+    justify-content: center;
+  }
+
+  .mobile-action-bar {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: .55rem;
+    padding: .55rem .75rem calc(.55rem + env(safe-area-inset-bottom));
+    background: linear-gradient(180deg, rgba(5,8,22,0), rgba(5,8,22,.98) 42%);
+  }
+
+  .mobile-action-bar a {
+    min-width: 0;
+    min-height: 44px;
+    padding: .68rem .75rem;
+    border-radius: .8rem;
+    font-size: .82rem;
+    line-height: 1;
+  }
+
+  /* About hero */
+  .about-hero-react {
+    min-height: auto;
+  }
+
+  .about-hero-inner {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 7.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .about-hero-copy {
+    width: 100%;
+  }
+
+  .about-hero-copy h1 {
+    font-size: clamp(2.3rem, 10.5vw, 3.35rem);
+    line-height: 1.02;
+  }
+
+  .about-lead {
+    margin-top: 1.25rem;
+    font-size: .98rem;
+    line-height: 1.75;
+  }
+
+  .about-secondary {
+    font-size: .88rem;
+    line-height: 1.7;
+  }
+
+  .about-hero-actions {
+    margin-top: 1.5rem;
+  }
+
+  .about-hero-actions .home-button {
+    max-width: none;
+  }
+
+  .about-portrait-wrap {
+    width: 100%;
+    max-width: 30rem;
+    margin-inline: auto;
+  }
+
+  .about-marquee-react {
+    gap: 0;
+  }
+
+  .about-marquee-set-react span {
+    font-size: clamp(72px, 20vw, 120px);
+    letter-spacing: -3px;
+  }
+
+  /* Common mobile grid protection */
+  .split-heading,
+  .problem-heading,
+  .about-brands-heading,
+  .about-expectations-grid,
+  .about-expectations-editorial,
+  .contact-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .problem-grid,
+  .audience-grid,
+  .approach-grid,
+  .case-grid,
+  .services-grid,
+  .results-grid,
+  .results-grid.six,
+  .process-grid,
+  .process-grid.six {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card,
+  .problem-grid article {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .result-card:last-child,
+  .problem-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  .about-industry-grid,
+  .about-principles-grid,
+  .about-expectation-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    padding: 4.5rem 0;
+  }
+
+  .about-final-cta h2 {
+    font-size: clamp(2.25rem, 10.5vw, 3.4rem);
+  }
+
+  .contact-hero {
+    min-height: auto;
+    padding-top: 7.5rem;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(2.35rem, 11vw, 3.5rem);
+  }
+
+  .contact-form {
+    padding: 1.15rem;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-button,
+  .contact-submit {
+    min-height: 44px;
+  }
+
+  .services-cta-button,
+  .about-fit-button {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid > div:first-child,
+  .footer-grid > div:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: min(100% - 1.5rem, 80rem);
+  }
+
+  .nav-wrap {
+    padding-inline: .75rem;
+  }
+
+  .mobile-action-bar {
+    gap: .45rem;
+    padding-inline: .6rem;
+  }
+
+  .mobile-action-bar a {
+    font-size: .76rem;
+  }
+
+  .about-hero-inner {
+    padding-top: 7rem;
+  }
+}
