@@ -5,7 +5,7 @@ import BlogCard from '../components/blog/BlogCard.jsx'
 export default function Blog() {
   const publishedPosts = blogPosts.filter((post) => post.date !== 'Coming soon')
   const latestPost = publishedPosts[0]
-  const categories = ['Performance Marketing', 'Analytics', 'Lead Gen', 'CRO']
+  const categories = ['Performance Marketing', 'Marketing Psychology', 'Analytics', 'Lead Gen', 'CRO']
 
   return <main className="blog-page">
     <section className="blog-hero">
