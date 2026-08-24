@@ -24,6 +24,7 @@ import './styles/lead-quality.css'
 import './styles/algorithm-blog.css'
 import './styles/hormozi-blog.css'
 import './styles/lead-quality-blog.css'
+import './styles/seo-ai-blog.css'
 import './styles/mobile-overrides.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
