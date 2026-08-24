@@ -27,6 +27,7 @@ import './styles/lead-quality-blog.css'
 import './styles/seo-ai-blog.css'
 import './styles/marketing-concepts-blog.css'
 import './styles/increase-aov-blog.css'
+import './styles/content-angles-blog.css'
 import './styles/blog-prompt-architect.css'
 import './styles/mobile-overrides.css'
 
