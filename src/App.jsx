@@ -14,6 +14,7 @@ import HormoziMetaAdsStrategy from './pages/HormoziMetaAdsStrategy.jsx'
 import LeadQualityBenchmarksBlog from './pages/LeadQualityBenchmarksBlog.jsx'
 import SeoAiSearchBlog from './pages/SeoAiSearchBlog.jsx'
 import MarketingConceptsBlog from './pages/MarketingConceptsBlog.jsx'
+import IncreaseAverageOrderValueBlog from './pages/IncreaseAverageOrderValueBlog.jsx'
 import Resources from './pages/Resources.jsx'
 import CampaignBudgetCalculator from './pages/CampaignBudgetCalculator.jsx'
 import UTMBuilder from './pages/UTMBuilder.jsx'
@@ -43,6 +44,7 @@ export default function App() {
       <Route path="/resources/lead-quality-framework" element={<LeadQualityFramework />} />
       <Route path="/resources/blog-prompt-architect" element={<BlogPromptArchitect />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/increase-average-order-value" element={<IncreaseAverageOrderValueBlog />} />
       <Route path="/blog/how-meta-ads-algorithm-works" element={<MetaAdsAlgorithmBlog />} />
       <Route path="/blog/hormozi-meta-ads-strategy" element={<HormoziMetaAdsStrategy />} />
       <Route path="/blog/more-leads-revenue-didnt-move" element={<LeadQualityBenchmarksBlog />} />
