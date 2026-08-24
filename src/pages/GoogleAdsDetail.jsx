@@ -94,7 +94,7 @@ export default function GoogleAdsDetail() {
       <div className="container ga-hero-inner">
         <div className="ga-hero-copy ga-hero-copy-centered">
           <p className="services-eyebrow">Google Ads Management · Dubai, UAE</p>
-          <h1>Turn Search Demand Into <span>Measurable Customer Acquisition.</span></h1>
+          <h1>Google Ads Management in Dubai That Turns Search Into <span>Customers.</span></h1>
           <p className="ga-lead">I manage Google Ads as part of a complete customer acquisition system, connecting search intent, campaign strategy, landing pages, conversion tracking and lead quality for UAE businesses.</p>
           <div className="ga-final-actions ga-hero-actions">
             <a className="ga-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Get a Free Consultation <span>↗</span></a>
