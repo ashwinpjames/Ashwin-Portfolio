@@ -40,14 +40,6 @@ export default function MetaAdsService() {
           <a className="meta-service-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute Meta Ads Audit <span>↗</span></a>
           <p className="meta-service-trust">No obligation · Hands on management · Audience strategy · Creative direction · Lead qualification</p>
         </div>
-        <div className="meta-hero-visual" aria-hidden="true">
-          <div className="meta-visual-ring meta-visual-ring-one"/>
-          <div className="meta-visual-ring meta-visual-ring-two"/>
-          <div className="meta-visual-core"><span>META</span><strong>ADS</strong><small>ATTENTION → DEMAND → LEADS</small></div>
-          <span className="meta-orbit meta-orbit-one">AUDIENCE</span>
-          <span className="meta-orbit meta-orbit-two">CREATIVE</span>
-          <span className="meta-orbit meta-orbit-three">LEAD QUALITY</span>
-        </div>
       </div>
     </div></section>
 
