@@ -19,6 +19,7 @@ import CampaignBudgetCalculator from './pages/CampaignBudgetCalculator.jsx'
 import UTMBuilder from './pages/UTMBuilder.jsx'
 import MetaAdsChecklist from './pages/MetaAdsChecklist.jsx'
 import LeadQualityFramework from './pages/LeadQualityFramework.jsx'
+import BlogPromptArchitect from './pages/BlogPromptArchitect.jsx'
 import Blog from './pages/Blog.jsx'
 import Contact from './pages/Contact.jsx'
 import PlaceholderPage from './pages/PlaceholderPage.jsx'
@@ -40,6 +41,7 @@ export default function App() {
       <Route path="/resources/utm-builder" element={<UTMBuilder />} />
       <Route path="/resources/meta-ads-launch-checklist" element={<MetaAdsChecklist />} />
       <Route path="/resources/lead-quality-framework" element={<LeadQualityFramework />} />
+      <Route path="/resources/blog-prompt-architect" element={<BlogPromptArchitect />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/how-meta-ads-algorithm-works" element={<MetaAdsAlgorithmBlog />} />
       <Route path="/blog/hormozi-meta-ads-strategy" element={<HormoziMetaAdsStrategy />} />
