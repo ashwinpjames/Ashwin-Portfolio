@@ -4,6 +4,7 @@ import { whatsappUrl } from '../utils/contact.js'
 import portrait from '../../assets/ashwin-james-portrait.png'
 import '../styles/about-brands.css'
 import '../styles/about-availability.css'
+import '../styles/about-portrait-fix.css'
 
 const linkedinUrl = 'https://www.linkedin.com/in/ashwin-james'
 
