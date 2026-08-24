@@ -36,7 +36,6 @@ export default function Blog() {
           <Link to={`/blog/${latestPost.slug}`} className="blog-stack-card blog-stack-front">
             <div className="blog-latest-tag"><span />LATEST POST</div>
             <h3>{latestPost.title}</h3>
-            <p>{latestPost.excerpt}</p>
           </Link>
         </div>}
       </div>
