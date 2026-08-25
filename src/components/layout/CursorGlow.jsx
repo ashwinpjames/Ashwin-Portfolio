@@ -5,20 +5,33 @@ export default function CursorGlow() {
     if (window.matchMedia('(pointer: coarse)').matches) return undefined
 
     const root = document.documentElement
+    let frame = 0
+    let pending = null
+
     const move = (event) => {
-      root.style.setProperty('--cursor-x', `${event.clientX}px`)
-      root.style.setProperty('--cursor-y', `${event.clientY}px`)
-      root.classList.add('cursor-active')
+      pending = { x: event.clientX, y: event.clientY }
+      if (frame) return
+      frame = window.requestAnimationFrame(() => {
+        if (pending) {
+          root.style.setProperty('--cursor-x', `${pending.x}px`)
+          root.style.setProperty('--cursor-y', `${pending.y}px`)
+          root.classList.add('cursor-active')
+        }
+        pending = null
+        frame = 0
+      })
     }
+
     const leave = () => root.classList.remove('cursor-active')
 
-    window.addEventListener('pointermove', move)
+    window.addEventListener('pointermove', move, { passive: true })
     document.documentElement.addEventListener('mouseleave', leave)
 
     return () => {
       window.removeEventListener('pointermove', move)
       document.documentElement.removeEventListener('mouseleave', leave)
       root.classList.remove('cursor-active')
+      if (frame) window.cancelAnimationFrame(frame)
     }
   }, [])
 
