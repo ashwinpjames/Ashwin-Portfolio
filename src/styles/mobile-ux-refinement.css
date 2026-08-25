@@ -1,0 +1,55 @@
+/* Mobile UX refinement: touch friendly, restrained and consistent */
+@media (max-width: 767px) {
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .menu-button {
+    border: 1px solid transparent;
+    transition: background .18s ease, border-color .18s ease, transform .18s cubic-bezier(.2,0,0,1);
+  }
+
+  .menu-button:active {
+    transform: scale(.95);
+    background: rgba(255,255,255,.06);
+    border-color: rgba(255,255,255,.08);
+  }
+
+  .mobile-menu {
+    overscroll-behavior: contain;
+  }
+
+  .mobile-menu a {
+    transition: background .18s ease, color .18s ease, transform .18s cubic-bezier(.2,0,0,1);
+  }
+
+  .mobile-menu a:active {
+    transform: scale(.985);
+    background: rgba(255,255,255,.07);
+  }
+
+  .mobile-consultation:active {
+    background: #eff6ff !important;
+    color: #050816 !important;
+  }
+
+  .mobile-action-bar a {
+    transition: transform .18s cubic-bezier(.2,0,0,1), background .18s ease, border-color .18s ease;
+  }
+
+  .mobile-action-bar a:active {
+    transform: scale(.97);
+    background: rgba(255,255,255,.16);
+    border-color: rgba(255,255,255,.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-button,
+  .mobile-menu a,
+  .mobile-action-bar a {
+    transition: none;
+  }
+}
