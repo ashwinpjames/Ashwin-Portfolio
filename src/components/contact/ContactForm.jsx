@@ -78,8 +78,10 @@ export default function ContactForm() {
         {status === 'sending' ? 'Sending enquiry…' : 'Send enquiry'} <span>↗</span>
       </button>
 
-      {status === 'success' && <p className="contact-form-note">Thanks. Your enquiry has been sent successfully. I’ll get back to you soon.</p>}
-      {status === 'error' && <p className="contact-form-note contact-form-note-error">Something went wrong while sending the enquiry. Please try again or contact me directly by WhatsApp or email.</p>}
+      <div aria-live="polite">
+        {status === 'success' && <p className="contact-form-note">Thanks. Your enquiry has been sent successfully. I’ll get back to you soon.</p>}
+        {status === 'error' && <p className="contact-form-note contact-form-note-error">Something went wrong while sending the enquiry. Please try again or contact me directly by WhatsApp or email.</p>}
+      </div>
       <p className="contact-privacy">Your details are only used to respond to this enquiry.</p>
     </form>
   )
