@@ -32,6 +32,7 @@ import './styles/increase-aov-blog.css'
 import './styles/content-angles-blog.css'
 import './styles/blog-prompt-architect.css'
 import './styles/mobile-overrides.css'
+import './styles/mobile-ux-refinement.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
