@@ -1,0 +1,9 @@
+/* CTA hierarchy and micro interactions. Typography and layout remain unchanged. */
+.home-button.primary{box-shadow:0 8px 24px rgba(0,0,0,.14)}
+.home-button.primary:hover{background:#eff6ff;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.home-button.secondary:hover{border-color:rgba(255,255,255,.24);background:rgba(255,255,255,.07)}
+.home-button span{display:inline-block;transition:transform .2s cubic-bezier(.2,0,0,1)}
+.home-button.primary:hover span{transform:translate(2px,-2px)}
+.home-button.secondary:hover span{transform:translateY(2px)}
+.home-button:focus-visible{outline:2px solid #60a5fa;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.home-button span{transition:none}.home-button.primary:hover span,.home-button.secondary:hover span{transform:none}}
