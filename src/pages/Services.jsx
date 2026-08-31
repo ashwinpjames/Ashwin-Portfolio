@@ -34,8 +34,8 @@ const ecosystemItems = [
   { name: 'Meta Ads', type: 'meta', position: 'growth-tool-2', service: 'meta-ads', color: '#5b8def' },
   { name: 'HubSpot', type: 'hubspot', position: 'growth-tool-3', service: 'hubspot', color: '#ff7a59' },
   { name: 'WordPress', type: 'wordpress', position: 'growth-tool-4', service: 'wordpress', color: '#60a5fa' },
-  { name: 'Tag Manager', type: 'gtm', position: 'growth-tool-5', service: 'performance-growth-marketing', color: '#8ab4f8' },
-  { name: 'Analytics', type: 'analytics', position: 'growth-tool-6', service: 'performance-growth-marketing', color: '#f9ab00' },
+  { name: 'Tag Manager', type: 'gtm', position: 'growth-tool-5', service: 'performance-marketing', color: '#8ab4f8' },
+  { name: 'Analytics', type: 'analytics', position: 'growth-tool-6', service: 'performance-marketing', color: '#f9ab00' },
   { name: 'WhatsApp', type: 'whatsapp', position: 'growth-tool-7', service: 'whatsapp-marketing', color: '#25d366' },
   { name: 'SEO', type: 'search', position: 'growth-tool-8', service: 'seo', color: '#a78bfa' },
 ]
