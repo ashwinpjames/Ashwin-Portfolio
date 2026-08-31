@@ -6,6 +6,7 @@ import Resume from './pages/Resume.jsx'
 import Services from './pages/Services.jsx'
 import ServiceDetail from './pages/ServiceDetail.jsx'
 import MetaAdsService from './pages/MetaAdsService.jsx'
+import PerformanceMarketingService from './pages/PerformanceMarketingService.jsx'
 import CaseStudies from './pages/CaseStudies.jsx'
 import CrmCaseStudy from './pages/CrmCaseStudy.jsx'
 import MetaTrackingCaseStudy from './pages/MetaTrackingCaseStudy.jsx'
@@ -36,7 +37,7 @@ export default function App() {
       <Route path="/resume" element={<Resume />} />
       <Route path="/services" element={<Services />} />
       <Route path="/services/meta-ads" element={<MetaAdsService />} />
-      <Route path="/services/performance-marketing" element={<ServiceDetail />} />
+      <Route path="/services/performance-marketing" element={<PerformanceMarketingService />} />
       <Route path="/services/performance-growth-marketing" element={<Navigate to="/services/performance-marketing" replace />} />
       <Route path="/services/:slug" element={<ServiceDetail />} />
       <Route path="/case-studies" element={<CaseStudies />} />
