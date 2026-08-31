@@ -11,7 +11,7 @@ const iconSets = {
   'lead-generation': ['↗', '◎', '▣', '✓'],
   'website-development': ['⌘', '◇', '↗', '▤'],
   'landing-page-optimisation': ['⌕', '◈', '↗', '✓'],
-  'performance-growth-marketing': ['◒', '↗', '◎', '▥'],
+  'performance-marketing': ['◒', '↗', '◎', '▥'],
   'whatsapp-marketing': ['◌', '↗', '◎', '✓'],
   'content-marketing': ['✦', '▤', '◈', '↗'],
 }
@@ -20,7 +20,7 @@ export default function ServiceDetail() {
   const { slug } = useParams()
   if (slug === 'google-ads') return <GoogleAdsDetail />
   if (slug === 'seo') return <SEOService />
-  if (slug === 'performance-growth-marketing') return <PerformanceMarketingService />
+  if (slug === 'performance-marketing') return <PerformanceMarketingService />
 
   const service = allServices.find((item) => item.id === slug)
   if (!service) return <main className="service-detail-page"><div className="container"><h1>Service not found.</h1><Link to="/services">Back to Services</Link></div></main>
