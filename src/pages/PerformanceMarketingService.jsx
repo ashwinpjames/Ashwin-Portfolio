@@ -75,15 +75,6 @@ export default function PerformanceMarketingService() {
           <p className="pm-sub-cta">No obligation — get a straight answer on what’s working and what isn’t.</p>
           <p className="pm-trust">Trusted by businesses across Dubai and the UAE to manage paid media, CRM, and lead systems end-to-end.</p>
         </div>
-        <div className="pm-hero-system" aria-hidden="true">
-          <div className="pm-system-orbit pm-system-orbit-one" />
-          <div className="pm-system-orbit pm-system-orbit-two" />
-          <div className="pm-system-core"><strong>PERFORMANCE</strong><strong>MARKETING</strong><span>One connected growth system</span></div>
-          <span className="pm-node pm-node-one">PAID MEDIA</span>
-          <span className="pm-node pm-node-two">CRO</span>
-          <span className="pm-node pm-node-three">CRM</span>
-          <span className="pm-node pm-node-four">LEADS</span>
-        </div>
       </div>
     </section>
 
