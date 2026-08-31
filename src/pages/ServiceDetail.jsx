@@ -3,6 +3,7 @@ import { whatsappUrl } from '../utils/contact.js'
 import { coreServices, growthServices } from '../data/services.js'
 import GoogleAdsDetail from './GoogleAdsDetail.jsx'
 import SEOService from './SEOService.jsx'
+import PerformanceMarketingService from './PerformanceMarketingService.jsx'
 
 const allServices = [...coreServices, ...growthServices]
 
@@ -19,6 +20,7 @@ export default function ServiceDetail() {
   const { slug } = useParams()
   if (slug === 'google-ads') return <GoogleAdsDetail />
   if (slug === 'seo') return <SEOService />
+  if (slug === 'performance-growth-marketing') return <PerformanceMarketingService />
 
   const service = allServices.find((item) => item.id === slug)
   if (!service) return <main className="service-detail-page"><div className="container"><h1>Service not found.</h1><Link to="/services">Back to Services</Link></div></main>
