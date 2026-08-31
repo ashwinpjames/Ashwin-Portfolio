@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -36,6 +36,8 @@ export default function App() {
       <Route path="/resume" element={<Resume />} />
       <Route path="/services" element={<Services />} />
       <Route path="/services/meta-ads" element={<MetaAdsService />} />
+      <Route path="/services/performance-marketing" element={<ServiceDetail />} />
+      <Route path="/services/performance-growth-marketing" element={<Navigate to="/services/performance-marketing" replace />} />
       <Route path="/services/:slug" element={<ServiceDetail />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/case-studies/crm-sales-qualified-lead" element={<CrmCaseStudy />} />
