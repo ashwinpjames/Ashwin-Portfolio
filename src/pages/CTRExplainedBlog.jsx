@@ -101,8 +101,28 @@ function VisualCard({ item }) {
   )
 }
 
+function FAQSection() {
+  return (
+    <section className="ctr-faq" aria-labelledby="ctr-faq-heading">
+      <div className="ctr-faq-heading">
+        <span>FAQ</span>
+        <h2 id="ctr-faq-heading">Frequently asked questions</h2>
+        <p>Quick answers to the questions marketers ask most often about CTR.</p>
+      </div>
+      <div className="ctr-faq-list">
+        {faq.map(([question, answer]) => (
+          <details className="ctr-faq-item" key={question}>
+            <summary>{question}<span aria-hidden="true">+</span></summary>
+            <div className="ctr-faq-answer"><p>{answer}</p></div>
+          </details>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export default function CTRExplainedBlog() {
-  const body = articleMarkdown.replace(/^# .+\n\n/, '')
+  const body = articleMarkdown.replace(/^# .+\n\n/, '').replace(/\n## FAQ[\s\S]*$/, '')
   const renderedArticle = renderMarkdown(body)
   return <main className="ctr-blog-page">
     <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
@@ -120,6 +140,7 @@ export default function CTRExplainedBlog() {
         {visuals.map(item => <VisualCard key={item.label} item={item} />)}
       </section>
       <div className="ctr-blog-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} />
+      <FAQSection />
       <footer className="ctr-blog-cta">
         <span>PERFORMANCE MARKETING</span>
         <h2>Do not chase clicks. Diagnose what the clicks mean.</h2>
