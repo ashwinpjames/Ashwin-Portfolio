@@ -13,19 +13,21 @@ export default function Contact() {
       <div className="container contact-hero-inner">
         <div className="contact-copy">
           <p className="contact-eyebrow"><span /> Get in touch</p>
-          <h1>Let’s build your<br /><span>growth engine.</span></h1>
-          <p className="contact-lead">Have a project in mind or want to improve your marketing performance? I’d love to hear about it. Tell me what you are working on and let’s find the clearest next move.</p>
+          <h1>Let’s build something <span>great together.</span></h1>
+          <p className="contact-lead">Have a project in mind or want to improve your marketing performance? I’d love to hear about it. Tell me what you are trying to achieve and let’s find the clearest next move.</p>
           <div className="contact-hero-points">
-            <div className="contact-hero-point"><strong>Quick response</strong><small>Usually within 24 hours</small></div>
-            <div className="contact-hero-point"><strong>No spam, ever</strong><small>Your details stay private</small></div>
-            <div className="contact-hero-point"><strong>Based in the UAE</strong><small>Dubai and remote projects</small></div>
+            <div className="contact-hero-point"><b>01</b><strong>Performance focused</strong><small>Built around measurable growth</small></div>
+            <div className="contact-hero-point"><b>02</b><strong>Clear communication</strong><small>No unnecessary complexity</small></div>
+            <div className="contact-hero-point"><b>03</b><strong>UAE based</strong><small>Dubai and remote collaboration</small></div>
           </div>
           <Link className="contact-back" to="/">← Back to home</Link>
         </div>
         <div className="contact-hero-visual">
           <div className="contact-portrait-glow" aria-hidden="true" />
           <div className="contact-portrait-ring" aria-hidden="true" />
-          <img src={portrait} alt="Ashwin James" className="contact-portrait" />
+          <div className="contact-portrait-stage">
+            <img src={portrait} alt="Ashwin James" className="contact-portrait" />
+          </div>
           <div className="contact-hero-card">
             <span className="contact-card-label">Performance Marketing</span>
             <strong>Ashwin James</strong>
