@@ -19,6 +19,7 @@ import IncreaseAverageOrderValueBlog from './pages/IncreaseAverageOrderValueBlog
 import ContentAnglesStrategyBlog from './pages/ContentAnglesStrategyBlog.jsx'
 import CTRExplainedBlog from './pages/CTRExplainedBlog.jsx'
 import CPMExplainedBlog from './pages/CPMExplainedBlog.jsx'
+import LeadGenerationRightLeadsBlog from './pages/LeadGenerationRightLeadsBlog.jsx'
 import Resources from './pages/Resources.jsx'
 import CampaignBudgetCalculator from './pages/CampaignBudgetCalculator.jsx'
 import UTMBuilder from './pages/UTMBuilder.jsx'
@@ -52,6 +53,7 @@ export default function App() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/ctr-explained" element={<CTRExplainedBlog />} />
       <Route path="/blog/cpm-explained" element={<CPMExplainedBlog />} />
+      <Route path="/blog/lead-generation-right-leads" element={<LeadGenerationRightLeadsBlog />} />
       <Route path="/blog/increase-average-order-value" element={<IncreaseAverageOrderValueBlog />} />
       <Route path="/blog/content-angles-strategy" element={<ContentAnglesStrategyBlog />} />
       <Route path="/blog/how-meta-ads-algorithm-works" element={<MetaAdsAlgorithmBlog />} />
