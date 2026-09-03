@@ -7,13 +7,15 @@
 .desktop-nav a::after{content:'';position:absolute;left:50%;right:50%;bottom:-.25rem;height:1px;background:#60a5fa;opacity:0;transition:left .18s ease,right .18s ease,opacity .18s ease}
 .desktop-nav a:hover::after,.desktop-nav a.active::after{left:0;right:0;opacity:1}
 .desktop-nav a.active{color:#fff}
-.consultation-link{box-shadow:0 6px 18px rgba(255,255,255,.06)}
-.consultation-link span{display:inline-block;transition:transform .18s cubic-bezier(.2,0,0,1)}
-.consultation-link:hover span{transform:translate(2px,-2px)}
+.consultation-link{box-shadow:0 6px 18px rgba(255,255,255,.06);gap:.45rem}
+.consultation-icon{display:inline-flex!important;width:1.1rem;height:1.1rem;align-items:center;justify-content:center;border-radius:50%;background:#2563eb;color:#fff;transition:transform .22s cubic-bezier(.2,0,0,1),background .22s ease,box-shadow .22s ease}
+.consultation-icon svg{width:.68rem;height:.68rem;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s cubic-bezier(.2,0,0,1)}
+.consultation-link:hover .consultation-icon{transform:rotate(8deg) scale(1.12);background:#1d4ed8;box-shadow:0 4px 12px rgba(37,99,235,.3)}
+.consultation-link:hover .consultation-icon svg{transform:translate(1px,-1px)}
 .menu-button{transition:background .18s ease,transform .18s cubic-bezier(.2,0,0,1)}
 .menu-button:hover{background:rgba(255,255,255,.06)}
 .menu-button:active{transform:scale(.95)}
 .mobile-menu a{transition:background .18s ease,color .18s ease,transform .18s cubic-bezier(.2,0,0,1)}
 .mobile-menu a:hover{transform:translateX(2px)}
 .mobile-consultation:hover{transform:translateY(-1px)!important;background:#eff6ff!important}
-@media(prefers-reduced-motion:reduce){.brand,.desktop-nav a::after,.consultation-link,.consultation-link span,.menu-button,.mobile-menu a{transition:none}.brand:hover,.mobile-menu a:hover{transform:none}.consultation-link:hover span{transform:none}}
+@media(prefers-reduced-motion:reduce){.brand,.desktop-nav a::after,.consultation-link,.consultation-icon,.consultation-icon svg,.menu-button,.mobile-menu a{transition:none}.brand:hover,.mobile-menu a:hover{transform:none}.consultation-link:hover .consultation-icon,.consultation-link:hover .consultation-icon svg{transform:none}}
