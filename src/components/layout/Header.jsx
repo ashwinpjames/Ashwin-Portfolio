@@ -4,6 +4,8 @@ import { navigation } from '../../data/navigation.js'
 import { useScroll } from '../../hooks/useScroll.js'
 import { whatsappUrl } from '../../utils/contact.js'
 
+const calendlyUrl = 'https://calendly.com/ashwinjames-marketing/30min'
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const scrolled = useScroll(24)
@@ -27,9 +29,9 @@ export default function Header() {
     <div className="nav-wrap">
       <NavLink className="brand" to="/" aria-label="Ashwin James home">ASHWIN<span>.</span></NavLink>
       <nav className="desktop-nav" aria-label="Primary navigation">{navigation.map((item) => <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>{item.label}</NavLink>)}</nav>
-      <a className="consultation-link" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation <span>↗</span></a>
+      <a className="consultation-link" href={calendlyUrl} target="_blank" rel="noreferrer">Book a call <span>↗</span></a>
       <button className="menu-button" type="button" aria-expanded={menuOpen} aria-controls="mobile-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen((value) => !value)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">{menuOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}</svg></button>
     </div>
-    <div id="mobile-menu" className={`mobile-menu${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}><nav aria-label="Mobile navigation">{navigation.map((item) => <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>{item.label}</NavLink>)}<a className="mobile-consultation" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation</a></nav></div>
+    <div id="mobile-menu" className={`mobile-menu${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}><nav aria-label="Mobile navigation">{navigation.map((item) => <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>{item.label}</NavLink>)}<a className="mobile-consultation" href={calendlyUrl} target="_blank" rel="noreferrer">Book a call</a></nav></div>
   </header>
 }
