@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import ContactForm from '../components/contact/ContactForm.jsx'
 import ContactMethods from '../components/contact/ContactMethods.jsx'
 import CalendlyBooking from '../components/contact/CalendlyBooking.jsx'
+import contactPhotoBase64 from '../assets/ashwin-contact-photo-0.js'
+
+const contactPhoto = `data:image/webp;base64,${contactPhotoBase64}`
 
 export default function Contact() {
   return <main className="contact-page">
@@ -24,7 +27,9 @@ export default function Contact() {
         <div className="contact-hero-visual">
           <div className="contact-portrait-glow" aria-hidden="true" />
           <div className="contact-portrait-ring" aria-hidden="true" />
-          <div className="contact-portrait-stage" aria-hidden="true" />
+          <div className="contact-portrait-stage">
+            <img className="contact-portrait" src={contactPhoto} alt="Ashwin James, Performance Marketing Specialist" fetchPriority="high" />
+          </div>
           <div className="contact-hero-card">
             <span className="contact-card-label">Performance Marketing</span>
             <strong>Ashwin James</strong>
