@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
-import portrait from '../../assets/ashwin-james-portrait.png'
 import '../styles/about-brands.css'
 import '../styles/about-availability.css'
 import '../styles/about-portrait-fix.css'
@@ -21,14 +20,8 @@ const expectations = [
 ]
 
 const industries = [
-  'Immigration & visa services',
-  'Healthcare & wellness',
-  'Attestation & professional services',
-  'Recruitment & HR',
-  'Business services & SMEs',
-  'B2B & high consideration services',
-  'Marketing agencies',
-  'Ecommerce',
+  'Immigration & visa services', 'Healthcare & wellness', 'Attestation & professional services', 'Recruitment & HR',
+  'Business services & SMEs', 'B2B & high consideration services', 'Marketing agencies', 'Ecommerce',
 ]
 
 const brandLogos = [
@@ -80,7 +73,7 @@ export default function About() {
       <div className="container about-hero-inner">
         <div className="about-hero-copy about-reveal"><p className="home-eyebrow">About Ashwin</p><h1>A growth partner who stays close to the work.</h1><p className="about-lead">I combine business thinking, performance marketing and practical delivery to help ambitious UAE businesses turn more attention into revenue.</p><p className="about-secondary">The goal is not more dashboards or noise. It is a clear growth system your team understands, can trust and can keep improving.</p><div className="about-hero-actions"><a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Work with Ashwin <span>↗</span></a><Link className="home-button secondary" to="/case-studies">View selected work <span>→</span></Link></div></div>
         <div className="about-portrait-wrap about-reveal" style={{ transitionDelay: '.12s' }}>
-          <div className="about-portrait-glow" /><div className="about-portrait-card"><img className="about-portrait-image" src={portrait} width="1024" height="1536" alt="Professional portrait of Ashwin James, Performance Marketing Specialist in UAE" fetchPriority="high" /><div className="about-portrait-overlay" /><span className="about-availability"><i />Available to work</span><div className="about-portrait-info"><div className="about-portrait-quote">“Build the system, not just the campaign.”</div><div className="about-portrait-divider" /><div className="about-portrait-bottom"><div className="about-portrait-caption"><strong>Ashwin James</strong><span>Performance Marketing &amp; Growth Systems Specialist</span></div><a className="linkedin-button" href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="View Ashwin James on LinkedIn"><span>in</span></a></div></div></div>
+          <div className="about-portrait-glow" /><div className="about-portrait-card"><div className="about-portrait-image" role="img" aria-label="Professional portrait area for Ashwin James" /><div className="about-portrait-overlay" /><span className="about-availability"><i />Available to work</span><div className="about-portrait-info"><div className="about-portrait-quote">“Build the system, not just the campaign.”</div><div className="about-portrait-divider" /><div className="about-portrait-bottom"><div className="about-portrait-caption"><strong>Ashwin James</strong><span>Performance Marketing &amp; Growth Systems Specialist</span></div><a className="linkedin-button" href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="View Ashwin James on LinkedIn"><span>in</span></a></div></div></div>
         </div>
       </div>
     </section>
