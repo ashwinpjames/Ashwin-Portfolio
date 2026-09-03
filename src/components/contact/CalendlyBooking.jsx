@@ -1,21 +1,33 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 const calendlyUrl = 'https://calendly.com/ashwinjames-marketing/30min'
 const calendlyScriptUrl = 'https://assets.calendly.com/assets/external/widget.js'
 
 export default function CalendlyBooking() {
+  const widgetRef = useRef(null)
+
   useEffect(() => {
+    let cancelled = false
+
     const initialize = () => {
-      if (window.Calendly) {
-        window.Calendly.initInlineWidget({ url: calendlyUrl })
+      if (!cancelled && window.Calendly && widgetRef.current) {
+        widgetRef.current.innerHTML = ''
+        window.Calendly.initInlineWidget({
+          url: calendlyUrl,
+          parentElement: widgetRef.current,
+        })
       }
     }
 
     const existingScript = document.querySelector(`script[src="${calendlyScriptUrl}"]`)
+
     if (existingScript) {
       if (window.Calendly) initialize()
       else existingScript.addEventListener('load', initialize, { once: true })
-      return () => existingScript.removeEventListener('load', initialize)
+      return () => {
+        cancelled = true
+        existingScript.removeEventListener('load', initialize)
+      }
     }
 
     const script = document.createElement('script')
@@ -25,6 +37,7 @@ export default function CalendlyBooking() {
     document.body.appendChild(script)
 
     return () => {
+      cancelled = true
       script.onload = null
     }
   }, [])
@@ -38,9 +51,10 @@ export default function CalendlyBooking() {
       </div>
       <div className="calendly-frame">
         <div
+          ref={widgetRef}
           className="calendly-inline-widget"
-          data-auto-load="false"
           style={{ minWidth: '320px', height: '680px' }}
+          aria-label="Calendly booking calendar"
         />
       </div>
     </section>
