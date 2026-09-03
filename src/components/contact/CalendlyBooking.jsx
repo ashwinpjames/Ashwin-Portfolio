@@ -1,47 +1,6 @@
-import { useEffect, useRef } from 'react'
-
-const calendlyUrl = 'https://calendly.com/ashwinjames-marketing/30min'
-const calendlyScriptUrl = 'https://assets.calendly.com/assets/external/widget.js'
+const calendlyUrl = 'https://calendly.com/ashwinjames-marketing/30min?hide_gdpr_banner=1'
 
 export default function CalendlyBooking() {
-  const widgetRef = useRef(null)
-
-  useEffect(() => {
-    let cancelled = false
-
-    const initialize = () => {
-      if (!cancelled && window.Calendly && widgetRef.current) {
-        widgetRef.current.innerHTML = ''
-        window.Calendly.initInlineWidget({
-          url: calendlyUrl,
-          parentElement: widgetRef.current,
-        })
-      }
-    }
-
-    const existingScript = document.querySelector(`script[src="${calendlyScriptUrl}"]`)
-
-    if (existingScript) {
-      if (window.Calendly) initialize()
-      else existingScript.addEventListener('load', initialize, { once: true })
-      return () => {
-        cancelled = true
-        existingScript.removeEventListener('load', initialize)
-      }
-    }
-
-    const script = document.createElement('script')
-    script.src = calendlyScriptUrl
-    script.async = true
-    script.onload = initialize
-    document.body.appendChild(script)
-
-    return () => {
-      cancelled = true
-      script.onload = null
-    }
-  }, [])
-
   return (
     <section className="calendly-booking" aria-labelledby="calendly-heading">
       <div className="calendly-booking-heading">
@@ -50,11 +9,12 @@ export default function CalendlyBooking() {
         <span>A focused 30 minute conversation about your business, marketing and growth opportunities.</span>
       </div>
       <div className="calendly-frame">
-        <div
-          ref={widgetRef}
-          className="calendly-inline-widget"
-          style={{ minWidth: '320px', height: '680px' }}
-          aria-label="Calendly booking calendar"
+        <iframe
+          src={calendlyUrl}
+          title="Book a call with Ashwin James"
+          className="calendly-iframe"
+          loading="lazy"
+          frameBorder="0"
         />
       </div>
     </section>
