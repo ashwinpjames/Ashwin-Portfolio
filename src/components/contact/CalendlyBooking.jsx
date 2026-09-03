@@ -13,8 +13,16 @@ export default function CalendlyBooking() {
           src={calendlyUrl}
           title="Book a call with Ashwin James"
           className="calendly-iframe"
-          loading="lazy"
+          loading="eager"
           frameBorder="0"
+          scrolling="no"
+          style={{
+            display: 'block',
+            width: '100%',
+            minWidth: '100%',
+            height: '680px',
+            border: 0,
+          }}
         />
       </div>
     </section>
