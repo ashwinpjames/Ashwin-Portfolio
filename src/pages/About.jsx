@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
+import AshwinPortraitCard from '../components/common/AshwinPortraitCard.jsx'
 import '../styles/about-brands.css'
 import '../styles/about-availability.css'
 import '../styles/about-portrait-fix.css'
-
-const linkedinUrl = 'https://www.linkedin.com/in/ashwin-james'
+import '../styles/ashwin-portrait.css'
 
 const principles = [
   ['01', 'Start with the business', 'The market, the sales process, unit economics and the real constraint all come before a channel recommendation.'],
@@ -72,9 +72,7 @@ export default function About() {
       <div className="about-marquee-react" aria-hidden="true"><div className="about-marquee-row-react top"><div className="about-marquee-set-react">{['Growth', 'Clarity', 'Momentum', 'Integrity'].map((word) => <span key={`top-a-${word}`}>{word}</span>)}</div><div className="about-marquee-set-react">{['Growth', 'Clarity', 'Momentum', 'Integrity'].map((word) => <span key={`top-b-${word}`}>{word}</span>)}</div></div><div className="about-marquee-row-react bottom"><div className="about-marquee-set-react">{['Integrity', 'Momentum', 'Clarity', 'Growth'].map((word) => <span key={`bottom-a-${word}`}>{word}</span>)}</div><div className="about-marquee-set-react">{['Integrity', 'Momentum', 'Clarity', 'Growth'].map((word) => <span key={`bottom-b-${word}`}>{word}</span>)}</div></div></div>
       <div className="container about-hero-inner">
         <div className="about-hero-copy about-reveal"><p className="home-eyebrow">About Ashwin</p><h1>A growth partner who stays close to the work.</h1><p className="about-lead">I combine business thinking, performance marketing and practical delivery to help ambitious UAE businesses turn more attention into revenue.</p><p className="about-secondary">The goal is not more dashboards or noise. It is a clear growth system your team understands, can trust and can keep improving.</p><div className="about-hero-actions"><a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Work with Ashwin <span>↗</span></a><Link className="home-button secondary" to="/case-studies">View selected work <span>→</span></Link></div></div>
-        <div className="about-portrait-wrap about-reveal" style={{ transitionDelay: '.12s' }}>
-          <div className="about-portrait-glow" /><div className="about-portrait-card"><div className="about-portrait-image" role="img" aria-label="Professional portrait area for Ashwin James" /><div className="about-portrait-overlay" /><span className="about-availability"><i />Available to work</span><div className="about-portrait-info"><div className="about-portrait-quote">“Build the system, not just the campaign.”</div><div className="about-portrait-divider" /><div className="about-portrait-bottom"><div className="about-portrait-caption"><strong>Ashwin James</strong><span>Performance Marketing &amp; Growth Systems Specialist</span></div><a className="linkedin-button" href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="View Ashwin James on LinkedIn"><span>in</span></a></div></div></div>
-        </div>
+        <div className="about-hero-portrait about-reveal" style={{ transitionDelay: '.12s' }}><AshwinPortraitCard /></div>
       </div>
     </section>
 
