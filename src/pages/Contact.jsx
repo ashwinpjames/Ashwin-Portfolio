@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import ContactForm from '../components/contact/ContactForm.jsx'
 import ContactMethods from '../components/contact/ContactMethods.jsx'
 import CalendlyBooking from '../components/contact/CalendlyBooking.jsx'
-
-const contactPhoto = 'https://github.com/ashwinpjames.png?size=512'
+import AshwinPortraitCard from '../components/common/AshwinPortraitCard.jsx'
+import '../styles/ashwin-portrait.css'
 
 export default function Contact() {
   return <main className="contact-page">
@@ -23,17 +23,10 @@ export default function Contact() {
           </div>
           <Link className="contact-back" to="/">← Back to home</Link>
         </div>
-        <div className="contact-hero-visual">
+        <div className="contact-hero-visual contact-hero-portrait">
           <div className="contact-portrait-glow" aria-hidden="true" />
           <div className="contact-portrait-ring" aria-hidden="true" />
-          <div className="contact-portrait-stage">
-            <img className="contact-portrait" src={contactPhoto} alt="Ashwin James, Performance Marketing Specialist" fetchPriority="high" />
-          </div>
-          <div className="contact-hero-card">
-            <span className="contact-card-label">Performance Marketing</span>
-            <strong>Ashwin James</strong>
-            <small>Dubai, United Arab Emirates</small>
-          </div>
+          <AshwinPortraitCard />
         </div>
       </div>
     </section>
