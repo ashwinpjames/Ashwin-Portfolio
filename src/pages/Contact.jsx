@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import ContactForm from '../components/contact/ContactForm.jsx'
 import ContactMethods from '../components/contact/ContactMethods.jsx'
 import CalendlyBooking from '../components/contact/CalendlyBooking.jsx'
-import contactPhoto from '../assets/ashwin-contact-photo.js'
+
+const contactPhoto = 'https://github.com/ashwinpjames.png?size=512'
 
 export default function Contact() {
   return <main className="contact-page">
