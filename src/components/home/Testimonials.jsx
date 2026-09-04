@@ -10,7 +10,7 @@ const testimonials = [
 ]
 
 function Cards({ hidden = false }) {
-  return <div className="testimonial-set" aria-hidden={hidden}>{testimonials.map(([initials, role, company, quote, url, image]) => <figure className="testimonial-card surface" key={`${initials}-${company}`}><div><div className="stars" aria-label="Five out of five stars">★★★★★</div><blockquote>“{quote}”</blockquote></div><figcaption>{image ? <a className="testimonial-profile" href={url} target="_blank" rel="noreferrer" aria-label={`View ${role} LinkedIn profile`}><img src={image} alt="" loading="lazy" referrerPolicy="no-referrer" /></a> : <span>{initials}</span>}<div><strong>{role}</strong><small>{company}</small>{url && <a className="recommendation-link" href={url} target="_blank" rel="noreferrer">{image ? 'LinkedIn · View Recommendation ↗' : 'Google · Read full review ↗'}</a>}</div></figcaption></figure>)}</div>
+  return <div className="testimonial-set" aria-hidden={hidden}>{testimonials.map(([initials, role, company, quote, url, image]) => <figure className="testimonial-card surface" key={`${initials}-${company}`}><div><div className="stars" aria-label="Five out of five stars">★★★★★</div><blockquote>“{quote}”</blockquote></div><figcaption>{image ? <a className="testimonial-profile" href={url} target="_blank" rel="noreferrer" aria-label={`View ${role} LinkedIn profile`}><img src={image} alt="" loading="lazy" referrerPolicy="no-referrer" /></a> : <span>{initials}</span>}<div><strong>{role}</strong><small>{company}</small>{url && <a className="recommendation-link" href={url} target="_blank" rel="noreferrer">{image ? 'LinkedIn · View Recommedation ↗' : 'Google · Read full review ↗'}</a>}</div></figcaption></figure>)}</div>
 }
 
 export default function Testimonials() {
