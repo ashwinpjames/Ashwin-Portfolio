@@ -10,7 +10,7 @@ export default function ContactMethods() {
       <span>Email</span>
       <small>{emailAddress}</small>
     </a>
-    <a className="contact-method-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+    <a className="contact-method-linkedin" href="https://www.linkedin.com/in/ashwin-james" target="_blank" rel="noreferrer">
       <span>LinkedIn</span>
       <small>Connect professionally</small>
     </a>
