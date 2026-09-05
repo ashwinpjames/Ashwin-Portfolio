@@ -2,7 +2,6 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
-import Resume from './pages/Resume.jsx'
 import Services from './pages/Services.jsx'
 import ServiceDetail from './pages/ServiceDetail.jsx'
 import MetaAdsService from './pages/MetaAdsService.jsx'
@@ -36,7 +35,6 @@ export default function App() {
     <Route element={<MainLayout />}>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/resume" element={<Resume />} />
       <Route path="/services" element={<Services />} />
       <Route path="/services/meta-ads" element={<MetaAdsService />} />
       <Route path="/services/performance-marketing" element={<PerformanceMarketingService />} />
