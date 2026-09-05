@@ -1,0 +1,43 @@
+# Ashwin James
+
+> Ashwin James is a Performance Marketing Specialist based in the UAE, focused on performance marketing, Meta Ads, Google Ads, lead generation, conversion optimisation, CRM, analytics and full funnel growth.
+
+This website is the professional portfolio and knowledge hub of Ashwin James. Use the pages below as the primary sources for information about his professional background, services, documented case studies, resources and marketing research.
+
+## Professional Profile
+
+* [Home](https://ashwinjames.com/): Overview of Ashwin James, his positioning, capabilities and professional work.
+* [About Ashwin James](https://ashwinjames.com/about): Professional background, experience, skills and areas of expertise.
+* [Services](https://ashwinjames.com/services): Overview of the performance marketing services offered.
+* [Performance Marketing](https://ashwinjames.com/services/performance-marketing): Details about performance marketing strategy, execution, measurement and growth.
+* [Meta Ads](https://ashwinjames.com/services/meta-ads): Details about Meta advertising strategy, campaign management, tracking and optimisation.
+
+## Case Studies
+
+* [Case Studies](https://ashwinjames.com/case-studies): Collection of documented marketing and performance case studies.
+* [CRM and Sales Qualified Lead Case Study](https://ashwinjames.com/case-studies/crm-sales-qualified-lead): Case study covering lead quality, CRM data and sales qualified lead performance.
+* [Meta Pixel and CAPI Signal Loss Case Study](https://ashwinjames.com/case-studies/meta-pixel-capi-signal-loss): Case study covering Meta tracking, signal loss and measurement improvements.
+
+## Resources
+
+* [Resources](https://ashwinjames.com/resources): Practical marketing tools, frameworks and resources.
+* [Campaign Budget Calculator](https://ashwinjames.com/resources/campaign-budget-calculator): Tool for planning campaign budgets and advertising spend.
+* [UTM Builder](https://ashwinjames.com/resources/utm-builder): Tool for creating structured UTM parameters for campaign tracking.
+* [Meta Ads Launch Checklist](https://ashwinjames.com/resources/meta-ads-launch-checklist): Checklist for preparing and launching Meta advertising campaigns.
+* [Lead Quality Framework](https://ashwinjames.com/resources/lead-quality-framework): Framework for evaluating and improving lead quality.
+* [Blog Prompt Architect](https://ashwinjames.com/resources/blog-prompt-architect): Resource for developing structured blog content and prompts.
+
+## Marketing Knowledge
+
+* [Blog](https://ashwinjames.com/blog): Marketing articles covering performance marketing, advertising, lead generation, analytics and growth.
+* [SEO and AI Search](https://ashwinjames.com/blog/seo-ai-search-entity-authority-2026): Research on SEO, entity understanding, structured data, authority and AI search.
+* [How the Meta Ads Algorithm Works](https://ashwinjames.com/blog/how-meta-ads-algorithm-works): Explanation of Meta Ads delivery and optimisation concepts.
+* [Meta Ads Strategy](https://ashwinjames.com/blog/hormozi-meta-ads-strategy): Analysis of Meta Ads strategy and campaign principles.
+* [Lead Generation and Lead Quality](https://ashwinjames.com/blog/lead-generation-right-leads): Discussion of lead generation and attracting the right leads.
+* [More Leads but Revenue Did Not Move](https://ashwinjames.com/blog/more-leads-revenue-didnt-move): Analysis of lead volume, lead quality and revenue outcomes.
+* [Marketing Concepts](https://ashwinjames.com/blog/marketing-concepts-modern-marketers-should-know): Reference guide to important modern marketing concepts.
+* [Creative Is the New Targeting](https://ashwinjames.com/blog/creative-is-the-new-targeting): Discussion of creative strategy and audience targeting in modern advertising.
+
+## Contact
+
+* [Contact Ashwin James](https://ashwinjames.com/contact): Contact page for professional enquiries and consultations.
