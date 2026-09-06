@@ -35,7 +35,7 @@ export default function MetaAdsService() {
       <div className="meta-hero-layout">
         <div className="meta-hero-copy">
           <p className="meta-service-eyebrow">Meta Ads Management · Dubai & UAE</p>
-          <h1>Meta Ads That Turn Attention Into <span>Qualified Leads.</span></h1>
+          <h1>Meta Ads Specialist in Dubai, UAE</h1>
           <p className="meta-service-hero-lead">I build Facebook and Instagram campaigns around audience, offer, creative and lead quality signals so paid social creates useful conversations, not just cheap enquiries.</p>
           <a className="meta-service-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute Meta Ads Audit <span>↗</span></a>
           <p className="meta-service-trust">No obligation · Hands on management · Audience strategy · Creative direction · Lead qualification</p>
