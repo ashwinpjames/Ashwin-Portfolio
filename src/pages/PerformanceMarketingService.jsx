@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { FiAward, FiMapPin, FiStar } from 'react-icons/fi'
 import { whatsappUrl } from '../utils/contact.js'
 import './performance-marketing-service.css'
 
@@ -60,6 +61,12 @@ function ServiceLink({ href, children }) {
   return <Link className="pm-inline-link" to={href}>{children}</Link>
 }
 
+const trustIndicators = [
+  { icon: FiMapPin, title: 'UAE Market Experience', subtitle: 'Local Expertise' },
+  { icon: FiStar, title: '5/5 Rated', subtitle: 'Client Satisfaction' },
+  { icon: FiAward, title: '5+ Years', subtitle: 'Industry Experience' },
+]
+
 export default function PerformanceMarketingService() {
   return <main className="pm-page" id="main">
     <section className="pm-hero">
@@ -69,11 +76,12 @@ export default function PerformanceMarketingService() {
       <div className="container pm-hero-inner">
         <div className="pm-hero-copy">
           <p className="services-eyebrow">Performance Marketing · Dubai, UAE</p>
-          <h1>Turn Ad Spend Into Predictable Leads <span>— Not Just Clicks</span></h1>
-          <p className="pm-lead">Paid media, conversion-focused pages, and CRM-driven follow-up, built as one connected system for businesses in Dubai and the UAE.</p>
-          <div className="pm-hero-actions"><CTA>Book a Free Strategy Call</CTA></div>
-          <p className="pm-sub-cta">No obligation — get a straight answer on what’s working and what isn’t.</p>
-          <p className="pm-trust">Trusted by businesses across Dubai and the UAE to manage paid media, CRM, and lead systems end-to-end.</p>
+          <h1>Performance Marketing Specialist in <span>Dubai, UAE</span></h1>
+          <p className="pm-lead">As a Performance Marketing Specialist and Digital Marketing Specialist, I help businesses in Dubai and across the UAE grow through data driven strategies, targeted advertising and measurable results.</p>
+          <div className="pm-hero-actions"><a className="pm-primary pm-whatsapp-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Message on WhatsApp <span>↗</span></a><Link className="pm-secondary" to="/contact">Book a Consultation <span>↗</span></Link></div>
+          <div className="pm-trust-grid" aria-label="Trust indicators">
+            {trustIndicators.map(({ icon: Icon, title, subtitle }) => <div className="pm-trust-item" key={title}><span className="pm-trust-icon"><Icon aria-hidden="true" /></span><div><strong>{title}</strong><span>{subtitle}</span></div></div>)}
+          </div>
         </div>
       </div>
     </section>
