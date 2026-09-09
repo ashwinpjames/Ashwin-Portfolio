@@ -35,6 +35,7 @@ function inlineMarkdown(value) {
   output = output.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
   output = output.replace(/\*([^*]+)\*/g, '<em>$1</em>')
   output = output.replace(/`([^`]+)`/g, '<code>$1</code>')
+  output = output.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
   return output
 }
 
