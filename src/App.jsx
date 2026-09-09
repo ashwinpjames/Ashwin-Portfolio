@@ -85,6 +85,10 @@ const CreativeIsTheNewTargetingBlog = lazyWithStyles(() => import('./pages/Creat
   () => import('./styles/blog.css'),
   () => import('./styles/creative-targeting-blog.css'),
 ])
+const MetaAdsLeadsNoSalesBlog = lazyWithStyles(() => import('./pages/MetaAdsLeadsNoSalesBlog.jsx'), [
+  () => import('./styles/blog.css'),
+  () => import('./styles/meta-ads-leads-no-sales-blog.css'),
+])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [
   () => import('./styles/resources.css'),
 ])
@@ -149,6 +153,7 @@ export default function App() {
         <Route path="/blog/more-leads-revenue-didnt-move" element={<LeadQualityBenchmarksBlog />} />
         <Route path="/blog/seo-ai-search-entity-authority-2026" element={<SeoAiSearchBlog />} />
         <Route path="/blog/marketing-concepts-modern-marketers-should-know" element={<MarketingConceptsBlog />} />
+        <Route path="/blog/meta-ads-generating-leads-but-not-sales" element={<MetaAdsLeadsNoSalesBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>
