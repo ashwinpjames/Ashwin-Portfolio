@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/meta-ads-leads-no-sales.md?raw'
 
@@ -98,13 +99,25 @@ function MetricsGraphic() {
 }
 
 export default function MetaAdsLeadsNoSalesBlog() {
+  useEffect(() => {
+    document.title = "Meta Ads Generating Leads But No Sales? Here's Why | Performance Marketing Specialist in UAE"
+    const description = "Meta Ads bringing in leads but not customers? A performance marketing specialist in UAE explains why cheap leads don't convert and how to fix it."
+    let tag = document.querySelector('meta[name="description"]')
+    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
+    tag.setAttribute('content', description)
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
+    canonical.setAttribute('href', 'https://ashwinjames.com/blog/meta-ads-generating-leads-but-not-sales')
+    return () => { document.title = 'Performance Marketing Specialist in UAE' }
+  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
-  const [introAndOne, afterOne] = renderedArticle.split('<h2>2. Why Cheap Leads')
-  const [sectionTwo, afterTwo] = afterOne.split('<h2>3. Your Lead Generation')
-  const [sectionThree, afterThree] = afterTwo.split('<h2>4. The Problem May Happen')
-  const [sectionFour, afterFour] = afterThree.split('<h2>5. Why Businesses Need')
-  const [sectionFive, afterFive] = afterFour.split('<h2>6. How a Performance')
-  const [sectionSix, sectionSeven] = afterFive.split('<h2>7. How to Fix')
+  const [introAndOne, afterOne = ''] = renderedArticle.split('<h2>2. Why Cheap Leads')
+  const [sectionTwo, afterTwo = ''] = afterOne.split('<h2>3. Your Lead Generation')
+  const [sectionThree, afterThree = ''] = afterTwo.split('<h2>4. The Problem May Happen')
+  const [sectionFour, afterFour = ''] = afterThree.split('<h2>5. Why Businesses Need')
+  const [sectionFive, afterFive = ''] = afterFour.split('<h2>6. How a Performance')
+  const [sectionSix, sectionSeven = ''] = afterFive.split('<h2>7. How to Fix')
 
   return <main className="meta-sales-blog-page">
     <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
