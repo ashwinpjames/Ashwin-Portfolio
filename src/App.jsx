@@ -11,6 +11,7 @@ const lazyWithStyles = (loadPage, loadStyles = []) => lazy(async () => {
 const About = lazyWithStyles(() => import('./pages/About.jsx'), [() => import('./styles/about.css'), () => import('./styles/about-editorial.css'), () => import('./styles/portrait-card.css'), () => import('./styles/portrait-mobile-fix.css'), () => import('./styles/resume.css')])
 const Services = lazyWithStyles(() => import('./pages/Services.jsx'), [() => import('./styles/services.css')])
 const ServiceDetail = lazyWithStyles(() => import('./pages/ServiceDetail.jsx'), [() => import('./styles/services.css'), () => import('./styles/service-detail.css')])
+const ServiceLanding = lazyWithStyles(() => import('./pages/ServiceLanding.jsx'), [() => import('./styles/service-landing.css')])
 const MetaAdsService = lazyWithStyles(() => import('./pages/MetaAdsService.jsx'), [() => import('./styles/services.css'), () => import('./styles/service-detail.css')])
 const PerformanceMarketingService = lazyWithStyles(() => import('./pages/PerformanceMarketingService.jsx'), [() => import('./styles/services.css'), () => import('./styles/service-detail.css')])
 const CaseStudies = lazyWithStyles(() => import('./pages/CaseStudies.jsx'), [() => import('./styles/case-studies.css')])
@@ -51,6 +52,7 @@ export default function App() {
         <Route path="/services/meta-ads" element={<MetaAdsService />} />
         <Route path="/services/performance-marketing" element={<PerformanceMarketingService />} />
         <Route path="/services/performance-growth-marketing" element={<Navigate to="/services/performance-marketing" replace />} />
+        <Route path="/services/website-development" element={<ServiceLanding />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/case-studies/crm-sales-qualified-lead" element={<CrmCaseStudy />} />
