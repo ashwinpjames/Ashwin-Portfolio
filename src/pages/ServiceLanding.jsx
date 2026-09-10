@@ -1,35 +1,25 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import { serviceLandings } from '../data/serviceLandings.js'
 import '../styles/service-landing.css'
 
+const slug = 'website-development'
+
 const related = {
-  seo: ['website-development', 'landing-page-optimisation', 'lead-generation'],
   'website-development': ['landing-page-optimisation', 'lead-generation', 'wordpress'],
-  'lead-generation': ['google-ads', 'meta-ads', 'hubspot'],
-  'landing-page-optimisation': ['google-ads', 'meta-ads', 'website-development'],
-  'performance-growth-marketing': ['google-ads', 'meta-ads', 'lead-generation'],
-  'whatsapp-marketing': ['lead-generation', 'hubspot', 'meta-ads'],
-  hubspot: ['lead-generation', 'whatsapp-marketing', 'google-ads'],
-  wordpress: ['website-development', 'landing-page-optimisation', 'seo'],
 }
 
 const names = {
   'website-development': 'Website Development',
   'landing-page-optimisation': 'Landing Page Optimisation',
   'lead-generation': 'Lead Generation',
-  seo: 'SEO',
-  'performance-growth-marketing': 'Performance & Growth Marketing',
-  'whatsapp-marketing': 'WhatsApp Marketing',
-  hubspot: 'HubSpot CRM & Automation',
   wordpress: 'WordPress Development',
 }
 
 export default function ServiceLanding() {
-  const { slug } = useParams()
-  const service = serviceLandings[slug]
+  const service = serviceLandings['website-development']
   if (!service) return <main className="service-landing"><div className="container"><h1>Service not found.</h1><Link to="/services">Back to services</Link></div></main>
-  const relatedItems = (related[slug] || []).map((id) => ({ id, name: names[id] })).filter((item) => item.name)
+  const relatedItems = related[slug].map((id) => ({ id, name: names[id] })).filter((item) => item.name)
   const hasStrategy = Array.isArray(service.strategy)
   const hasMeasurement = Array.isArray(service.measurementFlow)
   return <main className="service-landing" id="main">
@@ -59,5 +49,3 @@ export default function ServiceLanding() {
     <section className="sl-related"><div className="container"><p className="sl-eyebrow">Related services</p><div className="sl-related-grid">{relatedItems.map((item) => <Link key={item.id} to={`/services/${item.id}`}><span>{item.name}</span><b>→</b></Link>)}</div></div></section>
   </main>
 }
-
-// Force a fresh production build after the Website Development content update.
