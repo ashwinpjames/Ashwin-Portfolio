@@ -29,7 +29,7 @@ export default function ServiceLanding() {
       <div className="container sl-hero-inner">
         <div className="sl-hero-copy">
           <p className="sl-eyebrow">{service.eyebrow}</p>
-          <h1>Website Development Dubai for High Performing Business Websites</h1>
+          <h1>Website Development Specialist in Dubai, UAE</h1>
           <p className="sl-lead">{service.lead}</p>
           <div className="sl-hero-actions">
             <a className="sl-primary" href={whatsappUrl} target="_blank" rel="noreferrer">{service.cta} <span>↗</span></a>
