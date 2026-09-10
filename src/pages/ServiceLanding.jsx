@@ -27,18 +27,19 @@ export default function ServiceLanding() {
       <div className="sl-grid" aria-hidden="true" />
       <div className="sl-hero-glow" aria-hidden="true" />
       <div className="container sl-hero-inner">
-        <Link className="sl-back" to="/services">← Back to services</Link>
         <div className="sl-hero-copy">
           <p className="sl-eyebrow">{service.eyebrow}</p>
           <h1>{service.h1}</h1>
           <p className="sl-lead">{service.lead}</p>
-          <a className="sl-primary" href={whatsappUrl} target="_blank" rel="noreferrer">{service.cta} <span>↗</span></a>
-          <p className="sl-trust">{service.microcopy || 'No obligation · Hands on specialist support · Dubai based'}</p>
+          <div className="sl-hero-actions">
+            <a className="sl-primary" href={whatsappUrl} target="_blank" rel="noreferrer">{service.cta} <span>↗</span></a>
+            <Link className="sl-secondary" to="/contact">Book a Consultation <span>↗</span></Link>
+          </div>
         </div>
-        <div className="sl-hero-highlights" aria-label="Website development benefits">
-          <article><span className="sl-highlight-icon">ϟ</span><div><strong>Fast, modern & secure</strong><small>Built for performance</small></div></article>
-          <article><span className="sl-highlight-icon">▣</span><div><strong>Mobile first design</strong><small>Looks great on every device</small></div></article>
-          <article><span className="sl-highlight-icon">▥</span><div><strong>Built for growth</strong><small>More leads, more sales</small></div></article>
+        <div className="sl-hero-highlights" aria-label="Website development highlights">
+          <article><span className="sl-highlight-icon">⌖</span><div><strong>UAE Market Focus</strong><small>Local business context</small></div></article>
+          <article><span className="sl-highlight-icon">☆</span><div><strong>Conversion Focused</strong><small>Built around business goals</small></div></article>
+          <article><span className="sl-highlight-icon">◉</span><div><strong>Marketing Led</strong><small>Designed for growth</small></div></article>
         </div>
       </div>
     </section>
