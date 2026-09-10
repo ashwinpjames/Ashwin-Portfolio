@@ -8,13 +8,7 @@ const lazyWithStyles = (loadPage, loadStyles = []) => lazy(async () => {
   return loadPage()
 })
 
-const About = lazyWithStyles(() => import('./pages/About.jsx'), [
-  () => import('./styles/about.css'),
-  () => import('./styles/about-editorial.css'),
-  () => import('./styles/portrait-card.css'),
-  () => import('./styles/portrait-mobile-fix.css'),
-  () => import('./styles/resume.css'),
-])
+const About = lazyWithStyles(() => import('./pages/About.jsx'), [() => import('./styles/about.css'), () => import('./styles/about-editorial.css'), () => import('./styles/portrait-card.css'), () => import('./styles/portrait-mobile-fix.css'), () => import('./styles/resume.css')])
 const Services = lazyWithStyles(() => import('./pages/Services.jsx'), [() => import('./styles/services.css')])
 const ServiceDetail = lazyWithStyles(() => import('./pages/ServiceDetail.jsx'), [() => import('./styles/services.css'), () => import('./styles/service-detail.css')])
 const MetaAdsService = lazyWithStyles(() => import('./pages/MetaAdsService.jsx'), [() => import('./styles/services.css'), () => import('./styles/service-detail.css')])
@@ -36,6 +30,7 @@ const CreativeIsTheNewTargetingBlog = lazyWithStyles(() => import('./pages/Creat
 const MetaAdsLeadsNoSalesBlog = lazyWithStyles(() => import('./pages/MetaAdsLeadsNoSalesBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/meta-ads-leads-no-sales-blog.css')])
 const FreelanceMarketingConsultantUaeBlog = lazyWithStyles(() => import('./pages/FreelanceMarketingConsultantUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/freelance-marketing-consultant-blog.css')])
 const PaidAdsSpecialistUaeBlog = lazyWithStyles(() => import('./pages/PaidAdsSpecialistUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/paid-ads-specialist-blog.css')])
+const PerformanceMarketingSpecialistBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingSpecialistBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
@@ -81,6 +76,7 @@ export default function App() {
         <Route path="/blog/meta-ads-generating-leads-but-not-sales" element={<MetaAdsLeadsNoSalesBlog />} />
         <Route path="/blog/freelance-marketing-consultant-uae" element={<FreelanceMarketingConsultantUaeBlog />} />
         <Route path="/blog/paid-ads-specialist-uae" element={<PaidAdsSpecialistUaeBlog />} />
+        <Route path="/blog/performance-marketing-specialist" element={<PerformanceMarketingSpecialistBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>
