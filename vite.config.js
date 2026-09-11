@@ -53,7 +53,7 @@ export default defineConfig({
       renderer: new vitePrerender.PuppeteerRenderer({
         headless: true,
         maxConcurrentRoutes: 2,
-        renderAfterElementExists: '#root > main',
+        renderAfterElementExists: '#page-content > main',
       }),
     }),
   ],
