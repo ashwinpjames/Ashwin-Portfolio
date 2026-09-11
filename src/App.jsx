@@ -18,6 +18,7 @@ const LeadGenerationService = lazyWithStyles(() => import('./pages/LeadGeneratio
 const CROService = lazyWithStyles(() => import('./pages/CROService.jsx'), [() => import('./styles/cro-service.css')])
 const WhatsAppMarketingService = lazyWithStyles(() => import('./pages/WhatsAppMarketingService.jsx'), [() => import('./styles/whatsapp-marketing-service.css')])
 const HubSpotCRMService = lazyWithStyles(() => import('./pages/HubSpotCRMService.jsx'), [() => import('./styles/hubspot-crm-service.css')])
+const WordPressService = lazyWithStyles(() => import('./pages/WordPressService.jsx'), [() => import('./styles/wordpress-service.css')])
 const CaseStudies = lazyWithStyles(() => import('./pages/CaseStudies.jsx'), [() => import('./styles/case-studies.css')])
 const CrmCaseStudy = lazyWithStyles(() => import('./pages/CrmCaseStudy.jsx'), [() => import('./styles/case-studies.css'), () => import('./styles/crm-case.css')])
 const MetaTrackingCaseStudy = lazyWithStyles(() => import('./pages/MetaTrackingCaseStudy.jsx'), [() => import('./styles/case-studies.css'), () => import('./styles/crm-case.css')])
@@ -60,6 +61,7 @@ export default function App() {
         <Route path="/services/cro" element={<CROService />} />
         <Route path="/services/whatsapp-marketing" element={<WhatsAppMarketingService />} />
         <Route path="/services/hubspot" element={<HubSpotCRMService />} />
+        <Route path="/services/wordpress" element={<WordPressService />} />
         <Route path="/services/website-development" element={<ServiceLanding />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/case-studies" element={<CaseStudies />} />
