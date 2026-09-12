@@ -8,7 +8,7 @@ const template = fs.readFileSync(templatePath, 'utf8')
 
 const escapeHtml = (value) => value
   .replace(/&/g, '&amp;')
-  .replace(/</g, '&lt;')
+  .replace(/</g, '&lt;/g, '&lt;')
   .replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;')
   .replace(/'/g, '&#39;')
@@ -26,7 +26,7 @@ const buildPage = (pathname, [title, description]) => {
     html = html.replace('</head>', `    <link rel="canonical" href="${canonical}" />\n  </head>`)
   }
   const h1 = escapeHtml(getH1(title))
-  html = html.replace('<div id="root"></div>', `<div id="root"><noscript><h1>${h1}</h1></noscript></div>`)
+  html = html.replace('<div id="root"></div>', `<div id="root"><h1>${h1}</h1></div>`)
   return html
 }
 for (const [pathname, metadata] of Object.entries(routeMeta)) {
