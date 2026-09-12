@@ -1,0 +1,63 @@
+/* Brand accent system: blue to purple gradient from the approved reference. */
+:root{
+  --brand-blue:#4F8FF7;
+  --brand-purple:#9B7BFF;
+  --brand-gradient:linear-gradient(90deg,#4F8FF7 0%,#9B7BFF 100%);
+  --brand-blue-soft:rgba(79,143,247,.18);
+  --brand-purple-soft:rgba(155,123,255,.16);
+}
+
+/* Shared accent text */
+.brand span,.footer-brand span,
+.home-eyebrow,.placeholder-page .eyebrow,
+.recommendation-link,.problem-grid span,.service-number,
+.process-card>span,.case-body>a span,
+.approach-mark,.service-card .service-icon,
+.home-hero h1 span{
+  background:var(--brand-gradient);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+
+/* Hero accent */
+.home-hero-glow{
+  background:radial-gradient(circle,rgba(79,143,247,.16) 0%,rgba(155,123,255,.11) 30%,rgba(79,143,247,.06) 50%,transparent 72%);
+  box-shadow:0 0 120px rgba(79,143,247,.09);
+}
+
+/* Accent controls and navigation */
+.desktop-nav a::after{background:var(--brand-gradient)}
+.consultation-icon{background:linear-gradient(135deg,#4F8FF7,#9B7BFF)}
+.consultation-link:hover .consultation-icon{background:linear-gradient(135deg,#4F8FF7,#9B7BFF);box-shadow:0 4px 12px rgba(79,143,247,.28)}
+
+/* Cards, borders and interactive accents */
+.problem-grid span,.service-card .service-icon,.approach-mark{color:#4F8FF7}
+.audience-card:hover,.approach-card:hover{border-color:rgba(79,143,247,.45);background:linear-gradient(135deg,rgba(79,143,247,.05),rgba(155,123,255,.04))}
+.service-card:hover{border-color:rgba(79,143,247,.7);background:linear-gradient(135deg,rgba(79,143,247,.05),rgba(155,123,255,.04))}
+.process-card:hover{border-color:rgba(79,143,247,.55);background:linear-gradient(135deg,rgba(79,143,247,.05),rgba(155,123,255,.04))}
+.case-card:hover{border-color:rgba(79,143,247,.55)}
+
+/* Home buttons retain the white reference treatment. */
+.home-button.primary{background:#fff;color:#050816;box-shadow:0 10px 30px rgba(79,143,247,.12)}
+.home-button.primary:hover{background:#fff}
+.home-button.secondary{border-color:rgba(79,143,247,.4)}
+.home-button.secondary:hover{border-color:rgba(155,123,255,.65)}
+.home-button:focus-visible{outline-color:#4F8FF7}
+
+/* Case study graphic accent */
+.case-graph{background:linear-gradient(135deg,rgba(79,143,247,.12),rgba(155,123,255,.08),rgba(11,15,25,.7))}
+.case-graph>div:first-child span{border-color:rgba(79,143,247,.25)}
+.graph-line:after{background:linear-gradient(90deg,#4F8FF7 0%,#9B7BFF 100%);box-shadow:0 0 18px rgba(79,143,247,.28)}
+
+/* Shared links and review controls */
+.google-review-button{border-color:rgba(79,143,247,.45);background:linear-gradient(135deg,rgba(79,143,247,.14),rgba(155,123,255,.12))}
+.google-review-button:hover{border-color:rgba(155,123,255,.8);background:linear-gradient(135deg,rgba(79,143,247,.2),rgba(155,123,255,.18))}
+
+/* Footer CTA */
+.footer-primary-cta{border-color:rgba(79,143,247,.35);background:linear-gradient(135deg,rgba(79,143,247,.14),rgba(155,123,255,.12))}
+.footer-primary-cta:hover{background:linear-gradient(135deg,rgba(79,143,247,.22),rgba(155,123,255,.2));border-color:rgba(155,123,255,.7)}
+
+/* Replace the old cyan hero eyebrow treatment with the approved gradient. */
+.home-eyebrow{color:#4F8FF7}
