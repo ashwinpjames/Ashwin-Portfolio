@@ -13,7 +13,7 @@ export default function Hero() {
       <p className="home-hero-copy reveal-home">I’m a performance marketing specialist helping businesses in Dubai and across the UAE plan, execute, and scale data driven campaigns that deliver qualified leads, higher conversions, and measurable growth.</p>
       <div className="home-actions reveal-home">
         <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation <span>↗</span></a>
-        <a className="home-button secondary" href="#case-studies">View case studies <span>↓</span></a>
+        <a className="home-button secondary" href="#case-studies" style={{ background: '#fff', color: '#050816', borderColor: '#fff' }}>View case studies <span>↓</span></a>
       </div>
       <div className="hero-proof reveal-home">{proof.map((item) => <span key={item}>✓ {item}</span>)}</div>
     </div>
