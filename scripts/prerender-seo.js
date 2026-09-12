@@ -13,6 +13,8 @@ const escapeHtml = (value) => value
   .replace(/"/g, '&quot;')
   .replace(/'/g, '&#39;')
 
+const getH1 = (title) => title.replace(/\s+\|\s+Ashwin James$/i, '').trim()
+
 const buildPage = (pathname, [title, description]) => {
   let html = template
   html = html.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(title)}</title>`)
@@ -25,14 +27,20 @@ const buildPage = (pathname, [title, description]) => {
     html = html.replace('</head>', `    <link rel="canonical" href="${canonical}" />\n  </head>`)
   }
 
+  const h1 = escapeHtml(getH1(title))
+  html = html.replace('<div id="root"></div>', `<div id="root"><noscript><h1>${h1}</h1></noscript></div>`)
   return html
 }
 
 for (const [pathname, metadata] of Object.entries(routeMeta)) {
-  if (pathname === '/') continue
+  const html = buildPage(pathname, metadata)
+  if (pathname === '/') {
+    fs.writeFileSync(templatePath, html, 'utf8')
+    continue
+  }
   const outputDir = path.join(distDir, pathname.replace(/^\//, ''))
   fs.mkdirSync(outputDir, { recursive: true })
-  fs.writeFileSync(path.join(outputDir, 'index.html'), buildPage(pathname, metadata))
+  fs.writeFileSync(path.join(outputDir, 'index.html'), html)
 }
 
-console.log(`Prerendered SEO metadata for ${Object.keys(routeMeta).length} routes.`)
+console.log(`Prerendered SEO metadata and H1 fallbacks for ${Object.keys(routeMeta).length} routes.`)
