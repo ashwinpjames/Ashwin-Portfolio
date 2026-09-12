@@ -8,7 +8,7 @@ const template = fs.readFileSync(templatePath, 'utf8')
 
 const escapeHtml = (value) => value
   .replace(/&/g, '&amp;')
-  .replace(/</g, '&lt;/g, '&lt;')
+  .replace(/</g, '&lt;')
   .replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;')
   .replace(/'/g, '&#39;')
