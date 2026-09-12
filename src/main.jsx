@@ -10,6 +10,7 @@ import './styles/header-refinement.css'
 import './styles/insights.css'
 import './styles/mobile-overrides.css'
 import './styles/mobile-ux-refinement.css'
+import './styles/brand-accent.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
