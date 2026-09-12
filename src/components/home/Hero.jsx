@@ -3,19 +3,8 @@ import PlatformMarquee from './PlatformMarquee.jsx'
 
 const proof = ['Based in UAE', 'Meta & Google Ads Specialist', 'Data Driven Performance Marketing', 'End to End Funnel Strategy']
 
-const heroBackground = 'https://res.cloudinary.com/fo4xyppd/image/upload/f_auto,q_auto,c_fill,w_2400,h_1600/v1789221068/dubai-city-skyline-and-waterfront-united-arab-emi-2026-01-09-08-24-38-utc.jpg'
-
 export default function Hero() {
-  return <section
-    className="home-hero"
-    id="top"
-    style={{
-      backgroundImage: `linear-gradient(180deg, rgba(3, 8, 20, 0.72) 0%, rgba(3, 8, 20, 0.64) 48%, rgba(3, 8, 20, 0.86) 100%), url(${heroBackground})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      backgroundRepeat: 'no-repeat'
-    }}
-  >
+  return <section className="home-hero" id="top">
     <div className="home-hero-grid" aria-hidden="true" />
     <div className="home-hero-glow" aria-hidden="true" />
     <div className="container home-hero-content" style={{ paddingBottom: '4.5rem' }}>
