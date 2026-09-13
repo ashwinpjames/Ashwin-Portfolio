@@ -1,12 +1,21 @@
 import React from 'react'
+import { PassThrough } from 'node:stream'
 import { renderToPipeableStream } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom/server'
 import App from './App.jsx'
 
 export function render(url) {
   return new Promise((resolve, reject) => {
-    let html = ''
     let didError = false
+    const output = new PassThrough()
+    const chunks = []
+
+    output.on('data', (chunk) => chunks.push(Buffer.from(chunk)))
+    output.on('end', () => {
+      if (didError) reject(new Error('SSR rendering failed'))
+      else resolve(Buffer.concat(chunks).toString('utf8'))
+    })
+    output.on('error', reject)
 
     const stream = renderToPipeableStream(
       <React.StrictMode>
@@ -16,20 +25,7 @@ export function render(url) {
       </React.StrictMode>,
       {
         onAllReady() {
-          const writable = {
-            write(chunk) {
-              html += Buffer.from(chunk).toString('utf8')
-            },
-            end() {
-              if (didError) reject(new Error('SSR rendering failed'))
-              else resolve(html)
-            },
-            on() {},
-            destroy(error) {
-              if (error) reject(error)
-            },
-          }
-          stream.pipe(writable)
+          stream.pipe(output)
         },
         onShellError(error) {
           reject(error)
