@@ -4,7 +4,9 @@ import MainLayout from './layouts/MainLayout.jsx'
 import Home from './pages/Home.jsx'
 
 const lazyWithStyles = (loadPage, loadStyles = []) => lazy(async () => {
-  await Promise.all(loadStyles.map((loadStyle) => loadStyle()))
+  if (!import.meta.env.SSR) {
+    await Promise.all(loadStyles.map((loadStyle) => loadStyle()))
+  }
   return loadPage()
 })
 
