@@ -19,5 +19,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>,
 )
-
-document.getElementById('root')?.style.removeProperty('visibility')
