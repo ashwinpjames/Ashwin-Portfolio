@@ -49,5 +49,15 @@ export default function Contact() {
     </section>
 
     <CalendlyBooking />
+
+    <section className="container" aria-label="OnToplist recognition" style={{ textAlign: 'center', padding: '32px 0' }}>
+      <a href="https://www.ontoplist.com/social-media-marketing-companies/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://www.ontoplist.com/images/ontoplist51.png?id=6aa6895481d9f"
+          alt="Top Social Media Marketing Companies - OnToplist.com"
+          border="0"
+        />
+      </a>
+    </section>
   </main>
 }
