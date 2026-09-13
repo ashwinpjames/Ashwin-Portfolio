@@ -9,8 +9,15 @@ const testimonials = [
   ['OD', 'Operations Director', 'Recruitment, UAE', 'The process was calm, direct and genuinely helpful. We left each review knowing exactly what to improve next.'],
 ]
 
+function renderQuote(quote) {
+  const phrase = 'conversion funnel'
+  if (!quote.includes(phrase)) return quote
+  const [before, after] = quote.split(phrase)
+  return <>{before}<a href="https://en.wikipedia.org/wiki/Conversion_funnel" target="_blank" rel="noreferrer">{phrase}</a>{after}</>
+}
+
 function Cards({ hidden = false }) {
-  return <div className="testimonial-set" aria-hidden={hidden}>{testimonials.map(([initials, role, company, quote, url, image, websiteUrl]) => <figure className="testimonial-card surface" key={`${initials}-${company}`}><div><div className="stars" aria-label="Five out of five stars">★★★★★</div><blockquote>“{quote}”</blockquote></div><figcaption>{image ? <a className="testimonial-profile" href={url} target="_blank" rel="noreferrer" aria-label={`View ${role} LinkedIn profile`}><img src={image} alt="" loading="lazy" referrerPolicy="no-referrer" /></a> : <span>{initials}</span>}<div><strong>{websiteUrl ? <a href={websiteUrl} target="_blank" rel="noreferrer">{role}</a> : role}</strong><small>{company}</small>{url && <a className="recommendation-link" href={url} target="_blank" rel="noreferrer">{image ? 'LinkedIn · View Recommedation ↗' : 'Google · Read full review ↗'}</a>}</div></figcaption></figure>)}</div>
+  return <div className="testimonial-set" aria-hidden={hidden}>{testimonials.map(([initials, role, company, quote, url, image, websiteUrl]) => <figure className="testimonial-card surface" key={`${initials}-${company}`}><div><div className="stars" aria-label="Five out of five stars">★★★★★</div><blockquote>“{renderQuote(quote)}”</blockquote></div><figcaption>{image ? <a className="testimonial-profile" href={url} target="_blank" rel="noreferrer" aria-label={`View ${role} LinkedIn profile`}><img src={image} alt="" loading="lazy" referrerPolicy="no-referrer" /></a> : <span>{initials}</span>}<div><strong>{websiteUrl ? <a href={websiteUrl} target="_blank" rel="noreferrer">{role}</a> : role}</strong><small>{company}</small>{url && <a className="recommendation-link" href={url} target="_blank" rel="noreferrer">{image ? 'LinkedIn · View Recommedation ↗' : 'Google · Read full review ↗'}</a>}</div></figcaption></figure>)}</div>
 }
 
 export default function Testimonials() {
