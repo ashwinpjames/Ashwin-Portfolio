@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { routeMeta } from '../src/seo-meta.js'
+import { render } from '../dist-server/entry-server.js'
 
 const distDir = path.resolve('dist')
 const templatePath = path.join(distDir, 'index.html')
@@ -13,8 +14,10 @@ const escapeHtml = (value) => value
   .replace(/"/g, '&quot;')
   .replace(/'/g, '&#39;')
 
-const buildPage = (pathname, [title, description]) => {
+const buildPage = async (pathname, [title, description]) => {
   let html = template
+  const renderedBody = await render(pathname)
+
   html = html.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(title)}</title>`)
   html = html.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/i, `<meta name="description" content="${escapeHtml(description)}" />`)
   const canonical = `https://www.ashwinjames.com${pathname === '/' ? '/' : pathname}`
@@ -23,17 +26,20 @@ const buildPage = (pathname, [title, description]) => {
   } else {
     html = html.replace('</head>', `    <link rel="canonical" href="${canonical}" />\n  </head>`)
   }
+
+  html = html.replace('<div id="root"></div>', `<div id="root">${renderedBody}</div>`)
   return html
 }
 
 for (const [pathname, metadata] of Object.entries(routeMeta)) {
-  const html = buildPage(pathname, metadata)
+  const html = await buildPage(pathname, metadata)
   if (pathname === '/') {
     fs.writeFileSync(templatePath, html, 'utf8')
     continue
   }
   const outputDir = path.join(distDir, pathname.replace(/^\//, ''))
   fs.mkdirSync(outputDir, { recursive: true })
-  fs.writeFileSync(path.join(outputDir, 'index.html'), html)
+  fs.writeFileSync(path.join(outputDir, 'index.html'), html, 'utf8')
 }
-console.log(`Prerendered SEO metadata for ${Object.keys(routeMeta).length} routes.`)
+
+console.log(`Prerendered full HTML for ${Object.keys(routeMeta).length} routes.`)
