@@ -22,6 +22,9 @@ function escapeHtml(value) { return value.replace(/&/g, '&amp;').replace(/</g, '
 function inlineMarkdown(value) {
   let output = escapeHtml(value)
   output = output.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/\*([^*]+)\*/g, '<em>$1</em>').replace(/`([^`]+)`/g, '<code>$1</code>')
+  output = output.replace(/\bclick-through rate\b/gi, '<a href="https://en.wikipedia.org/wiki/Click-through_rate" target="_blank" rel="noreferrer">$&</a>')
+  output = output.replace(/\bsegmentation\b/gi, '<a href="https://en.wikipedia.org/wiki/Market_segmentation" target="_blank" rel="noreferrer">$&</a>')
+  output = output.replace(/\bpositioning\b/gi, '<a href="https://en.wikipedia.org/wiki/Positioning_(marketing)" target="_blank" rel="noreferrer">$&</a>')
   return output
 }
 function renderMarkdown(markdown) {
