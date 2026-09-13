@@ -40,6 +40,9 @@ function inlineMarkdown(value) {
   output = output.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
   output = output.replace(/\*([^*]+)\*/g, '<em>$1</em>')
   output = output.replace(/`([^`]+)`/g, '<code>$1</code>')
+  output = output.replace(/\bcost per mille\b/gi, '<a href="https://en.wikipedia.org/wiki/Cost_per_mille" target="_blank" rel="noreferrer">$&</a>')
+  output = output.replace(/\bimpressions\b/gi, '<a href="https://en.wikipedia.org/wiki/Cost_per_impression" target="_blank" rel="noreferrer">$&</a>')
+  output = output.replace(/\bclick-through rate\b/gi, '<a href="https://en.wikipedia.org/wiki/Click-through_rate" target="_blank" rel="noreferrer">$&</a>')
   return output
 }
 
