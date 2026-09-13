@@ -7,9 +7,9 @@ export default function CaseStudies() {
   return <main className="case-studies-page">
     <section className="case-hero case-hero-minimal">
       <div className="case-container">
-        <p className="case-eyebrow">Selected case studies</p>
+        <h1 className="case-eyebrow">Performance Marketing Case Studies</h1>
         <div className="case-minimal-heading">
-          <h1>Work that <span>moved the numbers.</span></h1>
+          <h2>Work that <span>moved the numbers.</span></h2>
           <p>Selected work across paid acquisition, conversion and marketing operations.</p>
         </div>
       </div>
