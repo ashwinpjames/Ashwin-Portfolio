@@ -28,7 +28,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 function escapeHtml(value) { return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;') }
 function inlineMarkdown(value) {
   let output = escapeHtml(value)
-  output = output.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+|\/[^)]+)\)/g, (_, text, href) => `<a href="${href}"${href.startsWith('http') ? '' : ''}>${text}</a>`)
+  output = output.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+|\/[^)]+)\)/g, (_, text, href) => `<a href="${href}">${text}</a>`)
   output = output.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
   output = output.replace(/\*([^*]+)\*/g, '<em>$1</em>')
   output = output.replace(/`([^`]+)`/g, '<code>$1</code>')
@@ -82,7 +82,8 @@ export default function PerformanceMarketingStrategyUaeBlog() {
     let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/performance-marketing-strategy-uae')
     return () => { document.title = 'Performance Marketing Specialist in UAE' }
   }, [])
-  const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
+  const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '')
+  const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
     <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · UAE · STRATEGY</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 14, 2026</span></div><h1>How to Build a Performance Marketing Strategy for a UAE Business</h1><p className="pms-lede">A practical framework for turning business objectives, customer insight, paid acquisition, conversion tracking and sales data into a measurable growth system.</p><div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-dubai">Performance Marketing in Dubai</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div></header>
     <StrategyFlow />
