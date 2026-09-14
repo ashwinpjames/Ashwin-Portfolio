@@ -5,14 +5,45 @@ import articleMarkdown from '../content/free-invoice-generator-for-freelancers.m
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: 'Free Invoice Generator for Freelancers: Why Proper Invoicing Matters',
-  description: 'Learn why freelancers need professional invoices, what a good invoice should include and how proper invoicing can improve cash flow, client trust and business organisation.',
+  headline: 'Free Invoice Generator for Freelancers: How to Create Professional Invoices and Get Paid Faster',
+  description: 'Learn why proper invoicing matters for freelancers, what a professional invoice should include, how to invoice for freelance marketing services and how to build a simple invoicing process.',
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-14',
   dateModified: '2026-09-14',
   mainEntityOfPage: 'https://ashwinjames.com/blog/free-invoice-generator-for-freelancers',
-  keywords: 'free invoice generator for freelancers, freelance invoice generator, freelance marketing services, freelancer invoicing, professional invoice for freelancers, digital marketing services',
+  keywords: 'free invoice generator for freelancers, freelance invoice generator, invoice generator for freelancers, professional invoice for freelancers, freelance invoice, how to create an invoice as a freelancer, invoice template for freelancers, freelance marketing services, digital marketing services',
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    ['What is a freelance invoice?', 'A freelance invoice is a formal document a self employed professional sends to a client to request payment for completed work or services.'],
+    ['What should a freelancer include on an invoice?', 'Include your details, the client details, a unique invoice number, invoice and due dates, service descriptions, pricing, applicable taxes, total amount due and payment instructions.'],
+    ['Can freelancers create invoices for free?', 'Yes. A free invoice generator for freelancers can help independent professionals create invoices without paying for a full accounting platform.'],
+    ['How do I create an invoice for freelance marketing services?', 'List each service clearly and connect it to the agreed billing model, such as Meta Ads management, Google Ads management, SEO or consulting with the relevant billing period, quantity and rate.'],
+    ['Can I use an invoice generator without accounting software?', 'Yes. An invoice generator can handle invoice creation on its own, while full accounting software becomes more relevant for broader bookkeeping and financial management.'],
+    ['What payment terms should freelancers put on an invoice?', 'Common terms include due on receipt, Net 7, Net 15 and Net 30. The terms should match the client agreement and be stated clearly on the invoice.'],
+  ].map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })),
+}
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Create an Invoice as a Freelancer',
+  description: 'A simple process for creating a professional freelance invoice.',
+  step: [
+    'Add your business details',
+    "Add your client's details",
+    'Assign a unique invoice number',
+    'Add the invoice and due dates',
+    'Add the services and billing details',
+    'Add applicable tax or discounts',
+    'Check the total',
+    'Download the invoice',
+    'Send the invoice promptly',
+  ].map((text, index) => ({ '@type': 'HowToStep', position: index + 1, text })),
 }
 
 function escapeHtml(value) {
@@ -67,8 +98,8 @@ function renderMarkdown(markdown) {
 
 export default function FreelanceInvoiceGeneratorBlog() {
   useEffect(() => {
-    document.title = 'Free Invoice Generator for Freelancers: Why Proper Invoicing Matters | Ashwin James'
-    const description = 'Learn why freelancers need professional invoices, what a good invoice should include and how proper invoicing can improve cash flow, client trust and business organisation.'
+    document.title = 'Free Invoice Generator for Freelancers: How to Create Professional Invoices | Ashwin James'
+    const description = 'Learn why proper invoicing matters for freelancers, what a professional invoice should include, how to invoice for freelance marketing services and how to build a simple invoicing process.'
     let tag = document.querySelector('meta[name="description"]')
     if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
     tag.setAttribute('content', description)
@@ -82,12 +113,14 @@ export default function FreelanceInvoiceGeneratorBlog() {
 
   return <main className="blog-page">
     <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+    <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+    <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>
     <article className="blog-article">
       <header className="blog-hero">
         <Link to="/blog" className="blog-back">Back to all blogs</Link>
         <p className="blog-eyebrow">FREELANCING · BUSINESS · INVOICING</p>
         <div className="blog-meta"><span>Freelancing</span><span>•</span><span>9 min read</span><span>•</span><span>September 14, 2026</span></div>
-        <h1>Free Invoice Generator for Freelancers: Why Proper Invoicing Matters</h1>
+        <h1>Free Invoice Generator for Freelancers: How to Create Professional Invoices and Get Paid Faster</h1>
         <p className="blog-lede">A practical guide to professional invoicing, client trust, payment tracking and building a simple invoicing process as a freelancer.</p>
         <div className="blog-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/contact">Work with Ashwin</Link></div>
       </header>
