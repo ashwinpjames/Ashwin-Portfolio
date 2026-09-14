@@ -41,6 +41,7 @@ const PerformanceMarketingDubaiGuideBlog = lazyWithStyles(() => import('./pages/
 const FreelanceInvoiceGeneratorBlog = lazyWithStyles(() => import('./pages/FreelanceInvoiceGeneratorBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/freelance-marketing-consultant-blog.css')])
 const PerformanceMarketingVsDigitalMarketingBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingVsDigitalMarketingBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const PerformanceMarketingStrategyUaeBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingStrategyUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const PerformanceMarketingMetricsBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingMetricsBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
@@ -97,6 +98,7 @@ export default function App() {
         <Route path="/blog/free-invoice-generator-for-freelancers" element={<FreelanceInvoiceGeneratorBlog />} />
         <Route path="/blog/performance-marketing-vs-digital-marketing" element={<PerformanceMarketingVsDigitalMarketingBlog />} />
         <Route path="/blog/performance-marketing-strategy-uae" element={<PerformanceMarketingStrategyUaeBlog />} />
+        <Route path="/blog/performance-marketing-metrics" element={<PerformanceMarketingMetricsBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>
