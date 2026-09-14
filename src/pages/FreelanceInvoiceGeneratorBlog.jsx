@@ -15,17 +15,19 @@ const articleSchema = {
   keywords: 'free invoice generator for freelancers, freelance invoice generator, invoice generator for freelancers, professional invoice for freelancers, freelance invoice, how to create an invoice as a freelancer, invoice template for freelancers, freelance marketing services, digital marketing services',
 }
 
+const faqItems = [
+  ['What is a freelance invoice?', 'A freelance invoice is a formal document a self employed professional sends to a client to request payment for completed work or services.'],
+  ['What should a freelancer include on an invoice?', 'Include your details, the client details, a unique invoice number, invoice and due dates, service descriptions, pricing, applicable taxes, total amount due and payment instructions.'],
+  ['Can freelancers create invoices for free?', 'Yes. A free invoice generator for freelancers can help independent professionals create invoices without paying for a full accounting platform.'],
+  ['How do I create an invoice for freelance marketing services?', 'List each service clearly and connect it to the agreed billing model, such as Meta Ads management, Google Ads management, SEO or consulting with the relevant billing period, quantity and rate.'],
+  ['Can I use an invoice generator without accounting software?', 'Yes. An invoice generator can handle invoice creation on its own, while full accounting software becomes more relevant for broader bookkeeping and financial management.'],
+  ['What payment terms should freelancers put on an invoice?', 'Common terms include due on receipt, Net 7, Net 15 and Net 30. The terms should match the client agreement and be stated clearly on the invoice.'],
+]
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    ['What is a freelance invoice?', 'A freelance invoice is a formal document a self employed professional sends to a client to request payment for completed work or services.'],
-    ['What should a freelancer include on an invoice?', 'Include your details, the client details, a unique invoice number, invoice and due dates, service descriptions, pricing, applicable taxes, total amount due and payment instructions.'],
-    ['Can freelancers create invoices for free?', 'Yes. A free invoice generator for freelancers can help independent professionals create invoices without paying for a full accounting platform.'],
-    ['How do I create an invoice for freelance marketing services?', 'List each service clearly and connect it to the agreed billing model, such as Meta Ads management, Google Ads management, SEO or consulting with the relevant billing period, quantity and rate.'],
-    ['Can I use an invoice generator without accounting software?', 'Yes. An invoice generator can handle invoice creation on its own, while full accounting software becomes more relevant for broader bookkeeping and financial management.'],
-    ['What payment terms should freelancers put on an invoice?', 'Common terms include due on receipt, Net 7, Net 15 and Net 30. The terms should match the client agreement and be stated clearly on the invoice.'],
-  ].map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })),
+  mainEntity: faqItems.map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })),
 }
 
 const howToSchema = {
@@ -50,7 +52,10 @@ function inlineMarkdown(value) {
 }
 
 function normalizeArticleMarkdown(markdown) {
-  return markdown.replace(/<div style="text-align:center; margin: (?:32|36)px 0;">\s*<a href="([^"]+)"[^>]*>\s*([^<]+?)\s*<\/a>\s*<\/div>/gs, (_, href, label) => `\n[CTA_BUTTON::${label.trim()}::${href}]\n`)
+  return markdown
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<div style="text-align:center; margin: (?:32|36)px 0;">\s*<a href="([^"]+)"[^>]*>\s*([^<]+?)\s*<\/a>\s*<\/div>/gs, (_, href, label) => `\n[CTA_BUTTON::${label.trim()}::${href}]\n`)
+    .replace(/\n## Frequently Asked Questions[\s\S]*$/i, '')
 }
 
 function renderMarkdown(markdown) {
@@ -123,6 +128,20 @@ function InvoiceMetricsGraphic() {
   return <div className="freelance-measurement" aria-label="Invoice essentials infographic"><span>MAKE EVERY INVOICE CLEAR</span><strong>Give the client the information they need</strong><div>{metrics.map(([metric, label]) => <div key={metric}><b>{metric}</b><small>{label}</small></div>)}</div></div>
 }
 
+function InvoiceFaq() {
+  return <section className="invoice-faq" aria-labelledby="invoice-faq-title">
+    <h2 id="invoice-faq-title">Frequently Asked Questions</h2>
+    <div className="invoice-faq-list">
+      {faqItems.map(([question, answer]) => (
+        <details className="invoice-faq-item" key={question}>
+          <summary>{question}<span aria-hidden="true">+</span></summary>
+          <div className="invoice-faq-answer">{answer}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+}
+
 export default function FreelanceInvoiceGeneratorBlog() {
   useEffect(() => {
     document.title = 'Free Invoice Generator for Freelancers: Create Professional Invoices | Ashwin James'
@@ -152,7 +171,7 @@ export default function FreelanceInvoiceGeneratorBlog() {
         <div className="freelance-consultant-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/contact">Work with Ashwin</Link></div>
       </header>
       <InvoiceSystemGraphic />
-      <div className="freelance-consultant-content"><InvoiceVisual /><div dangerouslySetInnerHTML={{ __html: html }} /><InvoiceMetricsGraphic /></div>
+      <div className="freelance-consultant-content"><InvoiceVisual /><div dangerouslySetInnerHTML={{ __html: html }} /><InvoiceMetricsGraphic /><InvoiceFaq /></div>
       <footer className="freelance-consultant-cta"><span>FREE INVOICE GENERATOR FOR FREELANCERS</span><h2>Ready to create your next invoice?</h2><p>Use InvoiceFlow to create a professional invoice for your freelance work without rebuilding the document from scratch.</p><div><a href="https://invoiceflow.myportfoliowebsite.com/" target="_blank" rel="noreferrer">Try InvoiceFlow</a><Link to="/contact">Work with Ashwin</Link></div></footer>
     </article>
   </main>
