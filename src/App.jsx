@@ -37,13 +37,13 @@ const MetaAdsLeadsNoSalesBlog = lazyWithStyles(() => import('./pages/MetaAdsLead
 const FreelanceMarketingConsultantUaeBlog = lazyWithStyles(() => import('./pages/FreelanceMarketingConsultantUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/freelance-marketing-consultant-blog.css')])
 const PaidAdsSpecialistUaeBlog = lazyWithStyles(() => import('./pages/PaidAdsSpecialistUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/paid-ads-specialist-blog.css')])
 const PerformanceMarketingSpecialistBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingSpecialistBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const FreelanceInvoiceGeneratorBlog = lazyWithStyles(() => import('./pages/FreelanceInvoiceGeneratorBlog.jsx'), [() => import('./styles/blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
 const MetaAdsChecklist = lazyWithStyles(() => import('./pages/MetaAdsChecklist.jsx'), [() => import('./styles/resources.css'), () => import('./styles/meta-checklist.css')])
 const LeadQualityFramework = lazyWithStyles(() => import('./pages/LeadQualityFramework.jsx'), [() => import('./styles/resources.css'), () => import('./styles/lead-quality.css')])
 const BlogPromptArchitect = lazyWithStyles(() => import('./pages/BlogPromptArchitect.jsx'), [() => import('./styles/resources.css'), () => import('./styles/blog-prompt-architect.css')])
-const InvoiceGenerator = lazyWithStyles(() => import('./pages/InvoiceGenerator.jsx'), [() => import('./styles/resources.css'), () => import('./styles/invoice-generator.css')])
 const Blog = lazyWithStyles(() => import('./pages/Blog.jsx'), [() => import('./styles/blog.css')])
 const Contact = lazyWithStyles(() => import('./pages/Contact.jsx'), [() => import('./styles/contact.css'), () => import('./styles/contact-method-colors.css'), () => import('./styles/calendly.css')])
 const PlaceholderPage = lazy(() => import('./pages/PlaceholderPage.jsx'))
@@ -74,7 +74,6 @@ export default function App() {
         <Route path="/resources/meta-ads-launch-checklist" element={<MetaAdsChecklist />} />
         <Route path="/resources/lead-quality-framework" element={<LeadQualityFramework />} />
         <Route path="/resources/blog-prompt-architect" element={<BlogPromptArchitect />} />
-        <Route path="/resources/invoice-generator" element={<InvoiceGenerator />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/creative-is-the-new-targeting" element={<CreativeIsTheNewTargetingBlog />} />
         <Route path="/blog/ctr-explained" element={<CTRExplainedBlog />} />
@@ -91,6 +90,7 @@ export default function App() {
         <Route path="/blog/freelance-marketing-consultant-uae" element={<FreelanceMarketingConsultantUaeBlog />} />
         <Route path="/blog/paid-ads-specialist-uae" element={<PaidAdsSpecialistUaeBlog />} />
         <Route path="/blog/performance-marketing-specialist" element={<PerformanceMarketingSpecialistBlog />} />
+        <Route path="/blog/free-invoice-generator-for-freelancers" element={<FreelanceInvoiceGeneratorBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>
