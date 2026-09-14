@@ -245,6 +245,8 @@ If you want to understand the role in more detail, see [What Is a Performance Ma
 
 You can also explore the [performance marketing service](/services/performance-marketing) to see how the discipline can connect paid acquisition, conversion optimisation, analytics, and business outcomes.
 
+The goal is to work with a **[performance marketing specialist](http://ashwinjames.com/)** who can connect campaign activity with meaningful business outcomes.
+
 ## Where Businesses Get the Comparison Wrong
 
 ### Mistake 1: Treating Performance Marketing as Just Paid Ads
