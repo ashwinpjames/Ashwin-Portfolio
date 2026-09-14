@@ -37,7 +37,7 @@ const MetaAdsLeadsNoSalesBlog = lazyWithStyles(() => import('./pages/MetaAdsLead
 const FreelanceMarketingConsultantUaeBlog = lazyWithStyles(() => import('./pages/FreelanceMarketingConsultantUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/freelance-marketing-consultant-blog.css')])
 const PaidAdsSpecialistUaeBlog = lazyWithStyles(() => import('./pages/PaidAdsSpecialistUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/paid-ads-specialist-blog.css')])
 const PerformanceMarketingSpecialistBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingSpecialistBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
-const FreelanceInvoiceGeneratorBlog = lazyWithStyles(() => import('./pages/FreelanceInvoiceGeneratorBlog.jsx'), [() => import('./styles/blog.css')])
+const FreelanceInvoiceGeneratorBlog = lazyWithStyles(() => import('./pages/FreelanceInvoiceGeneratorBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/freelance-marketing-consultant-blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
