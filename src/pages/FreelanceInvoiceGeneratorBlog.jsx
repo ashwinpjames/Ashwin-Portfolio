@@ -49,6 +49,10 @@ function inlineMarkdown(value) {
   return output
 }
 
+function normalizeArticleMarkdown(markdown) {
+  return markdown.replace(/<div style="text-align:center; margin: (?:32|36)px 0;">\s*<a href="([^"]+)"[^>]*>\s*([^<]+?)\s*<\/a>\s*<\/div>/gs, (_, href, label) => `\n[CTA_BUTTON::${label.trim()}::${href}]\n`)
+}
+
 function renderMarkdown(markdown) {
   const lines = markdown.trim().split('\n')
   const html = []
@@ -56,6 +60,16 @@ function renderMarkdown(markdown) {
   while (i < lines.length) {
     const line = lines[i]
     if (!line.trim()) { i += 1; continue }
+
+    const cta = line.match(/^\[CTA_BUTTON::(.+)::([^\]]+)\]$/)
+    if (cta) {
+      const label = inlineMarkdown(cta[1])
+      const href = escapeHtml(cta[2])
+      html.push(`<div style="text-align:center; margin:32px 0;"><a href="${href}" target="_blank" rel="noreferrer" style="display:inline-flex; align-items:center; justify-content:center; padding:14px 32px; background:linear-gradient(90deg,#5b6cff,#8a5cff); color:#ffffff; font-weight:700; text-decoration:none; border-radius:999px; font-family:inherit;">${label}</a></div>`)
+      i += 1
+      continue
+    }
+
     const table = line.includes('|') && i + 1 < lines.length && /^\s*\|?\s*:?-+/.test(lines[i + 1])
     if (table) {
       const parseRow = row => row.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => inlineMarkdown(cell.trim()))
@@ -66,6 +80,7 @@ function renderMarkdown(markdown) {
       html.push(`<div class="freelance-consultant-table-wrap"><table><thead><tr>${headers.map(cell => `<th>${cell}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`)
       continue
     }
+
     const heading = line.match(/^(#{1,3})\s+(.+)$/)
     if (heading) {
       const level = heading[1].length
@@ -73,14 +88,16 @@ function renderMarkdown(markdown) {
       i += 1
       continue
     }
+
     if (/^[-*]\s+/.test(line)) {
       const items = []
       while (i < lines.length && /^[-*]\s+/.test(lines[i])) { items.push(`<li>${inlineMarkdown(lines[i].replace(/^[-*]\s+/, ''))}</li>`); i += 1 }
       html.push(`<ul>${items.join('')}</ul>`)
       continue
     }
+
     const paragraph = []
-    while (i < lines.length && lines[i].trim() && !/^#{1,3}\s+/.test(lines[i]) && !/^[-*]\s+/.test(lines[i]) && !(lines[i].includes('|') && i + 1 < lines.length && /^\s*\|?\s*:?-+/.test(lines[i + 1]))) { paragraph.push(lines[i]); i += 1 }
+    while (i < lines.length && lines[i].trim() && !/^\[CTA_BUTTON::/.test(lines[i]) && !/^#{1,3}\s+/.test(lines[i]) && !/^[-*]\s+/.test(lines[i]) && !(lines[i].includes('|') && i + 1 < lines.length && /^\s*\|?\s*:?-+/.test(lines[i + 1]))) { paragraph.push(lines[i]); i += 1 }
     html.push(`<p>${paragraph.map(inlineMarkdown).join('<br />')}</p>`)
   }
   return html.join('')
@@ -119,7 +136,7 @@ export default function FreelanceInvoiceGeneratorBlog() {
     return () => { document.title = 'Performance Marketing Specialist in UAE' }
   }, [])
 
-  const html = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
+  const html = renderMarkdown(normalizeArticleMarkdown(articleMarkdown.replace(/^# .+\n\n/, '')))
 
   return <main className="freelance-consultant-blog-page">
     <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
