@@ -43,6 +43,7 @@ const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() =>
 const MetaAdsChecklist = lazyWithStyles(() => import('./pages/MetaAdsChecklist.jsx'), [() => import('./styles/resources.css'), () => import('./styles/meta-checklist.css')])
 const LeadQualityFramework = lazyWithStyles(() => import('./pages/LeadQualityFramework.jsx'), [() => import('./styles/resources.css'), () => import('./styles/lead-quality.css')])
 const BlogPromptArchitect = lazyWithStyles(() => import('./pages/BlogPromptArchitect.jsx'), [() => import('./styles/resources.css'), () => import('./styles/blog-prompt-architect.css')])
+const InvoiceGenerator = lazyWithStyles(() => import('./pages/InvoiceGenerator.jsx'), [() => import('./styles/resources.css'), () => import('./styles/invoice-generator.css')])
 const Blog = lazyWithStyles(() => import('./pages/Blog.jsx'), [() => import('./styles/blog.css')])
 const Contact = lazyWithStyles(() => import('./pages/Contact.jsx'), [() => import('./styles/contact.css'), () => import('./styles/contact-method-colors.css'), () => import('./styles/calendly.css')])
 const PlaceholderPage = lazy(() => import('./pages/PlaceholderPage.jsx'))
@@ -73,6 +74,7 @@ export default function App() {
         <Route path="/resources/meta-ads-launch-checklist" element={<MetaAdsChecklist />} />
         <Route path="/resources/lead-quality-framework" element={<LeadQualityFramework />} />
         <Route path="/resources/blog-prompt-architect" element={<BlogPromptArchitect />} />
+        <Route path="/resources/invoice-generator" element={<InvoiceGenerator />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/creative-is-the-new-targeting" element={<CreativeIsTheNewTargetingBlog />} />
         <Route path="/blog/ctr-explained" element={<CTRExplainedBlog />} />
