@@ -273,7 +273,7 @@ Effective **Meta Ads lead generation** is a system, not a button inside Ads Mana
 
 For UAE businesses, the strongest approach is to connect the offer, audience, creative, lead capture experience, qualification process, sales follow up and measurement model. Facebook Ads lead generation and Instagram Ads can generate attention and enquiries, but the real objective is to create a repeatable path from advertising spend to commercially useful demand.
 
-If you want to approach that system from a business outcome rather than a dashboard metric, a **Performance Marketing Specialist** can help connect paid acquisition with lead quality, conversion and revenue.
+If you want to approach that system from a business outcome rather than a dashboard metric, a [Performance Marketing Specialist](https://ashwinjames.com/) can help connect paid acquisition with lead quality, conversion and revenue.
 
 ## Frequently asked questions
 
