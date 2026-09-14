@@ -18,7 +18,7 @@ export default function MainLayout() {
     <Header />
     <div id="page-content"><Outlet /></div>
     {isBlogArticle && <div style={{ maxWidth: '780px', margin: '0 auto', padding: '1.5rem 24px 2.5rem', textAlign: 'center', color: '#8f96ab', fontSize: '0.88rem', lineHeight: 1.7 }}>
-      Looking for a <a href="https://www.ashwinjames.com/" style={{ color: '#7c86ff', fontWeight: 700 }}>performance marketing specialist</a> in the UAE? Explore my approach and services.
+      Looking for a <a href="https://www.ashwinjames.com/" style={{ color: '#7c86ff', fontWeight: 700 }}>Performance Marketing Specialist</a> in the UAE? Explore my approach and services.
     </div>}
     <MobileActionBar />
     <Footer />
