@@ -1,5 +1,5 @@
 import { renderToPipeableStream } from 'react-dom/server'
-import { StaticRouter } from 'react-router-dom/server'
+import { MemoryRouter } from 'react-router-dom'
 import { PassThrough } from 'node:stream'
 import App from './App.jsx'
 
@@ -17,9 +17,9 @@ export function render(url) {
     stream.on('error', reject)
 
     const { pipe } = renderToPipeableStream(
-      <StaticRouter location={url}>
+      <MemoryRouter initialEntries={[url]}>
         <App />
-      </StaticRouter>,
+      </MemoryRouter>,
       {
         onAllReady() {
           pipe(stream)
