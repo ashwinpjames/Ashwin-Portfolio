@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './styles/globals.css'
@@ -12,7 +12,8 @@ import './styles/mobile-overrides.css'
 import './styles/mobile-ux-refinement.css'
 import './styles/brand-accent.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+hydrateRoot(
+  document.getElementById('root'),
   <React.StrictMode>
     <BrowserRouter>
       <App />
