@@ -47,6 +47,7 @@ const MetaAdsCampaignStructureBlog = lazyWithStyles(() => import('./pages/MetaAd
 const GoogleAdsLeadGenerationUaeBlog = lazyWithStyles(() => import('./pages/GoogleAdsLeadGenerationUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const GoogleAdsVsMetaAdsBlog = lazyWithStyles(() => import('./pages/GoogleAdsVsMetaAdsBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const GoogleSearchAdsLeadGenerationCampaignBlog = lazyWithStyles(() => import('./pages/GoogleSearchAdsLeadGenerationCampaignBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const GoogleAdsClicksNotTurningIntoLeadsBlog = lazyWithStyles(() => import('./pages/GoogleAdsClicksNotTurningIntoLeadsBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
@@ -109,6 +110,7 @@ export default function App() {
         <Route path="/blog/google-ads-lead-generation-uae" element={<GoogleAdsLeadGenerationUaeBlog />} />
         <Route path="/blog/google-ads-vs-meta-ads" element={<GoogleAdsVsMetaAdsBlog />} />
         <Route path="/blog/google-search-ads-lead-generation-campaign" element={<GoogleSearchAdsLeadGenerationCampaignBlog />} />
+        <Route path="/blog/google-ads-clicks-not-turning-into-leads" element={<GoogleAdsClicksNotTurningIntoLeadsBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>
