@@ -17,8 +17,8 @@ export default function MainLayout() {
     <a className="skip-link" href="#page-content">Skip to content</a>
     <Header />
     <div id="page-content"><Outlet /></div>
-    {isBlogArticle && <div style={{ maxWidth: '780px', margin: '0 auto', padding: '1.5rem 24px 2.5rem', textAlign: 'center', color: '#8f96ab', fontSize: '0.88rem', lineHeight: 1.7 }}>
-      Looking for a <a href="https://www.ashwinjames.com/" style={{ color: '#7c86ff', fontWeight: 700 }}>Performance Marketing Specialist</a> in the UAE? Explore my approach and services.
+    {isBlogArticle && <div className="blog-home-link-note">
+      Looking for a <a href="https://www.ashwinjames.com/">Performance Marketing Specialist</a> in the UAE? Explore my approach and services.
     </div>}
     <MobileActionBar />
     <Footer />
