@@ -50,7 +50,7 @@ const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() =>
 const MetaAdsChecklist = lazyWithStyles(() => import('./pages/MetaAdsChecklist.jsx'), [() => import('./styles/resources.css'), () => import('./styles/meta-checklist.css')])
 const LeadQualityFramework = lazyWithStyles(() => import('./pages/LeadQualityFramework.jsx'), [() => import('./styles/resources.css'), () => import('./styles/lead-quality.css')])
 const BlogPromptArchitect = lazyWithStyles(() => import('./pages/BlogPromptArchitect.jsx'), [() => import('./styles/resources.css'), () => import('./styles/blog-prompt-architect.css')])
-const Blog = lazyWithStyles(() => import('./pages/Blog.jsx'), [() => import('./styles/blog.css')])
+const Blog = lazyWithStyles(() => import('./pages/Blog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/blog-heading-fix.css')])
 const Contact = lazyWithStyles(() => import('./pages/Contact.jsx'), [() => import('./styles/contact.css'), () => import('./styles/contact-method-colors.css'), () => import('./styles/calendly.css')])
 const PlaceholderPage = lazy(() => import('./pages/PlaceholderPage.jsx'))
 
