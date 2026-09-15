@@ -1,18 +1,20 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { routeMeta } from '../src/seo-meta.js'
+import { extraRouteMeta } from '../src/seo-meta-extra.js'
 
 const distDir = path.resolve('dist')
 const serverEntryPath = path.resolve('dist-server/entry-server.js')
 const templatePath = path.join(distDir, 'index.html')
 const template = fs.readFileSync(templatePath, 'utf8')
 const { render } = await import(serverEntryPath)
+const allRouteMeta = { ...routeMeta, ...extraRouteMeta }
 
 const escapeHtml = (value) => value
   .replace(/&/g, '&amp;')
   .replace(/</g, '&lt;')
   .replace(/>/g, '&gt;')
-  .replace(/"/g, '&quot;')
+  .replace(/\"/g, '&quot;')
   .replace(/'/g, '&#39;')
 
 const buildPage = async (pathname, [title, description]) => {
@@ -30,7 +32,7 @@ const buildPage = async (pathname, [title, description]) => {
   return html
 }
 
-for (const [pathname, metadata] of Object.entries(routeMeta)) {
+for (const [pathname, metadata] of Object.entries(allRouteMeta)) {
   const html = await buildPage(pathname, metadata)
   if (pathname === '/') {
     fs.writeFileSync(templatePath, html, 'utf8')
@@ -41,4 +43,4 @@ for (const [pathname, metadata] of Object.entries(routeMeta)) {
   fs.writeFileSync(path.join(outputDir, 'index.html'), html, 'utf8')
 }
 
-console.log(`Prerendered full HTML for ${Object.keys(routeMeta).length} routes.`)
+console.log(`Prerendered full HTML for ${Object.keys(allRouteMeta).length} routes.`)

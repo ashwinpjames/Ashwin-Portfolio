@@ -60,6 +60,7 @@ const CrmLeadTrackingPaidAdsBlog = lazyWithStyles(() => import('./pages/CrmLeadT
 const Ga4PerformanceMarketingBlog = lazyWithStyles(() => import('./pages/Ga4PerformanceMarketingBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const PaidAdvertisingRoiBlog = lazyWithStyles(() => import('./pages/PaidAdvertisingRoiBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const CustomerAcquisitionCostVsCplBlog = lazyWithStyles(() => import('./pages/CustomerAcquisitionCostVsCplBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const RoasVsRoiBlog = lazyWithStyles(() => import('./pages/RoasVsRoiBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
@@ -135,6 +136,7 @@ export default function App() {
         <Route path="/blog/ga4-performance-marketing" element={<Ga4PerformanceMarketingBlog />} />
         <Route path="/blog/paid-advertising-roi" element={<PaidAdvertisingRoiBlog />} />
         <Route path="/blog/customer-acquisition-cost-vs-cpl" element={<CustomerAcquisitionCostVsCplBlog />} />
+        <Route path="/blog/roas-vs-roi" element={<RoasVsRoiBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>
