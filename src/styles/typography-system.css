@@ -1,0 +1,28 @@
+/* Site wide typography normalization */
+main h1,main h2,main h3,main h4,main h5,main h6{font-family:var(--font-heading);font-weight:800;color:var(--color-text);margin-top:0;text-wrap:balance}
+main h1{line-height:1.02;letter-spacing:-.055em}
+main h2{line-height:1.06;letter-spacing:-.045em}
+main h3{line-height:1.25;letter-spacing:-.025em}
+main h4{line-height:1.32;letter-spacing:-.015em}
+main p{font-family:var(--font-body)}
+main a,main button,main input,main textarea,main select{font-family:var(--font-body)}
+main [class*="eyebrow"]{font-family:var(--font-body);font-weight:800;line-height:1.4}
+main [class*="badge"],main [class*="pill"]{font-family:var(--font-body);line-height:1.3}
+main [class*="meta"]{line-height:1.4}
+
+/* Consistent spacing rhythm between headings and supporting copy */
+.section-heading h2,.problem-heading h2,.about-preview-copy h2,.services-heading h2,.services-cta h2,.service-detail-page h2,.service-detail-cta-section h2,.about-section-heading h2,.about-fit-inner h2,.about-brands-heading h2,.blog-heading h2,.resources-heading-row h2,.calculator-explanation h2,.contact-form-heading h2,.contact-panel-heading h2,.calendly-booking-heading h2{margin-bottom:1rem}
+.section-heading p,.problem-heading>p,.about-section-heading>p,.about-brands-heading>p,.services-heading>p,.services-cta>div>p:not(.services-eyebrow),.resources-heading-row>p,.contact-panel-heading>span,.contact-lead,.service-detail-lead,.service-detail-copy{line-height:1.72}
+
+.home-hero h1,.about-hero-copy h1,.service-detail-page h1,.contact-hero h1,.resources-hero-content h1,.calculator-hero h1,.blog-hero h1,.prompt-architect-hero h1,.placeholder-page h1{font-family:var(--font-heading)}
+
+.blog-home-link-note{max-width:780px;margin:0 auto;padding:1.5rem 24px 2.5rem;text-align:center;color:#8f96ab;font-size:.88rem;line-height:1.72}
+.blog-home-link-note a{color:#7c86ff;font-weight:700;text-decoration:none}
+.blog-home-link-note a:hover{color:#9aa2ff}
+
+@media(max-width:767px){
+  main h1{line-height:1.04;letter-spacing:-.04em}
+  main h2{line-height:1.08;letter-spacing:-.035em}
+  main h3{line-height:1.26;letter-spacing:-.02em}
+  .blog-home-link-note{padding:1.25rem 1rem 2rem;font-size:.82rem;line-height:1.68}
+}
