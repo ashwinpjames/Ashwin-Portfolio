@@ -21,6 +21,13 @@ main [class*="meta"]{line-height:1.4}
 
 .home-hero h1,.about-hero-copy h1,.service-detail-page h1,.contact-hero h1,.resources-hero-content h1,.calculator-hero h1,.blog-hero h1,.prompt-architect-hero h1,.placeholder-page h1{font-family:var(--font-heading)!important}
 
+/* Hero word color transfer: the accent starts on Growth and moves to Marketing on hover */
+.home-hero h1 .hero-accent-word{display:inline-block;color:#22d3ee;-webkit-text-fill-color:#22d3ee;transition:color .42s ease,text-shadow .42s ease,-webkit-text-fill-color .42s ease}
+.home-hero h1 .hero-accent-marketing{color:#f8fafc;-webkit-text-fill-color:#f8fafc}
+.home-hero h1:hover .hero-accent-growth{color:#f8fafc;-webkit-text-fill-color:#f8fafc;text-shadow:none}
+.home-hero h1:hover .hero-accent-marketing{color:#22d3ee;-webkit-text-fill-color:#22d3ee;text-shadow:0 0 28px rgba(34,211,238,.22);transition-delay:.16s}
+@media (prefers-reduced-motion:reduce){.home-hero h1 .hero-accent-word{transition:none}.home-hero h1:hover .hero-accent-marketing{transition-delay:0}}
+
 .blog-home-link-note{max-width:780px;margin:0 auto;padding:1.5rem 24px 2.5rem;text-align:center;color:#8f96ab;font-size:.88rem;line-height:1.72}
 .blog-home-link-note a{color:#7c86ff;font-weight:700;text-decoration:none}
 .blog-home-link-note a:hover{color:#9aa2ff}
