@@ -113,7 +113,7 @@ export default function PaidAdvertisingRoiBlog() {
     return () => { document.title = 'Performance Marketing Specialist in UAE' }
   }, [])
 
-  const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '')
+  const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '').replace(/url[^]*/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
 
   return <main className="pms-blog-page">
