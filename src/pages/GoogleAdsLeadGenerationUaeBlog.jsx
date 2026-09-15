@@ -24,36 +24,36 @@ const articleSchema = {
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
 
-function escapeHtml(value) { return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\\"/g, '&quot;') }
+function escapeHtml(value) { return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;') }
 function inlineMarkdown(value) {
   let output = escapeHtml(value)
-  output = output.replace(/\\[([^\\]]+)\\]\\((https?:\\/\\/[^)]+|\\/[^)]+)\\)/g, (_, text, href) => `<a href="${href}">${text}</a>`)
-  output = output.replace(/\\*\\*([^*]+)\\*\\*/g, '<strong>$1</strong>')
-  output = output.replace(/\\*([^*]+)\\*/g, '<em>$1</em>')
+  output = output.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+|\/[^)]+)\)/g, (_, text, href) => `<a href="${href}">${text}</a>`)
+  output = output.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+  output = output.replace(/\*([^*]+)\*/g, '<em>$1</em>')
   output = output.replace(/`([^`]+)`/g, '<code>$1</code>')
   return output
 }
 function renderMarkdown(markdown) {
-  const lines = markdown.trim().split('\\n'); const html = []; let i = 0
+  const lines = markdown.trim().split('\n'); const html = []; let i = 0
   while (i < lines.length) {
     const line = lines[i]
     if (!line.trim()) { i += 1; continue }
-    const table = line.includes('|') && i + 1 < lines.length && /^\\s*\\|?\\s*:?-+/.test(lines[i + 1])
+    const table = line.includes('|') && i + 1 < lines.length && /^\s*\|?\s*:?-+/.test(lines[i + 1])
     if (table) {
-      const parseRow = row => row.trim().replace(/^\\|/, '').replace(/\\|$/, '').split('|').map(cell => inlineMarkdown(cell.trim()))
+      const parseRow = row => row.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => inlineMarkdown(cell.trim()))
       const headers = parseRow(lines[i]); i += 2; const rows = []
       while (i < lines.length && lines[i].includes('|') && lines[i].trim()) { rows.push(parseRow(lines[i])); i += 1 }
       html.push(`<div class="pms-table-wrap"><table><thead><tr>${headers.map(cell => `<th>${cell}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`); continue
     }
-    const heading = line.match(/^(#{1,3})\\s+(.+)$/)
-    if (heading) { const level = heading[1].length; const text = inlineMarkdown(heading[2]); const id = heading[2].toLowerCase().replace(/[^a-z0-9 ]/g, '').trim().replace(/\\s+/g, '-'); html.push(`<h${level} id="${id}">${text}</h${level}>`); i += 1; continue }
-    if (/^\\d+\\.\\s+/.test(line) || /^[-*]\\s+/.test(line)) {
-      const ordered = /^\\d+\\.\\s+/.test(line); const pattern = ordered ? /^\\d+\\.\\s+/ : /^[-*]\\s+/; const items = []
+    const heading = line.match(/^(#{1,3})\s+(.+)$/)
+    if (heading) { const level = heading[1].length; const text = inlineMarkdown(heading[2]); const id = heading[2].toLowerCase().replace(/[^a-z0-9 ]/g, '').trim().replace(/\s+/g, '-'); html.push(`<h${level} id="${id}">${text}</h${level}>`); i += 1; continue }
+    if (/^\d+\.\s+/.test(line) || /^[-*]\s+/.test(line)) {
+      const ordered = /^\d+\.\s+/.test(line); const pattern = ordered ? /^\d+\.\s+/ : /^[-*]\s+/; const items = []
       while (i < lines.length && pattern.test(lines[i])) { items.push(`<li>${inlineMarkdown(lines[i].replace(pattern, ''))}</li>`); i += 1 }
       html.push(`<${ordered ? 'ol' : 'ul'}>${items.join('')}</${ordered ? 'ol' : 'ul'}>`); continue
     }
     const paragraph = []
-    while (i < lines.length && lines[i].trim() && !/^#{1,3}\\s+/.test(lines[i]) && !/^\\d+\\.\\s+/.test(lines[i]) && !/^[-*]\\s+/.test(lines[i]) && !(lines[i].includes('|') && i + 1 < lines.length && /^\\s*\\|?\\s*:?-+/.test(lines[i + 1]))) { paragraph.push(lines[i]); i += 1 }
+    while (i < lines.length && lines[i].trim() && !/^#{1,3}\s+/.test(lines[i]) && !/^\d+\.\s+/.test(lines[i]) && !/^[-*]\s+/.test(lines[i]) && !(lines[i].includes('|') && i + 1 < lines.length && /^\s*\|?\s*:?-+/.test(lines[i + 1]))) { paragraph.push(lines[i]); i += 1 }
     html.push(`<p>${paragraph.map(inlineMarkdown).join('<br />')}</p>`)
   }
   return html.join('')
@@ -79,7 +79,7 @@ export default function GoogleAdsLeadGenerationUaeBlog() {
     let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/google-ads-lead-generation-uae')
     return () => { document.title = 'Performance Marketing Specialist in UAE' }
   }, [])
-  const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\\n\\n/, ''))
+  const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
     <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">GOOGLE ADS · LEAD GENERATION · UAE</p><div className="pms-meta"><span>Google Ads</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div><h1>Google Ads for Lead Generation: A Practical Guide for UAE Businesses</h1><p className="pms-lede">A practical framework for turning high intent searches into qualified enquiries by connecting keywords, ads, landing pages, tracking and sales feedback.</p><div className="pms-links"><Link to="/services/google-ads">Google Ads</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/blog/performance-marketing-strategy-uae">UAE Performance Marketing Strategy</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link></div></header>
     <IntentFlow />
