@@ -51,6 +51,7 @@ const GoogleAdsClicksNotTurningIntoLeadsBlog = lazyWithStyles(() => import('./pa
 const GoogleAdsKeywordIntentBlog = lazyWithStyles(() => import('./pages/GoogleAdsKeywordIntentBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const GoogleAdsLeadQualityBlog = lazyWithStyles(() => import('./pages/GoogleAdsLeadQualityBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const GoogleAdsConversionTrackingBlog = lazyWithStyles(() => import('./pages/GoogleAdsConversionTrackingBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const LeadGenerationVsLeadQualificationBlog = lazyWithStyles(() => import('./pages/LeadGenerationVsLeadQualificationBlog.jsx'), [() => import('./styles/blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
@@ -117,6 +118,7 @@ export default function App() {
         <Route path="/blog/google-ads-keyword-intent" element={<GoogleAdsKeywordIntentBlog />} />
         <Route path="/blog/google-ads-lead-quality" element={<GoogleAdsLeadQualityBlog />} />
         <Route path="/blog/google-ads-conversion-tracking" element={<GoogleAdsConversionTrackingBlog />} />
+        <Route path="/blog/lead-generation-vs-lead-qualification" element={<LeadGenerationVsLeadQualificationBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>
