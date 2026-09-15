@@ -57,6 +57,7 @@ const LeadFormOptimisationBlog = lazyWithStyles(() => import('./pages/LeadFormOp
 const CostPerLeadVsCostPerCustomerBlog = lazyWithStyles(() => import('./pages/CostPerLeadVsCostPerCustomerBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const MarketingSalesFunnelSalesPipelineBlog = lazyWithStyles(() => import('./pages/MarketingSalesFunnelSalesPipelineBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const CrmLeadTrackingPaidAdsBlog = lazyWithStyles(() => import('./pages/CrmLeadTrackingPaidAdsBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const Ga4PerformanceMarketingBlog = lazyWithStyles(() => import('./pages/Ga4PerformanceMarketingBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
@@ -129,6 +130,7 @@ export default function App() {
         <Route path="/blog/cost-per-lead-vs-cost-per-customer" element={<CostPerLeadVsCostPerCustomerBlog />} />
         <Route path="/blog/marketing-sales-funnel-sales-pipeline" element={<MarketingSalesFunnelSalesPipelineBlog />} />
         <Route path="/blog/crm-lead-tracking-paid-ads" element={<CrmLeadTrackingPaidAdsBlog />} />
+        <Route path="/blog/ga4-performance-marketing" element={<Ga4PerformanceMarketingBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>
