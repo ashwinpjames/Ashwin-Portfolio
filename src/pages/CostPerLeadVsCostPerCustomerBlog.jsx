@@ -15,12 +15,12 @@ const faq = [
 const articleSchema = {
   '@context': 'https://schema.org', '@type': 'BlogPosting',
   headline: 'Cost Per Lead vs Cost Per Customer: Which Should You Optimise For?',
-  description: 'Understand the difference between CPL and customer acquisition cost, when each metric is useful, and how to optimise lead generation around customer outcomes.',
+  description: 'Learn how a marketing sales funnel connects lead generation, sales and customer acquisition, and how sales and marketing alignment can improve acquisition decisions.',
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15', dateModified: '2026-09-15',
   mainEntityOfPage: 'https://ashwinjames.com/blog/cost-per-lead-vs-cost-per-customer',
-  keywords: 'cost per lead vs cost per customer, CPL, CAC',
+  keywords: 'marketing sales funnel, sales and marketing alignment, cost per lead vs cost per customer, CPL, CAC',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
 
@@ -71,15 +71,15 @@ function FAQSection() { return <section className="pms-faq" aria-labelledby="cpl
 
 export default function CostPerLeadVsCostPerCustomerBlog() {
   useEffect(() => {
-    document.title = 'Cost Per Lead vs Cost Per Customer: Which Should You Optimise For? | Ashwin James'
-    const description = 'Understand the difference between CPL and customer acquisition cost, when each metric is useful, and how to optimise lead generation around customer outcomes.'
+    document.title = 'Marketing Sales Funnel: Cost Per Lead vs Cost Per Customer | Ashwin James'
+    const description = 'Learn how a marketing sales funnel connects lead generation, sales and customer acquisition, and how sales and marketing alignment can improve acquisition decisions.'
     let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
     let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/cost-per-lead-vs-cost-per-customer')
     return () => { document.title = 'Performance Marketing Specialist in UAE' }
   }, [])
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
-    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · LEAD GENERATION · CAC</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div><h1>Cost Per Lead vs Cost Per Customer: Which Should You Optimise For?</h1><p className="pms-lede">Understand when CPL is useful, why a cheaper lead can create a more expensive customer, and how to connect acquisition metrics with real business outcomes.</p><div className="pms-links"><Link to="/services/lead-generation">Lead Generation</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/lead-form-optimisation">Lead Form Optimisation</Link><Link to="/blog/google-ads-lead-quality">Google Ads Lead Quality</Link></div></header>
+    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · LEAD GENERATION · CAC</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div><h1>Cost Per Lead vs Cost Per Customer: Which Should You Optimise For?</h1><p className="pms-lede">A marketing sales funnel only works when lead generation, qualification, sales and customer outcomes are connected. This guide explains how sales and marketing alignment changes the way you should evaluate CPL, CAC and the performance of paid acquisition.</p><div className="pms-links"><Link to="/services/lead-generation">Lead Generation</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/lead-form-optimisation">Lead Form Optimisation</Link><Link to="/blog/google-ads-lead-quality">Google Ads Lead Quality</Link></div></header>
     <DecisionFlow />
     <div className="pms-article-grid"><aside className="pms-toc"><span>ON THIS PAGE</span><a href="#cost-per-lead-vs-cost-per-customer-at-a-glance">Comparison</a><a href="#what-is-cpl">CPL</a><a href="#what-is-cac">CAC</a><a href="#why-a-lower-cpl-can-produce-a-higher-cac">Why CPL can mislead</a><a href="#when-cpl-is-the-right-metric-to-optimise-for">When CPL works</a><a href="#when-cac-should-become-the-primary-business-metric">When CAC matters</a><a href="#cpl-cost-per-qualified-lead-and-cac-work-together">The metric chain</a><a href="#how-crm-data-changes-the-optimisation-decision">CRM data</a><a href="#how-to-decide-what-to-optimise-for">Decision framework</a><a href="#conclusion">Conclusion</a></aside><div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} /></div>
     <DecisionCards /><FAQSection />
