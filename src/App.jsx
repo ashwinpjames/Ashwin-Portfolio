@@ -51,6 +51,7 @@ const GoogleAdsClicksNotTurningIntoLeadsBlog = lazyWithStyles(() => import('./pa
 const GoogleAdsKeywordIntentBlog = lazyWithStyles(() => import('./pages/GoogleAdsKeywordIntentBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const GoogleAdsLeadQualityBlog = lazyWithStyles(() => import('./pages/GoogleAdsLeadQualityBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const GoogleAdsConversionTrackingBlog = lazyWithStyles(() => import('./pages/GoogleAdsConversionTrackingBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const ConversionTrackingPerformanceMarketingBlog = lazyWithStyles(() => import('./pages/ConversionTrackingPerformanceMarketingBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const LeadGenerationVsLeadQualificationBlog = lazyWithStyles(() => import('./pages/LeadGenerationVsLeadQualificationBlog.jsx'), [() => import('./styles/blog.css')])
 const LeadFormOptimisationBlog = lazyWithStyles(() => import('./pages/LeadFormOptimisationBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const CostPerLeadVsCostPerCustomerBlog = lazyWithStyles(() => import('./pages/CostPerLeadVsCostPerCustomerBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
@@ -122,6 +123,7 @@ export default function App() {
         <Route path="/blog/google-ads-keyword-intent" element={<GoogleAdsKeywordIntentBlog />} />
         <Route path="/blog/google-ads-lead-quality" element={<GoogleAdsLeadQualityBlog />} />
         <Route path="/blog/google-ads-conversion-tracking" element={<GoogleAdsConversionTrackingBlog />} />
+        <Route path="/blog/conversion-tracking-performance-marketing" element={<ConversionTrackingPerformanceMarketingBlog />} />
         <Route path="/blog/lead-generation-vs-lead-qualification" element={<LeadGenerationVsLeadQualificationBlog />} />
         <Route path="/blog/lead-form-optimisation" element={<LeadFormOptimisationBlog />} />
         <Route path="/blog/cost-per-lead-vs-cost-per-customer" element={<CostPerLeadVsCostPerCustomerBlog />} />
