@@ -1,8 +1,18 @@
+.footer-trustpilot {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 28px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 .trustpilot-badge {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  z-index: 1000;
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -81,19 +91,16 @@
 }
 
 @media (max-width: 700px) {
+  .footer-trustpilot {
+    margin-top: 22px;
+    padding: 0 12px;
+  }
+
   .trustpilot-badge {
-    left: 12px;
-    right: 12px;
-    bottom: 74px;
-    justify-content: center;
     gap: 12px;
     min-height: 58px;
     padding: 8px 10px;
     border-radius: 10px;
-  }
-
-  .trustpilot-badge-brand {
-    font-size: 15px;
   }
 
   .trustpilot-badge-copy strong {
