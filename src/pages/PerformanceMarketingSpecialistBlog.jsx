@@ -20,7 +20,7 @@ const faq = [
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
 
 function escapeHtml(value) { return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;') }
-function inlineMarkdown(value) { let output = escapeHtml(value); output = output.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>'); output = output.replace(/\*([^*]+)\*/g, '<em>$1</em>'); output = output.replace(/`([^`]+)`/g, '<code>$1</code>'); return output }
+function inlineMarkdown(value) { let output = escapeHtml(value); output = output.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>'); output = output.replace(/\*([^*]+)\*/g, '<em>$1</em>'); output = output.replace(/`([^`]+)`/g, '<code>$1</code>'); output = output.replace(/\bperformance marketing specialist\b/gi, '<a href="https://ashwinjames.com/">$&</a>'); return output }
 function renderMarkdown(markdown) {
   const lines = markdown.trim().split('\n'); const html = []; let i = 0
   while (i < lines.length) {
