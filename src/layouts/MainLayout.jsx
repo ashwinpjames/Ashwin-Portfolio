@@ -5,6 +5,8 @@ import MobileActionBar from '../components/layout/MobileActionBar.jsx'
 import RouteMeta from '../components/layout/RouteMeta.jsx'
 import CursorGlow from '../components/layout/CursorGlow.jsx'
 import ScrollToTop from '../components/layout/ScrollToTop.jsx'
+import TrustpilotBadge from '../components/layout/TrustpilotBadge.jsx'
+import '../styles/trustpilot-badge.css'
 
 export default function MainLayout() {
   const location = useLocation()
@@ -20,6 +22,7 @@ export default function MainLayout() {
     {isBlogArticle && <div className="blog-home-link-note">
       Looking for a <a href="https://www.ashwinjames.com/">Performance Marketing Specialist</a> in the UAE? Explore my approach and services.
     </div>}
+    <TrustpilotBadge />
     <MobileActionBar />
     <Footer />
   </>
