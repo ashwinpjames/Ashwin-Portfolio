@@ -2,7 +2,7 @@ import portrait from '../../assets/ashwin-home-portrait.webp'
 import signature from '../../../assets/ashwin-signature.png'
 import './AvailabilityIndicator.css'
 
-const portraitUrl = 'https://res.cloudinary.com/fo4xyppd/image/upload/v1789633901/ChatGPT_Image_Sep_17_2026_12_24_19_PM.png'
+const portraitUrl = 'https://res.cloudinary.com/fo4xyppd/image/upload/v1789634305/ChatGPT_Image_Sep_17_2026_12_38_01_PM.png'
 const linkedinUrl = 'https://www.linkedin.com/in/ashwin-james'
 
 export default function AboutPreview() {
