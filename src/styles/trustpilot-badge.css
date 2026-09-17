@@ -1,0 +1,116 @@
+.trustpilot-badge {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  padding: 10px 15px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #202020;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.16);
+  text-decoration: none;
+  font-family: Inter, Arial, sans-serif;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.trustpilot-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.2);
+}
+
+.trustpilot-badge-copy,
+.trustpilot-badge-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.trustpilot-badge-label,
+.trustpilot-badge-rating span {
+  font-size: 11px;
+  line-height: 1.2;
+  color: #4b5563;
+}
+
+.trustpilot-badge-copy strong {
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.trustpilot-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.trustpilot-stars span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  background: #00b67a;
+  color: #ffffff;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.trustpilot-star-partial {
+  background: linear-gradient(90deg, #00b67a 42%, #d8dde2 42%);
+}
+
+.trustpilot-brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 4px;
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.trustpilot-mark {
+  color: #00b67a;
+  font-size: 29px;
+  line-height: 1;
+  transform: rotate(-18deg);
+}
+
+@media (max-width: 700px) {
+  .trustpilot-badge {
+    left: 12px;
+    right: 12px;
+    bottom: 74px;
+    justify-content: center;
+    gap: 12px;
+    min-height: 58px;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  .trustpilot-badge-brand {
+    font-size: 15px;
+  }
+
+  .trustpilot-badge-copy strong {
+    font-size: 14px;
+  }
+
+  .trustpilot-stars span {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+  }
+
+  .trustpilot-brand {
+    font-size: 15px;
+  }
+
+  .trustpilot-mark {
+    font-size: 25px;
+  }
+}
