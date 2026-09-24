@@ -1,3 +1,15 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/services/performance-marketing",
+      "destination": "/services/performance-marketing-specialist",
+      "permanent": true
+    }
+  ]
 }
