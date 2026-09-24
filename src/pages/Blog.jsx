@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { blogPosts } from '../data/blog.js'
 import BlogCard from '../components/blog/BlogCard.jsx'
@@ -7,6 +8,39 @@ const newBlogPost = { slug: 'why-attribution-matters-performance-marketing', cat
 const latestBlogPost = { slug: 'roas-vs-roi', category: 'Performance Marketing', title: 'ROAS vs ROI: What Is the Difference?', excerpt: 'Understand the difference between ROAS and ROI, how to calculate each metric, when to use them and how they affect advertising decisions.', date: 'Sep 15, 2026', readTime: '12 min read' }
 
 export default function Blog() {
+  useEffect(() => {
+    const button = document.getElementById('ashwin-preferred-source-btn')
+    if (!button) return
+
+    const setupPreferredSource = (preferredSource) => {
+      preferredSource.init({
+        theme: 'light',
+        lang: 'en',
+      })
+
+      button.onclick = () => {
+        preferredSource.addPreferredSource()
+      }
+    }
+
+    const queue = (self.PREFERRED_SOURCE = self.PREFERRED_SOURCE || [])
+    queue.push(setupPreferredSource)
+
+    const existingScript = document.querySelector('script[data-google-preferred-source]')
+    if (!existingScript) {
+      const script = document.createElement('script')
+      script.async = true
+      script.src = 'https://news.google.com/swg/js/v1/publisher.js'
+      script.setAttribute('preferred-sources-control', 'manual')
+      script.setAttribute('data-google-preferred-source', 'true')
+      document.head.appendChild(script)
+    }
+
+    return () => {
+      button.onclick = null
+    }
+  }, [])
+
   const posts = [newBlogPost, latestBlogPost, ...blogPosts.filter((post) => post.slug !== newBlogPost.slug && post.slug !== latestBlogPost.slug)]
   const publishedPosts = posts.filter((post) => post.date !== 'Coming soon')
   const latestPost = publishedPosts[0]
@@ -43,6 +77,35 @@ export default function Blog() {
             <h3>{latestPost.title}</h3>
           </Link>
         </div>}
+      </div>
+    </section>
+
+    <section className="blog-library">
+      <div className="container">
+        <div style={{ marginTop: '24px', paddingBottom: '48px' }}>
+          <button
+            id="ashwin-preferred-source-btn"
+            type="button"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minHeight: '44px',
+              padding: '10px 16px',
+              border: '1px solid #dadce0',
+              borderRadius: '8px',
+              background: '#fff',
+              color: '#202124',
+              fontFamily: 'Arial, sans-serif',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+            }}
+            aria-label="Add Ashwin James as a preferred source on Google"
+          >
+            Add Ashwin James as a Preferred Source
+          </button>
+        </div>
       </div>
     </section>
 
