@@ -67,6 +67,31 @@ export default function Blog() {
           <div className="blog-hero-pills" aria-label="Blog topics">
             {categories.map((category) => <span key={category}>{category}</span>)}
           </div>
+
+          <button
+            id="ashwin-preferred-source-btn"
+            type="button"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: '24px',
+              minHeight: '42px',
+              padding: '9px 16px',
+              border: '1px solid rgba(255,255,255,0.22)',
+              borderRadius: '10px',
+              background: 'rgba(255,255,255,0.08)',
+              color: '#fff',
+              fontFamily: 'inherit',
+              fontSize: '14px',
+              fontWeight: 600,
+              cursor: 'pointer',
+              backdropFilter: 'blur(8px)',
+            }}
+            aria-label="Add Ashwin James as a preferred source on Google"
+          >
+            ☆ Add as a Preferred Source on Google
+          </button>
         </div>
 
         {latestPost && <div className="blog-post-stack" aria-label="Latest article">
@@ -77,35 +102,6 @@ export default function Blog() {
             <h3>{latestPost.title}</h3>
           </Link>
         </div>}
-      </div>
-    </section>
-
-    <section className="blog-library">
-      <div className="container">
-        <div style={{ marginTop: '24px', paddingBottom: '48px' }}>
-          <button
-            id="ashwin-preferred-source-btn"
-            type="button"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minHeight: '44px',
-              padding: '10px 16px',
-              border: '1px solid #dadce0',
-              borderRadius: '8px',
-              background: '#fff',
-              color: '#202124',
-              fontFamily: 'Arial, sans-serif',
-              fontSize: '14px',
-              fontWeight: 500,
-              cursor: 'pointer',
-            }}
-            aria-label="Add Ashwin James as a preferred source on Google"
-          >
-            Add Ashwin James as a Preferred Source
-          </button>
-        </div>
       </div>
     </section>
 
