@@ -115,7 +115,7 @@ export default function App() {
         <Route path="/blog/meta-ads-generating-leads-but-not-sales" element={<MetaAdsLeadsNoSalesBlog />} />
         <Route path="/blog/freelance-marketing-consultant-uae" element={<FreelanceMarketingConsultantUaeBlog />} />
         <Route path="/blog/paid-ads-specialist-uae" element={<PaidAdsSpecialistUaeBlog />} />
-        <Route path="/blog/performance-marketing-specialist" element={<PerformanceMarketingSpecialistBlog />} />
+        <Route path="/blog/performance-marketing-specialist-in-dubai" element={<PerformanceMarketingSpecialistBlog />} />
         <Route path="/blog/performance-marketing-dubai" element={<PerformanceMarketingDubaiGuideBlog />} />
         <Route path="/blog/free-invoice-generator-for-freelancers" element={<FreelanceInvoiceGeneratorBlog />} />
         <Route path="/blog/performance-marketing-vs-digital-marketing" element={<PerformanceMarketingVsDigitalMarketingBlog />} />
