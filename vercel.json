@@ -10,6 +10,11 @@
       "source": "/services/performance-marketing",
       "destination": "/services/performance-marketing-specialist",
       "permanent": true
+    },
+    {
+      "source": "/blog/performance-marketing-specialist",
+      "destination": "/blog/performance-marketing-specialist-in-dubai",
+      "permanent": true
     }
   ]
 }
