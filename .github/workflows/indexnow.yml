@@ -24,8 +24,8 @@ jobs:
           import xml.etree.ElementTree as ET
 
           sitemap_url = "https://www.ashwinjames.com/sitemap.xml"
-          key_file = "public/68259b05e8b3bc6bd9ae1429961b9832.txt"
-          key_location = "https://www.ashwinjames.com/68259b05e8b3bc6bd9ae1429961b9832.txt"
+          key_file = "public/c3cec1a63f2e493199224b31904362b0.txt"
+          key_location = "https://www.ashwinjames.com/c3cec1a63f2e493199224b31904362b0.txt"
 
           with open(key_file, "r", encoding="utf-8") as f:
               key = f.read().strip()
