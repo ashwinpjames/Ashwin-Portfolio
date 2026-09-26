@@ -1,0 +1,65 @@
+name: Submit URLs to IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for production deployment
+        run: sleep 90
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Submit sitemap URLs to IndexNow
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          import xml.etree.ElementTree as ET
+
+          sitemap_url = "https://www.ashwinjames.com/sitemap.xml"
+          key_file = "public/68259b05e8b3bc6bd9ae1429961b9832.txt"
+          key_location = "https://www.ashwinjames.com/68259b05e8b3bc6bd9ae1429961b9832.txt"
+
+          with open(key_file, "r", encoding="utf-8") as f:
+              key = f.read().strip()
+
+          xml_data = urllib.request.urlopen(sitemap_url, timeout=30).read()
+          root = ET.fromstring(xml_data)
+
+          urls = [
+              loc.text.strip()
+              for loc in root.iter()
+              if loc.tag.endswith("loc") and loc.text
+          ]
+
+          if not urls:
+              raise SystemExit("No URLs found in sitemap.")
+
+          payload = {
+              "host": "www.ashwinjames.com",
+              "key": key,
+              "keyLocation": key_location,
+              "urlList": urls
+          }
+
+          request = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=json.dumps(payload).encode("utf-8"),
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST"
+          )
+
+          with urllib.request.urlopen(request, timeout=60) as response:
+              print(f"IndexNow response: HTTP {response.status}")
+              if response.status != 200:
+                  raise SystemExit("IndexNow submission failed.")
+
+          print(f"Submitted {len(urls)} sitemap URLs to IndexNow.")
+          PY
