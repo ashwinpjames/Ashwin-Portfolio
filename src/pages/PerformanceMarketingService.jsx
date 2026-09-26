@@ -6,35 +6,35 @@ import './performance-marketing-service.css'
 const included = [
   {
     title: 'Paid Media Strategy & Execution',
-    text: <><ServiceLink href="/">Performance Marketing Specialist</ServiceLink>, I plan and manage paid acquisition around commercial intent, audience quality and business economics. This includes Google Ads across Search, Shopping, Display and Performance Max, alongside Meta Ads across Facebook and Instagram, retargeting and creative testing.',
+    text: 'I plan and manage paid acquisition around commercial intent, audience quality and business economics. This includes Google Ads across Search, Shopping, Display and Performance Max, alongside Meta Ads across Facebook and Instagram, retargeting and creative testing.',
   },
   {
     title: 'Landing Pages That Convert',
-    text: <><ServiceLink href="/">Performance Marketing Specialist</ServiceLink>, paid traffic only creates value when the destination continues the promise made in the ad. I apply CRO fundamentals to landing page structure, messaging, calls to action and conversion friction so more of the right visitors have a clear path to enquire.',
+    text: 'Paid traffic only creates value when the destination continues the promise made in the ad. I apply CRO fundamentals to landing page structure, messaging, calls to action and conversion friction so more of the right visitors have a clear path to enquire.',
   },
   {
     title: 'Lead Generation Systems',
-    text: <><ServiceLink href="/">Performance Marketing Specialist</ServiceLink>, a lead generation system connects the offer, acquisition channels, qualification process and sales handoff. I build the acquisition side around the type of lead the business actually needs, with measurement that makes lead quality visible.',
+    text: 'A lead generation system connects the offer, acquisition channels, qualification process and sales handoff. I build the acquisition side around the type of lead the business actually needs, with measurement that makes lead quality visible.',
     link: ['/services/lead-generation', 'Lead Generation'],
   },
   {
     title: 'CRM & Marketing Automation',
-    text: <><ServiceLink href="/">Performance Marketing Specialist</ServiceLink>, getting a lead is only the start. CRM workflows, lifecycle stages, source tracking, routing and automation help make sure opportunities are captured, followed up and measured instead of disappearing after the first enquiry.',
+    text: 'Getting a lead is only the start. CRM workflows, lifecycle stages, source tracking, routing and automation help make sure opportunities are captured, followed up and measured instead of disappearing after the first enquiry.',
     link: ['/services/hubspot', 'HubSpot'],
   },
   {
     title: 'WhatsApp & Conversational Follow-Up',
-    text: <><ServiceLink href="/">Performance Marketing Specialist</ServiceLink>, for high intent leads, the conversation after the click can determine whether an enquiry becomes an opportunity. Structured WhatsApp journeys can improve response consistency, qualification and handoff while keeping the customer experience practical and human.',
+    text: 'For high intent leads, the conversation after the click can determine whether an enquiry becomes an opportunity. Structured WhatsApp journeys can improve response consistency, qualification and handoff while keeping the customer experience practical and human.',
     link: ['/services/whatsapp-marketing', 'WhatsApp Marketing'],
   },
   {
     title: 'SEO & Organic Growth',
-    text: <><ServiceLink href="/">Performance Marketing Specialist</ServiceLink>, paid acquisition does not have to carry the entire growth burden. Search visibility can create a compounding acquisition channel by building authority around the commercial searches that matter to the business.',
+    text: 'Paid acquisition does not have to carry the entire growth burden. Search visibility can create a compounding acquisition channel by building authority around the commercial searches that matter to the business.',
     link: ['/services/seo', 'SEO'],
   },
   {
     title: 'Website Foundations',
-    text: <><ServiceLink href="/">Performance Marketing Specialist</ServiceLink>, the website is part of the acquisition system, not just a brochure. I can help with the technical and conversion foundations required for a reliable marketing journey, from WordPress implementation to broader website development.',
+    text: 'The website is part of the acquisition system, not just a brochure. I can help with the technical and conversion foundations required for a reliable marketing journey, from WordPress implementation to broader website development.',
     links: [['/services/wordpress', 'WordPress'], ['/services/website-development', 'Website Development']],
   },
 ]
