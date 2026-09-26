@@ -8,7 +8,7 @@ const articleSchema = {
   description: 'A detailed guide to what a performance marketing specialist does, the skills and tools they use, how they measure success, and how performance marketing connects acquisition with revenue.',
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' }, datePublished: '2026-09-10', dateModified: '2026-09-10',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/performance-marketing-specialist',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/performance-marketing-specialist-in-dubai',
   keywords: 'performance marketing specialist, performance marketing specialist UAE, what is a performance marketing specialist, performance marketer, performance marketing specialist job description',
 }
 const faq = [
