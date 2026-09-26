@@ -77,7 +77,7 @@ export default function PerformanceMarketingSpecialistBlog() {
     document.title = 'What Is a Performance Marketing Specialist and What Do They Do?'
     const description = 'A detailed guide to what a performance marketing specialist does, the skills and tools they use, how they measure success, and how performance marketing connects acquisition with revenue.'
     let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/performance-marketing-specialist')
+    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://www.ashwinjames.com/blog/performance-marketing-specialist-in-dubai')
     return () => { document.title = 'Performance Marketing Specialist in UAE' }
   }, [])
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
