@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { emailAddress, whatsappUrl } from '../../utils/contact.js'
-import TrustpilotBadge from './TrustpilotBadge.jsx'
 
 const linkedinUrl = 'https://www.linkedin.com/in/ashwin-james'
 const githubUrl = 'https://github.com/ashwinpjames'
@@ -62,10 +61,6 @@ export default function Footer() {
         <a href={`mailto:${emailAddress}`}>Email</a>
         <a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
-    </div>
-
-    <div className="footer-trustpilot">
-      <TrustpilotBadge />
     </div>
 
     <div className="container footer-bottom">
