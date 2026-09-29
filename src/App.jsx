@@ -42,6 +42,7 @@ const FreelanceInvoiceGeneratorBlog = lazyWithStyles(() => import('./pages/Freel
 const PerformanceMarketingVsDigitalMarketingBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingVsDigitalMarketingBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const PerformanceMarketingStrategyUaeBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingStrategyUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const PerformanceMarketingMetricsBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingMetricsBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const PerformanceMarketingSalaryBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingSalaryBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-salary-blog.css')])
 const MetaAdsLeadGenerationUaeBlog = lazyWithStyles(() => import('./pages/MetaAdsLeadGenerationUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const MetaAdsCampaignStructureBlog = lazyWithStyles(() => import('./pages/MetaAdsCampaignStructureBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const GoogleAdsLeadGenerationUaeBlog = lazyWithStyles(() => import('./pages/GoogleAdsLeadGenerationUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
@@ -121,6 +122,7 @@ export default function App() {
         <Route path="/blog/performance-marketing-vs-digital-marketing" element={<PerformanceMarketingVsDigitalMarketingBlog />} />
         <Route path="/blog/performance-marketing-strategy-uae" element={<PerformanceMarketingStrategyUaeBlog />} />
         <Route path="/blog/performance-marketing-metrics" element={<PerformanceMarketingMetricsBlog />} />
+        <Route path="/blog/performance-marketing-salary" element={<PerformanceMarketingSalaryBlog />} />
         <Route path="/blog/meta-ads-lead-generation-uae" element={<MetaAdsLeadGenerationUaeBlog />} />
         <Route path="/blog/meta-ads-campaign-structure" element={<MetaAdsCampaignStructureBlog />} />
         <Route path="/blog/google-ads-lead-generation-uae" element={<GoogleAdsLeadGenerationUaeBlog />} />
