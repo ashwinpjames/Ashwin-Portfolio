@@ -69,3 +69,17 @@
  .sbb-page .sbb-tabs button{flex:1;padding:10px 8px}
 }
 @media(max-width:440px){.sbb-page .sbb-howto ol{grid-template-columns:1fr}.sbb-page .sbb-howto li{padding-top:29px}}
+
+/* How-to guide: expandable step list */
+.sbb-page .sbb-step-list{display:grid;grid-template-columns:1fr;gap:7px;margin:16px 0 0}
+.sbb-page .sbb-step{border:1px solid #202b40;border-radius:11px;background:#090f1e;overflow:hidden}
+.sbb-page .sbb-step summary{display:flex;align-items:center;gap:12px;padding:11px 13px;cursor:pointer;list-style:none;min-height:28px}
+.sbb-page .sbb-step summary::-webkit-details-marker{display:none}
+.sbb-page .sbb-step-num{display:grid;place-items:center;flex:0 0 29px;width:29px;height:29px;border-radius:9px;background:#142449;border:1px solid #294577;color:#91b2ff;font-size:10px;font-weight:900;letter-spacing:.04em}
+.sbb-page .sbb-step summary strong{color:#dce7ff;font-size:12px;font-weight:750}
+.sbb-page .sbb-step-action{margin-left:auto;color:#71819e;font-size:10px;white-space:nowrap}
+.sbb-page .sbb-step-action:after{content:"+";display:inline-block;margin-left:8px;color:#91aaff;font-size:15px;vertical-align:-1px}
+.sbb-page .sbb-step[open] .sbb-step-action:after{content:"−"}
+.sbb-page .sbb-step p{margin:0;padding:0 16px 12px 54px;color:#8995ab;font-size:11px;line-height:1.6;max-width:780px}
+.sbb-page .sbb-step[open]{border-color:#2b3d60;background:#0b1325}
+@media(max-width:600px){.sbb-page .sbb-step summary{gap:9px;padding:10px}.sbb-page .sbb-step summary strong{font-size:11px}.sbb-page .sbb-step p{padding:0 12px 12px 48px}}
