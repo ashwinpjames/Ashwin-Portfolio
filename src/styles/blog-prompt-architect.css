@@ -83,3 +83,32 @@
 .sbb-page .sbb-step p{margin:0;padding:0 16px 12px 54px;color:#8995ab;font-size:11px;line-height:1.6;max-width:780px}
 .sbb-page .sbb-step[open]{border-color:#2b3d60;background:#0b1325}
 @media(max-width:600px){.sbb-page .sbb-step summary{gap:9px;padding:10px}.sbb-page .sbb-step summary strong{font-size:11px}.sbb-page .sbb-step p{padding:0 12px 12px 48px}}
+
+/* Consistent breathing room between SEO Blog Builder content blocks */
+.sbb-page .sbb-layout{gap:26px}
+.sbb-page .sbb-howto{margin-bottom:2px}
+.sbb-page .sbb-intro{padding:8px 2px 2px}
+.sbb-page .sbb-tabs{margin-top:18px}
+.sbb-page .sbb-card{margin-top:2px}
+.sbb-page .pa-topbar{margin-bottom:8px}
+.sbb-page .pa-section{padding:27px 0}
+.sbb-page .pa-section-heading{margin-bottom:19px}
+.sbb-page .pa-field{margin-bottom:17px}
+.sbb-page .pa-advanced-toggle{margin:12px 0}
+.sbb-page .pa-advanced-panel{padding:22px 0 8px}
+.sbb-page .pa-trust-note{margin-top:22px}
+.sbb-page .prompt-architect-generate{margin-top:20px}
+.sbb-page .sbb-prompt-output{margin-top:26px;padding-top:24px}
+.sbb-page .sbb-score{margin:22px 0;padding:21px}
+.sbb-page .sbb-checks{gap:10px}
+.sbb-page .sbb-check{padding:12px}
+.sbb-page .sbb-criteria-heading{padding-top:5px}
+.sbb-page .sbb-criteria-list{margin-top:15px}
+@media(max-width:760px){
+ .sbb-page .sbb-layout{gap:20px}
+ .sbb-page .pa-section{padding:23px 0}
+ .sbb-page .pa-section-heading{margin-bottom:16px}
+ .sbb-page .pa-field{margin-bottom:15px}
+ .sbb-page .sbb-prompt-output{margin-top:21px;padding-top:19px}
+ .sbb-page .sbb-score{margin:18px 0;padding:16px}
+}
