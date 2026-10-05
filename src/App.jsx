@@ -88,7 +88,8 @@ export default function App() {
         <Route path="/services/lead-generation" element={<LeadGenerationService />} />
         <Route path="/services/cro" element={<CROService />} />
         <Route path="/services/whatsapp-marketing" element={<WhatsAppMarketingService />} />
-        <Route path="/services/hubspot" element={<HubSpotCRMService />} />
+        <Route path="/services/hubspot-crm-integration" element={<HubSpotCRMService />} />
+        <Route path="/services/hubspot" element={<Navigate to="/services/hubspot-crm-integration" replace />} />
         <Route path="/services/wordpress" element={<WordPressService />} />
         <Route path="/services/website-development" element={<ServiceLanding />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
