@@ -7,6 +7,11 @@
   ],
   "redirects": [
     {
+      "source": "/services/hubspot",
+      "destination": "/services/hubspot-crm-integration",
+      "permanent": true
+    },
+    {
       "source": "/services/performance-marketing",
       "destination": "/services/performance-marketing-specialist",
       "permanent": true
