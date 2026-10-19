@@ -37,6 +37,7 @@ const MetaAdsLeadsNoSalesBlog = lazyWithStyles(() => import('./pages/MetaAdsLead
 const FreelanceMarketingConsultantUaeBlog = lazyWithStyles(() => import('./pages/FreelanceMarketingConsultantUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/freelance-marketing-consultant-blog.css')])
 const PaidAdsSpecialistUaeBlog = lazyWithStyles(() => import('./pages/PaidAdsSpecialistUaeBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/paid-ads-specialist-blog.css')])
 const PerformanceMarketingSpecialistBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingSpecialistBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+const BestPerformanceMarketingSpecialistBlog = lazyWithStyles(() => import('./pages/BestPerformanceMarketingSpecialistBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const PerformanceMarketingDubaiGuideBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingDubaiGuideBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const FreelanceInvoiceGeneratorBlog = lazyWithStyles(() => import('./pages/FreelanceInvoiceGeneratorBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/freelance-marketing-consultant-blog.css')])
 const PerformanceMarketingVsDigitalMarketingBlog = lazyWithStyles(() => import('./pages/PerformanceMarketingVsDigitalMarketingBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
@@ -118,6 +119,7 @@ export default function App() {
         <Route path="/blog/freelance-marketing-consultant-uae" element={<FreelanceMarketingConsultantUaeBlog />} />
         <Route path="/blog/paid-ads-specialist-uae" element={<PaidAdsSpecialistUaeBlog />} />
         <Route path="/blog/performance-marketing-specialist-in-dubai" element={<PerformanceMarketingSpecialistBlog />} />
+        <Route path="/blog/best-performance-marketing-specialist" element={<BestPerformanceMarketingSpecialistBlog />} />
         <Route path="/blog/performance-marketing-dubai" element={<PerformanceMarketingDubaiGuideBlog />} />
         <Route path="/blog/free-invoice-generator-for-freelancers" element={<FreelanceInvoiceGeneratorBlog />} />
         <Route path="/blog/performance-marketing-vs-digital-marketing" element={<PerformanceMarketingVsDigitalMarketingBlog />} />
