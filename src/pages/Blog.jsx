@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { blogPosts } from '../data/blog.js'
 import BlogCard from '../components/blog/BlogCard.jsx'
 
+const bestSpecialistPost = { slug: 'best-performance-marketing-specialist', category: 'Performance Marketing', title: 'Best Performance Marketing Specialist: How to Choose the Right Expert in Dubai', excerpt: 'Learn how to evaluate performance marketing expertise, qualified lead metrics, CRM analysis and case studies before hiring a specialist.', date: 'Oct 19, 2026', readTime: '12 min read' }
+
 const newBlogPost = { slug: 'why-attribution-matters-performance-marketing', category: 'Performance Marketing', title: 'Why Attribution Matters in Performance Marketing', excerpt: 'Understand marketing attribution, attribution models and how attribution should influence performance marketing decisions.', date: 'Sep 15, 2026', readTime: '14 min read' }
 
 const latestBlogPost = { slug: 'roas-vs-roi', category: 'Performance Marketing', title: 'ROAS vs ROI: What Is the Difference?', excerpt: 'Understand the difference between ROAS and ROI, how to calculate each metric, when to use them and how they affect advertising decisions.', date: 'Sep 15, 2026', readTime: '12 min read' }
@@ -41,7 +43,7 @@ export default function Blog() {
     }
   }, [])
 
-  const posts = [newBlogPost, latestBlogPost, ...blogPosts.filter((post) => post.slug !== newBlogPost.slug && post.slug !== latestBlogPost.slug)]
+  const posts = [bestSpecialistPost, newBlogPost, latestBlogPost, ...blogPosts.filter((post) => post.slug !== bestSpecialistPost.slug && post.slug !== newBlogPost.slug && post.slug !== latestBlogPost.slug)]
   const publishedPosts = posts.filter((post) => post.date !== 'Coming soon')
   const latestPost = publishedPosts[0]
   const categories = ['Performance Marketing', 'Marketing Psychology', 'Analytics', 'Lead Gen', 'CRO']
