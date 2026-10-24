@@ -76,8 +76,8 @@ export default function PerformanceMarketingService() {
       <div className="container pm-hero-inner">
         <div className="pm-hero-copy">
           <p className="services-eyebrow">Performance Marketing · Dubai, UAE</p>
-          <h1>Performance Marketing Specialist in <span>Dubai, UAE</span></h1>
-          <p className="pm-lead">As a Performance Marketing Specialist and Digital Marketing Specialist, I help businesses in Dubai and across the UAE grow through data driven strategies, targeted advertising and measurable results.</p>
+          <h1>Performance Marketing Services for Businesses in <span>Dubai, UAE</span></h1>
+          <p className="pm-lead">I connect paid acquisition, conversion-focused landing pages, analytics and CRM workflows into a practical performance marketing system for businesses in Dubai and across the UAE.</p>
           <div className="pm-hero-actions"><a className="pm-primary pm-whatsapp-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Message on WhatsApp <span>↗</span></a><Link className="pm-secondary" to="/contact">Book a Consultation <span>↗</span></Link></div>
           <div className="pm-trust-grid" aria-label="Trust indicators">
             {trustIndicators.map(({ icon: Icon, title, subtitle }) => <div className="pm-trust-item" key={title}><span className="pm-trust-icon"><Icon aria-hidden="true" /></span><div><strong>{title}</strong><span>{subtitle}</span></div></div>)}
