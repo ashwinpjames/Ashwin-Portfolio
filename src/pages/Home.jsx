@@ -12,7 +12,8 @@ import FAQ from '../components/home/FAQ.jsx'
 import Insights from '../components/home/Insights.jsx'
 import ResourceLead from '../components/home/ResourceLead.jsx'
 import HomeCTA from '../components/home/HomeCTA.jsx'
+import ExpertiseTags from '../components/home/ExpertiseTags.jsx'
 
 export default function Home() {
-  return <main><Hero /><ProblemSection /><BestFit /><Results /><AboutPreview /><Approach /><ServicesPreview /><Process /><CaseStudiesPreview /><Testimonials /><FAQ /><Insights /><ResourceLead /><HomeCTA /></main>
+  return <main><Hero /><ProblemSection /><BestFit /><Results /><AboutPreview /><Approach /><ServicesPreview /><Process /><CaseStudiesPreview /><Testimonials /><FAQ /><Insights /><ResourceLead /><ExpertiseTags /><HomeCTA /></main>
 }
