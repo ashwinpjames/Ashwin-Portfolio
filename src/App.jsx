@@ -15,6 +15,7 @@ const ServiceLanding = lazyWithStyles(() => import('./pages/ServiceLanding.jsx')
 const MetaAdsService = lazyWithStyles(() => import('./pages/MetaAdsService.jsx'), [() => import('./styles/services.css'), () => import('./styles/service-detail.css')])
 const PerformanceMarketingService = lazyWithStyles(() => import('./pages/PerformanceMarketingService.jsx'), [() => import('./styles/services.css'), () => import('./styles/service-detail.css')])
 const PerformanceSpecialistDubai = lazy(() => import('./pages/PerformanceSpecialistDubai.jsx'))
+const DigitalMarketingConsultantDubai = lazy(() => import('./pages/DigitalMarketingConsultantDubai.jsx'))
 const LeadGenerationService = lazyWithStyles(() => import('./pages/LeadGenerationService.jsx'), [() => import('./styles/lead-generation-service.css')])
 const CROService = lazyWithStyles(() => import('./pages/CROService.jsx'), [() => import('./styles/cro-service.css')])
 const WhatsAppMarketingService = lazyWithStyles(() => import('./pages/WhatsAppMarketingService.jsx'), [() => import('./styles/whatsapp-marketing-service.css')])
@@ -82,6 +83,7 @@ export default function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/performance-marketing-specialist-in-dubai" element={<PerformanceSpecialistDubai />} />
+        <Route path="/services/digital-marketing-consultant-dubai" element={<DigitalMarketingConsultantDubai />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/meta-ads" element={<MetaAdsService />} />
