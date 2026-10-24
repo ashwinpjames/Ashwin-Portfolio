@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 const tags = [
   ['Performance Marketing', '/services/performance-marketing-specialist'],
   ['Performance Marketing Consultant', '/blog/freelance-marketing-consultant-uae'],
+  ['Digital Marketing Consultant', '/services/digital-marketing-consultant-dubai'],
   ['Performance Marketing Specialist', '/services/performance-marketing-specialist'],
   ['Performance Marketing Specialist in Dubai', '/performance-marketing-specialist-in-dubai'],
   ['Performance Marketing Services', '/services'],
