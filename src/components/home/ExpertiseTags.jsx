@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const tags = [
   'Performance Marketing',
   'Performance Marketing Consultant',
@@ -38,7 +40,7 @@ export default function ExpertiseTags() {
       <h2 id="expertise-tags-title">The skills behind measurable growth</h2>
       <p className="expertise-tags-copy">From campaign strategy to tracking and conversion optimization, I connect the pieces that help marketing perform better.</p>
       <div className="expertise-tags-list">
-        {tags.map((tag) => <span className="expertise-pill" key={tag}>{tag}</span>)}
+        {tags.map((tag) => tag === "Performance Marketing Specialist in Dubai" ? <Link className="expertise-pill" key={tag} to="/performance-marketing-specialist-in-dubai">{tag}</Link> : <span className="expertise-pill" key={tag}>{tag}</span>)}
       </div>
     </div>
   </section>
