@@ -28,8 +28,7 @@ const tags = [
   'Creative Testing',
   'Reporting & Attribution',
   'SEO Strategy',
-  'Digital Marketing',
-  'Dubai & UAE'
+  'Digital Marketing'
 ]
 
 export default function ExpertiseTags() {
