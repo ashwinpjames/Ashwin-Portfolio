@@ -24,6 +24,7 @@ const buildPage = async (pathname, [title, description]) => {
   html = html.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(title)}</title>`)
   html = html.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/i, `<meta name="description" content="${escapeHtml(description)}" />`)
   const canonical = `https://www.ashwinjames.com${pathname === '/' ? '/' : pathname}`
+  html = html.replace(/<meta\\s+property="og:url"\\s+content="[^"]*"\\s*\\/>/i, `<meta property="og:url" content="${canonical}" />`)
   if (/<link\s+rel="canonical"/i.test(html)) {
     html = html.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/>/i, `<link rel="canonical" href="${canonical}" />`)
   } else {
