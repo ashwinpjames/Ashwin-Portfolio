@@ -14,14 +14,20 @@
 .home-eyebrow,.placeholder-page .eyebrow,
 .recommendation-link,.problem-grid span,.service-number,
 .process-card>span,.case-body>a span,
-.approach-mark,.service-card .service-icon,
-.home-hero h1 span{
+.approach-mark,.service-card .service-icon{
   background:var(--brand-gradient);
   -webkit-background-clip:text;
   background-clip:text;
   -webkit-text-fill-color:transparent;
   color:transparent;
 }
+
+/* Hero headline words stay white until individually hovered. */
+.home-hero h1 .hero-word{position:relative;display:inline-block;color:#fff;-webkit-text-fill-color:#fff;background:none;cursor:default;transition:color .28s ease;outline:none}
+.home-hero h1 .hero-word::after{content:attr(data-word);position:absolute;inset:0;background:linear-gradient(90deg,#8BE9FF 0%,#3987FF 35%,#8585FF 68%,#C9A0FF 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;opacity:0;pointer-events:none;transition:opacity .28s ease}
+.home-hero h1 .hero-word:hover::after,.home-hero h1 .hero-word:focus-visible::after{opacity:1}
+.home-hero h1 .hero-word:focus-visible{outline:2px solid rgba(139,233,255,.65);outline-offset:4px;border-radius:3px}
+@media(prefers-reduced-motion:reduce){.home-hero h1 .hero-word,.home-hero h1 .hero-word::after{transition:none}}
 
 /* Hero accent */
 .home-hero-glow{
