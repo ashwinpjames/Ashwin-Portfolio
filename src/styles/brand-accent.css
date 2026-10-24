@@ -69,3 +69,11 @@
 
 /* Replace the old cyan hero eyebrow treatment with the approved gradient. */
 .home-eyebrow{color:#4F8FF7}
+
+/* Homepage services and expertise pill tags */
+.expertise-tags-section{padding:clamp(4rem,8vw,7rem) 0;text-align:center;position:relative}
+.expertise-tags-section h2{max-width:760px;margin:.65rem auto 1rem}
+.expertise-tags-copy{max-width:680px;margin:0 auto 2rem;color:var(--text-muted,#A1A9B8);line-height:1.75}
+.expertise-tags-list{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;max-width:1000px;margin:0 auto}
+.expertise-pill{display:inline-flex;align-items:center;border:1px solid rgba(79,143,247,.28);border-radius:999px;padding:.68rem 1.05rem;background:linear-gradient(135deg,rgba(79,143,247,.09),rgba(155,123,255,.07));color:#DCE7FF;font-size:.9rem;line-height:1.25;white-space:normal;transition:none}
+@media(max-width:600px){.expertise-tags-section{padding:3.5rem 0}.expertise-tags-list{gap:.5rem}.expertise-pill{font-size:.82rem;padding:.58rem .82rem}}
