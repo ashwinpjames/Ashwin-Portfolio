@@ -23,10 +23,12 @@
 }
 
 /* Hero headline words stay white until individually hovered. */
-.home-hero h1 .hero-word{position:relative;display:inline-block;color:#fff;-webkit-text-fill-color:#fff;background:none;cursor:default;transition:color .28s ease;outline:none}
-.home-hero h1 .hero-word::after{content:attr(data-word);position:absolute;inset:0;background:linear-gradient(90deg,#8BE9FF 0%,#3987FF 35%,#8585FF 68%,#C9A0FF 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;opacity:0;pointer-events:none;transition:opacity .28s ease}
-.home-hero h1 .hero-word:hover::after,.home-hero h1 .hero-word:focus-visible::after{opacity:1}
-.home-hero h1 .hero-word:focus-visible{outline:2px solid rgba(139,233,255,.65);outline-offset:4px;border-radius:3px}
+.home-hero h1.hero-headline{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;column-gap:.22em;row-gap:.08em;max-width:68rem;margin:0 auto 1.5rem;padding:.08em 0 .12em}
+.home-hero h1 .hero-word{position:relative;display:inline-block;flex:0 0 auto;margin:0;padding:0;color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;cursor:default;transition:color .28s ease;outline:none;white-space:nowrap}
+.home-hero h1 .hero-word::after{content:attr(data-word);position:absolute;inset:0;background:linear-gradient(105deg,#8BE9FF 0%,#3987FF 34%,#8585FF 68%,#C9A0FF 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;opacity:0;pointer-events:none;transition:opacity .28s ease;filter:drop-shadow(0 0 0 rgba(139,233,255,0))}
+.home-hero h1 .hero-word:hover::after,.home-hero h1 .hero-word:focus-visible::after{opacity:1;filter:drop-shadow(0 0 10px rgba(99,145,255,.12))}
+.home-hero h1 .hero-word:focus-visible{outline:2px solid rgba(139,233,255,.65);outline-offset:5px;border-radius:3px}
+@media(max-width:600px){.home-hero h1.hero-headline{column-gap:.18em;row-gap:.1em;max-width:100%;padding-inline:.2rem;margin-bottom:1.25rem}.home-hero h1 .hero-word{white-space:normal}}
 @media(prefers-reduced-motion:reduce){.home-hero h1 .hero-word,.home-hero h1 .hero-word::after{transition:none}}
 
 /* Hero accent */
