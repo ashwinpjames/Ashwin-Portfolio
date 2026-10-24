@@ -1,34 +1,59 @@
 import { Link } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
-import '../styles/digital-marketing-consultant.css'
+import '../styles/lead-generation-service.css'
+
+const problems = [
+  ['01', 'Disconnected channels', 'Ads, SEO, website content and CRM activity are managed separately without one shared goal.'],
+  ['02', 'Unclear priorities', 'Teams are busy producing activity but do not know which improvements will have the greatest impact.'],
+  ['03', 'Inconsistent lead quality', 'Campaigns generate enquiries, but too many fail to become useful sales conversations.'],
+  ['04', 'Weak conversion paths', 'Landing pages, offers and forms create friction between interest and enquiry.'],
+  ['05', 'Incomplete measurement', 'Reporting focuses on clicks and platform conversions without showing what happens to leads afterward.'],
+  ['06', 'Slow follow up', 'Lead sources, CRM stages and sales feedback are not connected clearly enough to guide optimisation.'],
+]
 
 const services = [
-  ['01', 'Digital marketing strategy', 'Build a focused plan around your business goals, audience, offer, budget and customer journey. Prioritise the channels and activities most likely to support measurable growth.'],
-  ['02', 'Google Ads and Meta Ads', 'Plan and optimise paid campaigns across Google Search and Meta platforms, connecting targeting, messaging, creative, landing pages and conversion signals.'],
-  ['03', 'SEO and content direction', 'Identify search intent, improve page structure and build useful content around the questions and services your potential customers are actively looking for.'],
-  ['04', 'Lead generation and qualification', 'Design campaigns and enquiry journeys to attract relevant prospects, capture useful information and make lead quality visible beyond the initial form submission.'],
-  ['05', 'Landing pages and conversion optimisation', 'Improve message match, page clarity, calls to action, forms and user journeys to reduce avoidable friction between a visitor and a meaningful enquiry.'],
-  ['06', 'Analytics, tracking and reporting', 'Use GA4, Google Tag Manager, conversion events and UTM tracking to make campaign performance easier to interpret and improve.'],
-  ['07', 'CRM and marketing automation', 'Connect lead sources, CRM stages, follow up and sales feedback so enquiries can be tracked from acquisition through qualification and onward outcomes.'],
-  ['08', 'Ongoing optimisation', 'Use a regular review cycle to identify bottlenecks, test improvements and allocate effort based on evidence instead of assumptions.'],
+  ['01', 'Digital Marketing Strategy', 'Set priorities around business goals, audience, offer, budget and the customer journey. Build a practical channel plan instead of treating every platform as a separate task.'],
+  ['02', 'Google Ads and Meta Ads', 'Connect campaign structure, targeting, creative, messaging and conversion signals to attract relevant demand and capture intent.'],
+  ['03', 'SEO and Content Direction', 'Map search intent to useful service pages and content, strengthen internal links and improve how potential customers discover the business organically.'],
+  ['04', 'Lead Generation and Qualification', 'Align acquisition with the type of lead the sales team needs, then assess quality beyond the initial form submission.'],
+  ['05', 'Landing Pages and CRO', 'Improve offer clarity, message match, page structure, calls to action and forms to make the path to enquiry easier.'],
+  ['06', 'Analytics and Conversion Tracking', 'Use GA4, Google Tag Manager, conversion events and UTM conventions to make performance more reliable and easier to interpret.'],
+  ['07', 'CRM and Marketing Automation', 'Connect lead sources, lifecycle stages, routing, follow up and sales feedback so the team can see what happens after an enquiry.'],
+  ['08', 'Ongoing Optimisation', 'Review performance regularly, identify bottlenecks and prioritise tests using the strongest available campaign and business data.'],
 ]
 
 const process = [
-  ['01', 'Understand the business', 'Clarify your goals, audience, offer, current marketing activity and what a valuable customer or lead looks like.'],
-  ['02', 'Audit the current setup', 'Review channels, website, landing pages, tracking, lead handling and the performance data available today.'],
-  ['03', 'Create a prioritised plan', 'Turn the audit into a practical roadmap with clear actions, owners, measurement and priorities.'],
-  ['04', 'Implement and test', 'Launch the agreed work, establish a baseline and test changes against meaningful outcomes.'],
-  ['05', 'Measure and improve', 'Report on leads, lead quality, conversion rates and commercial outcomes where reliable data is available.'],
+  ['01', 'Understand', 'Clarify business goals, audience, offer, sales process and what a valuable lead or customer means.'],
+  ['02', 'Audit', 'Review channels, website, landing pages, tracking, CRM flow and the performance data currently available.'],
+  ['03', 'Prioritise', 'Build a practical roadmap with clear actions, measurement and an order of work based on likely impact.'],
+  ['04', 'Implement', 'Put agreed campaign, conversion, tracking or workflow improvements into practice and establish a baseline.'],
+  ['05', 'Optimise', 'Use results and sales feedback to improve the journey over time rather than relying on assumptions.'],
+]
+
+const deliverables = [
+  'Digital marketing strategy', 'Channel and campaign recommendations', 'Audience and offer review',
+  'Google Ads and Meta Ads planning', 'SEO and content priorities', 'Landing page recommendations',
+  'Lead capture and qualification review', 'GA4 and conversion tracking review', 'UTM tracking conventions',
+  'CRM and lead flow recommendations', 'Performance reporting framework', 'Prioritised optimisation roadmap',
+]
+
+const metrics = [
+  ['QUALIFIED LEADS', 'Enquiries that meet agreed qualification criteria'],
+  ['COST / QUALIFIED LEAD', 'Acquisition efficiency beyond raw lead volume'],
+  ['CONVERSION RATE', 'How effectively visits become meaningful actions'],
+  ['LEAD → OPPORTUNITY', 'Progression into the sales pipeline'],
+  ['CUSTOMER ACQUISITION COST', 'Where reliable cost and customer data exist'],
+  ['REVENUE CONTRIBUTION', 'Commercial outcomes where attribution is supportable'],
 ]
 
 const faqs = [
-  ['What does a digital marketing consultant do?', 'A digital marketing consultant reviews a business’s goals, audience, channels and customer journey, then recommends or supports a practical plan to improve visibility, lead generation and measurable marketing outcomes.'],
-  ['What digital marketing services can you help with?', 'The work can include digital strategy, Google Ads, Meta Ads, SEO direction, landing page optimisation, lead generation, analytics, conversion tracking and CRM alignment. The scope depends on your priorities and existing setup.'],
-  ['Do you work with businesses in Dubai and across the UAE?', 'I am based in the UAE and work with businesses whose goals and marketing requirements are a good fit. The first conversation helps clarify the market, scope and support needed.'],
-  ['Can you review my existing campaigns and website?', 'Yes. A review can cover campaign structure, audience and offer alignment, landing pages, tracking, lead quality and how enquiries are handled after submission.'],
-  ['Do you only work on paid advertising?', 'No. Paid media is one part of the wider digital marketing journey. Where relevant, I also consider SEO, conversion experience, analytics and CRM processes so the channels and follow up support the same business goal.'],
-  ['How do you measure digital marketing performance?', 'Measurement should match the objective. Depending on the business, this may include qualified leads, cost per qualified lead, conversion rate, customer acquisition cost, opportunities and revenue where reliable tracking is available.'],
-  ['How do we get started?', 'Start with a consultation to discuss your goals, current setup and constraints. From there, we can identify the most useful audit or next step rather than assume every business needs the same package.'],
+  ['What does a digital marketing consultant do?', 'A digital marketing consultant reviews business goals, audience, channels and the customer journey, then recommends or supports a practical plan to improve visibility, lead generation and measurable outcomes.'],
+  ['What services can you help with?', 'The scope can include digital strategy, Google Ads, Meta Ads, SEO direction, landing page optimisation, lead generation, analytics, conversion tracking and CRM alignment. It depends on your priorities and current setup.'],
+  ['Do you work with businesses in Dubai and across the UAE?', 'I am based in the UAE. An initial conversation helps clarify your market, objectives, scope and the support that makes sense for your business.'],
+  ['Can you audit existing campaigns and a website?', 'Yes. A review can cover campaign structure, targeting, offers, landing pages, conversion tracking, lead quality and how enquiries are handled after submission.'],
+  ['Do you only work on paid advertising?', 'No. Paid media is one part of the wider customer journey. Where relevant, I also consider SEO, conversion experience, analytics and CRM processes so the different activities support the same business goal.'],
+  ['How do you measure digital marketing performance?', 'Metrics depend on the objective and available data. They can include qualified leads, cost per qualified lead, conversion rate, opportunity progression, customer acquisition cost and revenue.'],
+  ['How do we get started?', 'Start with a conversation about your goals, current marketing setup and constraints. From there, we can identify the most useful audit or next step rather than assume every business needs the same package.'],
 ]
 
 const faqSchema = {
@@ -42,87 +67,102 @@ const faqSchema = {
 }
 
 export default function DigitalMarketingConsultantDubai() {
-  return (
-    <main className="dmc-page" id="main">
-      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      <section className="dmc-hero">
-        <div className="dmc-grid" aria-hidden="true" />
-        <div className="dmc-glow" aria-hidden="true" />
-        <div className="container dmc-hero-inner">
-          <p className="dmc-eyebrow">Digital Marketing Consulting · Dubai, UAE</p>
-          <h1>Digital Marketing Consultant in Dubai</h1>
-          <p className="dmc-lead">I help businesses bring strategy, paid advertising, SEO, conversion optimisation and analytics together in a practical digital marketing plan. The focus is on reaching the right audience, generating more relevant enquiries and understanding which activities contribute to business growth.</p>
-          <div className="dmc-actions">
-            <a className="dmc-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Discuss Your Marketing Goals <span>↗</span></a>
-            <Link className="dmc-secondary" to="/contact">Book a Consultation <span>↗</span></Link>
+  return <main className="lead-generation-page" id="main">
+    <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+
+    <section className="lg-hero">
+      <div className="lg-grid" aria-hidden="true" />
+      <div className="container lg-hero-inner">
+        <div className="lg-hero-copy">
+          <p className="lg-eyebrow">Digital Marketing Consulting · Dubai, UAE</p>
+          <h1>Digital Marketing Consultant in Dubai for Measurable Business Growth</h1>
+          <p className="lg-lead">Bring strategy, paid advertising, SEO, conversion optimisation and analytics together in a practical marketing plan built around your business goals.</p>
+          <div className="lg-actions">
+            <a className="lg-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Discuss Your Marketing Goals <span>↗</span></a>
+            <a className="lg-secondary" href="#approach">View My Approach</a>
           </div>
-          <div className="dmc-proofline"><span>Strategy and planning</span><i /><span>Paid media</span><i /><span>SEO and conversion</span><i /><span>Analytics and CRM</span></div>
+          <p className="lg-label">CONSULTING CAPABILITIES</p>
+          <div className="lg-pills"><span>STRATEGY & PLANNING</span><span>PAID ACQUISITION</span><span>SEO & CONTENT</span><span>ANALYTICS & CRM</span></div>
+          <p className="lg-meta">Strategy · Acquisition · Conversion · Measurement</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section className="dmc-section">
-        <div className="container dmc-two-col">
-          <div><p className="dmc-eyebrow">A connected approach</p><h2>Digital marketing should work as one customer journey.</h2></div>
-          <div className="dmc-copy">
-            <p>More activity does not automatically mean better results. A business can invest in advertising, publish content and attract website traffic yet still struggle to turn that attention into qualified enquiries.</p>
-            <p>My consulting approach looks at the full journey: what you offer, who you need to reach, how people discover you, what happens on the website and how enquiries are tracked and followed up. The recommendations are prioritised around your goals and the constraints in your current setup.</p>
-            <p>For paid acquisition, I connect this broader plan with <Link to="/services/performance-marketing-specialist">performance marketing services</Link>, <Link to="/services/meta-ads">Meta Ads</Link> and <Link to="/services/lead-generation">lead generation</Link> where they are relevant. You can also learn more about my work as a <Link to="/">Performance Marketing Specialist</Link> on my homepage.</p>
-          </div>
-        </div>
-      </section>
+    <section className="lg-section">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">The Problem</p><h2>More Marketing Activity Does Not Always Mean Better Results</h2><p>Digital marketing underperforms when channels, conversion paths and follow up are managed as separate tasks.</p></div>
+        <div className="lg-pain-grid">{problems.map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+      </div>
+    </section>
 
-      <section className="dmc-section dmc-dark">
-        <div className="container">
-          <div className="dmc-heading"><div><p className="dmc-eyebrow">Consulting services</p><h2>Practical support across the digital marketing funnel.</h2></div><p>The scope is shaped around the business, not a fixed checklist. We can focus on a specific challenge or connect the parts that need to work together.</p></div>
-          <div className="dmc-services">{services.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
-        </div>
-      </section>
+    <section className="lg-section lg-alt">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">The Approach</p><h2>One Connected Customer Journey, Not a Collection of Disconnected Channels</h2><p>As a <Link to="/">Performance Marketing Specialist</Link>, I look at how people discover your business, what persuades them to enquire and how the team follows up afterward.</p></div>
+        <div className="lg-funnel">{['AUDIENCE','CHANNELS','LANDING PAGE','ENQUIRY','QUALIFICATION','SALES FOLLOW UP','OUTCOME'].map((item, i) => <div key={item}><strong>{item}</strong>{i < 6 && <span>→</span>}</div>)}</div>
+        <p className="lg-principle">The goal is not simply more activity. It is a clearer path from marketing investment to meaningful business outcomes.</p>
+      </div>
+    </section>
 
-      <section className="dmc-section">
-        <div className="container dmc-two-col">
-          <div><p className="dmc-eyebrow">Who this is for</p><h2>For teams that need clarity on what to improve next.</h2></div>
-          <div className="dmc-copy">
-            <p>This service may suit small and growing businesses, professional services, healthcare and wellness providers, immigration services, and B2B teams that rely on digital channels to generate enquiries.</p>
-            <p>It can be useful if your marketing feels fragmented, lead quality is inconsistent, reporting does not explain business outcomes, or you need an independent view of where to invest next. Recommendations will depend on your actual goals, available resources and current data.</p>
-          </div>
-        </div>
-      </section>
+    <section className="lg-section">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">Consulting Services</p><h2>Practical Support Across the Digital Marketing Funnel</h2><p>The scope is shaped around your business priorities, with connected services where the bottleneck crosses multiple parts of the funnel.</p></div>
+        <div className="lg-system-grid">{services.map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+      </div>
+    </section>
 
-      <section className="dmc-section dmc-dark">
-        <div className="container">
-          <div className="dmc-heading"><div><p className="dmc-eyebrow">The process</p><h2>From diagnosis to a measurable action plan.</h2></div><p>A structured process helps make the work transparent and keeps priorities connected to business objectives.</p></div>
-          <div className="dmc-process">{process.map(([number, title, text]) => <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
-        </div>
-      </section>
+    <section id="approach" className="lg-section lg-alt">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">How I Work</p><h2>A Five Step Process From Audit to Optimisation</h2><p>A clear process keeps the work focused on business objectives and measurable next steps.</p></div>
+        <div className="lg-process-cards">{process.map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+      </div>
+    </section>
 
-      <section className="dmc-section">
-        <div className="container dmc-two-col">
-          <div><p className="dmc-eyebrow">Measurement</p><h2>Measure outcomes, not just marketing activity.</h2></div>
-          <div className="dmc-copy">
-            <p>The right metrics depend on the business model and conversion journey. Reporting can include qualified enquiries, cost per lead, cost per qualified lead, landing page conversion rate, channel performance and customer acquisition cost where the required data is available.</p>
-            <p>Tracking foundations matter too. Relevant work may include <Link to="/blog/ga4-performance-marketing">Google Analytics 4</Link>, <Link to="/blog/conversion-tracking-performance-marketing">conversion tracking</Link>, UTM consistency and CRM source data. These help the team understand what happens after the click instead of relying only on platform reported conversions.</p>
-          </div>
-        </div>
-      </section>
+    <section className="lg-section">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">Potential Deliverables</p><h2>Know What the Consulting Work Can Cover</h2><p>Recommendations and deliverables depend on the audit findings, agreed scope and the data available.</p></div>
+        <div className="lg-deliverables">{deliverables.map(item => <div key={item}><span>•</span><strong>{item}</strong></div>)}</div>
+      </div>
+    </section>
 
-      <section className="dmc-section dmc-dark">
-        <div className="container dmc-faq-wrap">
-          <div><p className="dmc-eyebrow">Frequently asked questions</p><h2>Digital marketing consulting, explained.</h2></div>
-          <div className="dmc-faq">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
-        </div>
-      </section>
+    <section className="lg-section lg-alt">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">Measurement</p><h2>Measure Outcomes, Not Just Clicks and Impressions</h2><p>Reporting should reflect the commercial goal and the reliability of the available tracking data.</p></div>
+        <div className="lg-funnel lg-revenue">{['REACH','CLICKS','ENQUIRIES','QUALIFIED LEADS','OPPORTUNITIES','CUSTOMERS'].map((item, i) => <div key={item}><strong>{item}</strong>{i < 5 && <span>→</span>}</div>)}</div>
+        <div className="lg-metrics">{metrics.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
+        <p className="lg-principle">Tracking may include <Link to="/blog/ga4-performance-marketing">Google Analytics 4</Link>, <Link to="/blog/conversion-tracking-performance-marketing">conversion tracking</Link>, consistent UTM parameters and CRM source data.</p>
+      </div>
+    </section>
 
-      <section className="dmc-cta">
-        <div className="container">
-          <p className="dmc-eyebrow">Start with a useful conversation</p>
-          <h2>Need a clearer digital marketing plan?</h2>
-          <p>Let’s discuss your goals, current marketing setup and the most useful next step for your business in Dubai or across the UAE.</p>
-          <div className="dmc-actions dmc-center">
-            <a className="dmc-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Discuss Your Goals <span>↗</span></a>
-            <Link className="dmc-secondary" to="/contact">Contact Ashwin <span>↗</span></Link>
-          </div>
+    <section className="lg-section">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">Related Services</p><h2>Connect the Areas That Need Attention</h2><p>Explore relevant services and resources for specific parts of the customer journey.</p></div>
+        <div className="lg-related">
+          <div><Link to="/services/performance-marketing-specialist">Performance Marketing Services</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/cro">Conversion Optimisation</Link><Link to="/services/hubspot">HubSpot CRM</Link><Link to="/services/seo">SEO</Link></div>
         </div>
-      </section>
-    </main>
-  )
+      </div>
+    </section>
+
+    <section className="lg-section lg-alt">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">Who This Is For</p><h2>For Businesses That Need Clarity on What to Improve Next</h2><p>This service may suit growing businesses, professional services, healthcare and wellness providers, immigration services and B2B teams that rely on digital channels for enquiries.</p></div>
+        <div className="lg-fit">{['Marketing feels fragmented across channels', 'Lead quality or conversion rates are inconsistent', 'Reporting does not explain business outcomes', 'You need a clearer plan for your marketing budget', 'You want marketing and sales follow up to work together'].map(item => <div key={item}><span>✓</span><strong>{item}</strong></div>)}</div>
+      </div>
+    </section>
+
+    <section className="lg-section">
+      <div className="container">
+        <div className="lg-heading"><p className="lg-eyebrow">FAQ</p><h2>Questions About Digital Marketing Consulting</h2><p>Clear answers to common questions about scope, process and measurement.</p></div>
+        <div className="lg-faq">{faqs.map(([q, a]) => <details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div>
+      </div>
+    </section>
+
+    <section className="lg-cta">
+      <div className="container">
+        <p className="lg-eyebrow">Start With a Useful Conversation</p>
+        <h2>Need a Clearer Digital Marketing Plan?</h2>
+        <p>Let’s discuss your goals, current marketing setup and the most useful next step for your business in Dubai or across the UAE.</p>
+        <a className="lg-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Start a Conversation <span>↗</span></a>
+      </div>
+    </section>
+  </main>
 }
