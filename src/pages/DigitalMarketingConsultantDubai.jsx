@@ -66,7 +66,7 @@ export default function DigitalMarketingConsultantDubai() {
           <div className="dmc-copy">
             <p>More activity does not automatically mean better results. A business can invest in advertising, publish content and attract website traffic yet still struggle to turn that attention into qualified enquiries.</p>
             <p>My consulting approach looks at the full journey: what you offer, who you need to reach, how people discover you, what happens on the website and how enquiries are tracked and followed up. The recommendations are prioritised around your goals and the constraints in your current setup.</p>
-            <p>For paid acquisition, I connect this broader plan with <Link to="/services/performance-marketing-specialist">performance marketing services</Link>, <Link to="/services/meta-ads">Meta Ads</Link> and <Link to="/services/lead-generation">lead generation</Link> where they are relevant.</p>
+            <p>For paid acquisition, I connect this broader plan with <Link to="/services/performance-marketing-specialist">performance marketing services</Link>, <Link to="/services/meta-ads">Meta Ads</Link> and <Link to="/services/lead-generation">lead generation</Link> where they are relevant. You can also learn more about my work as a <Link to="/">Performance Marketing Specialist</Link> on my homepage.</p>
           </div>
         </div>
       </section>
