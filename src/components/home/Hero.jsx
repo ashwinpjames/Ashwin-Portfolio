@@ -2,6 +2,7 @@ import { whatsappUrl } from '../../utils/contact.js'
 import PlatformMarquee from './PlatformMarquee.jsx'
 
 const proof = ['Based in UAE', 'Meta & Google Ads Specialist', 'Data Driven Performance Marketing', 'End to End Funnel Strategy']
+const headline = ['Growth', 'Driven', 'by', 'Better', 'Marketing']
 
 export default function Hero() {
   return <section className="home-hero" id="top">
@@ -9,7 +10,7 @@ export default function Hero() {
     <div className="home-hero-glow" aria-hidden="true" />
     <div className="container home-hero-content" style={{ paddingBottom: '4.5rem' }}>
       <p className="home-eyebrow reveal-home">Performance Marketing Specialist</p>
-      <h1 className="reveal-home"> <span className="hero-accent-word hero-accent-growth">Growth</span> Driven by Better <span className="hero-accent-word hero-accent-marketing">Marketing</span></h1>
+      <h1 className="reveal-home hero-headline">{headline.map((word, index) => <span className="hero-word" data-word={word} key={word} tabIndex={0}>{word}{index < headline.length - 1 ? ' ' : ''}</span>)}</h1>
       <p className="home-hero-copy reveal-home">I’m a performance marketing specialist helping businesses in Dubai and across the UAE plan, execute, and scale data driven campaigns that deliver qualified leads, higher conversions, and measurable growth.</p>
       <div className="home-actions reveal-home">
         <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation <span>↗</span></a>
