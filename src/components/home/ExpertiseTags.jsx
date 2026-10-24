@@ -1,5 +1,12 @@
 const tags = [
   'Performance Marketing',
+  'Performance Marketing Consultant',
+  'Performance Marketing Specialist',
+  'Performance Marketing Specialist in Dubai',
+  'Performance Marketing Services',
+  'Performance Marketing UAE',
+  'Performance Marketing Dubai',
+  'Marketing Specialist',
   'Growth Marketing',
   'Paid Media',
   'Meta Ads',
