@@ -8,11 +8,11 @@ export default function Hero() {
     <div className="home-hero-grid" aria-hidden="true" />
     <div className="home-hero-glow" aria-hidden="true" />
     <div className="container home-hero-content">
-      <h1 className="home-eyebrow reveal-home">Performance Marketing Specialist</h1>
-      <h2 className="home-hero-title reveal-home" aria-label="Growth Driven By Better Marketing">
+      <p className="home-eyebrow reveal-home">Performance Marketing Specialist</p>
+      <h1 className="home-hero-title reveal-home" aria-label="Growth Driven By Better Marketing">
         <span className="hero-title-line">Growth Driven</span>
         <span className="hero-title-line hero-title-accent">By Better Marketing</span>
-      </h2>
+      </h1>
       <p className="home-hero-copy reveal-home">I’m a performance marketing specialist helping businesses in Dubai and across the UAE plan, execute, and scale data driven campaigns that deliver qualified leads, higher conversions, and measurable growth.</p>
       <div className="home-actions reveal-home">
         <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation <span>↗</span></a>
