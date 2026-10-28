@@ -12,6 +12,7 @@ import './styles/mobile-overrides.css'
 import './styles/mobile-ux-refinement.css'
 import './styles/brand-accent.css'
 import './styles/typography-system.css'
+import './styles/homepage-hero-redesign.css'
 
 hydrateRoot(
   document.getElementById('root'),
