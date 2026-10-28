@@ -196,3 +196,18 @@
   font-style: normal;
   line-height: 1;
 }
+
+/* Keep the keyword label visibly rendered and use the main headline as the page H1. */
+.home-hero p.home-eyebrow {
+  color: #e3eaff !important;
+  -webkit-text-fill-color: #e3eaff;
+  opacity: 1;
+  visibility: visible;
+}
+.home-hero .home-hero-title .hero-title-line:not(.hero-title-accent) {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #f8fafc;
+  color: #f8fafc;
+}
