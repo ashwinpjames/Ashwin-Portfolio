@@ -178,3 +178,16 @@
 @media (prefers-reduced-motion: reduce) {
   .home-hero .home-button { transition: none; }
 }
+
+.home-hero .hero-proof .hero-proof-check {
+  display: inline;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: #22d3ee;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1;
+}
