@@ -2,22 +2,24 @@ import { whatsappUrl } from '../../utils/contact.js'
 import PlatformMarquee from './PlatformMarquee.jsx'
 
 const proof = ['Based in UAE', 'Meta & Google Ads Specialist', 'Data Driven Performance Marketing', 'End to End Funnel Strategy']
-const headline = ['Growth', 'Driven', 'by', 'Better', 'Marketing']
 
 export default function Hero() {
   return <section className="home-hero" id="top">
     <div className="home-hero-grid" aria-hidden="true" />
     <div className="home-hero-glow" aria-hidden="true" />
-    <div className="container home-hero-content" style={{ paddingBottom: '4.5rem' }}>
+    <div className="container home-hero-content">
       <h1 className="home-eyebrow reveal-home">Performance Marketing Specialist</h1>
-      <p className="reveal-home hero-headline">{headline.map((word) => <span className="hero-word" data-word={word} key={word} tabIndex={0}>{word}</span>)}</p>
+      <h2 className="home-hero-title reveal-home" aria-label="Growth Driven By Better Marketing">
+        <span className="hero-title-line">Growth Driven</span>
+        <span className="hero-title-line hero-title-accent">By Better Marketing</span>
+      </h2>
       <p className="home-hero-copy reveal-home">I’m a performance marketing specialist helping businesses in Dubai and across the UAE plan, execute, and scale data driven campaigns that deliver qualified leads, higher conversions, and measurable growth.</p>
       <div className="home-actions reveal-home">
         <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation <span>↗</span></a>
-        <a className="home-button secondary" href="#case-studies" style={{ background: '#fff', color: '#050816', borderColor: '#fff' }}>View case studies <span>↓</span></a>
+        <a className="home-button secondary" href="#case-studies">View case studies <span>↓</span></a>
       </div>
-      <div className="hero-proof reveal-home">{proof.map((item) => <span key={item}>✓ {item}</span>)}</div>
+      <div className="hero-proof reveal-home">{proof.map((item) => <span key={item}><span className="hero-proof-check" aria-hidden="true">✓</span>{item}</span>)}</div>
     </div>
-    <div className="hero-platform-marquee" style={{ position: 'absolute', left: 0, right: 0, bottom: 0 }}><PlatformMarquee /></div>
+    <div className="hero-platform-marquee"><PlatformMarquee /></div>
   </section>
 }
