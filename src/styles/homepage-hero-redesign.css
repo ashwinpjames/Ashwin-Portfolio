@@ -52,7 +52,7 @@
   line-height: 1.3;
   text-transform: none;
 }
-.home-hero h1.home-hero-title {
+.home-hero .home-hero-title {
   max-width: 66rem;
   margin: 0 auto 1.65rem;
   color: #f8fafc;
@@ -158,7 +158,7 @@
 @media (max-width: 900px) {
   .home-hero { padding-top: 8rem; padding-bottom: 6rem; }
   .home-hero-content { padding-bottom: 5rem !important; }
-  .home-hero h1.home-hero-title { font-size: clamp(2.8rem, 8.4vw, 5rem); }
+  .home-hero .home-hero-title { font-size: clamp(2.8rem, 8.4vw, 5rem); }
   .home-hero .hero-proof { gap: .65rem; }
   .home-hero .hero-proof span { white-space: normal; }
 }
@@ -166,7 +166,7 @@
   .home-hero { min-height: auto; padding: 7.5rem 0 5.5rem; }
   .home-hero-content { width: min(100% - 2rem, 78rem); padding-bottom: 1.5rem !important; }
   .home-hero .home-eyebrow { margin-bottom: 1.4rem; padding: .65rem 1rem; font-size: .82rem; }
-  .home-hero h1.home-hero-title { margin-bottom: 1.35rem; font-size: clamp(2.5rem, 11.4vw, 4rem); line-height: 1.05; letter-spacing: -.06em; }
+  .home-hero .home-hero-title { margin-bottom: 1.35rem; font-size: clamp(2.5rem, 11.4vw, 4rem); line-height: 1.05; letter-spacing: -.06em; }
   .home-hero-copy { padding: 0 .15rem; font-size: .98rem; line-height: 1.75; }
   .home-hero .home-actions { gap: .7rem; margin-top: 2rem; }
   .home-hero .home-button { width: 100%; min-height: 3.45rem; padding: .9rem 1rem; }
