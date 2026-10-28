@@ -18,7 +18,7 @@ export default function Hero() {
         <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation <span>↗</span></a>
         <a className="home-button secondary" href="#case-studies">View case studies <span>↓</span></a>
       </div>
-      <div className="hero-proof reveal-home">{proof.map((item) => <span key={item}><span className="hero-proof-check" aria-hidden="true">✓</span>{item}</span>)}</div>
+      <div className="hero-proof reveal-home">{proof.map((item) => <span key={item}><i className="hero-proof-check" aria-hidden="true">✓</i>{item}</span>)}</div>
     </div>
     <div className="hero-platform-marquee"><PlatformMarquee /></div>
   </section>
