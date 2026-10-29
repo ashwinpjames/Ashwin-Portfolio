@@ -1,6 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { whatsappUrl } from '../utils/contact.js'
 import '../styles/ai-lead-chat.css'
+
+// Dedicated EmailJS credentials for chatbot leads; keep the contact form config separate.
+const chatbotEmailJS = {
+  serviceId: 'service_yzt7adq',
+  templateId: 'template_docyrb9',
+  publicKey: 'ADrVKvriIATeakFp6',
+}
 
 const questions = [
   { key: 'name', label: 'your name', prompt: 'Great. What’s your name?', required: true, type: 'text', placeholder: 'Enter your name' },
@@ -133,24 +141,36 @@ export default function AILeadChat() {
     setEmailStatus('sending')
     setComplete(true)
     setReview(false)
+
+    const phoneDigits = String(submittedLead.phone || '').replace(/\D/g, '')
+    const templateParams = {
+      name: submittedLead.name || '',
+      service: submittedLead.service || '',
+      phone: submittedLead.phone || '',
+      phone_digits: phoneDigits,
+      email: submittedLead.email || '',
+      website: submittedLead.website || 'Not provided',
+      budget: submittedLead.budget || 'Not provided',
+      challenge: [
+        submittedLead.challenge ? `Main marketing challenge: ${submittedLead.challenge}` : 'Main marketing challenge: Not provided',
+        submittedLead.anythingElse ? `Additional details: ${submittedLead.anythingElse}` : '',
+      ].filter(Boolean).join('\n\n'),
+    }
+
     try {
-      const response = await fetch('/api/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submittedLead),
-      })
-      const result = await response.json().catch(() => ({}))
-      if (!response.ok || !result.success) throw new Error(result.error || 'Email could not be sent.')
+      await emailjs.send(
+        chatbotEmailJS.serviceId,
+        chatbotEmailJS.templateId,
+        templateParams,
+        { publicKey: chatbotEmailJS.publicKey },
+      )
       setEmailStatus('sent')
-      setComplete(true)
-      setReview(false)
       addAssistantMessage('All details are in! I’ll get back to you as soon as I can. You can ask more questions or contact me directly on WhatsApp below.')
     } catch (sendError) {
-      console.error('Chatbot lead email notification failed:', sendError)
+      console.error('Chatbot EmailJS send failed:', sendError)
       setEmailStatus('failed')
-      setComplete(true)
       addAssistantMessage('I couldn’t send the email automatically, but your details are ready. Please use the WhatsApp button below to send them directly.')
-      setError(sendError.message || 'We couldn’t email your enquiry. Please use the WhatsApp option below.')
+      setError('Email notification failed. Please use the WhatsApp option to send your enquiry directly.')
     }
   }
 
