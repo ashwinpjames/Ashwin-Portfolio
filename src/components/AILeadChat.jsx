@@ -118,8 +118,8 @@ export default function AILeadChat() {
       setStep(nextStep)
       addAssistantMessage(questions[nextStep].prompt)
     } else {
-      setReview(true)
-      addAssistantMessage('Thanks! Please review your answers below. You can submit them to Ashwin by email or send the same summary through WhatsApp.')
+      addAssistantMessage('Thanks — that’s everything. I’m sending your details to Ashwin now.')
+      submitLead(nextLead)
     }
   }
 
@@ -142,7 +142,7 @@ export default function AILeadChat() {
       setEmailStatus('sent')
       setComplete(true)
       setReview(false)
-      addAssistantMessage('Thanks! Your enquiry has been sent to Ashwin by email. You can also send the details through WhatsApp.')
+      addAssistantMessage('All details are in! I’ll get back to you as soon as I can. You can ask more questions or contact me directly on WhatsApp below.')
     } catch (sendError) {
       console.error('Chatbot lead email notification failed:', sendError)
       setEmailStatus('failed')
