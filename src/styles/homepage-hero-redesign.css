@@ -342,3 +342,30 @@
     margin-top: 1.75rem !important;
   }
 }
+
+
+/* Final mobile header override: the header and hero should read as one surface. */
+@media screen and (max-width: 767px) {
+  header.site-header,
+  header.site-header.is-scrolled,
+  .site-header,
+  .site-header.is-scrolled,
+  .site-header .nav-wrap,
+  .site-header.is-scrolled .nav-wrap {
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-image: none !important;
+  }
+
+  .site-header::before,
+  .site-header::after,
+  .site-header.is-scrolled::before,
+  .site-header.is-scrolled::after,
+  .site-header .nav-wrap::before,
+  .site-header .nav-wrap::after {
+    content: none !important;
+    display: none !important;
+  }
+}
