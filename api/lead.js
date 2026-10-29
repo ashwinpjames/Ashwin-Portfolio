@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   }
 
   const lead = req.body && typeof req.body === 'object' ? req.body : {}
-  const allowed = ['name', 'service', 'phone', 'email', 'website', 'budget', 'challenge']
+  const allowed = ['name', 'service', 'phone', 'email', 'website', 'budget', 'challenge', 'anythingElse']
   const clean = Object.fromEntries(allowed.map((key) => [
     key,
     typeof lead[key] === 'string' ? lead[key].trim().slice(0, 1200) : '',
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
     email: clean.email,
     website: clean.website || 'Not provided',
     budget: clean.budget || 'Not provided',
-    challenge: clean.challenge,
+    challenge: [clean.challenge ? `Main marketing challenge: ${clean.challenge}` : 'Main marketing challenge: Not provided', clean.anythingElse ? `Additional details: ${clean.anythingElse}` : ''].filter(Boolean).join('\n\n'),
   }
 
   try {
