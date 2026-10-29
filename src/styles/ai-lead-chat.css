@@ -109,3 +109,14 @@
   .ai-chat-launcher{min-height:2.5rem;padding:.38rem .7rem;font-size:.78rem;gap:.38rem}
   .ai-chat-launcher-mascot{width:1.85rem;height:1.85rem;flex-basis:1.85rem}
 }
+
+
+/* One gentle attention nudge 4.5 seconds after the visitor arrives */
+.ai-chat-launcher.is-nudging{animation:ai-chat-launcher-nudge 1.05s ease-in-out 2;transform-origin:center}
+@keyframes ai-chat-launcher-nudge{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 8px 24px rgba(0,0,0,.24)}
+  22%{transform:translateY(-5px) scale(1.025);box-shadow:0 12px 30px rgba(99,102,241,.28)}
+  44%{transform:translateY(0) scale(1)}
+  66%{transform:translateY(-3px) scale(1.015)}
+}
+@media(prefers-reduced-motion:reduce){.ai-chat-launcher.is-nudging{animation:none}}
