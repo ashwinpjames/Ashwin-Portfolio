@@ -1,0 +1,635 @@
+import { o as whatsappUrl } from "../entry-server.js";
+/* empty css                         */
+import { Link } from "react-router-dom";
+import { jsx, jsxs } from "react/jsx-runtime";
+// src/data/serviceLandings.js
+var serviceLandings = {
+	seo: {
+		keyword: "SEO Dubai",
+		eyebrow: "SEO · Dubai & UAE",
+		h1: "SEO Dubai That Builds Visibility Around Commercial Search Demand",
+		lead: "I build SEO around the searches your buyers actually use, with technical foundations, local visibility and content designed to turn relevant organic traffic into enquiries.",
+		cta: "Book a Free 15 Minute SEO Audit",
+		painTitle: "More traffic is not the same as more business.",
+		painIntro: "Ranking for broad keywords can look impressive while doing little for revenue. The goal is to build visibility around searches with commercial relevance.",
+		pains: [
+			["“We get traffic, but few enquiries.”", "Traffic without intent is not a useful acquisition channel. Pages need to match what the searcher is trying to do."],
+			["“We do not know what to prioritise.”", "Technical fixes, content and local SEO can compete for attention. The work needs a clear order based on commercial impact."],
+			["“Competitors keep appearing above us.”", "A stronger search presence requires understanding the gaps in relevance, authority, technical health and local signals."],
+			["“SEO feels impossible to measure.”", "Organic performance needs to connect rankings and traffic with enquiries, conversions and the pages that influence them."]
+		],
+		included: [
+			["Technical SEO", "Crawlability, indexation, site structure, metadata and technical issues that can limit visibility."],
+			["Keyword strategy", "Search themes grouped around commercial intent, location and buyer needs."],
+			["On page optimisation", "Sharper page structure, headings, internal links and copy aligned to search intent."],
+			["Local SEO", "Optimisation for Dubai and UAE searches where local relevance matters."],
+			["Content planning", "Topics and pages prioritised around useful demand rather than publishing volume."],
+			["Measurement", "Search Console, analytics and conversion signals used to understand what is actually improving."]
+		],
+		process: [
+			[
+				"01",
+				"Audit",
+				"Review technical health, existing visibility, pages, search intent and conversion paths."
+			],
+			[
+				"02",
+				"Map demand",
+				"Identify priority search themes and the pages that should own them."
+			],
+			[
+				"03",
+				"Fix foundations",
+				"Address technical and on page issues that prevent the site from competing effectively."
+			],
+			[
+				"04",
+				"Build authority",
+				"Create and improve useful commercial content and internal linking around priority topics."
+			],
+			[
+				"05",
+				"Measure and refine",
+				"Track visibility, organic behaviour and conversions, then adjust priorities based on evidence."
+			]
+		],
+		faqs: [
+			["How long does SEO take to work in Dubai?", "SEO is a compounding channel rather than an instant lead source. The timeline depends on competition, site condition, authority and the amount of relevant demand available."],
+			["Can SEO guarantee first place on Google?", "No credible SEO specialist can guarantee a specific ranking. The objective is to improve the site’s ability to compete for relevant searches and measure the business impact."],
+			["Do you focus on local SEO in Dubai?", "Yes. Where local intent matters, the strategy includes local relevance, location pages and the signals that help businesses compete for Dubai and UAE searches."],
+			["Do you create SEO content?", "I can plan and optimise the content system around search intent, commercial relevance and conversion. Production can be handled directly or with your existing content resources."],
+			["Can you audit my existing SEO?", "Yes. The audit looks at technical issues, search visibility, page relevance, internal linking, local signals and conversion paths."],
+			["How do you measure SEO results?", "Beyond rankings and traffic, I look at relevant landing pages, enquiries, conversion signals and the commercial value of organic demand."]
+		]
+	},
+	"website-development": {
+		keyword: "website development Dubai",
+		eyebrow: "Website Development · Dubai & UAE",
+		h1: "Websites Built to Turn Your Business Online Presence Into Opportunity",
+		lead: "Your website should do more than explain what your business does. I build fast, purposeful websites for UAE businesses that make it easier for potential customers to understand your offer, trust your business and take the next step. From WordPress and Shopify to React and fully coded websites, the right technology is selected around what the business actually needs.",
+		cta: "Send a Message →",
+		microcopy: "Tell me what you need. We can discuss the right approach before you commit to anything.",
+		painTitle: "A website can look good and still do very little for the business.",
+		painIntro: "A business website often becomes an afterthought. The company has a website because it feels necessary, but the website may be difficult to navigate, unclear about what the business offers, slow on mobile or disconnected from the action the business actually wants visitors to take. The problem is not always the absence of a website. It is having a website without a clear purpose.",
+		pains: [
+			["“Our website does not really generate enquiries.”", "A website can receive visitors without turning them into potential customers. When the messaging, structure and calls to action are unclear, visitors may leave without knowing what they should do next."],
+			["“We need a website, but we do not know what technology to use.”", "WordPress, Shopify, React and custom development all have different strengths. Choosing technology before understanding the business requirement can create unnecessary complexity and cost."],
+			["“Our website looks outdated compared with our competitors.”", "Your website is often one of the first places a potential customer evaluates your business. An outdated experience can affect how people perceive your credibility before they ever speak to you."],
+			["“We keep waiting to get the website finished.”", "A website project can become unnecessarily slow when requirements, content, design and development are not clearly organised. A focused process makes it easier to move from an idea to a usable business website."]
+		],
+		strategicInsightTitle: "A good business website connects clarity, experience and conversion.",
+		strategicInsightIntro: "The purpose of a website is not simply to put information online. It should help the right visitor understand the business quickly, find the information they need and move naturally towards an enquiry, booking, purchase or conversation. The technology supports this objective rather than becoming the objective itself.",
+		strategy: [
+			[
+				"01",
+				"Business Purpose",
+				"Start with what the website needs to achieve. A lead generation website, ecommerce store and personal portfolio should not be designed around the same priorities."
+			],
+			[
+				"02",
+				"Clear Messaging",
+				"Visitors should quickly understand who you are, what you offer and why it is relevant to them. Clear messaging reduces unnecessary friction before the visitor takes action."
+			],
+			[
+				"03",
+				"Useful Structure",
+				"Information should be organised around the questions customers are likely to have. The navigation, pages and content should guide visitors rather than make them search for answers."
+			],
+			[
+				"04",
+				"Conversion Paths",
+				"Important actions should be easy to find. Whether the goal is a WhatsApp message, enquiry form, phone call, booking or purchase, the website should make the next step obvious."
+			],
+			[
+				"05",
+				"Right Technology",
+				"The technology should match the requirement. WordPress may be appropriate for a business that needs easy content management, while Shopify can make sense for ecommerce and React or custom development can be useful when the website requires a more tailored experience."
+			],
+			[
+				"06",
+				"Built for Growth",
+				"A website should not become a limitation as the business grows. The structure should leave room for additional pages, campaigns, content, analytics, integrations and future improvements."
+			]
+		],
+		included: [
+			["Website Strategy", "Define the purpose of the website, the audience it needs to serve and the actions visitors should be encouraged to take."],
+			["Website Structure", "Organise pages, navigation and content so visitors can move through the website naturally and find important information without unnecessary friction."],
+			["Responsive Website Development", "Build an experience that works across desktop, tablet and mobile devices so customers can interact with the website regardless of how they access it."],
+			["WordPress Websites", "Create WordPress websites for businesses that need a practical content management system that can be updated and maintained without depending on a developer for every change."],
+			["Shopify Websites", "Build Shopify websites for businesses that need an ecommerce focused platform for presenting products and managing online purchases."],
+			["React and Custom Websites", "Develop more tailored website experiences using React or custom coded solutions when the requirements go beyond what a conventional website platform can comfortably provide."],
+			["Conversion Focused Pages", "Structure important pages around the action the business wants visitors to take, whether that means submitting an enquiry, contacting the business, booking a service or making a purchase."],
+			["Launch and Refinement", "Prepare the website for launch and identify opportunities for improvement based on how the website performs and how customers interact with it."]
+		],
+		process: [
+			[
+				"01",
+				"Understand the Business",
+				"We start by understanding what the business does, who the website needs to reach and what the website needs to achieve."
+			],
+			[
+				"02",
+				"Plan the Experience",
+				"The pages, navigation, content requirements and important conversion points are organised before development begins."
+			],
+			[
+				"03",
+				"Choose the Right Technology",
+				"The development approach is selected based on the actual requirement. This could mean WordPress, Shopify, React or a custom coded website."
+			],
+			[
+				"04",
+				"Build the Website",
+				"The agreed structure is developed into a responsive website with attention to usability, content presentation and the actions visitors need to take."
+			],
+			[
+				"05",
+				"Review and Launch",
+				"The completed website is reviewed, refined and prepared for launch so the business has a practical foundation it can continue building on."
+			]
+		],
+		measurementTitle: "A successful website should create a clearer path from visitor to enquiry.",
+		measurementFlow: [
+			"Visitor",
+			"Relevant Page",
+			"Understanding",
+			"Trust",
+			"Enquiry",
+			"Qualified Lead",
+			"Customer"
+		],
+		measurementIntro: "The website is one part of the acquisition system. Its job is to make the transition from interest to action easier.",
+		measurementDetails: "Depending on the website, useful measurements can include traffic sources, page engagement, conversion rate, enquiry volume, form submissions, calls, WhatsApp conversations and ecommerce purchases. When analytics and tracking are available, these signals can help identify which pages are helping the business and where visitors are dropping out.",
+		whyTitle: "A website should support the business, not just sit on the internet.",
+		whyText: "I approach website development from a marketing perspective as well as a development perspective. That means the website is considered in relation to how people discover the business, how they understand the offer and what happens after they arrive on the site. For a business that relies on enquiries, the website needs to work alongside advertising, landing pages, analytics and lead generation. For an ecommerce business, the experience needs to support product discovery and purchase. For a personal brand, the website needs to communicate credibility and make it easy for people to explore your work. The technology is important, but the business objective comes first.",
+		faqTitle: "Questions worth answering before investing in website development.",
+		faqs: [
+			["How much does website development cost?", "The cost depends on the type of website, number of pages, functionality, technology and level of customisation required. A simple business website and a custom ecommerce platform have very different requirements, so the scope should be understood before estimating the project."],
+			["How long does it take to build a website?", "The timeline depends on the size and complexity of the project and how quickly the required content and feedback are available. A focused project with clear requirements can move much faster than a project where the scope keeps changing."],
+			["Which platform should I use for my business website?", "There is no universally best platform. WordPress, Shopify, React and custom coded websites are suited to different requirements. The right choice depends on what the website needs to do, who will manage it and how the business expects it to grow."],
+			["Can you build a WordPress website?", "Yes. WordPress can be used when a business needs a practical website that can be managed and updated through a content management system."],
+			["Can you build a Shopify website?", "Yes. Shopify is an option for businesses that need an ecommerce focused website and online purchasing functionality."],
+			["Can you build a custom coded website?", "Yes. React and custom coded development can be considered when the website requires a more tailored experience or functionality that is not well suited to a standard website platform."],
+			["Will the website work on mobile?", "The website should be built with responsive behaviour so the experience adapts to different screen sizes. Mobile usability is particularly important because a significant portion of website traffic can come from mobile devices."],
+			["Can the website help generate leads?", "Yes, but the website itself is only one part of lead generation. The messaging, offer, page structure, calls to action, traffic source and follow up process all influence whether website visitors become enquiries and customers."]
+		]
+	},
+	"lead-generation": {
+		keyword: "lead generation Dubai",
+		eyebrow: "Lead Generation · Dubai & UAE",
+		h1: "Lead Generation Dubai Built Around Qualified Demand, Not Cheap Enquiries",
+		lead: "I build lead generation systems around audience, offer, acquisition, qualification and follow up so your sales team gets a healthier pipeline instead of a spreadsheet full of weak leads.",
+		cta: "Book a Free 15 Minute Lead Generation Audit",
+		painTitle: "A full inbox does not mean a healthy pipeline.",
+		painIntro: "Lead generation breaks when acquisition and qualification are treated as separate problems. The system has to account for what a good lead actually looks like.",
+		pains: [
+			["“We are getting too many irrelevant leads.”", "The campaign may be optimising for form volume instead of the characteristics of a valuable prospect."],
+			["“Sales says marketing leads are weak.”", "Without shared qualification criteria, marketing and sales can optimise toward different outcomes."],
+			["“Leads are being missed.”", "Slow response, unclear ownership and disconnected channels can waste demand that was already paid for."],
+			["“We cannot see what is working.”", "Source, campaign and lead quality data need to connect so budget can move toward better demand."]
+		],
+		included: [
+			["Offer and funnel strategy", "Define the offer, audience, journey and conversion mechanism around the commercial objective."],
+			["Acquisition planning", "Connect paid search, paid social, organic and other appropriate sources to the funnel."],
+			["Qualification", "Use forms, questions and routing to capture the information sales actually needs."],
+			["Attribution", "Track where leads came from and how they progress through the pipeline."],
+			["Lead routing", "Create clear handoff and follow up processes so opportunities do not sit untouched."],
+			["Performance reporting", "Measure qualified demand and downstream outcomes rather than raw lead volume alone."]
+		],
+		process: [
+			[
+				"01",
+				"Define quality",
+				"Agree what a qualified lead means and which business outcomes matter."
+			],
+			[
+				"02",
+				"Map the funnel",
+				"Identify acquisition sources, conversion points, qualification and sales handoff."
+			],
+			[
+				"03",
+				"Build",
+				"Set up offers, forms, tracking, routing and campaign connections."
+			],
+			[
+				"04",
+				"Optimise",
+				"Review lead quality and acquisition performance and shift effort toward stronger signals."
+			],
+			[
+				"05",
+				"Improve the handoff",
+				"Use sales feedback and CRM data to reduce leakage between enquiry and opportunity."
+			]
+		],
+		faqs: [
+			["How do you improve lead quality?", "Start by defining quality, then align audience, offer, messaging, qualification and conversion signals around that definition."],
+			["Can you work with our existing CRM?", "Yes. The system can be connected to the CRM you already use where the required access and data are available."],
+			["Do you guarantee a number of leads?", "No. A credible lead generation programme should be judged by the economics and quality of demand, not an arbitrary lead guarantee."],
+			["Can lead generation include Google and Meta?", "Yes. The channel mix depends on where your audience shows intent and whether the offer is better captured or created."],
+			["How do you measure lead generation?", "Useful measures include qualified lead cost, lead to opportunity rate, conversion rate, source quality and downstream revenue where data is available."],
+			["Can you fix an existing lead generation funnel?", "Yes. An audit can identify where acquisition, qualification, tracking or follow up is causing leakage."]
+		]
+	},
+	"landing-page-optimisation": {
+		keyword: "landing page optimisation Dubai",
+		eyebrow: "Landing Page Optimisation · Dubai & UAE",
+		h1: "Landing Page Optimisation Dubai That Makes Paid Traffic Work Harder",
+		lead: "If your ads are generating clicks but the page is losing intent, more traffic will not solve the problem. I improve the message, structure and conversion journey so more of the right visitors take the next step.",
+		cta: "Book a Free 15 Minute Landing Page Audit",
+		painTitle: "The click is only the beginning.",
+		painIntro: "A visitor arrives with a question, expectation or buying intent. The page has a short window to confirm relevance, build trust and make action easy.",
+		pains: [
+			["“Our ads get clicks but the conversion rate is low.”", "The landing experience may not match the promise that earned the click."],
+			["“We have too much information.”", "Long pages can still work, but every section needs a job in the decision journey."],
+			["“People do not trust us yet.”", "Proof, clarity, specificity and risk reduction need to appear before the CTA asks for action."],
+			["“We do not know what to test.”", "Testing random colours or button copy rarely addresses the largest conversion constraints."]
+		],
+		included: [
+			["Message match", "Align the landing page promise with the search, ad or campaign that brought the visitor."],
+			["Conversion copy", "Rewrite headlines, benefits, objections and CTAs around the visitor’s decision."],
+			["Page structure", "Prioritise information in the order needed to understand, believe and act."],
+			["Trust and proof", "Place relevant evidence, process detail and risk reducers where they support the decision."],
+			["Form optimisation", "Reduce unnecessary friction while preserving the information needed for qualification."],
+			["Testing roadmap", "Prioritise experiments around the highest impact conversion constraints."]
+		],
+		process: [
+			[
+				"01",
+				"Diagnose",
+				"Review traffic source, page behaviour, offer, copy, form and conversion data."
+			],
+			[
+				"02",
+				"Find the friction",
+				"Identify the points where relevance, trust or clarity breaks down."
+			],
+			[
+				"03",
+				"Rebuild the message",
+				"Improve hierarchy, copy, proof and CTA structure around the decision journey."
+			],
+			[
+				"04",
+				"Test",
+				"Create a practical testing sequence based on the strongest hypotheses."
+			],
+			[
+				"05",
+				"Learn",
+				"Use conversion data to decide what should be kept, changed or tested next."
+			]
+		],
+		faqs: [
+			["How do I know if my landing page needs optimisation?", "Compare traffic quality with conversion behaviour. If relevant visitors arrive but few take the intended action, the page deserves investigation."],
+			["Can you optimise an existing page without redesigning the whole website?", "Yes. The work can be focused on the landing experience without changing unrelated parts of the site."],
+			["What conversion rate should a landing page have?", "There is no universal benchmark that is useful without context. Traffic intent, offer, audience, price and qualification requirements all affect conversion rate."],
+			["Do you test landing pages?", "Yes. Testing should follow clear hypotheses and enough data to make the result useful."],
+			["Can you optimise pages for Google Ads and Meta Ads?", "Yes. The page can be adapted to the intent and expectation created by each acquisition channel."],
+			["Will you improve the page copy too?", "Yes. Copy is central to the conversion problem and is considered alongside layout and UX."]
+		]
+	},
+	"performance-growth-marketing": {
+		keyword: "performance marketing Dubai",
+		eyebrow: "Performance & Growth Marketing · Dubai & UAE",
+		h1: "Performance Marketing Dubai Focused on the Growth Constraint That Matters",
+		lead: "Instead of adding more channels because they are available, I connect acquisition, conversion, analytics and prioritisation around the bottleneck most likely to improve growth.",
+		cta: "Book a Free 15 Minute Growth Audit",
+		painTitle: "More marketing activity can create less clarity.",
+		painIntro: "Growth gets expensive when every channel has its own objective, dashboard and optimisation logic. The system needs a commercial north star.",
+		pains: [
+			["“We are doing a lot but growth feels flat.”", "Activity can hide a constraint in acquisition, conversion, offer or follow up."],
+			["“Every channel reports a different success.”", "Without shared definitions, channel metrics can make the overall picture harder to understand."],
+			["“We do not know what to prioritise.”", "There are always more tests than resources. The challenge is choosing the ones with the strongest expected impact."],
+			["“Marketing and sales are disconnected.”", "Growth decisions improve when acquisition data and sales outcomes inform each other."]
+		],
+		included: [
+			["Growth audit", "Review acquisition, conversion, tracking and operational constraints together."],
+			["Channel strategy", "Decide which channels deserve attention based on audience, intent and economics."],
+			["Funnel optimisation", "Improve the path from first interaction to qualified opportunity."],
+			["Measurement framework", "Define the metrics and signals needed to make better decisions."],
+			["Testing priorities", "Turn the largest constraints into a practical sequence of experiments."],
+			["Ongoing optimisation", "Review evidence, learn from results and adjust the roadmap."]
+		],
+		process: [
+			[
+				"01",
+				"Diagnose",
+				"Map the customer journey and identify the strongest current constraint."
+			],
+			[
+				"02",
+				"Prioritise",
+				"Rank opportunities by likely impact, confidence and effort."
+			],
+			[
+				"03",
+				"Execute",
+				"Implement the highest priority changes across the relevant marketing system."
+			],
+			[
+				"04",
+				"Measure",
+				"Review the signals that show whether the change is improving the intended outcome."
+			],
+			[
+				"05",
+				"Compound",
+				"Use what was learned to decide the next highest value intervention."
+			]
+		],
+		faqs: [
+			["What is performance marketing?", "It is a measurement led approach to acquisition and growth where activity is tied to measurable outcomes and decisions are made from evidence."],
+			["Do you replace an internal marketing team?", "Not necessarily. The engagement can complement an existing team by providing strategy, execution or a focused specialist capability."],
+			["Which channels do you manage?", "The current service set includes Google Ads, Meta Ads, SEO, websites, landing pages, lead generation, WhatsApp and HubSpot. The mix depends on the business problem."],
+			["How do you decide what to optimise first?", "I look at the customer journey, data quality, commercial impact, confidence and effort rather than choosing the most visible metric."],
+			["Do you guarantee growth?", "No. Growth depends on market, offer, execution and many factors outside a marketer’s control. The job is to improve the quality of decisions and execution."],
+			["Can you work with our existing tools?", "Yes. The goal is to improve the system you already have where that is more sensible than replacing it."]
+		]
+	}
+};
+// src/pages/ServiceLanding.jsx
+var slug = "website-development";
+var related = { "website-development": [
+	"landing-page-optimisation",
+	"lead-generation",
+	"wordpress"
+] };
+var names = {
+	"website-development": "Website Development",
+	"landing-page-optimisation": "Landing Page Optimisation",
+	"lead-generation": "Lead Generation",
+	wordpress: "WordPress Development"
+};
+function ServiceLanding() {
+	const service = serviceLandings["website-development"];
+	if (!service) return /* @__PURE__ */ jsx("main", {
+		className: "service-landing",
+		children: /* @__PURE__ */ jsxs("div", {
+			className: "container",
+			children: [/* @__PURE__ */ jsx("h1", { children: "Service not found." }), /* @__PURE__ */ jsx(Link, {
+				to: "/services",
+				children: "Back to services"
+			})]
+		})
+	});
+	const relatedItems = related[slug].map((id) => ({
+		id,
+		name: names[id]
+	})).filter((item) => item.name);
+	const hasStrategy = Array.isArray(service.strategy);
+	const hasMeasurement = Array.isArray(service.measurementFlow);
+	return /* @__PURE__ */ jsxs("main", {
+		className: "service-landing",
+		id: "main",
+		children: [
+			/* @__PURE__ */ jsxs("section", {
+				className: "sl-hero",
+				children: [
+					/* @__PURE__ */ jsx("div", {
+						className: "sl-grid",
+						"aria-hidden": "true"
+					}),
+					/* @__PURE__ */ jsx("div", {
+						className: "sl-hero-glow",
+						"aria-hidden": "true"
+					}),
+					/* @__PURE__ */ jsxs("div", {
+						className: "container sl-hero-inner",
+						children: [/* @__PURE__ */ jsxs("div", {
+							className: "sl-hero-copy",
+							children: [
+								/* @__PURE__ */ jsx("p", {
+									className: "sl-eyebrow",
+									children: service.eyebrow
+								}),
+								/* @__PURE__ */ jsx("h1", { children: "Website Development Specialist in Dubai, UAE" }),
+								/* @__PURE__ */ jsx("p", {
+									className: "sl-lead",
+									children: service.lead
+								}),
+								/* @__PURE__ */ jsxs("div", {
+									className: "sl-hero-actions",
+									children: [/* @__PURE__ */ jsxs("a", {
+										className: "sl-primary",
+										href: whatsappUrl,
+										target: "_blank",
+										rel: "noreferrer",
+										children: [
+											service.cta,
+											" ",
+											/* @__PURE__ */ jsx("span", { children: "↗" })
+										]
+									}), /* @__PURE__ */ jsxs(Link, {
+										className: "sl-secondary",
+										to: "/contact",
+										children: ["Book a Consultation ", /* @__PURE__ */ jsx("span", { children: "↗" })]
+									})]
+								})
+							]
+						}), /* @__PURE__ */ jsxs("div", {
+							className: "sl-hero-highlights",
+							"aria-label": "Website development highlights",
+							children: [
+								/* @__PURE__ */ jsxs("article", { children: [/* @__PURE__ */ jsx("span", {
+									className: "sl-highlight-icon",
+									children: "⌖"
+								}), /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("strong", { children: "UAE Market Focus" }), /* @__PURE__ */ jsx("small", { children: "Local business context" })] })] }),
+								/* @__PURE__ */ jsxs("article", { children: [/* @__PURE__ */ jsx("span", {
+									className: "sl-highlight-icon",
+									children: "☆"
+								}), /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("strong", { children: "Conversion Focused" }), /* @__PURE__ */ jsx("small", { children: "Built around business goals" })] })] }),
+								/* @__PURE__ */ jsxs("article", { children: [/* @__PURE__ */ jsx("span", {
+									className: "sl-highlight-icon",
+									children: "◉"
+								}), /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("strong", { children: "Marketing Led" }), /* @__PURE__ */ jsx("small", { children: "Designed for growth" })] })] })
+							]
+						})]
+					})
+				]
+			}),
+			/* @__PURE__ */ jsx("section", {
+				className: "sl-section",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container",
+					children: [/* @__PURE__ */ jsxs("div", {
+						className: "sl-heading",
+						children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+							className: "sl-eyebrow",
+							children: "The problem"
+						}), /* @__PURE__ */ jsx("h2", { children: service.painTitle })] }), /* @__PURE__ */ jsx("p", { children: service.painIntro })]
+					}), /* @__PURE__ */ jsx("div", {
+						className: "sl-pain-grid",
+						children: service.pains.map(([title, text]) => /* @__PURE__ */ jsxs("article", { children: [
+							/* @__PURE__ */ jsx("span", { children: "→" }),
+							/* @__PURE__ */ jsx("h3", { children: title }),
+							/* @__PURE__ */ jsx("p", { children: text })
+						] }, title))
+					})]
+				})
+			}),
+			hasStrategy && /* @__PURE__ */ jsx("section", {
+				className: "sl-section sl-dark",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container",
+					children: [/* @__PURE__ */ jsxs("div", {
+						className: "sl-heading",
+						children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+							className: "sl-eyebrow",
+							children: "Strategic approach"
+						}), /* @__PURE__ */ jsx("h2", { children: service.strategicInsightTitle })] }), /* @__PURE__ */ jsx("p", { children: service.strategicInsightIntro })]
+					}), /* @__PURE__ */ jsx("div", {
+						className: "sl-strategy-grid",
+						children: service.strategy.map(([number, title, text]) => /* @__PURE__ */ jsxs("article", { children: [/* @__PURE__ */ jsx("span", {
+							className: "sl-strategy-number",
+							children: number
+						}), /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("h3", { children: title }), /* @__PURE__ */ jsx("p", { children: text })] })] }, number))
+					})]
+				})
+			}),
+			/* @__PURE__ */ jsx("section", {
+				className: "sl-section",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container",
+					children: [/* @__PURE__ */ jsxs("div", {
+						className: "sl-heading",
+						children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+							className: "sl-eyebrow",
+							children: "What's included"
+						}), /* @__PURE__ */ jsx("h2", { children: "Specific work. Clear deliverables. No filler." })] }), /* @__PURE__ */ jsx("p", { children: "Everything you need to launch a high performing website, without unnecessary extras." })]
+					}), /* @__PURE__ */ jsx("div", {
+						className: "sl-included-grid",
+						children: service.included.map(([title, text], i) => /* @__PURE__ */ jsxs("article", { children: [
+							/* @__PURE__ */ jsx("span", { children: String(i + 1).padStart(2, "0") }),
+							/* @__PURE__ */ jsx("h3", { children: title }),
+							/* @__PURE__ */ jsx("p", { children: text })
+						] }, title))
+					})]
+				})
+			}),
+			/* @__PURE__ */ jsx("section", {
+				className: "sl-section sl-dark",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container",
+					children: [/* @__PURE__ */ jsxs("div", {
+						className: "sl-heading",
+						children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+							className: "sl-eyebrow",
+							children: "The process"
+						}), /* @__PURE__ */ jsx("h2", { children: "A practical path from audit to optimisation." })] }), /* @__PURE__ */ jsx("p", { children: "A clear and collaborative process to ensure your website is built right from the start." })]
+					}), /* @__PURE__ */ jsx("div", {
+						className: "sl-process sl-process-timeline",
+						children: service.process.map(([number, title, text]) => /* @__PURE__ */ jsxs("article", { children: [/* @__PURE__ */ jsx("span", { children: number }), /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("h3", { children: title }), /* @__PURE__ */ jsx("p", { children: text })] })] }, number))
+					})]
+				})
+			}),
+			hasMeasurement && /* @__PURE__ */ jsx("section", {
+				className: "sl-proof",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container sl-proof-grid",
+					children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+						className: "sl-eyebrow",
+						children: "Measurement"
+					}), /* @__PURE__ */ jsx("h2", { children: service.measurementTitle })] }), /* @__PURE__ */ jsxs("div", { children: [
+						/* @__PURE__ */ jsx("div", {
+							className: "sl-proof-tags",
+							children: service.measurementFlow.map((item, index) => /* @__PURE__ */ jsxs("span", { children: [
+								index + 1,
+								". ",
+								item
+							] }, item))
+						}),
+						/* @__PURE__ */ jsx("p", { children: service.measurementIntro }),
+						/* @__PURE__ */ jsx("p", { children: service.measurementDetails })
+					] })]
+				})
+			}),
+			!hasMeasurement && /* @__PURE__ */ jsx("section", {
+				className: "sl-proof",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container sl-proof-grid",
+					children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+						className: "sl-eyebrow",
+						children: "Results & proof"
+					}), /* @__PURE__ */ jsx("h2", { children: "Measure the outcome that actually matters." })] }), /* @__PURE__ */ jsxs("div", { children: [
+						/* @__PURE__ */ jsx("p", { children: "Relevant experience spans immigration and visa services, attestation and professional services, healthcare and wellness, recruitment and HR, business services and other high consideration offers." }),
+						/* @__PURE__ */ jsx("p", { children: "Verified campaign, analytics or CRM metrics can be added here as the evidence base grows. I will not manufacture performance numbers to make the page look better." }),
+						/* @__PURE__ */ jsxs("div", {
+							className: "sl-proof-tags",
+							children: [
+								/* @__PURE__ */ jsx("span", { children: "Qualified demand" }),
+								/* @__PURE__ */ jsx("span", { children: "Conversion" }),
+								/* @__PURE__ */ jsx("span", { children: "Measurement" })
+							]
+						})
+					] })]
+				})
+			}),
+			/* @__PURE__ */ jsx("section", {
+				className: "sl-section",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container sl-why",
+					children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+						className: "sl-eyebrow",
+						children: "Why it matters"
+					}), /* @__PURE__ */ jsx("h2", { children: service.whyTitle || "A website should support the business, not just sit on the internet." })] }), /* @__PURE__ */ jsx("p", { children: service.whyText || "I work across acquisition, conversion, analytics and follow up rather than treating a single channel as the entire growth system. That makes it easier to identify whether the constraint is traffic, messaging, the website, tracking, lead quality or what happens after the enquiry." })]
+				})
+			}),
+			/* @__PURE__ */ jsx("section", {
+				className: "sl-section sl-dark",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container",
+					children: [/* @__PURE__ */ jsxs("div", {
+						className: "sl-heading",
+						children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+							className: "sl-eyebrow",
+							children: "Frequently asked questions"
+						}), /* @__PURE__ */ jsx("h2", { children: service.faqTitle || "Questions worth answering before you start." })] }), /* @__PURE__ */ jsx("p", { children: "Clear answers to common questions about the process, timeline and ongoing support." })]
+					}), /* @__PURE__ */ jsx("div", {
+						className: "sl-faq",
+						children: service.faqs.map(([question, answer]) => /* @__PURE__ */ jsxs("details", { children: [/* @__PURE__ */ jsxs("summary", { children: [question, /* @__PURE__ */ jsx("span", { children: "+" })] }), /* @__PURE__ */ jsx("p", { children: answer })] }, question))
+					})]
+				})
+			}),
+			/* @__PURE__ */ jsx("section", {
+				className: "sl-cta",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container",
+					children: [
+						/* @__PURE__ */ jsx("p", {
+							className: "sl-eyebrow",
+							children: "Ready to build a better website?"
+						}),
+						/* @__PURE__ */ jsx("h2", { children: "Let's create a website that works for your business." }),
+						/* @__PURE__ */ jsx("p", { children: "A clear, strategic and high performing website, built for growth." }),
+						/* @__PURE__ */ jsxs("a", {
+							className: "sl-primary",
+							href: whatsappUrl,
+							target: "_blank",
+							rel: "noreferrer",
+							children: ["Book a Free Consultation ", /* @__PURE__ */ jsx("span", { children: "↗" })]
+						})
+					]
+				})
+			}),
+			/* @__PURE__ */ jsx("section", {
+				className: "sl-related",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "container",
+					children: [/* @__PURE__ */ jsx("p", {
+						className: "sl-eyebrow",
+						children: "Related services"
+					}), /* @__PURE__ */ jsx("div", {
+						className: "sl-related-grid",
+						children: relatedItems.map((item) => /* @__PURE__ */ jsxs(Link, {
+							to: `/services/${item.id}`,
+							children: [/* @__PURE__ */ jsx("span", { children: item.name }), /* @__PURE__ */ jsx("b", { children: "→" })]
+						}, item.id))
+					})]
+				})
+			})
+		]
+	});
+}
+export { ServiceLanding as default };
