@@ -47,3 +47,20 @@
   .ai-chat-avatar{width:2.15rem;height:2.15rem;flex-basis:2.15rem;}
   .ai-chat-launcher-mascot{width:2.3rem;height:2.3rem;flex-basis:2.3rem;}
 }
+
+
+/* Inputs and selectable answers for the progressive lead questionnaire */
+.ai-chat-form input{flex:1;min-width:0;width:100%;border:1px solid #cbd5e1;border-radius:.8rem;padding:.7rem .8rem;outline:none;background:#fff;color:#0f172a;font:inherit;font-size:.84rem;line-height:1.45}
+.ai-chat-form input:focus{border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.12)}
+.ai-chat-country-code{max-width:8.4rem;min-width:0;border:1px solid #cbd5e1;border-radius:.7rem;padding:.55rem .35rem;background:#fff;color:#0f172a;font-size:.75rem}
+.ai-chat-choice-list{display:flex;flex:1;flex-wrap:wrap;gap:.45rem;width:100%}
+.ai-chat-choice,.ai-chat-skip,.ai-chat-submit{border:1px solid #c7d2fe;border-radius:.7rem;background:#eef2ff;color:#3730a3;padding:.65rem .8rem;font-size:.8rem;font-weight:700;cursor:pointer}
+.ai-chat-choice{text-align:left;flex:1 1 calc(50% - .45rem);min-width:0}
+.ai-chat-choice:hover,.ai-chat-skip:hover{background:#e0e7ff}
+.ai-chat-skip{flex:0 0 auto;padding:.45rem .6rem;font-size:.72rem}
+.ai-chat-submit{display:block;width:calc(100% - 2rem);margin:0 1rem .65rem;border-color:#4f46e5;background:#4f46e5;color:#fff}
+.ai-chat-submit:disabled{opacity:.6;cursor:wait}
+.ai-chat-form:has(.ai-chat-skip){flex-wrap:wrap}
+.ai-chat-form:has(.ai-chat-skip) input{flex-basis:100%}
+.ai-chat-form:has(.ai-chat-skip) .ai-chat-skip{margin-right:auto}
+@media(max-width:420px){.ai-chat-country-code{max-width:7.6rem;font-size:.7rem}.ai-chat-choice{flex-basis:100%}}
