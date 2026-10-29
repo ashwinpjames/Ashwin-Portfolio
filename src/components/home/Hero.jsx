@@ -13,9 +13,9 @@ export default function Hero() {
         <span className="hero-title-line">Growth Driven</span>
         <span className="hero-title-line hero-title-accent">By Better Marketing</span>
       </h2>
-      <p className="home-hero-copy reveal-home">I’m a performance marketing specialist helping businesses in Dubai and across the UAE plan, execute, and scale data driven campaigns that deliver qualified leads, higher conversions, and measurable growth.</p>
+      <p className="home-hero-copy reveal-home">Need better results from your marketing? Let’s discuss your business goals and how to generate more qualified leads through performance marketing.</p>
       <div className="home-actions reveal-home">
-        <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Get a free consultation <span>↗</span></a>
+        <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Message Me on WhatsApp <span>↗</span></a>
         <a className="home-button secondary" href="#case-studies">View case studies <span>↓</span></a>
       </div>
       <div className="hero-proof reveal-home">{proof.map((item) => <span key={item}><i className="hero-proof-check" aria-hidden="true">✓</i>{item}</span>)}</div>
