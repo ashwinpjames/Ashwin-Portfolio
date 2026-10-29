@@ -51,8 +51,19 @@ export default async function handler(req, res) {
 
     const result = await upstream.json()
     if (!upstream.ok) {
-      console.error('OpenAI chat request failed:', upstream.status, result?.error?.type || 'unknown error')
-      return res.status(502).json({ error: 'The assistant could not reply just now. Please try again shortly.' })
+      const apiCode = result?.error?.code || ''
+      const apiType = result?.error?.type || ''
+      console.error('OpenAI chat request failed:', upstream.status, apiType || 'unknown error', apiCode || '')
+      if (upstream.status === 401 || upstream.status === 403) {
+        return res.status(502).json({ error: 'The AI service credentials were rejected. The site owner needs to check the OPENAI_API_KEY in Vercel.' })
+      }
+      if (upstream.status === 429) {
+        return res.status(502).json({ error: 'The AI service has reached its usage limit or is receiving too many requests. Please try again later or contact Ashwin on WhatsApp.' })
+      }
+      if (upstream.status === 400 && /model|response_format|json_object/i.test(String(result?.error?.message || apiCode))) {
+        return res.status(502).json({ error: 'The AI model configuration needs an update. Please contact Ashwin on WhatsApp while this is fixed.' })
+      }
+      return res.status(502).json({ error: 'The AI service returned an error. Please try again shortly or contact Ashwin on WhatsApp.' })
     }
 
     const raw = result?.choices?.[0]?.message?.content
