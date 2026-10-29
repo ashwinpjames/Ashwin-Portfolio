@@ -38,6 +38,7 @@ const countryCodes = [
 
 export default function AILeadChat() {
   const [open, setOpen] = useState(false)
+  const [launcherNudge, setLauncherNudge] = useState(false)
   const [messages, setMessages] = useState([firstMessage, { role: 'assistant', content: questions[0].prompt }])
   const [draft, setDraft] = useState('')
   const [phoneCountry, setPhoneCountry] = useState('+971')
@@ -48,6 +49,15 @@ export default function AILeadChat() {
   const [error, setError] = useState('')
   const [emailStatus, setEmailStatus] = useState('')
   const messagesRef = useRef(null)
+
+  useEffect(() => {
+    if (open) {
+      setLauncherNudge(false)
+      return undefined
+    }
+    const nudgeTimer = window.setTimeout(() => setLauncherNudge(true), 4500)
+    return () => window.clearTimeout(nudgeTimer)
+  }, [open])
 
   useEffect(() => {
     const container = messagesRef.current
@@ -245,6 +255,6 @@ export default function AILeadChat() {
       </form>}
       <p className="ai-chat-disclaimer">Your details are sent to Ashwin automatically. WhatsApp opens a message for you to send directly.</p>
     </section>}
-    {!open && <button className="ai-chat-launcher" type="button" aria-expanded={false} aria-label="Start a website enquiry" onClick={() => setOpen(true)}><img className="ai-chat-launcher-mascot" src="/ashwin-chatbot-mascot.svg" alt="" /><span>Ask me</span></button>}
+    {!open && <button className={`ai-chat-launcher${launcherNudge ? ' is-nudging' : ''}`} type="button" aria-expanded={false} aria-label="Start a website enquiry" onClick={() => setOpen(true)}><img className="ai-chat-launcher-mascot" src="/ashwin-chatbot-mascot.svg" alt="" /><span>Ask me</span></button>}
   </div>
 }
