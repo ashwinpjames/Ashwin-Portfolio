@@ -87,8 +87,9 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/meta-ads" element={<MetaAdsService />} />
-        <Route path="/services/performance-marketing" element={<Navigate to="/services/performance-marketing-specialist" replace />} />
-        <Route path="/services/performance-marketing-specialist" element={<PerformanceMarketingService />} />
+        <Route path="/services/performance-marketing" element={<Navigate to="/services/performance-marketing-services" replace />} />
+        <Route path="/services/performance-marketing-specialist" element={<Navigate to="/services/performance-marketing-services" replace />} />
+        <Route path="/services/performance-marketing-services" element={<PerformanceMarketingService />} />
         <Route path="/services/performance-growth-marketing" element={<Navigate to="/services/performance-marketing" replace />} />
         <Route path="/services/lead-generation" element={<LeadGenerationService />} />
         <Route path="/services/cro" element={<CROService />} />
