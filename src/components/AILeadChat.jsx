@@ -123,7 +123,6 @@ export default function AILeadChat() {
       <header className="ai-chat-header">
         <img className="ai-chat-avatar" src="/ashwin-chatbot-mascot.svg" alt="" aria-hidden="true" />
         <div className="ai-chat-heading"><strong>Marketing assistant</strong><span><i /> Website enquiry</span></div>
-        <button type="button" className="ai-chat-close" aria-label="Close chat" onClick={() => setOpen(false)}>×</button>
       </header>
       <div className="ai-chat-privacy">Answer a few quick questions. Your enquiry will be emailed to Ashwin when you finish. WhatsApp is optional.</div>
       <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
