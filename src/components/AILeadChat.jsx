@@ -131,6 +131,8 @@ export default function AILeadChat() {
   async function submitLead(submittedLead = lead) {
     setError('')
     setEmailStatus('sending')
+    setComplete(true)
+    setReview(false)
     try {
       const response = await fetch('/api/lead', {
         method: 'POST',
@@ -197,7 +199,7 @@ export default function AILeadChat() {
       </div>}
       {complete && <>
         <div className="ai-chat-lead-summary">
-          <strong>{emailStatus === 'failed' ? 'Ready to send on WhatsApp' : 'Enquiry sent'}</strong>
+          <strong>{emailStatus === 'sending' ? 'Sending your enquiry…' : emailStatus === 'failed' ? 'Ready to send on WhatsApp' : 'Enquiry sent'}</strong>
           {lead.name && <span>{lead.name}</span>}
           {lead.service && <span>{lead.service}</span>}
           {lead.phone && <span>{lead.phone}</span>}
