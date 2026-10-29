@@ -100,3 +100,12 @@
 @media(max-width:600px){
   .ai-chat-panel{height:min(48dvh,360px);max-height:calc(100dvh - 5rem)}
 }
+
+
+/* Slimmer floating chatbot launcher (the closed-state pill) */
+.ai-chat-launcher{min-height:2.65rem;padding:.42rem .78rem;gap:.42rem;font-size:.8rem;box-shadow:0 8px 24px rgba(0,0,0,.24)}
+.ai-chat-launcher-mascot{width:2rem;height:2rem;flex-basis:2rem;margin-left:-.22rem}
+@media(max-width:600px){
+  .ai-chat-launcher{min-height:2.5rem;padding:.38rem .7rem;font-size:.78rem;gap:.38rem}
+  .ai-chat-launcher-mascot{width:1.85rem;height:1.85rem;flex-basis:1.85rem}
+}
