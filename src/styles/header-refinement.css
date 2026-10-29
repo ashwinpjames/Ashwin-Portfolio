@@ -29,3 +29,34 @@
     box-shadow: none;
   }
 }
+
+
+/* Mobile reference match: make the header blend into the hero with no separator. */
+@media screen and (max-width: 767px) {
+  .site-header,
+  .site-header.is-scrolled {
+    border: 0 !important;
+    border-bottom: 0 !important;
+    border-bottom-width: 0 !important;
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+  }
+
+  .site-header::before,
+  .site-header::after,
+  .site-header.is-scrolled::before,
+  .site-header.is-scrolled::after,
+  .site-header .nav-wrap::before,
+  .site-header .nav-wrap::after {
+    display: none !important;
+    content: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .site-header .nav-wrap {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
