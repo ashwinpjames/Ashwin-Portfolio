@@ -30,7 +30,7 @@ export default function Footer() {
 
       <div>
         <h3>What I do</h3>
-        <Link to="/services/performance-marketing">Performance marketing</Link>
+        <Link to="/services/performance-marketing-services">Performance marketing</Link>
         <Link to="/services/google-ads">Google Ads</Link>
         <Link to="/services/meta-ads">Meta Ads</Link>
         <Link to="/services/seo">SEO</Link>
