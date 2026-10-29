@@ -66,7 +66,7 @@ export default function AILeadChat() {
   return <div className="ai-lead-chat">
     {open && <section className="ai-chat-panel" aria-label="AI marketing assistant">
       <header className="ai-chat-header">
-        <div className="ai-chat-avatar" aria-hidden="true">A.</div>
+        <img className="ai-chat-avatar" src="/ashwin-chatbot-mascot.svg" alt="" aria-hidden="true" />
         <div className="ai-chat-heading"><strong>Marketing assistant</strong><span><i /> Online · AI assistant</span></div>
         <button type="button" className="ai-chat-close" aria-label="Close chat" onClick={() => setOpen(false)}>×</button>
       </header>
@@ -85,7 +85,7 @@ export default function AILeadChat() {
       <p className="ai-chat-disclaimer">AI generated responses. Please don’t share sensitive information.</p>
     </section>}
     <button className={`ai-chat-launcher ${open ? 'is-open' : ''}`} type="button" aria-expanded={open} aria-label={open ? 'Close AI chat' : 'Chat with Ashwin’s AI assistant'} onClick={() => setOpen((value) => !value)}>
-      {open ? '×' : <><span className="ai-chat-launcher-icon">✳</span><span>Ask me</span></>}
+      {open ? '×' : <><img className="ai-chat-launcher-mascot" src="/ashwin-chatbot-mascot.svg" alt="" /><span>Ask me</span></>}
     </button>
   </div>
 }
