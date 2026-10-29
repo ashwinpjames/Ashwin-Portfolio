@@ -93,3 +93,10 @@
  .ai-chat-inline-options .ai-chat-choice{font-size:.73rem;padding:.55rem .72rem}
  .ai-chat-privacy{font-size:.64rem}
 }
+
+
+/* Shorter chatbot panel on desktop and mobile */
+.ai-chat-panel{height:min(390px,calc(100dvh - 5.75rem))}
+@media(max-width:600px){
+  .ai-chat-panel{height:min(48dvh,360px);max-height:calc(100dvh - 5rem)}
+}
