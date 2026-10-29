@@ -30,11 +30,16 @@ export default function Footer() {
 
       <div>
         <h3>What I do</h3>
-        <Link to="/services">Performance marketing</Link>
-        <Link to="/services">Lead generation</Link>
-        <Link to="/services">Landing pages & CRO</Link>
-        <Link to="/services">Analytics</Link>
-        <Link to="/services">CRM automation</Link>
+        <Link to="/services/performance-marketing">Performance marketing</Link>
+        <Link to="/services/google-ads">Google Ads</Link>
+        <Link to="/services/meta-ads">Meta Ads</Link>
+        <Link to="/services/seo">SEO</Link>
+        <Link to="/services/website-development">Website development</Link>
+        <Link to="/services/lead-generation">Lead generation</Link>
+        <Link to="/services/cro">Landing page optimisation & CRO</Link>
+        <Link to="/services/whatsapp-marketing">WhatsApp marketing</Link>
+        <Link to="/services/hubspot">HubSpot CRM & automation</Link>
+        <Link to="/services/wordpress">WordPress development</Link>
       </div>
 
       <div>
