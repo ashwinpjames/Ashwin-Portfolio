@@ -722,3 +722,32 @@
 .mobile-action-bar a {
   border-color: var(--card-border-visible) !important;
 }
+
+
+/* Harmonize card outlines with the portfolio's muted indigo and slate palette. */
+:root {
+  --card-border-visible: rgba(148, 163, 184, 0.28);
+}
+
+.problem-grid,
+.problem-grid article,
+.result-card,
+.service-card,
+.case-card,
+.audience-card,
+.approach-card,
+.process-card,
+.insight-card,
+.resource-card,
+.placeholder-shortcut,
+.about-preview .portrait-frame,
+.about-preview .portrait-inner,
+.linkedin-button,
+.footer-google-map,
+.footer-social-icons a,
+.home-hero .home-button.secondary,
+.service-card-button,
+.contact-submit,
+.mobile-action-bar a {
+  border-color: var(--card-border-visible) !important;
+}
