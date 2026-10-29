@@ -690,3 +690,35 @@
   .home-hero .home-actions .home-button { min-height: 3rem !important; }
   .home-hero .hero-proof { margin-top: .9rem !important; }
 }
+
+
+/* Use dark blue outlines for content cards and supporting buttons across the portfolio. */
+:root {
+  --card-border-visible: rgba(37, 99, 235, 0.55);
+}
+
+.problem-grid,
+.problem-grid article,
+.result-card,
+.service-card,
+.case-card,
+.audience-card,
+.approach-card,
+.process-card,
+.insight-card,
+.resource-card,
+.placeholder-shortcut,
+.about-preview .portrait-frame,
+.about-preview .portrait-inner,
+.linkedin-button,
+.footer-google-map,
+.footer-social-icons a {
+  border-color: var(--card-border-visible) !important;
+}
+
+.home-hero .home-button.secondary,
+.service-card-button,
+.contact-submit,
+.mobile-action-bar a {
+  border-color: var(--card-border-visible) !important;
+}
