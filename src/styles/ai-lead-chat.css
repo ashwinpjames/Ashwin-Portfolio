@@ -64,3 +64,13 @@
 .ai-chat-form:has(.ai-chat-skip) input{flex-basis:100%}
 .ai-chat-form:has(.ai-chat-skip) .ai-chat-skip{margin-right:auto}
 @media(max-width:420px){.ai-chat-country-code{max-width:7.6rem;font-size:.7rem}.ai-chat-choice{flex-basis:100%}}
+
+
+/* Keep the chat scrollable without displaying a scrollbar */
+.ai-chat-messages{scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior:contain}
+.ai-chat-messages::-webkit-scrollbar{display:none;width:0;height:0}
+
+/* Place selectable answers inside the conversation, below the assistant prompt */
+.ai-chat-inline-options{display:flex;align-self:flex-start;flex-direction:column;align-items:stretch;gap:.5rem;width:min(100%,320px);max-width:100%;padding:.15rem 0 .35rem}
+.ai-chat-inline-options .ai-chat-choice{display:block;flex:none;width:100%;min-width:0;max-width:100%;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere;text-align:left;border:1px solid #dbe3f0;border-radius:1rem;background:#fff;color:#26334a;padding:.7rem .9rem;font-size:.84rem;line-height:1.4}
+.ai-chat-inline-options .ai-chat-choice:hover{border-color:#818cf8;background:#eef2ff}
