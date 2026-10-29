@@ -20,10 +20,10 @@ export default async function handler(req, res) {
   const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean.email)
   const phoneDigits = clean.phone.replace(/\D/g, '')
 
-  if (!clean.name || !clean.service || !clean.phone || phoneDigits.length < 7 || phoneDigits.length > 15 || !emailIsValid || !clean.challenge) {
+  if (!clean.name || !clean.service || !clean.phone || phoneDigits.length < 7 || phoneDigits.length > 15 || !emailIsValid ) {
     return res.status(400).json({
       success: false,
-      error: 'Please provide your name, enquiry type, valid WhatsApp number, valid email address, and main marketing challenge.',
+      error: 'Please provide your name, enquiry type, valid WhatsApp number, valid email address.',
     })
   }
 
