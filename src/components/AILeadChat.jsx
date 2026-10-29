@@ -79,7 +79,7 @@ export default function AILeadChat() {
       {leadReady && <a className="ai-chat-whatsapp" href={whatsappHref} target="_blank" rel="noreferrer">Send enquiry to Ashwin on WhatsApp ↗</a>}
       <form className="ai-chat-form" onSubmit={submitMessage}>
         <label className="ai-chat-sr-only" htmlFor="ai-chat-input">Your message</label>
-        <textarea id="ai-chat-input" value={draft} onChange={(event) => setDraft(event.target.value)} placeholder="Type your message…" rows={2} maxLength={1200} disabled={sending} />
+        <textarea id="ai-chat-input" value={draft} onChange={(event) => setDraft(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); event.currentTarget.form?.requestSubmit() } }} placeholder="Type your message…" rows={2} maxLength={1200} disabled={sending} />
         <button type="submit" aria-label="Send message" disabled={sending || !draft.trim()}>{sending ? '…' : '↑'}</button>
       </form>
       <p className="ai-chat-disclaimer">AI generated responses. Please don’t share sensitive information.</p>
