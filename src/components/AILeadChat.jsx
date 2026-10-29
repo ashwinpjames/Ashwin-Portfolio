@@ -172,6 +172,9 @@ export default function AILeadChat() {
       <div className="ai-chat-privacy">Answer a few quick questions. Review your answers before submitting. WhatsApp is optional.</div>
       <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
         {messages.map((message, index) => <div className={`ai-chat-message ${message.role}`} key={`${message.role}-${index}`}>{message.content}</div>)}
+        {!review && !complete && activeQuestion?.type === 'choice' && <div className="ai-chat-inline-options" aria-label={activeQuestion.label}>
+          {activeQuestion.options.map((option) => <button type="button" className="ai-chat-choice" key={option} onClick={() => answerQuestion(option)}>{option}</button>)}
+        </div>}
       </div>
       {error && <p className="ai-chat-error" role="alert">{error}</p>}
       {review && !complete && <div className="ai-chat-lead-summary">
@@ -204,9 +207,7 @@ export default function AILeadChat() {
       </>}
       {!review && !complete && <form className="ai-chat-form" onSubmit={submitMessage}>
         <label className="ai-chat-sr-only" htmlFor="ai-chat-input">{activeQuestion?.label || 'Your answer'}</label>
-        {activeQuestion?.type === 'choice' ? <div className="ai-chat-choice-list">
-          {activeQuestion.options.map((option) => <button type="button" className="ai-chat-choice" key={option} onClick={() => answerQuestion(option)}>{option}</button>)}
-        </div> : <>
+        {activeQuestion?.type !== 'choice' && <>
           {activeQuestion?.type === 'phone' && <select className="ai-chat-country-code" aria-label="Country calling code" value={phoneCountry} onChange={(event) => setPhoneCountry(event.target.value)}>
             {countryCodes.map((country) => <option key={country.value} value={country.value}>{country.label}</option>)}
           </select>}
