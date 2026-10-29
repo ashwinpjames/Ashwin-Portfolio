@@ -211,3 +211,38 @@
   -webkit-text-fill-color: #f8fafc;
   color: #f8fafc;
 }
+
+
+/* Mobile hero recovery: keep animated content visible if reveal animation is interrupted. */
+@media (max-width: 767px) {
+  .home-hero {
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 2.5rem;
+  }
+  .home-hero-content {
+    position: relative;
+    padding-top: 1.25rem;
+    padding-bottom: 0 !important;
+  }
+  .home-hero .reveal-home {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    visibility: visible;
+  }
+  .home-hero .home-eyebrow,
+  .home-hero .home-hero-title,
+  .home-hero .home-hero-copy,
+  .home-hero .home-actions,
+  .home-hero .hero-proof {
+    visibility: visible;
+  }
+  .home-hero .home-hero-title {
+    font-size: clamp(2.4rem, 10.5vw, 3.5rem);
+    line-height: 1.06;
+  }
+  .home-hero .hero-platform-marquee {
+    margin-top: 2rem;
+  }
+}
