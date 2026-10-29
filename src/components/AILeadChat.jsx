@@ -10,11 +10,12 @@ const questions = [
   { key: 'budget', label: 'monthly advertising budget', prompt: 'What is your approximate monthly advertising budget (AED)?', required: true, type: 'choice', options: ['Below AED 3,000', 'AED 3,000–5,000', 'AED 5,001–10,000', 'Above AED 10,000', 'Let’s discuss and decide'] },
   { key: 'email', label: 'email address', prompt: 'What’s the best email address to reach you?', required: true, type: 'email', placeholder: 'you@example.com' },
   { key: 'challenge', label: 'main marketing challenge', prompt: 'What’s the main marketing challenge you want to solve?', required: false, type: 'textarea', placeholder: 'Tell Ashwin what you want to improve…' },
+  { key: 'anythingElse', label: 'anything else', prompt: 'Is there anything else you’d like Ashwin to know? You can add details here or skip this step.', required: false, type: 'textarea', placeholder: 'Anything else you’d like to share…' },
 ]
 
 const firstMessage = {
   role: 'assistant',
-  content: 'Hi! I’m Ashwin’s website assistant. I’ll ask a few quick questions so Ashwin can understand what your business needs. You’ll be able to review your answers before submitting. You can also send the enquiry to him on WhatsApp.',
+  content: 'Hi! I’m Ashwin’s website assistant. I’ll ask a few quick questions so Ashwin can understand what your business needs. You can also add any extra details at the end or contact him directly on WhatsApp.',
 }
 
 const countryCodes = [
@@ -53,7 +54,8 @@ export default function AILeadChat() {
       ['Website', lead.website || 'Not provided'],
       ['Monthly advertising budget', lead.budget],
       ['Email', lead.email],
-      ['Main marketing challenge', lead.challenge],
+      ['Main marketing challenge', lead.challenge || 'Not provided'],
+      ['Anything else', lead.anythingElse || 'Not provided'],
     ]
     const summary = [
       'Hi Ashwin, I have a new enquiry from your portfolio website.',
@@ -126,14 +128,14 @@ export default function AILeadChat() {
     answerQuestion(draft)
   }
 
-  async function submitLead() {
+  async function submitLead(submittedLead = lead) {
     setError('')
     setEmailStatus('sending')
     try {
       const response = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(lead),
+        body: JSON.stringify(submittedLead),
       })
       const result = await response.json().catch(() => ({}))
       if (!response.ok || !result.success) throw new Error(result.error || 'Email could not be sent.')
@@ -144,6 +146,8 @@ export default function AILeadChat() {
     } catch (sendError) {
       console.error('Chatbot lead email notification failed:', sendError)
       setEmailStatus('failed')
+      setComplete(true)
+      addAssistantMessage('I couldn’t send the email automatically, but your details are ready. Please use the WhatsApp button below to send them directly.')
       setError(sendError.message || 'We couldn’t email your enquiry. Please use the WhatsApp option below.')
     }
   }
@@ -169,10 +173,10 @@ export default function AILeadChat() {
         <div className="ai-chat-heading"><strong>Marketing assistant</strong><span><i /> Website enquiry</span></div>
         <button type="button" className="ai-chat-close" aria-label="Close chat" onClick={() => setOpen(false)}>×</button>
       </header>
-      <div className="ai-chat-privacy">Answer a few quick questions. Review your answers before submitting. WhatsApp is optional.</div>
+      <div className="ai-chat-privacy">A few quick questions to understand what you need. WhatsApp is optional.</div>
       <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
         {messages.map((message, index) => <div className={`ai-chat-message ${message.role}`} key={`${message.role}-${index}`}>{message.content}</div>)}
-        {!review && !complete && (activeQuestion?.type === 'choice' || activeQuestion?.type === 'url' || activeQuestion?.key === 'challenge') && <div className="ai-chat-inline-options" aria-label={activeQuestion.label}>
+        {!review && !complete && (activeQuestion?.type === 'choice' || activeQuestion?.type === 'url' || activeQuestion?.type === 'textarea') && <div className="ai-chat-inline-options" aria-label={activeQuestion.label}>
           {(activeQuestion.type === 'choice' ? activeQuestion.options : activeQuestion.type === 'url' ? ['Skip website'] : ['Skip this question']).map((option) => <button type="button" className="ai-chat-choice" key={option} onClick={() => answerQuestion(option === 'Skip website' || option === 'Skip this question' ? 'Skip' : option)}>{option}</button>)}
         </div>}
       </div>
@@ -186,13 +190,14 @@ export default function AILeadChat() {
           ['Website', lead.website || 'Not provided'],
           ['Monthly advertising budget', lead.budget],
           ['Email', lead.email],
-          ['Main marketing challenge', lead.challenge],
+          ['Main marketing challenge', lead.challenge || 'Not provided'],
+      ['Anything else', lead.anythingElse || 'Not provided'],
         ].map(([label, value]) => <span key={label}><b>{label}:</b> {value || 'Not provided'}</span>)}
         <button type="button" className="ai-chat-restart" onClick={() => { setReview(false); setStep(questions.length - 1); setDraft(lead.challenge || ''); setError(''); addAssistantMessage('You can edit your main marketing challenge below, or submit your enquiry as shown.') }}>Edit last answer</button>
       </div>}
       {complete && <>
         <div className="ai-chat-lead-summary">
-          <strong>Enquiry submitted</strong>
+          <strong>{emailStatus === 'failed' ? 'Ready to send on WhatsApp' : 'Enquiry sent'}</strong>
           {lead.name && <span>{lead.name}</span>}
           {lead.service && <span>{lead.service}</span>}
           {lead.phone && <span>{lead.phone}</span>}
@@ -201,9 +206,8 @@ export default function AILeadChat() {
       </>}
       {(review || complete) && <>
         <p className="ai-chat-email-status" role="status">{emailStatus === 'sending' ? 'Sending your enquiry by email…' : emailStatus === 'sent' ? 'Your enquiry has been emailed to Ashwin.' : emailStatus === 'failed' ? 'We couldn’t email your enquiry automatically. Please use the WhatsApp option below to send it directly.' : ''}</p>
-        {review && <button type="button" className="ai-chat-submit" onClick={submitLead} disabled={emailStatus === 'sending'}>{emailStatus === 'sending' ? 'Sending…' : 'Submit enquiry by email'}</button>}
         <a className="ai-chat-whatsapp" href={whatsappHref} target="_blank" rel="noreferrer">Send details to Ashwin on WhatsApp ↗</a>
-        {complete && <button type="button" className="ai-chat-restart" onClick={startOver}>Start a new enquiry</button>}
+        {complete && <button type="button" className="ai-chat-restart" onClick={startOver}>Ask more / Start again</button>}
       </>}
       {!review && !complete && <form className="ai-chat-form" onSubmit={submitMessage}>
         <label className="ai-chat-sr-only" htmlFor="ai-chat-input">{activeQuestion?.label || 'Your answer'}</label>
@@ -217,7 +221,7 @@ export default function AILeadChat() {
           <button type="submit" aria-label="Send answer" disabled={!draft.trim()}>↑</button>
         </>}
       </form>}
-      <p className="ai-chat-disclaimer">Your answers are emailed to Ashwin when you submit. WhatsApp is optional and requires you to press Send.</p>
+      <p className="ai-chat-disclaimer">Your details are sent to Ashwin automatically. WhatsApp opens a message for you to send directly.</p>
     </section>}
     {!open && <button className="ai-chat-launcher" type="button" aria-expanded={false} aria-label="Start a website enquiry" onClick={() => setOpen(true)}><img className="ai-chat-launcher-mascot" src="/ashwin-chatbot-mascot.svg" alt="" /><span>Ask me</span></button>}
   </div>
