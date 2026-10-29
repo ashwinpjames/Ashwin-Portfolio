@@ -401,3 +401,18 @@
 .mobile-action-bar a {
   border-color: var(--card-border-visible) !important;
 }
+
+
+/* Homepage primary CTA: use a white filled button instead of blue. */
+.home-hero .home-button.primary {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #080d1b !important;
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.10) !important;
+}
+.home-hero .home-button.primary:hover {
+  background: #f1f5f9 !important;
+  border-color: #f1f5f9 !important;
+  color: #080d1b !important;
+  box-shadow: 0 14px 38px rgba(255, 255, 255, 0.15) !important;
+}
