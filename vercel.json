@@ -7,18 +7,23 @@
   ],
   "redirects": [
     {
+      "source": "/services/performance-marketing-specialist",
+      "destination": "/services/performance-marketing-services",
+      "permanent": true
+    },
+    {
       "source": "/services/hubspot",
       "destination": "/services/hubspot-crm-integration",
       "permanent": true
     },
     {
-      "source": "/services/performance-marketing",
-      "destination": "/services/performance-marketing-specialist",
+      "source": "/blog/performance-marketing-specialist",
+      "destination": "/blog/performance-marketing-specialist-in-dubai",
       "permanent": true
     },
     {
-      "source": "/blog/performance-marketing-specialist",
-      "destination": "/blog/performance-marketing-specialist-in-dubai",
+      "source": "/services/performance-marketing",
+      "destination": "/services/performance-marketing-services",
       "permanent": true
     }
   ]
