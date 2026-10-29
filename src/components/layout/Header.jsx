@@ -32,6 +32,15 @@ export default function Header() {
       <a className="consultation-link" href={calendlyUrl} target="_blank" rel="noreferrer">Book a call <span className="consultation-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M6 4H12V10" /></svg></span></a>
       <button className="menu-button" type="button" aria-expanded={menuOpen} aria-controls="mobile-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen((value) => !value)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">{menuOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}</svg></button>
     </div>
-    <div id="mobile-menu" className={`mobile-menu${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}><nav aria-label="Mobile navigation">{navigation.map((item) => <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>{item.label}</NavLink>)}<a className="mobile-consultation" href={calendlyUrl} target="_blank" rel="noreferrer">Book a call</a></nav></div>
+    <div id="mobile-menu" className={`mobile-menu${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}>
+      <div className="mobile-menu-header">
+        <NavLink className="brand mobile-menu-brand" to="/" aria-label="Ashwin James home">ASHWIN<span>.</span></NavLink>
+        <button className="mobile-menu-close" type="button" aria-label="Close menu" onClick={() => setMenuOpen(false)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+      </div>
+      <nav aria-label="Mobile navigation">
+        {navigation.map((item) => <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>{item.label}</NavLink>)}
+        <a className="mobile-consultation" href={calendlyUrl} target="_blank" rel="noreferrer">Let's talk</a>
+      </nav>
+    </div>
   </header>
 }
