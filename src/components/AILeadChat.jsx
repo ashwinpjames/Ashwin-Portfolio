@@ -28,6 +28,7 @@ export default function AILeadChat() {
   const [step, setStep] = useState(-1)
   const [complete, setComplete] = useState(false)
   const [error, setError] = useState('')
+  const [emailStatus, setEmailStatus] = useState('')
   const messagesRef = useRef(null)
 
   useEffect(() => {
@@ -88,7 +89,22 @@ export default function AILeadChat() {
       addAssistantMessage(questions[nextStep].prompt)
     } else {
       setComplete(true)
-      addAssistantMessage('Thanks! Your enquiry summary is ready. Tap the WhatsApp button below to send these details to Ashwin. WhatsApp will open with the message prepared, and you’ll need to press Send there.')
+      setEmailStatus('sending')
+      addAssistantMessage('Thanks! I’m sending your enquiry to Ashwin by email now. You can also choose to send it through WhatsApp.')
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(nextLead),
+      })
+        .then(async (response) => {
+          const result = await response.json().catch(() => ({}))
+          if (!response.ok || !result.success) throw new Error(result.error || 'Email could not be sent.')
+          setEmailStatus('sent')
+        })
+        .catch((sendError) => {
+          console.error('Lead email notification failed:', sendError)
+          setEmailStatus('failed')
+        })
     }
   }
 
@@ -99,6 +115,7 @@ export default function AILeadChat() {
     setStep(-1)
     setComplete(false)
     setError('')
+    setEmailStatus('')
   }
 
   return <div className="ai-lead-chat">
@@ -108,7 +125,7 @@ export default function AILeadChat() {
         <div className="ai-chat-heading"><strong>Marketing assistant</strong><span><i /> Website enquiry</span></div>
         <button type="button" className="ai-chat-close" aria-label="Close chat" onClick={() => setOpen(false)}>×</button>
       </header>
-      <div className="ai-chat-privacy">Answer a few quick questions. Your details will only be sent to WhatsApp when you choose to send them.</div>
+      <div className="ai-chat-privacy">Answer a few quick questions. Your enquiry will be emailed to Ashwin when you finish. WhatsApp is optional.</div>
       <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
         {messages.map((message, index) => <div className={`ai-chat-message ${message.role}`} key={`${message.role}-${index}`}>{message.content}</div>)}
       </div>
@@ -121,6 +138,7 @@ export default function AILeadChat() {
           {lead.service && <span>{lead.service}</span>}
           {lead.contact && <span>{lead.contact}</span>}
         </div>
+        <p className="ai-chat-email-status" role="status">{emailStatus === 'sending' ? 'Sending your enquiry by email…' : emailStatus === 'sent' ? 'Your enquiry has been emailed to Ashwin.' : emailStatus === 'failed' ? 'We couldn’t email your enquiry automatically. Please use the WhatsApp button below to send it directly.' : ''}</p>
         <a className="ai-chat-whatsapp" href={whatsappHref} target="_blank" rel="noreferrer">Send details to Ashwin on WhatsApp ↗</a>
         <button type="button" className="ai-chat-restart" onClick={startOver}>Start a new enquiry</button>
       </>}
@@ -129,7 +147,7 @@ export default function AILeadChat() {
         <textarea id="ai-chat-input" value={draft} onChange={(event) => setDraft(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); event.currentTarget.form?.requestSubmit() } }} placeholder="Type your answer…" rows={2} maxLength={1200} />
         <button type="submit" aria-label="Send answer" disabled={!draft.trim()}>↑</button>
       </form>}
-      <p className="ai-chat-disclaimer">Your details are not sent until you choose to open WhatsApp and press Send.</p>
+      <p className="ai-chat-disclaimer">Your answers are emailed to Ashwin when you finish. WhatsApp is optional and requires you to press Send.</p>
     </section>}
     <button className={`ai-chat-launcher ${open ? 'is-open' : ''}`} type="button" aria-expanded={open} aria-label={open ? 'Close enquiry chat' : 'Start a website enquiry'} onClick={() => setOpen((value) => !value)}>
       {open ? '×' : <><img className="ai-chat-launcher-mascot" src="/ashwin-chatbot-mascot.svg" alt="" /><span>Ask me</span></>}
