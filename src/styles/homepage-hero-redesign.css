@@ -373,7 +373,7 @@
 
 /* Improve visibility of content card outlines and neutral button borders. */
 :root {
-  --card-border-visible: rgba(255, 255, 255, 0.25);
+  --card-border-visible: rgba(255, 255, 255, 0.50);
 }
 
 .problem-grid,
