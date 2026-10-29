@@ -123,6 +123,7 @@ export default function AILeadChat() {
       <header className="ai-chat-header">
         <img className="ai-chat-avatar" src="/ashwin-chatbot-mascot.svg" alt="" aria-hidden="true" />
         <div className="ai-chat-heading"><strong>Marketing assistant</strong><span><i /> Website enquiry</span></div>
+        <button type="button" className="ai-chat-close" aria-label="Close chat" onClick={() => setOpen(false)}>×</button>
       </header>
       <div className="ai-chat-privacy">Answer a few quick questions. Your enquiry will be emailed to Ashwin when you finish. WhatsApp is optional.</div>
       <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
@@ -148,8 +149,6 @@ export default function AILeadChat() {
       </form>}
       <p className="ai-chat-disclaimer">Your answers are emailed to Ashwin when you finish. WhatsApp is optional and requires you to press Send.</p>
     </section>}
-    <button className={`ai-chat-launcher ${open ? 'is-open' : ''}`} type="button" aria-expanded={open} aria-label={open ? 'Close enquiry chat' : 'Start a website enquiry'} onClick={() => setOpen((value) => !value)}>
-      {open ? '×' : <><img className="ai-chat-launcher-mascot" src="/ashwin-chatbot-mascot.svg" alt="" /><span>Ask me</span></>}
-    </button>
+    {!open && <button className="ai-chat-launcher" type="button" aria-expanded={false} aria-label="Start a website enquiry" onClick={() => setOpen(true)}><img className="ai-chat-launcher-mascot" src="/ashwin-chatbot-mascot.svg" alt="" /><span>Ask me</span></button>}
   </div>
 }
