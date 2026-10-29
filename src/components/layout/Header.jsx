@@ -29,7 +29,7 @@ export default function Header() {
     <div className="nav-wrap">
       <NavLink className="brand" to="/" aria-label="Ashwin James home">ASHWIN<span>.</span></NavLink>
       <nav className="desktop-nav" aria-label="Primary navigation">{navigation.map((item) => <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>{item.label}</NavLink>)}</nav>
-      <a className="consultation-link" href={calendlyUrl} target="_blank" rel="noreferrer">Book a call <span className="consultation-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M6 4H12V10" /></svg></span></a>
+      <a className="consultation-link" href={whatsappUrl} target="_blank" rel="noreferrer">Let’s Talk <span className="consultation-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M6 4H12V10" /></svg></span></a>
       <button className="menu-button" type="button" aria-expanded={menuOpen} aria-controls="mobile-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen((value) => !value)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">{menuOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}</svg></button>
     </div>
     <div id="mobile-menu" className={`mobile-menu${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}>
@@ -42,7 +42,7 @@ export default function Header() {
       </nav>
       <div className="mobile-menu-footer">
         <a className="mobile-menu-email" href="mailto:ashwinjames2720@gmail.com">ASHWINJAMES2720@GMAIL.COM</a>
-        <a className="mobile-menu-cta" href={calendlyUrl} target="_blank" rel="noreferrer">↗ LET'S TALK</a>
+        <a className="mobile-menu-cta" href={whatsappUrl} target="_blank" rel="noreferrer">↗ MESSAGE ON WHATSAPP</a>
         <div className="mobile-menu-socials">
           <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">↗ LINKEDIN</a>
           <a href="mailto:ashwinjames2720@gmail.com">↗ EMAIL</a>
