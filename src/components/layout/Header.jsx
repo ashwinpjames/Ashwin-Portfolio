@@ -37,10 +37,17 @@ export default function Header() {
         <NavLink className="brand mobile-menu-brand" to="/" aria-label="Ashwin James home">ASHWIN<span>.</span></NavLink>
         <button className="mobile-menu-close" type="button" aria-label="Close menu" onClick={() => setMenuOpen(false)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
       </div>
-      <nav aria-label="Mobile navigation">
+      <nav className="mobile-menu-links" aria-label="Mobile navigation">
         {navigation.map((item) => <NavLink key={item.path} className={linkClassName} to={item.path} end={item.path === '/'}>{item.label}</NavLink>)}
-        <a className="mobile-consultation" href={calendlyUrl} target="_blank" rel="noreferrer">Let's talk</a>
       </nav>
+      <div className="mobile-menu-footer">
+        <a className="mobile-menu-email" href="mailto:ashwinjames2720@gmail.com">ASHWINJAMES2720@GMAIL.COM</a>
+        <a className="mobile-menu-cta" href={calendlyUrl} target="_blank" rel="noreferrer">↗ LET'S TALK</a>
+        <div className="mobile-menu-socials">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">↗ LINKEDIN</a>
+          <a href="mailto:ashwinjames2720@gmail.com">↗ EMAIL</a>
+        </div>
+      </div>
     </div>
   </header>
 }
