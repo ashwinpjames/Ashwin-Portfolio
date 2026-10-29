@@ -80,3 +80,75 @@
     opacity: 1 !important;
   }
 }
+
+
+/* Refine the mobile About portrait card: lighter frame, less bulk, tighter proportions. */
+@media screen and (max-width: 767px) {
+  .about-preview-grid {
+    gap: 2rem !important;
+  }
+
+  .about-preview .portrait-frame {
+    width: 100% !important;
+    max-width: 22rem !important;
+    padding: .2rem !important;
+    margin-inline: auto !important;
+    border: 1px solid rgba(148, 163, 184, .22) !important;
+    border-radius: 1.05rem !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .22) !important;
+  }
+
+  .about-preview .portrait-inner {
+    height: min(105vw, 410px) !important;
+    min-height: 350px !important;
+    border: 1px solid rgba(255, 255, 255, .07) !important;
+    border-radius: .85rem !important;
+  }
+
+  .about-preview .portrait-info {
+    left: .85rem !important;
+    right: .85rem !important;
+    bottom: .8rem !important;
+  }
+
+  .about-preview .portrait-quote {
+    font-size: .76rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: .55rem !important;
+  }
+
+  .about-preview .portrait-divider {
+    margin-bottom: .65rem !important;
+  }
+
+  .about-preview .portrait-caption strong {
+    font-size: 1rem !important;
+  }
+
+  .about-preview .portrait-caption span {
+    font-size: .7rem !important;
+  }
+
+  .about-preview .linkedin-button {
+    width: 2.15rem !important;
+    height: 2.15rem !important;
+    flex-basis: 2.15rem !important;
+  }
+
+  .about-preview .availability {
+    left: .8rem !important;
+    top: .8rem !important;
+    padding: .4rem .6rem !important;
+    font-size: .56rem !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .about-preview .portrait-frame {
+    max-width: 100% !important;
+  }
+  .about-preview .portrait-inner {
+    height: 108vw !important;
+    min-height: 330px !important;
+  }
+}
