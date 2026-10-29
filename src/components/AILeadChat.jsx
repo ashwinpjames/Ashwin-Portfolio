@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { whatsappUrl } from '../utils/contact.js'
 import '../styles/ai-lead-chat.css'
 
@@ -28,6 +28,12 @@ export default function AILeadChat() {
   const [step, setStep] = useState(-1)
   const [complete, setComplete] = useState(false)
   const [error, setError] = useState('')
+  const messagesRef = useRef(null)
+
+  useEffect(() => {
+    const container = messagesRef.current
+    if (container) container.scrollTop = container.scrollHeight
+  }, [messages, error, complete])
 
   const whatsappHref = useMemo(() => {
     const fields = [
@@ -103,7 +109,7 @@ export default function AILeadChat() {
         <button type="button" className="ai-chat-close" aria-label="Close chat" onClick={() => setOpen(false)}>×</button>
       </header>
       <div className="ai-chat-privacy">Answer a few quick questions. Your details will only be sent to WhatsApp when you choose to send them.</div>
-      <div className="ai-chat-messages" aria-live="polite">
+      <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
         {messages.map((message, index) => <div className={`ai-chat-message ${message.role}`} key={`${message.role}-${index}`}>{message.content}</div>)}
       </div>
       {error && <p className="ai-chat-error" role="alert">{error}</p>}
