@@ -751,3 +751,80 @@
 .mobile-action-bar a {
   border-color: var(--card-border-visible) !important;
 }
+
+
+/* Subtle, reversible tile interactions: gentle lift, soft shadow, and slate border emphasis. */
+.problem-grid article,
+.result-card,
+.service-card,
+.case-card,
+.audience-card,
+.approach-card,
+.process-card,
+.insight-card,
+.resource-card,
+.placeholder-shortcut {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .problem-grid article:hover,
+  .result-card:hover,
+  .service-card:hover,
+  .case-card:hover,
+  .audience-card:hover,
+  .approach-card:hover,
+  .process-card:hover,
+  .insight-card:hover,
+  .resource-card:hover,
+  .placeholder-shortcut:hover {
+    transform: translateY(-3px);
+    border-color: rgba(148, 163, 184, 0.48) !important;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.09);
+  }
+}
+
+.problem-grid article:focus-within,
+.result-card:focus-within,
+.service-card:focus-within,
+.case-card:focus-within,
+.audience-card:focus-within,
+.approach-card:focus-within,
+.process-card:focus-within,
+.insight-card:focus-within,
+.resource-card:focus-within,
+.placeholder-shortcut:focus-within {
+  border-color: rgba(148, 163, 184, 0.48) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .problem-grid article,
+  .result-card,
+  .service-card,
+  .case-card,
+  .audience-card,
+  .approach-card,
+  .process-card,
+  .insight-card,
+  .resource-card,
+  .placeholder-shortcut {
+    transition: none;
+  }
+
+  .problem-grid article:hover,
+  .result-card:hover,
+  .service-card:hover,
+  .case-card:hover,
+  .audience-card:hover,
+  .approach-card:hover,
+  .process-card:hover,
+  .insight-card:hover,
+  .resource-card:hover,
+  .placeholder-shortcut:hover {
+    transform: none;
+  }
+}
