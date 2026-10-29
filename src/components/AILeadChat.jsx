@@ -9,7 +9,7 @@ const questions = [
   { key: 'website', label: 'website', prompt: 'What’s your website URL? You can skip this if you don’t have one.', required: false, type: 'url', placeholder: 'https://yourwebsite.com' },
   { key: 'budget', label: 'monthly advertising budget', prompt: 'What is your approximate monthly advertising budget (AED)?', required: true, type: 'choice', options: ['Below AED 3,000', 'AED 3,000–5,000', 'AED 5,001–10,000', 'Above AED 10,000', 'Let’s discuss and decide'] },
   { key: 'email', label: 'email address', prompt: 'What’s the best email address to reach you?', required: true, type: 'email', placeholder: 'you@example.com' },
-  { key: 'challenge', label: 'main marketing challenge', prompt: 'What’s the main marketing challenge you want to solve?', required: true, type: 'textarea', placeholder: 'Tell Ashwin what you want to improve…' },
+  { key: 'challenge', label: 'main marketing challenge', prompt: 'What’s the main marketing challenge you want to solve?', required: false, type: 'textarea', placeholder: 'Tell Ashwin what you want to improve…' },
 ]
 
 const firstMessage = {
@@ -172,8 +172,8 @@ export default function AILeadChat() {
       <div className="ai-chat-privacy">Answer a few quick questions. Review your answers before submitting. WhatsApp is optional.</div>
       <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
         {messages.map((message, index) => <div className={`ai-chat-message ${message.role}`} key={`${message.role}-${index}`}>{message.content}</div>)}
-        {!review && !complete && activeQuestion?.type === 'choice' && <div className="ai-chat-inline-options" aria-label={activeQuestion.label}>
-          {activeQuestion.options.map((option) => <button type="button" className="ai-chat-choice" key={option} onClick={() => answerQuestion(option)}>{option}</button>)}
+        {!review && !complete && (activeQuestion?.type === 'choice' || activeQuestion?.type === 'url' || activeQuestion?.key === 'challenge') && <div className="ai-chat-inline-options" aria-label={activeQuestion.label}>
+          {(activeQuestion.type === 'choice' ? activeQuestion.options : activeQuestion.type === 'url' ? ['Skip website'] : ['Skip this question']).map((option) => <button type="button" className="ai-chat-choice" key={option} onClick={() => answerQuestion(option === 'Skip website' || option === 'Skip this question' ? 'Skip' : option)}>{option}</button>)}
         </div>}
       </div>
       {error && <p className="ai-chat-error" role="alert">{error}</p>}
@@ -214,7 +214,6 @@ export default function AILeadChat() {
           {activeQuestion?.type === 'textarea'
             ? <textarea id="ai-chat-input" value={draft} onChange={(event) => setDraft(event.target.value)} placeholder={activeQuestion.placeholder} rows={2} maxLength={1200} />
             : <input id="ai-chat-input" type={activeQuestion?.type === 'email' ? 'email' : activeQuestion?.type === 'phone' ? 'tel' : 'text'} value={draft} onChange={(event) => setDraft(event.target.value)} placeholder={activeQuestion?.placeholder || 'Type your answer…'} maxLength={activeQuestion?.type === 'phone' ? 30 : 1200} autoComplete={activeQuestion?.type === 'email' ? 'email' : activeQuestion?.type === 'phone' ? 'tel-national' : 'off'} />}
-          {activeQuestion?.type === 'url' && <button type="button" className="ai-chat-skip" onClick={() => answerQuestion('Skip')}>Skip website</button>}
           <button type="submit" aria-label="Send answer" disabled={!draft.trim()}>↑</button>
         </>}
       </form>}
