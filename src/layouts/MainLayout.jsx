@@ -5,6 +5,7 @@ import MobileActionBar from '../components/layout/MobileActionBar.jsx'
 import RouteMeta from '../components/layout/RouteMeta.jsx'
 import CursorGlow from '../components/layout/CursorGlow.jsx'
 import ScrollToTop from '../components/layout/ScrollToTop.jsx'
+import AILeadChat from '../components/AILeadChat.jsx'
 
 export default function MainLayout() {
   const location = useLocation()
@@ -22,5 +23,6 @@ export default function MainLayout() {
     </div>}
     <MobileActionBar />
     <Footer />
+    <AILeadChat />
   </>
 }
