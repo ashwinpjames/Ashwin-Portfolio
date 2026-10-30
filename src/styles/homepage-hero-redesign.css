@@ -943,3 +943,34 @@
     font-size: .64rem !important;
   }
 }
+
+
+/* Preserve readable type on compact phones without enlarging the whole hero. */
+@media screen and (max-width: 390px) {
+  .home-hero .home-eyebrow {
+    font-size: .76rem !important;
+  }
+
+  .home-hero .home-hero-copy {
+    font-size: .98rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .home-hero .home-actions .home-button {
+    font-size: .94rem !important;
+    min-height: 3.25rem !important;
+  }
+
+  .home-hero .hero-proof {
+    font-size: .72rem !important;
+    gap: .55rem !important;
+  }
+
+  .home-hero .hero-proof span {
+    padding: .55rem .6rem !important;
+  }
+
+  .home-hero .hero-proof .hero-proof-check {
+    font-size: .9rem !important;
+  }
+}
