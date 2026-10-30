@@ -7,7 +7,7 @@ const instagramUrl = 'https://www.instagram.com/'
 const xUrl = 'https://x.com/'
 const redditUrl = 'https://www.reddit.com/'
 const threadsUrl = 'https://www.threads.net/'
-const googleReviewUrl = 'https://search.google.com/local/writereview?placeid=ChIJn3EsesSYBK4RKmOOSOVoEI8'
+const googleReviewUrl = 'https://g.page/r/CSpjjkjlaBCPEBI/review'
 const googleBusinessUrl = 'https://share.google/OIRIEsstXUcjmDEgr'
 
 const socialLinks = [
@@ -56,7 +56,7 @@ export default function Footer() {
         <Link to="/blog">Marketing insights</Link>
         <Link to="/blog">Articles</Link>
         <a href={googleBusinessUrl} target="_blank" rel="noreferrer">Google Business</a>
-        <a href={googleReviewUrl} target="_blank" rel="noreferrer">Leave a Google review ↗</a>
+        <a href={googleReviewUrl} target="_blank" rel="noreferrer">Review me on Google ↗</a>
       </div>
 
       <div className="footer-contact">
