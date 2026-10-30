@@ -265,3 +265,30 @@
     padding-top: 7rem;
   }
 }
+
+
+/* Lift the chatbot above the mobile sticky action bar when it becomes visible. */
+@media (max-width: 767px) {
+  .ai-lead-chat {
+    bottom: calc(.75rem + env(safe-area-inset-bottom));
+    transition: bottom .22s ease;
+  }
+
+  body:has(.mobile-action-bar.is-visible) .ai-lead-chat {
+    bottom: calc(5.35rem + env(safe-area-inset-bottom));
+  }
+
+  .mobile-action-bar {
+    z-index: 80;
+  }
+
+  .ai-lead-chat {
+    z-index: 90;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-lead-chat {
+    transition: none;
+  }
+}
