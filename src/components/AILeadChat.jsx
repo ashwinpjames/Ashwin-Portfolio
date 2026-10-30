@@ -49,6 +49,9 @@ export default function AILeadChat() {
   const [error, setError] = useState('')
   const [emailStatus, setEmailStatus] = useState('')
   const messagesRef = useRef(null)
+  const exitIntentTriggered = useRef(false)
+  const dismissedByUser = useRef(false)
+  const mountedAt = useRef(Date.now())
 
   useEffect(() => {
     if (open) {
@@ -58,6 +61,23 @@ export default function AILeadChat() {
     const nudgeTimer = window.setTimeout(() => setLauncherNudge(true), 4500)
     return () => window.clearTimeout(nudgeTimer)
   }, [open])
+
+  useEffect(() => {
+    if (open || complete || dismissedByUser.current || exitIntentTriggered.current) return undefined
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return undefined
+
+    function handleExitIntent(event) {
+      if (event.clientY > 0 || event.relatedTarget) return
+      if (Date.now() - mountedAt.current < 5000) return
+      if (dismissedByUser.current || exitIntentTriggered.current) return
+
+      exitIntentTriggered.current = true
+      setOpen(true)
+    }
+
+    document.addEventListener('mouseout', handleExitIntent)
+    return () => document.removeEventListener('mouseout', handleExitIntent)
+  }, [open, complete])
 
   useEffect(() => {
     const container = messagesRef.current
@@ -203,7 +223,7 @@ export default function AILeadChat() {
       <header className="ai-chat-header">
         <img className="ai-chat-avatar" src="/ashwin-chatbot-mascot.svg" alt="" aria-hidden="true" />
         <div className="ai-chat-heading"><strong>Marketing assistant</strong><span><i /> Website enquiry</span></div>
-        <button type="button" className="ai-chat-close" aria-label="Close chat" onClick={() => setOpen(false)}>×</button>
+        <button type="button" className="ai-chat-close" aria-label="Close chat" onClick={() => { dismissedByUser.current = true; setOpen(false) }}>×</button>
       </header>
       <div className="ai-chat-privacy">A few quick questions to understand what you need. WhatsApp is optional.</div>
       <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
