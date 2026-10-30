@@ -44,6 +44,10 @@ export default function Contact() {
           </div>
           <ContactMethods />
           <div className="contact-note"><strong>Free initial consultation</strong><p>Use the booking calendar below if you would rather choose a time directly.</p></div>
+          <div className="contact-note">
+            <strong>Worked together or found my content helpful?</strong>
+            <p>I'd appreciate your feedback. <a href="https://g.page/r/CSpjjkjlaBCPEBI/review" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', fontWeight: 800, textDecoration: 'underline' }}>Review me on Google ↗</a></p>
+          </div>
         </div>
       </div>
     </section>
