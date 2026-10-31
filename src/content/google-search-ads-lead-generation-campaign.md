@@ -1,6 +1,8 @@
-# How to Build a Google Search Ads Campaign for Lead Generation
+# How to Set Up Google Search Ads for Lead Generation
 
 A Google Search Ads campaign for lead generation should do more than generate clicks. It should connect a specific customer need to a relevant search, a useful ad, a focused landing page and a measurable conversion path.
+
+To set up paid search ads for lead generation, define what counts as a qualified lead, group relevant searches by intent, write ads that match those searches, send visitors to a focused landing page, and track outcomes beyond the initial form submission.
 
 The difficult part is not opening Google Ads and creating a campaign. The difficult part is deciding what demand to target, how much control to create, what to exclude, what the searcher should see after the click and which conversions should guide optimisation.
 

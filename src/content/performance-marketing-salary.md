@@ -1,4 +1,4 @@
-# Is Performance Marketing a High Paying Career in 2026?
+# Is Performance Marketing a Good Career in 2026?
 
 Career Guide | Dubai, UAE | 2026
 

@@ -1,4 +1,4 @@
-# How to Measure the Real ROI of Paid Advertising
+# How to Measure ROI in Paid Advertising
 
 Paid advertising can look profitable in a dashboard while producing very little real business value. A campaign can generate cheap clicks, a strong conversion rate, a low cost per lead, or even an impressive ROAS number and still fail to create enough profit to justify the spend.
 
