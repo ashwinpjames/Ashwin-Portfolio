@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/paid-advertising-roi.md?raw'
 
 const faq = [
+  ['How do you measure ROI on person-based ads?', 'If person-based advertising means campaigns aimed at identifiable people or customer segments, measure it by connecting campaign exposure and spend with qualified leads, customers and contribution or revenue outcomes. Use consistent identifiers and a clear attribution method, account for overlap across channels, and avoid treating platform-reported conversions as proof of incremental return.'],
   ['What is a good paid advertising ROI?', 'There is no universal target. A good ROI depends on margin, customer value, sales cycle, retention, operating costs and the economics of the business.'],
   ['Is ROAS or ROI better for paid advertising?', 'Neither replaces the other. ROAS helps evaluate advertising efficiency, while ROI evaluates the broader return after relevant investment costs.'],
   ['How do you measure ROI for lead generation?', 'Connect advertising spend to leads, qualified leads, opportunities, customers and revenue, then use actual customer economics or a defensible expected value model.'],
@@ -13,12 +14,12 @@ const faq = [
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: 'How to Measure the Real ROI of Paid Advertising',
+  headline: 'How to Measure ROI in Paid Advertising',
   description: 'A practical framework for measuring paid advertising ROI beyond clicks, leads and ROAS by connecting advertising spend with qualification, customers, revenue and contribution.',
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
-  dateModified: '2026-09-15',
+  dateModified: '2026-10-31',
   mainEntityOfPage: 'https://ashwinjames.com/blog/paid-advertising-roi',
   keywords: 'paid advertising ROI, marketing ROI',
 }
@@ -102,8 +103,8 @@ function FAQSection() {
 
 export default function PaidAdvertisingRoiBlog() {
   useEffect(() => {
-    document.title = 'How to Measure Paid Advertising ROI | Ashwin James'
-    const description = 'A practical framework for measuring paid advertising ROI beyond clicks, leads and ROAS by connecting advertising spend with qualification, customers, revenue and contribution.'
+    document.title = 'How to Measure ROI in Paid Advertising | Ashwin James'
+    const description = 'Learn how to measure ROI in paid advertising by connecting campaign spend with qualified leads, customers, revenue, contribution and attribution.'
     let tag = document.querySelector('meta[name="description"]')
     if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
     tag.setAttribute('content', description)
@@ -124,7 +125,7 @@ export default function PaidAdvertisingRoiBlog() {
         <Link to="/blog" className="pms-back">Back to all blogs</Link>
         <p className="pms-eyebrow">PERFORMANCE MARKETING · PAID ADVERTISING · ROI</p>
         <div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div>
-        <h1>How to Measure the Real ROI of Paid Advertising</h1>
+        <h1>How to Measure ROI in Paid Advertising</h1>
         <p className="pms-lede">A practical framework for measuring advertising value beyond clicks, leads and ROAS by connecting spend with qualification, customers, revenue and contribution.</p>
         <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/conversion-tracking-performance-marketing">Conversion Tracking</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link></div>
       </header>
