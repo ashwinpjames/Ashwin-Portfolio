@@ -1,4 +1,4 @@
-# What Is a Performance Marketing Specialist and What Do They Do?
+# What Does a Performance Marketing Specialist Do?
 
 A **performance marketing specialist** is a digital marketing professional who focuses on generating measurable business results from marketing campaigns. Unlike marketing roles that may primarily focus on visibility, reach, or engagement, a performance marketing specialist is concerned with outcomes such as leads, sales, revenue, customer acquisition, conversion rates, and return on advertising spend.
 
