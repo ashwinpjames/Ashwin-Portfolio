@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/crm-data-for-paid-ads.md?raw'
 
 const faq = [
+  ['How do I use CRM data for ads?', 'Start by recording the original source, campaign and lead details in your CRM. Map each lead to meaningful lifecycle stages such as qualified, opportunity and customer, then connect reliable outcomes to the relevant ad platform where consent and technical requirements allow. Use those outcomes to evaluate and improve campaign quality.'],
   ['What is CRM data for paid ads?', 'CRM data for paid ads is customer and lead information from a CRM that can be connected with advertising acquisition data and downstream outcomes such as qualification, opportunities, customers and revenue.'],
   ['Why should CRM data be connected to Meta Ads?', 'Connecting CRM outcomes to Meta can help provide information about lead quality beyond the initial form submission. Meta\'s current Conversions API for CRM training specifically describes using first party CRM data to optimise for lead quality rather than only lead volume.'],
   ['Can CRM data improve Google Ads optimisation?', 'Yes. Google Ads supports enhanced conversions for leads and offline conversion workflows that can connect first party lead information and later qualified or converted lead outcomes with advertising measurement.'],
@@ -14,12 +15,12 @@ const faq = [
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: 'How CRM Data Can Improve Meta and Google Ads Optimisation',
+  headline: 'How to Use CRM Data for Paid Advertising',
   description: 'Learn how CRM data for paid ads connects lead quality, first party data and campaign optimisation across Meta Ads and Google Ads.',
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
-  dateModified: '2026-09-15',
+  dateModified: '2026-10-31',
   mainEntityOfPage: 'https://ashwinjames.com/blog/crm-data-for-paid-ads',
   keywords: 'CRM data for paid ads, first party data, campaign optimisation',
 }
@@ -89,8 +90,8 @@ function renderMarkdown(markdown) {
 
 export default function CrmDataForPaidAdsBlog() {
   useEffect(() => {
-    document.title = 'CRM Data for Paid Ads: Improve Meta & Google Ads Optimisation | Ashwin James'
-    const description = 'Learn how CRM data for paid ads connects lead quality, first party data and campaign optimisation across Meta Ads and Google Ads.'
+    document.title = 'How to Use CRM Data for Paid Advertising | Ashwin James'
+    const description = 'Learn how to use CRM data for paid ads by connecting campaign sources, lead qualification, customer outcomes and Meta and Google Ads optimisation.'
     let tag = document.querySelector('meta[name="description"]')
     if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
     tag.setAttribute('content', description)
@@ -111,7 +112,7 @@ export default function CrmDataForPaidAdsBlog() {
         <Link to="/blog" className="pms-back">Back to all blogs</Link>
         <p className="pms-eyebrow">PERFORMANCE MARKETING · CRM · ANALYTICS</p>
         <div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>14 min read</span><span>•</span><span>September 15, 2026</span></div>
-        <h1>How CRM Data Can Improve Meta and Google Ads Optimisation</h1>
+        <h1>How to Use CRM Data for Paid Advertising</h1>
         <p className="pms-lede">Learn how CRM data for paid ads connects lead quality, first party data and campaign optimisation across Meta Ads and Google Ads.</p>
         <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link><Link to="/blog/conversion-tracking-performance-marketing">Conversion Tracking</Link><Link to="/blog/google-ads-lead-quality">Google Ads Lead Quality</Link></div>
       </header>
