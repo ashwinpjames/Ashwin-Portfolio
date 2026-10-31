@@ -1,6 +1,8 @@
-# How CRM Data Can Improve Meta and Google Ads Optimisation
+# How to Use CRM Data for Paid Advertising
 
 Most paid advertising platforms can tell you that a person became a lead. Your CRM can tell you what happened next.
+
+To use CRM data for paid ads, capture the original source and campaign, connect each lead to its CRM lifecycle status, and send reliable qualified-lead or customer outcomes back to Meta and Google where consent, identifiers and platform requirements allow. Then optimise toward the deepest event that has enough consistent volume.
 
 That difference matters. A campaign can generate a low cost stream of leads while producing very few qualified opportunities. Another campaign can generate fewer leads at a higher CPL but create far more sales value. If your advertising decisions stop at the form submission, you cannot reliably see that difference.
 
