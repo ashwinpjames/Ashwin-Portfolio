@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/performance-marketing-salary.md?raw'
 
 const faq = [
+  ['Is performance marketing a good career?', 'It can be a good career for people who enjoy combining marketing execution, analytical problem solving and commercial decision making. The role offers opportunities across industries, but career quality depends on the employer, responsibilities, learning opportunities and the ability to demonstrate business impact.'],
   ['Is performance marketing a high paying job in Dubai?', 'Performance marketing can offer competitive salaries in Dubai, particularly in roles that combine campaign management, analytics and strategic responsibility. Compensation varies by experience, employer, industry and the scope of the position.'],
   ['What is the salary of a performance marketing specialist in Dubai?', 'Performance marketing salaries vary across employers and reporting platforms. Illustrative monthly estimates range from AED 5,000 to AED 8,000 for specialists with 1 to 3 years of experience, while more experienced professionals managing broader responsibilities may earn considerably more. These figures are estimates rather than guaranteed market averages.'],
   ['Can freshers get a job in performance marketing in Dubai?', 'Yes. Entry level opportunities may be available in agencies, startups and in house marketing teams. Practical experience with advertising platforms, analytics, campaign projects and reporting can help candidates demonstrate their skills.'],
@@ -14,12 +15,12 @@ const faq = [
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: 'Is Performance Marketing a High Paying Career in 2026?',
+  headline: 'Is Performance Marketing a Good Career in 2026?',
   description: 'Explore performance marketing salary in 2026, Dubai career opportunities, essential skills and how to grow your earning potential.',
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-29',
-  dateModified: '2026-09-29',
+  dateModified: '2026-10-31',
   mainEntityOfPage: 'https://www.ashwinjames.com/blog/performance-marketing-salary',
   keywords: 'Performance Marketing Salary, Performance Marketing Specialist in Dubai, Performance Marketing Career, Performance Marketer Salary, Performance Marketing Jobs in Dubai',
 }
@@ -93,8 +94,8 @@ function renderMarkdown(markdown) {
 
 export default function PerformanceMarketingSalaryBlog() {
   useEffect(() => {
-    document.title = 'Performance Marketing Salary in 2026: Dubai Career Guide | Ashwin James'
-    const description = 'Explore performance marketing salary in 2026, Dubai career opportunities, essential skills and how to grow your earning potential.'
+    document.title = 'Is Performance Marketing a Good Career in 2026? Salary Guide | Ashwin James'
+    const description = 'Is performance marketing a good career in 2026? Explore Dubai salary estimates, career opportunities, essential skills and progression paths.'
     let tag = document.querySelector('meta[name="description"]')
     if (!tag) {
       tag = document.createElement('meta')
@@ -122,7 +123,7 @@ export default function PerformanceMarketingSalaryBlog() {
         <Link to="/blog" className="pms-back">Back to all blogs</Link>
         <p className="pms-eyebrow">PERFORMANCE MARKETING · SALARY · DUBAI</p>
         <div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>10 min read</span><span>•</span><span>September 29, 2026</span></div>
-        <h1>Is Performance Marketing a High Paying Career in 2026?</h1>
+        <h1>Is Performance Marketing a Good Career in 2026?</h1>
         <p className="pms-lede">A practical guide to performance marketing salary in Dubai, career progression, essential skills and the factors that can influence earning potential.</p>
         <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-specialist-in-dubai">Performance Marketing Specialist</Link><Link to="/blog/performance-marketing-dubai">What Is Performance Marketing?</Link><Link to="/contact">Work with Ashwin</Link></div>
       </header>
