@@ -4,14 +4,15 @@ import articleMarkdown from '../content/performance-marketing-specialist.md?raw'
 
 const articleSchema = {
   '@context': 'https://schema.org', '@type': 'BlogPosting',
-  headline: 'What Is a Performance Marketing Specialist and What Do They Do?',
+  headline: 'What Does a Performance Marketing Specialist Do?',
   description: 'A detailed guide to what a performance marketing specialist does, the skills and tools they use, how they measure success, and how performance marketing connects acquisition with revenue.',
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
-  publisher: { '@type': 'Person', name: 'Ashwin James' }, datePublished: '2026-09-10', dateModified: '2026-09-10',
+  publisher: { '@type': 'Person', name: 'Ashwin James' }, datePublished: '2026-09-10', dateModified: '2026-10-31',
   mainEntityOfPage: 'https://www.ashwinjames.com/blog/performance-marketing-specialist-in-dubai',
   keywords: 'performance marketing specialist, performance marketing specialist UAE, what is a performance marketing specialist, performance marketer, performance marketing specialist job description',
 }
 const faq = [
+  ['What does a performance marketer do?', 'A performance marketer plans, manages and improves marketing campaigns against measurable outcomes such as qualified leads, sales and revenue. The role can include paid media, audience and keyword research, creative testing, landing page optimisation, conversion tracking, analytics, CRM feedback and budget decisions.'],
   ['What is a performance marketing specialist?', 'A performance marketing specialist is a digital marketing professional focused on measurable acquisition and business outcomes such as leads, sales, revenue, customer acquisition, conversion rates, and return on advertising spend.'],
   ['What does a performance marketing specialist do?', 'They can develop acquisition strategy, research audiences and keywords, manage paid campaigns, test creative, set up tracking, analyze performance, optimize landing pages, improve lead quality, connect CRM and sales data, manage budgets, and report on business outcomes.'],
   ['What is the difference between a performance marketer and a digital marketer?', 'Digital marketing is broader and can include SEO, content, social media, email, paid advertising, influencer marketing, affiliate marketing, and public relations. Performance marketing places a stronger emphasis on measurable acquisition, conversion, optimization, and business outcomes.'],
@@ -74,7 +75,7 @@ function FAQSection() { return <section className="pms-faq" aria-labelledby="pms
 
 export default function PerformanceMarketingSpecialistBlog() {
   useEffect(() => {
-    document.title = 'What Is a Performance Marketing Specialist and What Do They Do?'
+    document.title = 'What Does a Performance Marketing Specialist Do?'
     const description = 'A detailed guide to what a performance marketing specialist does, the skills and tools they use, how they measure success, and how performance marketing connects acquisition with revenue.'
     let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
     let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://www.ashwinjames.com/blog/performance-marketing-specialist-in-dubai')
@@ -82,7 +83,7 @@ export default function PerformanceMarketingSpecialistBlog() {
   }, [])
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
-    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · ANALYTICS · GROWTH</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 10, 2026</span></div><h1>What Is a Performance Marketing Specialist and What Do They Do?</h1><p className="pms-lede">A practical deep dive into the role, responsibilities, metrics, tools, skills and business thinking behind modern performance marketing.</p><div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/resources">Marketing Resources</Link><Link to="/contact">Work with Ashwin</Link></div></header>
+    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · ANALYTICS · GROWTH</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 10, 2026</span></div><h1>What Does a Performance Marketing Specialist Do?</h1><p className="pms-lede">A practical deep dive into the role, responsibilities, metrics, tools, skills and business thinking behind modern performance marketing.</p><div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/resources">Marketing Resources</Link><Link to="/contact">Work with Ashwin</Link></div></header>
     <FunnelGraphic />
     <div className="pms-article-grid"><aside className="pms-toc"><span>ON THIS PAGE</span><a href="#what-does-a-performance-marketing-specialist-do">What they do</a><a href="#key-responsibilities-of-a-performance-marketing-specialist">Key responsibilities</a><a href="#what-skills-does-a-performance-marketing-specialist-need">Skills</a><a href="#what-tools-does-a-performance-marketing-specialist-use">Tools</a><a href="#how-does-a-performance-marketing-specialist-measure-success">Measurement</a><a href="#understanding-the-performance-marketing-funnel">Funnel</a><a href="#how-to-become-a-performance-marketing-specialist">How to become one</a></aside><div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} /></div>
     <MetricCards /><SkillMap /><MistakeCards /><LearningPath /><FAQSection />
