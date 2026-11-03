@@ -295,11 +295,3 @@ HubSpot can centralize contact records, preserve source information, track sales
 ### What is the difference between lead connection rate and lead conversion rate?
 
 Connection rate measures the share of valid leads that have a meaningful two-way interaction with the business. Conversion rate measures the share that completes a defined next action, such as qualifying, booking or becoming a customer. Always state which conversion event is being measured.
-
----
-
-**About the author**
-
-Ashwin James is a UAE-based performance marketing professional working across Meta Ads, Google Ads, lead generation, CRM workflows, analytics and conversion optimization. His work focuses on connecting paid acquisition with lead quality, sales qualification and measurable business outcomes.
-
-[Explore Ashwin James's work and approach to performance marketing](https://www.ashwinjames.com/).
