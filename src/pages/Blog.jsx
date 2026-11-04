@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { blogPosts } from '../data/blog.js'
 import BlogCard from '../components/blog/BlogCard.jsx'
 
+const andromedaUpdatePost = { slug: 'meta-andromeda-update-2026', category: 'Meta Ads', title: 'Meta Andromeda Update 2026: What Changed and What Advertisers Should Do', excerpt: 'A practical explanation of Meta’s next-generation Andromeda retrieval engine, the October 2026 technical update and its implications for creative testing and campaign measurement.', date: 'Nov 4, 2026', readTime: '10 min read' }
+
 const bestSpecialistPost = { slug: 'best-performance-marketing-specialist', category: 'Performance Marketing', title: 'Best Performance Marketing Specialist: How to Choose the Right Expert in Dubai', excerpt: 'Learn how to evaluate performance marketing expertise, qualified lead metrics, CRM analysis and case studies before hiring a specialist.', date: 'Oct 19, 2026', readTime: '12 min read' }
 
 const newBlogPost = { slug: 'why-attribution-matters-performance-marketing', category: 'Performance Marketing', title: 'Why Attribution Matters in Performance Marketing', excerpt: 'Understand marketing attribution, attribution models and how attribution should influence performance marketing decisions.', date: 'Sep 15, 2026', readTime: '14 min read' }
@@ -43,7 +45,7 @@ export default function Blog() {
     }
   }, [])
 
-  const posts = [bestSpecialistPost, newBlogPost, latestBlogPost, ...blogPosts.filter((post) => post.slug !== bestSpecialistPost.slug && post.slug !== newBlogPost.slug && post.slug !== latestBlogPost.slug)]
+  const posts = [andromedaUpdatePost, bestSpecialistPost, newBlogPost, latestBlogPost, ...blogPosts.filter((post) => ![andromedaUpdatePost.slug, bestSpecialistPost.slug, newBlogPost.slug, latestBlogPost.slug].includes(post.slug))]
   const publishedPosts = posts.filter((post) => post.date !== 'Coming soon')
   const latestPost = publishedPosts[0]
   const categories = ['Performance Marketing', 'Marketing Psychology', 'Analytics', 'Lead Gen', 'CRO']
