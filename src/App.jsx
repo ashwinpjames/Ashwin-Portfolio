@@ -25,6 +25,7 @@ const CaseStudies = lazyWithStyles(() => import('./pages/CaseStudies.jsx'), [() 
 const CrmCaseStudy = lazyWithStyles(() => import('./pages/CrmCaseStudy.jsx'), [() => import('./styles/case-studies.css'), () => import('./styles/crm-case.css')])
 const MetaTrackingCaseStudy = lazyWithStyles(() => import('./pages/MetaTrackingCaseStudy.jsx'), [() => import('./styles/case-studies.css'), () => import('./styles/crm-case.css')])
 const MetaAdsAlgorithmBlog = lazyWithStyles(() => import('./pages/MetaAdsAlgorithmBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/algorithm-blog.css')])
+const MetaAndromedaUpdate2026Blog = lazyWithStyles(() => import('./pages/MetaAndromedaUpdate2026Blog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/algorithm-blog.css')])
 const HormoziMetaAdsStrategy = lazyWithStyles(() => import('./pages/HormoziMetaAdsStrategy.jsx'), [() => import('./styles/blog.css'), () => import('./styles/hormozi-blog.css')])
 const LeadQualityBenchmarksBlog = lazyWithStyles(() => import('./pages/LeadQualityBenchmarksBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/lead-quality-blog.css')])
 const SeoAiSearchBlog = lazyWithStyles(() => import('./pages/SeoAiSearchBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/seo-ai-blog.css')])
@@ -117,6 +118,7 @@ export default function App() {
         <Route path="/blog/increase-average-order-value" element={<IncreaseAverageOrderValueBlog />} />
         <Route path="/blog/content-angles-strategy" element={<ContentAnglesStrategyBlog />} />
         <Route path="/blog/how-meta-ads-algorithm-works" element={<MetaAdsAlgorithmBlog />} />
+        <Route path="/blog/meta-andromeda-update-2026" element={<MetaAndromedaUpdate2026Blog />} />
         <Route path="/blog/hormozi-meta-ads-strategy" element={<HormoziMetaAdsStrategy />} />
         <Route path="/blog/more-leads-revenue-didnt-move" element={<LeadQualityBenchmarksBlog />} />
         <Route path="/blog/seo-ai-search-entity-authority-2026" element={<SeoAiSearchBlog />} />
