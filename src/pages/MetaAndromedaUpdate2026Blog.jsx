@@ -57,6 +57,11 @@ export default function MetaAndromedaUpdate2026Blog() {
 
         <h2>What changed in the October 2026 update?</h2>
         <p>Meta’s 28 October 2026 engineering article describes a redesigned retrieval system built through closer co-design of the machine-learning model, serving system and GPU hardware. Three parts of the update are especially relevant.</p>
+        <figure className="andromeda-figure">
+          <img src="/images/meta-andromeda-moe-architecture.webp" alt="Diagram of Meta Andromeda's Mixture-of-Experts retrieval architecture, showing user signals, specialised user experts, contextualised ad inputs and relevance scoring." loading="lazy" decoding="async" />
+          <figcaption>Conceptual view of the next-generation Andromeda retrieval architecture, based on Meta's October 2026 engineering explanation.</figcaption>
+        </figure>
+
         <div className="algorithm-diagnostics">{improvements.map(([title, description]) => <div key={title}><h3>{title}</h3><p>{description}</p></div>)}</div>
 
         <h3>1. A Mixture-of-Experts retrieval model</h3>
@@ -67,7 +72,17 @@ export default function MetaAndromedaUpdate2026Blog() {
         <p>Meta reports that the new retrieval model approaches ranking-level model performance while using approximately <strong>300 times fewer inference-time FLOPs</strong> than its 2024 retrieval model. FLOPs are a measure of computational operations, so this is an engineering efficiency comparison, not an advertiser-facing performance multiplier.</p>
 
         <h3>3. A redesigned GPU pipeline</h3>
+        <figure className="andromeda-figure">
+          <img src="/images/meta-andromeda-gpu-pipeline.webp" alt="Diagram of Meta Andromeda's GPU retrieval pipeline, including index matching, fused per-user-ad scoring and top-K candidate selection on a single GPU server." loading="lazy" decoding="async" />
+          <figcaption>The GPU co-designed retrieval pipeline brings index matching, scoring and top-K selection into a more integrated execution flow.</figcaption>
+        </figure>
+
         <p>Meta also describes bringing index matching, scoring and top-candidate selection into a more integrated GPU pipeline. Its engineering article reports throughput above one billion ads per second for the production retrieval pipeline, and more than 10 billion ads per second for the optimised interaction network on a single NVIDIA GH200 GPU. These are system throughput figures, not the number of ads an individual campaign receives.</p>
+        <figure className="andromeda-figure">
+          <img src="/images/-%20meta-andromeda-throughput.webp" alt="Bar chart from the supplied Meta and NVIDIA collaboration graphic comparing throughput for the interaction network, index matching and end-to-end retrieval pipeline." loading="lazy" decoding="async" />
+          <figcaption>Throughput comparison reproduced from the supplied Meta and NVIDIA collaboration graphic. These are component-level engineering figures, not campaign delivery metrics.</figcaption>
+        </figure>
+
 
         <h2>What do Meta’s reported performance figures mean?</h2>
         <p>Meta says Andromeda has delivered a <strong>2.4% increase in conversions on Facebook since 2025</strong>. This is a result reported by Meta for its platform. It should not be interpreted as a guaranteed 2.4% improvement in every advertiser’s account, nor as a forecast for a specific campaign.</p>
