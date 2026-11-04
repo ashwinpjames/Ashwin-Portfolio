@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ashwinPortrait from '../assets/ashwin-home-portrait.webp'
 
 const faqs = [
   ['What is Meta Andromeda?', 'Meta Andromeda is Meta’s personalised ads retrieval engine. It helps select a smaller set of relevant ads from a much larger pool of eligible ads before later ranking systems decide which ad is most suitable to show.'],
@@ -138,6 +139,21 @@ export default function MetaAndromedaUpdate2026Blog() {
 
         <section className="algorithm-cta"><p className="algorithm-blog-eyebrow">Build a better acquisition system</p><h2>Meta Ads performance is bigger than the algorithm.</h2><p>Creative, conversion tracking, lead quality and sales feedback all influence the results your business gets from paid acquisition.</p><Link to="/contact">Discuss your Meta Ads strategy ↗</Link></section>
       </div>
+      <section className="andromeda-author" aria-labelledby="andromeda-author-title">
+        <img
+          className="andromeda-author-photo"
+          src={ashwinPortrait}
+          alt="Ashwin James, UAE-based performance marketing specialist"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="andromeda-author-copy">
+          <p className="andromeda-author-eyebrow">ABOUT THE AUTHOR</p>
+          <h2 id="andromeda-author-title">Ashwin James</h2>
+          <p>UAE-based performance marketing professional working across paid acquisition, lead generation, CRM workflows, analytics and conversion optimization.</p>
+          <Link to="/">Explore my performance marketing work <span aria-hidden="true">→</span></Link>
+        </div>
+      </section>
     </article>
   </main>
 }
