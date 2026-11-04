@@ -279,7 +279,7 @@ The goal is not to achieve the lowest possible CPM. It is to acquire the right c
 
 That requires more than reading an Ads Manager dashboard. It requires connecting paid acquisition with analytics, conversion tracking, CRM data and sales outcomes.
 
-For a broader view of how these systems fit together, explore the work of a [Performance Marketing Specialist]([[HOMEPAGE_LINK]]) and the related guides on [Meta Ads lead generation](/blog/meta-ads-lead-generation-uae), [CTR in advertising](/blog/ctr-explained), and [connecting paid ads with CRM data](/blog/crm-data-for-paid-ads).
+For a broader view of how these systems fit together, explore the work of a [Performance Marketing Specialist](/) and the related guides on [Meta Ads lead generation](/blog/meta-ads-lead-generation-uae), [CTR in advertising](/blog/ctr-explained), and [connecting paid ads with CRM data](/blog/crm-data-for-paid-ads).
 
 ## References and further reading
 
