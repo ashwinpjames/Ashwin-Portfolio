@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { blogPosts } from '../data/blog.js'
 import BlogCard from '../components/blog/BlogCard.jsx'
@@ -11,7 +11,17 @@ const newBlogPost = { slug: 'why-attribution-matters-performance-marketing', cat
 
 const latestBlogPost = { slug: 'roas-vs-roi', category: 'Performance Marketing', title: 'ROAS vs ROI: What Is the Difference?', excerpt: 'Understand the difference between ROAS and ROI, how to calculate each metric, when to use them and how they affect advertising decisions.', date: 'Sep 15, 2026', readTime: '12 min read' }
 
+const getPostTimestamp = (date) => {
+  if (!date || date === 'Coming soon') return 0
+  const timestamp = new Date(date).getTime()
+  return Number.isNaN(timestamp) ? 0 : timestamp
+}
+
 export default function Blog() {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('All categories')
+  const [sortOrder, setSortOrder] = useState('newest')
+
   useEffect(() => {
     const button = document.getElementById('ashwin-preferred-source-btn')
     if (!button) return
@@ -47,8 +57,23 @@ export default function Blog() {
 
   const posts = [andromedaUpdatePost, bestSpecialistPost, newBlogPost, latestBlogPost, ...blogPosts.filter((post) => ![andromedaUpdatePost.slug, bestSpecialistPost.slug, newBlogPost.slug, latestBlogPost.slug].includes(post.slug))]
   const publishedPosts = posts.filter((post) => post.date !== 'Coming soon')
-  const latestPost = publishedPosts[0]
-  const categories = ['Performance Marketing', 'Marketing Psychology', 'Analytics', 'Lead Gen', 'CRO']
+  const latestPost = [...publishedPosts].sort((a, b) => getPostTimestamp(b.date) - getPostTimestamp(a.date))[0]
+  const categories = [...new Set(publishedPosts.map((post) => post.category).filter(Boolean))].sort()
+  const filteredPosts = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase()
+    const matchingPosts = publishedPosts.filter((post) => {
+      const matchesCategory = selectedCategory === 'All categories' || post.category === selectedCategory
+      const searchableText = `${post.title} ${post.excerpt} ${post.category}`.toLowerCase()
+      return matchesCategory && (!query || searchableText.includes(query))
+    })
+
+    return [...matchingPosts].sort((a, b) => {
+      if (sortOrder === 'oldest') return getPostTimestamp(a.date) - getPostTimestamp(b.date)
+      if (sortOrder === 'title-asc') return a.title.localeCompare(b.title)
+      if (sortOrder === 'title-desc') return b.title.localeCompare(a.title)
+      return getPostTimestamp(b.date) - getPostTimestamp(a.date)
+    })
+  }, [publishedPosts, searchQuery, selectedCategory, sortOrder])
 
   return <main className="blog-page">
     <section className="blog-hero">
@@ -112,7 +137,41 @@ export default function Blog() {
     <section className="blog-library">
       <div className="container">
         <div className="blog-heading"><div><p className="blog-eyebrow">From the field</p><h2>Ideas worth testing.</h2></div><p>Original articles on performance marketing, analytics, lead generation, conversion and the systems behind sustainable growth.</p></div>
-        <div className="blog-grid">{posts.map((post) => <BlogCard key={post.slug} post={post} />)}</div>
+<div className="blog-controls" role="search" aria-label="Search and filter articles">
+          <label className="blog-search-field">
+            <span className="sr-only">Search articles</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m16 16 4 4" /></svg>
+            <input type="search" value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} placeholder="Search articles, topics or keywords..." />
+            {searchQuery && <button type="button" onClick={() => setSearchQuery('')} aria-label="Clear search">×</button>}
+          </label>
+          <label className="blog-control-select">
+            <span>Category</span>
+            <select value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
+              <option>All categories</option>
+              {categories.map((category) => <option key={category} value={category}>{category}</option>)}
+            </select>
+          </label>
+          <label className="blog-control-select">
+            <span>Sort by</span>
+            <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value)}>
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="title-asc">Title: A to Z</option>
+              <option value="title-desc">Title: Z to A</option>
+            </select>
+          </label>
+        </div>
+        <div className="blog-results-summary" aria-live="polite">
+          <span>{filteredPosts.length} {filteredPosts.length === 1 ? 'article' : 'articles'} found</span>
+          {(searchQuery || selectedCategory !== 'All categories') && <button type="button" onClick={() => { setSearchQuery(''); setSelectedCategory('All categories') }}>Clear filters</button>}
+        </div>
+        {filteredPosts.length > 0 ? <div className="blog-grid">{filteredPosts.map((post) => <BlogCard key={post.slug} post={post} />)}</div> : (
+          <div className="blog-empty-state">
+            <h3>No articles found</h3>
+            <p>Try a different search term or clear your filters to see all articles.</p>
+            <button type="button" onClick={() => { setSearchQuery(''); setSelectedCategory('All categories') }}>Show all articles</button>
+          </div>
+        )}
       </div>
     </section>
   </main>
