@@ -1,0 +1,102 @@
+/* Reversible brand palette experiment: Soft Blue / Midnight Navy / Coral */
+:root {
+  color-scheme: dark;
+  --color-bg: #002941;
+  --color-panel: #003650;
+  --color-card: #06415a;
+  --color-text: #f4fbff;
+  --color-body: #d7eaf1;
+  --color-muted: #a8c7d4;
+  --color-blue: #b6dfed;
+  --color-violet: #fd6e6e;
+  --color-line: rgba(182, 223, 237, .18);
+  --brand-soft-blue: #b6dfed;
+  --brand-midnight-navy: #002941;
+  --brand-coral: #fd6e6e;
+  --brand-deep-navy: #001f31;
+}
+html, body { background: var(--brand-midnight-navy); color: var(--color-body); }
+body { background: var(--brand-midnight-navy); }
+h1, h2, h3, h4, h5, h6 { color: #f4fbff; }
+a { text-decoration-color: rgba(182,223,237,.45); }
+::selection { background: var(--brand-soft-blue); color: var(--brand-midnight-navy); }
+
+/* Navigation and global chrome */
+.site-header.is-scrolled { background: rgba(0,41,65,.88); border-bottom-color: rgba(182,223,237,.18); }
+.mobile-menu { background: rgba(0,41,65,.98); }
+.mobile-menu a.active, .mobile-menu a:hover { background: rgba(182,223,237,.12); color: #fff; }
+.brand span, .footer-brand span { color: var(--brand-soft-blue); }
+.site-footer { background: var(--brand-deep-navy); border-top-color: rgba(182,223,237,.2); }
+.footer-primary-cta, .google-review-button { background: rgba(182,223,237,.12); border-color: rgba(182,223,237,.42); color: #f4fbff; }
+.footer-primary-cta:hover, .google-review-button:hover { background: rgba(182,223,237,.2); border-color: var(--brand-soft-blue); }
+
+/* Homepage hero: retain the existing composition, update only its visual language. */
+.home-hero {
+  background:
+    radial-gradient(55% 58% at 70% 0%, rgba(182,223,237,.19), transparent 73%),
+    radial-gradient(40% 40% at 2% 22%, rgba(253,110,110,.09), transparent 70%),
+    var(--brand-midnight-navy);
+}
+.home-hero-grid {
+  background-image: linear-gradient(rgba(182,223,237,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(182,223,237,.07) 1px, transparent 1px);
+}
+.home-eyebrow, .home-hero .home-hero-title span, .home-hero .hero-title-accent { color: var(--brand-soft-blue) !important; }
+.home-hero-copy, .section-heading p:not(.home-eyebrow), .problem-heading>p { color: #c0dbe5; }
+.home-hero .home-button.primary, .home-button.primary, .consultation-link, .mobile-consultation {
+  background: var(--brand-coral) !important;
+  border: 1px solid var(--brand-coral) !important;
+  color: var(--brand-midnight-navy) !important;
+  box-shadow: 0 10px 28px rgba(253,110,110,.18) !important;
+}
+.home-hero .home-button.primary:hover, .home-button.primary:hover, .consultation-link:hover {
+  background: #ff8585 !important;
+  border-color: #ff8585 !important;
+  color: var(--brand-midnight-navy) !important;
+}
+.home-hero .home-button.secondary, .home-button.secondary {
+  border-color: rgba(182,223,237,.45) !important;
+  background: rgba(182,223,237,.07) !important;
+  color: #f4fbff !important;
+}
+.home-hero .home-button.secondary:hover, .home-button.secondary:hover {
+  border-color: var(--brand-soft-blue) !important;
+  background: rgba(182,223,237,.14) !important;
+}
+.rating-pill { border-color: rgba(182,223,237,.24); background: rgba(182,223,237,.07); }
+.platform-strip { background: rgba(0,31,49,.7); border-color: rgba(182,223,237,.18); }
+.platform-track-react span { color: #a8c7d4; }
+
+/* Section surfaces and cards */
+.problem-section, .results-section, .process-section, .best-fit-section, .about-preview,
+.approach-section, .testimonials-section, .insights-section, .case-studies-preview {
+  background: #00334d;
+}
+.results-section { background: linear-gradient(180deg, #002941, #00334d); }
+.audience-card, .approach-card, .problem-grid, .result-card, .service-card, .case-card,
+.process-card, .insight-card, .resource-card, .placeholder-shortcut {
+  border-color: rgba(182,223,237,.2) !important;
+}
+.audience-card, .approach-card, .service-card, .case-card, .process-card, .insight-card,
+.resource-card, .placeholder-shortcut {
+  background: rgba(182,223,237,.045);
+}
+.audience-card:hover, .approach-card:hover, .service-card:hover, .case-card:hover,
+.process-card:hover, .insight-card:hover, .resource-card:hover, .placeholder-shortcut:hover {
+  border-color: rgba(182,223,237,.58) !important;
+  background: rgba(182,223,237,.09);
+}
+.approach-mark { background: rgba(182,223,237,.15); color: var(--brand-soft-blue); }
+.result-card strong, .problem-grid h3, .audience-card h3, .approach-card h3 { color: #f4fbff; }
+.result-card span, .problem-grid p, .audience-card p, .approach-card p { color: #c0dbe5; }
+.problem-grid span, .service-number, .recommendation-link, .placeholder-page .eyebrow { color: var(--brand-soft-blue); }
+.service-card-button, .contact-submit, .mobile-action-bar a {
+  border-color: rgba(182,223,237,.4) !important;
+}
+.mobile-action-bar { background: linear-gradient(180deg, rgba(0,41,65,0), rgba(0,31,49,.97)); }
+.mobile-action-bar a { background: rgba(182,223,237,.1); color: #f4fbff; }
+
+/* Keep all normal copy comfortably readable on the darker palette. */
+p, .placeholder-page p:not(.eyebrow), .footer-grid p, .footer-grid>div>a:not(.footer-brand):not(.footer-primary-cta),
+.footer-bottom, .footer-bottom-links a { color: #c0dbe5; }
+input, textarea, select { border-color: rgba(182,223,237,.3); }
+:focus-visible { outline: 2px solid var(--brand-soft-blue); outline-offset: 3px; }
