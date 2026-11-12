@@ -1,5 +1,5 @@
 export const routeMeta = {
-  '/': ['Performance Marketing Consultant in Dubai, UAE | Ashwin James', 'Performance marketing consultant in Dubai helping UAE businesses improve Meta Ads, Google Ads, lead generation, conversion tracking and CRM performance.'],
+  '/': ['Performance Marketing Specialist in Dubai, UAE | Ashwin James', 'Performance marketing specialist in Dubai helping UAE businesses improve Meta Ads, Google Ads, lead generation, conversion tracking and CRM performance.'],
   '/about': ['About Ashwin James | Performance Marketing Specialist', 'Learn about Ashwin James, a UAE based performance marketing specialist focused on paid advertising, lead generation, analytics and measurable business growth.'],
   '/services': ['Performance Marketing Services in Dubai, UAE | Ashwin James', 'Explore performance marketing services in Dubai including paid ads, lead generation, CRO, analytics and growth systems built around measurable business outcomes.'],
   '/services/google-ads': ['Google Ads Specialist in UAE | Ashwin James', 'Google Ads specialist in UAE helping businesses attract qualified leads through search campaigns, conversion tracking, landing pages and performance optimisation.'],
