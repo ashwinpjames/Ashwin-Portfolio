@@ -1,19 +1,19 @@
 import { whatsappUrl } from '../../utils/contact.js'
 import PlatformMarquee from './PlatformMarquee.jsx'
 
-const proof = ['Based in UAE', 'Meta & Google Ads Specialist', 'Data Driven Performance Marketing', 'End to End Funnel Strategy']
+const proof = ['Dubai & UAE Focus', 'Meta & Google Ads Specialist', 'Data Driven Performance Marketing', 'End to End Funnel Strategy']
 
 export default function Hero() {
   return <section className="home-hero" id="top">
     <div className="home-hero-grid" aria-hidden="true" />
     <div className="home-hero-glow" aria-hidden="true" />
     <div className="container home-hero-content">
-      <h1 className="home-eyebrow reveal-home">Performance Marketing Specialist</h1>
+      <h1 className="home-eyebrow reveal-home">Performance Marketing Consultant in Dubai, UAE</h1>
       <h2 className="home-hero-title reveal-home" aria-label="Growth Driven By Better Marketing">
         <span className="hero-title-line">Growth Driven</span>
         <span className="hero-title-line hero-title-accent">By Better Marketing</span>
       </h2>
-      <p className="home-hero-copy reveal-home">Need better results from your marketing? Let’s discuss your business goals and how to generate more qualified leads through performance marketing.</p>
+      <p className="home-hero-copy reveal-home">I help UAE businesses turn Meta Ads, Google Ads, conversion tracking and CRM insight into more qualified leads and better marketing decisions.</p>
       <div className="home-actions reveal-home">
         <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Message Me on WhatsApp <span>↗</span></a>
         <a className="home-button secondary" href="#case-studies">View case studies <span>↓</span></a>
