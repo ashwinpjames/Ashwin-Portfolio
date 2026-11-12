@@ -8,7 +8,7 @@ export default function Hero() {
     <div className="home-hero-grid" aria-hidden="true" />
     <div className="home-hero-glow" aria-hidden="true" />
     <div className="container home-hero-content">
-      <h1 className="home-eyebrow reveal-home">Performance Marketing Consultant in Dubai, UAE</h1>
+      <h1 className="home-eyebrow reveal-home">Performance Marketing Specialist in Dubai, UAE</h1>
       <h2 className="home-hero-title reveal-home" aria-label="Growth Driven By Better Marketing">
         <span className="hero-title-line">Growth Driven</span>
         <span className="hero-title-line hero-title-accent">By Better Marketing</span>
