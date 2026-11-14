@@ -1,4 +1,5 @@
 import '../../styles/footer-mobile-refinement.css'
+import '../../styles/footer-editorial.css'
 import { Link } from 'react-router-dom'
 import { emailAddress, whatsappUrl } from '../../utils/contact.js'
 
@@ -22,13 +23,7 @@ const socialLinks = [
 
 export default function Footer() {
   return <footer className="site-footer">
-    <div className="container footer-grid">
-      <div className="footer-brand-column">
-        <Link to="/" className="footer-brand">ASHWIN<span>.</span></Link>
-        <p>Performance marketing and growth systems for businesses ready to create a more predictable pipeline.</p>
-        <Link to="/contact" className="footer-primary-cta">Book a consultation <span>↗</span></Link>
-      </div>
-
+    <div className="container footer-editorial-shell"><div className="footer-editorial-intro"><div className="footer-editorial-brand"><Link to="/" className="footer-brand">ASHWIN<span>.</span></Link><p>Performance marketing and growth systems for businesses ready to create a more predictable pipeline.</p></div><div className="footer-editorial-cta"><span>LET’S BUILD SOMETHING BETTER</span><Link to="/contact" className="footer-primary-cta">Book a consultation <span>↗</span></Link></div></div><div className="footer-grid footer-editorial-links">
       <div>
         <h3>What I do</h3>
         <Link to="/services/performance-marketing-services">Performance marketing</Link>
@@ -69,6 +64,7 @@ export default function Footer() {
       </div>
     </div>
 
+    </div>
     <div className="container footer-bottom">
       <span>© {new Date().getFullYear()} Ashwin James. All rights reserved.</span>
       <div className="footer-social-icons" aria-label="Social links">
