@@ -1,3 +1,39 @@
+/* Footer density correction: prevent inherited spacing and stretched grid rows
+   from turning short navigation lists into scattered links. */
+.site-footer .footer-grid {
+  align-items: start;
+  gap: clamp(1.5rem, 2.5vw, 2.75rem);
+}
+.site-footer .footer-grid > div {
+  min-width: 0;
+  align-self: start;
+}
+.site-footer .footer-grid > div > a:not(.footer-brand):not(.footer-primary-cta) {
+  margin: 0 !important;
+  padding: .42rem 0;
+  line-height: 1.4;
+}
+.site-footer .footer-grid h3 {
+  margin-bottom: .65rem;
+}
+.site-footer .footer-contact p {
+  margin: 0 0 .5rem;
+}
+@media (min-width: 768px) {
+  .site-footer { padding-top: 3.5rem; }
+  .site-footer .footer-grid > div > a:not(.footer-brand):not(.footer-primary-cta) {
+    display: flex;
+    align-items: center;
+    min-height: 34px;
+    font-size: .82rem;
+  }
+  .site-footer .footer-grid > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* Compact, grouped mobile footer. All existing links and DOM order are preserved. */
 @media (max-width: 767px) {
   .site-footer {
@@ -116,5 +152,32 @@
   .site-footer .footer-grid { column-gap: .75rem !important; }
   .site-footer .footer-grid > div > a:not(.footer-brand):not(.footer-primary-cta) {
     font-size: .82rem !important;
+  }
+}
+
+/* Mobile: compact but accessible rows, predictable groups, no extra row stretching. */
+@media (max-width: 767px) {
+  .site-footer .footer-grid > div:nth-child(2) {
+    align-content: start;
+    grid-auto-rows: minmax(44px, auto);
+    row-gap: 0 !important;
+  }
+  .site-footer .footer-grid > div:nth-child(2) > a {
+    align-self: start;
+  }
+  .site-footer .footer-grid > div > a:not(.footer-brand):not(.footer-primary-cta) {
+    min-height: 44px;
+    padding-block: .45rem !important;
+    margin: 0 !important;
+  }
+  .site-footer .footer-grid > div:nth-child(3),
+  .site-footer .footer-grid > div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0 !important;
+  }
+  .site-footer .footer-contact > a {
+    margin: 0 .75rem 0 0 !important;
   }
 }
