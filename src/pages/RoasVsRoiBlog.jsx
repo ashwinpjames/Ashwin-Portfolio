@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/roas-vs-roi.md?raw'
 
@@ -15,11 +14,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'ROAS vs ROI: What Is the Difference?',
   description: 'Understand the difference between ROAS and ROI, how to calculate each metric, when to use them and how they affect advertising decisions.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/roas-vs-roi',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/roas-vs-roi',
   keywords: 'ROAS vs ROI, advertising ROI',
 }
 
@@ -96,17 +95,7 @@ function FAQSection() {
 }
 
 export default function RoasVsRoiBlog() {
-  useEffect(() => {
-    document.title = 'ROAS vs ROI: What Is the Difference? | Ashwin James'
-    const description = 'Understand ROAS vs ROI, how each metric is calculated, when to use them and how to connect advertising efficiency with business profitability.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/roas-vs-roi')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '').replace(/url[^]*/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
@@ -121,7 +110,7 @@ export default function RoasVsRoiBlog() {
         <div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div>
         <h1>ROAS vs ROI: What Is the Difference?</h1>
         <p className="pms-lede">Understand what ROAS and ROI actually measure, why the numbers can tell different stories, and how to use both metrics to make better advertising decisions.</p>
-        <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/conversion-tracking-performance-marketing">Conversion Tracking</Link><Link to="/blog/customer-acquisition-cost-vs-cpl">Customer Acquisition Cost</Link></div>
+        <div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/conversion-tracking-performance-marketing">Conversion Tracking</Link><Link to="/blog/customer-acquisition-cost-vs-cpl">Customer Acquisition Cost</Link></div>
       </header>
       <MetricStrip />
       <div className="pms-article-grid">
@@ -129,7 +118,7 @@ export default function RoasVsRoiBlog() {
         <div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} />
       </div>
       <FAQSection />
-      <footer className="pms-cta"><span>ROAS VS ROI</span><h2>Measure advertising in the language of the business.</h2><p>Use ROAS to understand media efficiency, ROI to understand economics, and downstream data to connect advertising activity with real business outcomes.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <footer className="pms-cta"><span>ROAS VS ROI</span><h2>Measure advertising in the language of the business.</h2><p>Use ROAS to understand media efficiency, ROI to understand economics, and downstream data to connect advertising activity with real business outcomes.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

@@ -219,7 +219,7 @@ For better **advertising ROI**, connect the stages.
 
 This is where CRM data becomes important. Without downstream feedback, marketers often optimise the part of the funnel they can see rather than the part of the funnel that creates business value.
 
-For businesses where paid acquisition and CRM data need to work together, a strong [Performance Marketing Specialist](https://ashwinjames.com/) should be thinking beyond the advertising dashboard and into qualification, sales outcomes and customer economics.
+For businesses where paid acquisition and CRM data need to work together, a strong [Performance Marketing Specialist](https://www.ashwinjames.com/) should be thinking beyond the advertising dashboard and into qualification, sales outcomes and customer economics.
 
 ## ROAS vs ROI for ecommerce
 

@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/freelance-marketing-consultant-uae.md?raw'
 
@@ -7,11 +6,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Freelance Marketing Consultant in UAE: What They Do, When You Need One and How to Choose',
   description: 'Learn what a freelance marketing consultant does, when a UAE business should hire one, consultant versus agency differences, and how performance marketing connects acquisition to revenue.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-09',
   dateModified: '2026-09-09',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/freelance-marketing-consultant-uae',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/freelance-marketing-consultant-uae',
   keywords: 'freelance marketing consultant, freelance marketing consultant UAE, marketing consultant UAE, performance marketing consultant, Meta Ads consultant UAE, Google Ads consultant UAE, freelance digital marketing consultant',
 }
 
@@ -97,17 +96,7 @@ function MeasurementGraphic() {
 }
 
 export default function FreelanceMarketingConsultantUaeBlog() {
-  useEffect(() => {
-    document.title = 'Freelance Marketing Consultant in UAE: What They Do and How to Choose'
-    const description = 'Learn what a freelance marketing consultant does, when a UAE business should hire one, consultant versus agency differences, and how performance marketing connects acquisition to revenue.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/freelance-marketing-consultant-uae')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const html = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
 
@@ -121,11 +110,11 @@ export default function FreelanceMarketingConsultantUaeBlog() {
         <div className="freelance-consultant-meta"><span>Marketing Strategy</span><span>•</span><span>8 min read</span><span>•</span><span>September 9, 2026</span></div>
         <h1>Freelance Marketing Consultant in UAE: What They Do, When You Need One and How to Choose</h1>
         <p className="freelance-consultant-lede">A practical guide for UAE businesses that want marketing decisions connected to acquisition, lead quality, CRM, sales and revenue.</p>
-        <div className="freelance-consultant-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/contact">Work with Ashwin</Link></div>
+        <div className="freelance-consultant-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/contact">Work with Ashwin</Link></div>
       </header>
       <GrowthSystemGraphic />
       <div className="freelance-consultant-content"><ConsultantGraphic /><div dangerouslySetInnerHTML={{ __html: html }} /><MeasurementGraphic /></div>
-      <footer className="freelance-consultant-cta"><span>FREELANCE MARKETING CONSULTING · UAE</span><h2>Need marketing that connects advertising to revenue?</h2><p>Let us look at your acquisition funnel, identify the biggest constraint and build a clearer path from paid traffic to qualified opportunities and customers.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <footer className="freelance-consultant-cta"><span>FREELANCE MARKETING CONSULTING · UAE</span><h2>Need marketing that connects advertising to revenue?</h2><p>Let us look at your acquisition funnel, identify the biggest constraint and build a clearer path from paid traffic to qualified opportunities and customers.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

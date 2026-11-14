@@ -12,9 +12,9 @@ const articleSchema = {
   '@context': 'https://schema.org', '@type': 'Article',
   headline: 'Creative Is the New Targeting: How the Right Message Finds the Right Customer',
   description: 'Targeting and creative are no longer separate levers in Meta Ads. Learn how the right message pre-qualifies leads, shapes response, and improves lead quality — not just CTR.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   datePublished: '2026-09-03', dateModified: '2026-09-03',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/creative-is-the-new-targeting',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/creative-is-the-new-targeting',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })) }
 

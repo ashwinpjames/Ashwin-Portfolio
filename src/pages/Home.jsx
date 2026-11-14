@@ -1,3 +1,4 @@
+import { siteUrl } from '../seo.js'
 import Hero from '../components/home/Hero.jsx'
 import ProblemSection from '../components/home/ProblemSection.jsx'
 import BestFit from '../components/home/BestFit.jsx'
@@ -15,5 +16,5 @@ import HomeCTA from '../components/home/HomeCTA.jsx'
 import ExpertiseTags from '../components/home/ExpertiseTags.jsx'
 
 export default function Home() {
-  return <main><Hero /><ProblemSection /><BestFit /><Results /><AboutPreview /><Approach /><ServicesPreview /><Process /><CaseStudiesPreview /><Testimonials /><FAQ /><Insights /><ResourceLead /><ExpertiseTags /><HomeCTA /></main>
+  return <main><script type="application/ld+json">{JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${siteUrl}/#website`, name: 'Ashwin James', url: `${siteUrl}/`, inLanguage: 'en', publisher: { '@id': `${siteUrl}/#person` } })}</script><Hero /><ProblemSection /><BestFit /><Results /><AboutPreview /><Approach /><ServicesPreview /><Process /><CaseStudiesPreview /><Testimonials /><FAQ /><Insights /><ResourceLead /><ExpertiseTags /><HomeCTA /></main>
 }

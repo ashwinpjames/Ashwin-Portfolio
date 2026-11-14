@@ -332,7 +332,7 @@ If the CRM can show which acquisition sources produce qualified opportunities an
 
 That is the real purpose of connecting paid ads with CRM data: not more reporting, but better optimisation decisions.
 
-For marketers building acquisition systems around measurable business outcomes, the role of a [Performance Marketing Specialist](https://ashwinjames.com/) increasingly sits at the intersection of paid media, analytics, CRM and sales feedback.
+For marketers building acquisition systems around measurable business outcomes, the role of a [Performance Marketing Specialist](https://www.ashwinjames.com/) increasingly sits at the intersection of paid media, analytics, CRM and sales feedback.
 
 ## Frequently asked questions
 

@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-ads-keyword-intent.md?raw'
 
@@ -15,11 +14,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Google Ads Keyword Intent: Informational vs Commercial vs Transactional',
   description: 'Learn how to classify Google Ads keyword intent as informational, commercial or transactional and use search intent to improve campaign structure, ads, landing pages and measurement.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/google-ads-keyword-intent',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-ads-keyword-intent',
   keywords: 'Google Ads keyword intent, search intent, commercial keywords',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -72,13 +71,7 @@ function IntentCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="keyword-intent-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="keyword-intent-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function GoogleAdsKeywordIntentBlog() {
-  useEffect(() => {
-    document.title = 'Google Ads Keyword Intent: Informational vs Commercial vs Transactional | Ashwin James'
-    const description = 'Learn how Google Ads keyword intent works across informational, commercial and transactional searches and how search intent should influence campaigns, ads, landing pages and measurement.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/google-ads-keyword-intent')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
     <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">GOOGLE ADS · KEYWORD RESEARCH · SEARCH INTENT</p><div className="pms-meta"><span>Google Ads</span><span>•</span><span>11 min read</span><span>•</span><span>September 15, 2026</span></div><h1>Google Ads Keyword Intent: Informational vs Commercial vs Transactional</h1><p className="pms-lede">A practical framework for classifying search intent and matching keywords with campaigns, ads, landing pages and conversion goals.</p><div className="pms-links"><Link to="/services/google-ads">Google Ads</Link><Link to="/blog/google-ads-lead-generation-uae">Google Ads Lead Generation Guide</Link><Link to="/blog/google-search-ads-lead-generation-campaign">Google Search Ads Campaign Guide</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link></div></header>

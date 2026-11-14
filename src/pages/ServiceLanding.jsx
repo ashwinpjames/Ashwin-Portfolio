@@ -62,6 +62,6 @@ export default function ServiceLanding() {
 
     <section className="sl-cta"><div className="container"><p className="sl-eyebrow">Ready to build a better website?</p><h2>Let's create a website that works for your business.</h2><p>A clear, strategic and high performing website, built for growth.</p><a className="sl-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free Consultation <span>↗</span></a></div></section>
 
-    <section className="sl-related"><div className="container"><p className="sl-eyebrow">Related services</p><div className="sl-related-grid">{relatedItems.map((item) => <Link key={item.id} to={`/services/${item.id}`}><span>{item.name}</span><b>→</b></Link>)}</div></div></section>
+    <section className="sl-related"><div className="container"><p className="sl-eyebrow">Related services</p><div className="sl-related-grid">{relatedItems.map((item) => <Link key={item.id} to={`/services/${item.id === 'landing-page-optimisation' ? 'cro' : item.id}`}><span>{item.name}</span><b>→</b></Link>)}</div></div></section>
   </main>
 }

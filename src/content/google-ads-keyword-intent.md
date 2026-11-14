@@ -296,7 +296,7 @@ The decision should still be based on economics. If an informational keyword pro
 
 Keyword intent is ultimately a decision framework.
 
-A strong **Performance Marketing Specialist** does not treat keywords as isolated strings. The keyword is evidence about a person's problem, awareness level and likely next step. That evidence should influence the ad, landing page, conversion action, budget and measurement model. [Explore the wider performance marketing approach](https://ashwinjames.com/).
+A strong **Performance Marketing Specialist** does not treat keywords as isolated strings. The keyword is evidence about a person's problem, awareness level and likely next step. That evidence should influence the ad, landing page, conversion action, budget and measurement model. [Explore the wider performance marketing approach](https://www.ashwinjames.com/).
 
 The most useful question is therefore not "Which keyword has the highest volume?"
 

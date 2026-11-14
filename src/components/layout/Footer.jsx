@@ -38,14 +38,14 @@ export default function Footer() {
         <Link to="/services/lead-generation">Lead generation</Link>
         <Link to="/services/cro">Landing page optimisation & CRO</Link>
         <Link to="/services/whatsapp-marketing">WhatsApp marketing</Link>
-        <Link to="/services/hubspot">HubSpot CRM & automation</Link>
+        <Link to="/services/hubspot-crm-integration">HubSpot CRM & automation</Link>
         <Link to="/services/wordpress">WordPress development</Link>
       </div>
 
       <div>
         <h3>Who I am</h3>
         <Link to="/about">About</Link>
-        <Link to="/case-studies">Case studies</Link>
+        <Link to="/case-studies">Frameworks</Link>
         <Link to="/blog">Insights</Link>
         <Link to="/#testimonials">Testimonials</Link>
         <Link to="/contact">Contact</Link>
@@ -71,12 +71,11 @@ export default function Footer() {
     <div className="container footer-bottom">
       <span>© {new Date().getFullYear()} Ashwin James. All rights reserved.</span>
       <div className="footer-social-icons" aria-label="Social links">
-        {socialLinks.map(({ label, url, icon }) => <a key={label} href={url} target="_blank" rel="noreferrer" aria-label={label} dangerouslySetInnerHTML={{ __html: icon }} />)}
+        {socialLinks.filter(({ label }) => ['GitHub', 'LinkedIn'].includes(label)).map(({ label, url, icon }) => <a key={label} href={url} target="_blank" rel="noreferrer" aria-label={label} dangerouslySetInnerHTML={{ __html: icon }} />)}
       </div>
       <div className="footer-bottom-links">
         <Link to="/privacy">Privacy policy</Link>
-        <Link to="/terms">Terms & conditions</Link>
-        <Link to="/sitemap.xml">Sitemap</Link>
+        <a href="/sitemap.xml">Sitemap</a>
       </div>
     </div>
   </footer>

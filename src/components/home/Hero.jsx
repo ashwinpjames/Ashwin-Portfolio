@@ -13,10 +13,10 @@ export default function Hero() {
         <span className="hero-title-line">Growth Driven</span>
         <span className="hero-title-line hero-title-accent">By Better Marketing</span>
       </h2>
-      <p className="home-hero-copy reveal-home">I help UAE businesses turn Meta Ads, Google Ads, conversion tracking and CRM insight into more qualified leads and better marketing decisions.</p>
+      <p className="home-hero-copy reveal-home">Need better leads from your marketing? I’m Ashwin James, a performance marketing specialist and consultant in Dubai. I connect Meta Ads, Google Ads, landing pages and CRM to help UAE businesses improve lead quality and make better budget decisions.</p>
       <div className="home-actions reveal-home">
-        <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Message Me on WhatsApp <span>↗</span></a>
-        <a className="home-button secondary" href="#case-studies">View case studies <span>↓</span></a>
+        <a className="home-button primary" href={whatsappUrl} target="_blank" rel="noreferrer">Discuss Your Marketing Goals <span>↗</span></a>
+        <a className="home-button secondary" href="#services">Explore services <span>↓</span></a>
       </div>
       <div className="hero-proof reveal-home">{proof.map((item) => <span key={item}><i className="hero-proof-check" aria-hidden="true">✓</i>{item}</span>)}</div>
     </div>

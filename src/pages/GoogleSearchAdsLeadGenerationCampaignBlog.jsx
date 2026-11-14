@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-search-ads-lead-generation-campaign.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'How to Build a Google Search Ads Campaign for Lead Generation',
   description: 'A practical guide to building Google Search Ads campaigns for lead generation, covering intent, campaign structure, keywords, ads, landing pages, tracking, lead quality, budgets and optimisation.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/google-search-ads-lead-generation-campaign',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-search-ads-lead-generation-campaign',
   keywords: 'Google Search Ads, Search Ads strategy, lead generation',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -73,13 +72,7 @@ function MetricCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="search-ads-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="search-ads-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function GoogleSearchAdsLeadGenerationCampaignBlog() {
-  useEffect(() => {
-    document.title = 'How to Build a Google Search Ads Campaign for Lead Generation | Ashwin James'
-    const description = 'Learn how to build a Google Search Ads campaign for lead generation, from search intent and keywords to ads, landing pages, tracking, lead quality and optimisation.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://www.ashwinjames.com/blog/google-search-ads-lead-generation-campaign')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">

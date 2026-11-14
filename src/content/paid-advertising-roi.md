@@ -212,7 +212,7 @@ Each lead should retain enough acquisition context to connect the eventual busin
 
 This is where tools such as CRM systems, Google Tag Manager, analytics platforms and advertising platforms need to work together rather than operate as isolated reporting systems.
 
-If you are working as a **[Performance Marketing Specialist](https://ashwinjames.com/)**, this connection is one of the most important parts of measuring whether paid acquisition is actually creating business value.
+If you are working as a **[Performance Marketing Specialist](https://www.ashwinjames.com/)**, this connection is one of the most important parts of measuring whether paid acquisition is actually creating business value.
 
 ## Track value at the conversion level where possible
 

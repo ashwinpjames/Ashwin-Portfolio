@@ -94,6 +94,6 @@ export default function WhatsAppMarketingService() {
 
     <section className="wa-cta"><div className="container"><p className="wa-eyebrow">Make WhatsApp Part of the Sales System</p><h2>Improve What Happens After the Click.</h2><p>Build a clearer conversation journey that turns more of the right WhatsApp enquiries into measurable business opportunities.</p><a className="wa-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Start a WhatsApp Conversation <span>↗</span></a></div></section>
 
-    <section className="wa-related"><div className="container"><p className="wa-eyebrow">Related Services</p><div className="wa-related-grid"><Link to="/services/meta-ads">Meta Ads</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/hubspot">HubSpot CRM & Automation</Link></div></div></section>
+    <section className="wa-related"><div className="container"><p className="wa-eyebrow">Related Services</p><div className="wa-related-grid"><Link to="/services/meta-ads">Meta Ads</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/hubspot-crm-integration">HubSpot CRM & Automation</Link></div></div></section>
   </main>
 }

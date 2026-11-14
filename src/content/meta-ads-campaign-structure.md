@@ -379,7 +379,7 @@ The same principle applies to Facebook Ads campaign structure and Facebook Ads t
 
 When the campaign structure, creative, lead capture and measurement system work together, advertising becomes easier to learn from and easier to connect to commercial outcomes. That is the real purpose of structure.
 
-If you want to connect campaign structure with broader acquisition strategy, a [Performance Marketing Specialist](https://ashwinjames.com/) can help build the measurement and optimisation system around it.
+If you want to connect campaign structure with broader acquisition strategy, a [Performance Marketing Specialist](https://www.ashwinjames.com/) can help build the measurement and optimisation system around it.
 
 ## Frequently asked questions
 

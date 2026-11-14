@@ -1,3 +1,4 @@
+import PlaceholderPage from './PlaceholderPage.jsx'
 import { Link, useParams } from 'react-router-dom'
 import { whatsappUrl } from '../utils/contact.js'
 import { coreServices, growthServices } from '../data/services.js'
@@ -23,7 +24,7 @@ export default function ServiceDetail() {
   if (slug === 'performance-marketing') return <PerformanceMarketingService />
 
   const service = allServices.find((item) => item.id === slug)
-  if (!service) return <main className="service-detail-page"><div className="container"><h1>Service not found.</h1><Link to="/services">Back to Services</Link></div></main>
+  if (!service) return <PlaceholderPage />
 
   const points = service.points ?? []
   const outcome = service.bestFor ?? service.outcome

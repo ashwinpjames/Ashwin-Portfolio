@@ -77,6 +77,7 @@ const LeadQualityFramework = lazyWithStyles(() => import('./pages/LeadQualityFra
 const BlogPromptArchitect = lazyWithStyles(() => import('./pages/BlogPromptArchitect.jsx'), [() => import('./styles/resources.css'), () => import('./styles/blog-prompt-architect.css')])
 const Blog = lazyWithStyles(() => import('./pages/Blog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/blog-heading-fix.css')])
 const Contact = lazyWithStyles(() => import('./pages/Contact.jsx'), [() => import('./styles/contact.css'), () => import('./styles/contact-method-colors.css'), () => import('./styles/calendly.css')])
+const Privacy = lazy(() => import('./pages/Privacy.jsx'))
 const PlaceholderPage = lazy(() => import('./pages/PlaceholderPage.jsx'))
 
 export default function App() {
@@ -92,7 +93,7 @@ export default function App() {
         <Route path="/services/performance-marketing" element={<Navigate to="/services/performance-marketing-services" replace />} />
         <Route path="/services/performance-marketing-specialist" element={<Navigate to="/services/performance-marketing-services" replace />} />
         <Route path="/services/performance-marketing-services" element={<PerformanceMarketingService />} />
-        <Route path="/services/performance-growth-marketing" element={<Navigate to="/services/performance-marketing" replace />} />
+        <Route path="/services/performance-growth-marketing" element={<Navigate to="/services/performance-marketing-services" replace />} />
         <Route path="/services/lead-generation" element={<LeadGenerationService />} />
         <Route path="/services/cro" element={<CROService />} />
         <Route path="/services/whatsapp-marketing" element={<WhatsAppMarketingService />} />
@@ -156,6 +157,9 @@ export default function App() {
         <Route path="/blog/roas-vs-roi" element={<RoasVsRoiBlog />} />
         <Route path="/blog/crm-data-for-paid-ads" element={<CrmDataForPaidAdsBlog />} />
         <Route path="/blog/why-attribution-matters-performance-marketing" element={<MarketingAttributionBlog />} />
+        <Route path="/services/hubspot-crm-automation" element={<Navigate to="/services/hubspot-crm-integration" replace />} />
+        <Route path="/services/landing-page-optimisation" element={<Navigate to="/services/cro" replace />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage />} />
       </Route>

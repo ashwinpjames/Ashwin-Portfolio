@@ -196,7 +196,7 @@ A stronger CAC based decision system usually requires:
 
 For a performance marketing team, this is where advertising, analytics and CRM stop being separate systems.
 
-A marketer acting as a **[Performance Marketing Specialist](https://ashwinjames.com/)** should be able to understand not only how many leads a campaign generates, but what happens to those leads after acquisition and how that affects the business.
+A marketer acting as a **[Performance Marketing Specialist](https://www.ashwinjames.com/)** should be able to understand not only how many leads a campaign generates, but what happens to those leads after acquisition and how that affects the business.
 
 ## Paid media CAC vs blended CAC
 

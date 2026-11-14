@@ -1,14 +1,12 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { routeMeta } from '../src/seo-meta.js'
-import { extraRouteMeta } from '../src/seo-meta-extra.js'
+import { allRouteMeta, canonicalUrl, notFoundMeta, openGraphType } from '../src/seo.js'
 
 const distDir = path.resolve('dist')
 const serverEntryPath = path.resolve('dist-server/entry-server.js')
 const templatePath = path.join(distDir, 'index.html')
 const template = fs.readFileSync(templatePath, 'utf8')
 const { render } = await import(serverEntryPath)
-const allRouteMeta = { ...routeMeta, ...extraRouteMeta }
 
 const escapeHtml = (value) => value
   .replace(/&/g, '&amp;')
@@ -23,7 +21,10 @@ const buildPage = async (pathname, [title, description]) => {
   html = html.replace('<div id="root"></div>', `<div id="root">${renderedApp}</div>`)
   html = html.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(title)}</title>`)
   html = html.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/i, `<meta name="description" content="${escapeHtml(description)}" />`)
-  const canonical = `https://www.ashwinjames.com${pathname === '/' ? '/' : pathname}`
+  html = html.replace(/<meta\s+property="og:(title|description)"\s+content="[^"]*"\s*\/>/gi, (_, field) => `<meta property="og:${field}" content="${escapeHtml(field === 'title' ? title : description)}" />`)
+  if (pathname === '/404') html = html.replace('</head>', '    <meta name="robots" content="noindex,follow" />\n  </head>')
+  html = html.replace(/<meta\s+property="og:type"\s+content="[^"]*"\s*\/>/i, `<meta property="og:type" content="${openGraphType(pathname)}" />`)
+  const canonical = canonicalUrl(pathname)
   html = html.replace(/<meta\s+property="og:url"\s+content="[^"]*"\s*\/>/i, `<meta property="og:url" content="${canonical}" />`)
   if (/<link\s+rel="canonical"/i.test(html)) {
     html = html.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/>/i, `<link rel="canonical" href="${canonical}" />`)
@@ -45,3 +46,5 @@ for (const [pathname, metadata] of Object.entries(allRouteMeta)) {
 }
 
 console.log(`Prerendered full HTML for ${Object.keys(allRouteMeta).length} routes.`)
+
+fs.writeFileSync(path.join(distDir, '404.html'), await buildPage('/404', notFoundMeta), 'utf8')

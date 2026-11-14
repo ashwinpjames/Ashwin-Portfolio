@@ -344,7 +344,7 @@ It is, "How efficiently did our marketing turn advertising spend into valuable c
 
 That shift in thinking is what makes performance marketing a business discipline rather than simply an advertising activity.
 
-If you are looking for a structured approach to paid acquisition, conversion tracking, lead generation, and campaign optimization, you can explore [performance marketing specialist](https://ashwinjames.com/) services.
+If you are looking for a structured approach to paid acquisition, conversion tracking, lead generation, and campaign optimization, you can explore [performance marketing specialist](https://www.ashwinjames.com/) services.
 
 ## About the Author: Ashwin James
 
@@ -354,6 +354,6 @@ His approach focuses on connecting advertising activity with measurable business
 
 ## Related Articles
 
-* [Performance Marketing Services](https://ashwinjames.com/services/performance-marketing)
-* [Performance Marketing Case Studies](https://ashwinjames.com/case-studies)
-* [Performance Marketing Resources](https://ashwinjames.com/resources)
+* [Performance Marketing Services](https://www.ashwinjames.com/services/performance-marketing-services)
+* [Performance Marketing Case Studies](https://www.ashwinjames.com/case-studies)
+* [Performance Marketing Resources](https://www.ashwinjames.com/resources)

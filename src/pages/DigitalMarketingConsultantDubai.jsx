@@ -137,7 +137,7 @@ export default function DigitalMarketingConsultantDubai() {
       <div className="container">
         <div className="lg-heading"><p className="lg-eyebrow">Related Services</p><h2>Connect the Areas That Need Attention</h2><p>Explore relevant services and resources for specific parts of the customer journey.</p></div>
         <div className="lg-related">
-          <div><Link to="/services/performance-marketing-specialist">Performance Marketing Services</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/cro">Conversion Optimisation</Link><Link to="/services/hubspot">HubSpot CRM</Link><Link to="/services/seo">SEO</Link></div>
+          <div><Link to="/services/performance-marketing-services">Performance Marketing Services</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/cro">Conversion Optimisation</Link><Link to="/services/hubspot-crm-integration">HubSpot CRM</Link><Link to="/services/seo">SEO</Link></div>
         </div>
       </div>
     </section>

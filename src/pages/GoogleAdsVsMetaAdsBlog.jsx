@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-ads-vs-meta-ads.md?raw'
 
@@ -15,11 +14,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Google Ads vs Meta Ads for Lead Generation: Which Is Better for UAE Businesses?',
   description: 'A practical comparison of Google Ads vs Meta Ads for lead generation, covering intent, creative, lead quality, budgets, measurement and UAE use cases.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/google-ads-vs-meta-ads',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-ads-vs-meta-ads',
   keywords: 'Google Ads vs Meta Ads, Google Ads UAE, Meta Ads UAE',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -72,13 +71,7 @@ function MetricCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="google-meta-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="google-meta-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function GoogleAdsVsMetaAdsBlog() {
-  useEffect(() => {
-    document.title = 'Google Ads vs Meta Ads for Lead Generation | UAE Guide | Ashwin James'
-    const description = 'Compare Google Ads vs Meta Ads for lead generation in the UAE. Learn how intent, creative, lead quality, budgets and measurement should shape the channel decision.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/google-ads-vs-meta-ads')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
     <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">GOOGLE ADS · META ADS · LEAD GENERATION</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div><h1>Google Ads vs Meta Ads for Lead Generation: Which Is Better for UAE Businesses?</h1><p className="pms-lede">A practical comparison of search intent, audience behaviour, creative, lead quality, budgets and measurement so you can choose the acquisition channel around how customers actually buy.</p><div className="pms-links"><Link to="/services/google-ads">Google Ads</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/blog/google-ads-lead-generation-uae">Google Ads lead generation</Link><Link to="/blog/meta-ads-lead-generation-uae">Meta Ads lead generation</Link></div></header>

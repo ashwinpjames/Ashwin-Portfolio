@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-ads-clicks-not-turning-into-leads.md?raw'
 
@@ -15,11 +14,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Why Google Ads Clicks Are Not Turning Into Leads',
   description: 'A practical guide to diagnosing why Google Ads clicks are not turning into leads, covering search intent, landing pages, offers, forms, conversion tracking, lead quality and optimisation.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/google-ads-clicks-not-turning-into-leads',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-ads-clicks-not-turning-into-leads',
   keywords: 'Google Ads conversion, Google Ads lead generation, Google Ads clicks not converting',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -72,13 +71,7 @@ function MetricCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="ads-conversion-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="ads-conversion-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function GoogleAdsClicksNotTurningIntoLeadsBlog() {
-  useEffect(() => {
-    document.title = 'Why Google Ads Clicks Are Not Turning Into Leads | Ashwin James'
-    const description = 'Learn why Google Ads clicks are not turning into leads and how to diagnose search intent, landing pages, offers, forms, conversion tracking and lead quality.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/google-ads-clicks-not-turning-into-leads')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">

@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-ads-conversion-tracking.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Google Ads Conversion Tracking: What Businesses Need to Measure',
   description: 'A practical guide to Google Ads conversion tracking, including what to measure, how GA4 and Google Tag Manager fit together, and how to diagnose tracking problems.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/google-ads-conversion-tracking',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-ads-conversion-tracking',
   keywords: 'Google Ads conversion tracking, conversion tracking, GA4, Google Tag Manager',
 }
 
@@ -187,17 +186,7 @@ function FAQSection() {
 }
 
 export default function GoogleAdsConversionTrackingBlog() {
-  useEffect(() => {
-    document.title = 'Google Ads Conversion Tracking: What Businesses Need to Measure | Ashwin James'
-    const description = 'Learn what Google Ads conversion tracking should measure, how GA4 and Google Tag Manager fit together, and how to diagnose tracking problems.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/google-ads-conversion-tracking')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, '').replace(/\n## FAQ[\s\S]*$/, ''))
 
@@ -212,7 +201,7 @@ export default function GoogleAdsConversionTrackingBlog() {
         <h1>Google Ads Conversion Tracking: What Businesses Need to Measure</h1>
         <p className="pms-lede">A practical guide to measuring the actions that matter, connecting Google Ads with GA4 and Google Tag Manager, and turning conversion data into better acquisition decisions.</p>
         <div className="pms-links">
-          <Link to="/services/performance-marketing">Performance Marketing</Link>
+          <Link to="/services/performance-marketing-services">Performance Marketing</Link>
           <Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link>
           <Link to="/resources/lead-quality-framework">Lead Quality Framework</Link>
         </div>
@@ -240,7 +229,7 @@ export default function GoogleAdsConversionTrackingBlog() {
         <span>GOOGLE ADS CONVERSION TRACKING</span>
         <h2>Measure the business outcome, not just the event.</h2>
         <p>Better tracking starts with a clear definition of value and ends with data that can explain which acquisition activity produces customers.</p>
-        <div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div>
+        <div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div>
       </footer>
     </article>
   </main>

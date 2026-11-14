@@ -98,6 +98,6 @@ export default function LeadGenerationService() {
 
     <section className="lg-cta"><div className="container"><p className="lg-eyebrow">Let’s Build the System Behind the Leads</p><h2>Build a lead generation system your sales team can actually use.</h2><p>A focused acquisition system built around qualified demand, measurable performance and commercial outcomes.</p><a className="lg-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Start a Conversation <span>↗</span></a></div></section>
 
-    <section className="lg-related"><div className="container"><p className="lg-eyebrow">Related Services</p><div><Link to="/services/google-ads">Google Ads</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/services/hubspot">HubSpot CRM & Automation</Link></div></div></section>
+    <section className="lg-related"><div className="container"><p className="lg-eyebrow">Related Services</p><div><Link to="/services/google-ads">Google Ads</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/services/hubspot-crm-integration">HubSpot CRM & Automation</Link></div></div></section>
   </main>
 }

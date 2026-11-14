@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/meta-ads-campaign-structure.md?raw'
 
@@ -15,11 +14,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'How to Structure Meta Ads Campaigns for Lead Generation',
   description: 'A practical guide to Meta Ads campaign structure for lead generation, including Facebook Ads campaign structure, ad creative testing and Facebook Ads testing.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/meta-ads-campaign-structure',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/meta-ads-campaign-structure',
   keywords: 'Meta Ads campaign structure, Facebook Ads campaign structure, ad creative testing, Facebook Ads testing',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -72,13 +71,7 @@ function MetricCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="meta-structure-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="meta-structure-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function MetaAdsCampaignStructureBlog() {
-  useEffect(() => {
-    document.title = 'How to Structure Meta Ads Campaigns for Lead Generation | Ashwin James'
-    const description = 'Learn how to structure Meta Ads campaigns for lead generation, including Facebook Ads campaign structure, ad creative testing and Facebook Ads testing.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/meta-ads-campaign-structure')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
     <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">META ADS · CAMPAIGN STRUCTURE · LEAD GENERATION</p><div className="pms-meta"><span>Meta Ads</span><span>•</span><span>14 min read</span><span>•</span><span>September 15, 2026</span></div><h1>How to Structure Meta Ads Campaigns for Lead Generation</h1><p className="pms-lede">A practical framework for structuring campaigns, ad sets and creative tests so your advertising account produces useful learning instead of unnecessary complexity.</p><div className="pms-links"><Link to="/services/meta-ads">Meta Ads</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/blog/meta-ads-lead-generation-uae">Meta Ads lead generation</Link><Link to="/resources/meta-ads-launch-checklist">Meta Ads Launch Checklist</Link></div></header>

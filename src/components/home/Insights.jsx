@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import { blogPosts } from '../../data/blog.js'
 
 export default function Insights() {
-  const publishedPosts = blogPosts.filter((post) => post.date !== 'Coming soon').slice(0, 3)
+  const featuredSlugs = ['improve-lead-quality-connection-rates', 'crm-data-for-paid-ads', 'cpm-explained']
+  const publishedPosts = featuredSlugs.map((slug) => blogPosts.find((post) => post.slug === slug && post.date !== 'Coming soon')).filter(Boolean)
 
   return <section id="insights" className="home-section insights-section">
     <div className="container">

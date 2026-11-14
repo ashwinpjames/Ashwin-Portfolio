@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/paid-advertising-roi.md?raw'
 
@@ -15,11 +14,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'How to Measure the Real ROI of Paid Advertising',
   description: 'A practical framework for measuring paid advertising ROI beyond clicks, leads and ROAS by connecting advertising spend with qualification, customers, revenue and contribution.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/paid-advertising-roi',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/paid-advertising-roi',
   keywords: 'paid advertising ROI, marketing ROI',
 }
 
@@ -101,17 +100,7 @@ function FAQSection() {
 }
 
 export default function PaidAdvertisingRoiBlog() {
-  useEffect(() => {
-    document.title = 'How to Measure Paid Advertising ROI | Ashwin James'
-    const description = 'A practical framework for measuring paid advertising ROI beyond clicks, leads and ROAS by connecting advertising spend with qualification, customers, revenue and contribution.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/paid-advertising-roi')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '').replace(/url[^]*/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
@@ -126,7 +115,7 @@ export default function PaidAdvertisingRoiBlog() {
         <div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div>
         <h1>How to Measure the Real ROI of Paid Advertising</h1>
         <p className="pms-lede">A practical framework for measuring advertising value beyond clicks, leads and ROAS by connecting spend with qualification, customers, revenue and contribution.</p>
-        <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/conversion-tracking-performance-marketing">Conversion Tracking</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link></div>
+        <div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/conversion-tracking-performance-marketing">Conversion Tracking</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link></div>
       </header>
       <ValueChain />
       <div className="pms-article-grid">
@@ -135,7 +124,7 @@ export default function PaidAdvertisingRoiBlog() {
       </div>
       <ROIQuestions />
       <FAQSection />
-      <footer className="pms-cta"><span>PAID ADVERTISING ROI</span><h2>Make advertising measurement a business decision system.</h2><p>Connect spend, lead quality, CRM outcomes, customer value and contribution so the next budget decision is based on economics rather than dashboard vanity.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <footer className="pms-cta"><span>PAID ADVERTISING ROI</span><h2>Make advertising measurement a business decision system.</h2><p>Connect spend, lead quality, CRM outcomes, customer value and contribution so the next budget decision is based on economics rather than dashboard vanity.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

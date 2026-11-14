@@ -65,6 +65,6 @@ export default function WordPressDevelopmentService() {
 
     <section className="wp-cta"><div className="container"><p className="wp-eyebrow">Need WordPress support?</p><h2>Let's look at what your website actually needs.</h2><p>Book 15 minutes and we can identify the technical, performance or marketing improvement worth addressing first.</p><a className="wp-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Start a Free WordPress Review <span>↗</span></a></div></section>
 
-    <section className="wp-related"><div className="container"><p className="wp-eyebrow">Related services</p><div className="wp-related-grid"><Link to="/services/website-development"><span>Website Development</span><b>→</b></Link><Link to="/services/landing-page-optimisation"><span>Landing Page Optimisation</span><b>→</b></Link><Link to="/services/cro"><span>Conversion Rate Optimisation</span><b>→</b></Link></div></div></section>
+    <section className="wp-related"><div className="container"><p className="wp-eyebrow">Related services</p><div className="wp-related-grid"><Link to="/services/website-development"><span>Website Development</span><b>→</b></Link><Link to="/services/cro"><span>Landing Page Optimisation</span><b>→</b></Link><Link to="/services/cro"><span>Conversion Rate Optimisation</span><b>→</b></Link></div></div></section>
   </main>
 }

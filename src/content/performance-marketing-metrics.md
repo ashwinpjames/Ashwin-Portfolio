@@ -365,7 +365,7 @@ But none of these numbers should be viewed in isolation.
 
 The real measurement system is the relationship between them and the business economics behind them.
 
-If you want to understand how these metrics fit into a broader acquisition and optimisation system, you can explore the work of a [Performance Marketing Specialist](https://ashwinjames.com/) focused on connecting paid acquisition, conversion tracking, lead quality and business outcomes.
+If you want to understand how these metrics fit into a broader acquisition and optimisation system, you can explore the work of a [Performance Marketing Specialist](https://www.ashwinjames.com/) focused on connecting paid acquisition, conversion tracking, lead quality and business outcomes.
 
 ## About the Author
 
@@ -375,7 +375,7 @@ His approach focuses on connecting marketing activity with measurable business o
 
 ## Related Articles
 
-* [Performance Marketing Strategy for a UAE Business](https://ashwinjames.com/blog/performance-marketing-strategy-uae)
-* [What Is Performance Marketing? A Dubai Business Guide](https://ashwinjames.com/blog/performance-marketing-dubai)
-* [Why Your Meta Ads Are Generating Leads but Not Sales](https://ashwinjames.com/blog/meta-ads-generating-leads-but-not-sales)
-* [Lead Generation Is About the Right Leads](https://ashwinjames.com/blog/lead-generation-right-leads)
+* [Performance Marketing Strategy for a UAE Business](https://www.ashwinjames.com/blog/performance-marketing-strategy-uae)
+* [What Is Performance Marketing? A Dubai Business Guide](https://www.ashwinjames.com/blog/performance-marketing-dubai)
+* [Why Your Meta Ads Are Generating Leads but Not Sales](https://www.ashwinjames.com/blog/meta-ads-generating-leads-but-not-sales)
+* [Lead Generation Is About the Right Leads](https://www.ashwinjames.com/blog/lead-generation-right-leads)

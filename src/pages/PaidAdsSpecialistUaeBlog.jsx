@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/paid-ads-specialist-uae.md?raw'
 
@@ -7,11 +6,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Paid Ads Specialist in UAE: What They Do, What They Manage and How to Choose One',
   description: 'Learn what a paid ads specialist does, which platforms they manage, how paid advertising should be measured and how UAE businesses can choose the right specialist.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-09',
   dateModified: '2026-09-09',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/paid-ads-specialist-uae',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/paid-ads-specialist-uae',
   keywords: 'paid ads specialist, paid ads specialist UAE, paid advertising specialist UAE, PPC specialist UAE, Google Ads specialist UAE, Meta Ads specialist UAE, paid media specialist UAE, performance marketing specialist UAE, paid advertising consultant UAE',
 }
 
@@ -96,17 +95,7 @@ function MetricsGraphic() {
 }
 
 export default function PaidAdsSpecialistUaeBlog() {
-  useEffect(() => {
-    document.title = 'Paid Ads Specialist in UAE: What They Do and How to Choose One'
-    const description = 'Learn what a paid ads specialist does, which platforms they manage, how paid advertising should be measured and how UAE businesses can choose the right specialist.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/paid-ads-specialist-uae')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const html = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
 
@@ -120,11 +109,11 @@ export default function PaidAdsSpecialistUaeBlog() {
         <div className="paid-ads-meta"><span>Paid Advertising</span><span>•</span><span>10 min read</span><span>•</span><span>September 9, 2026</span></div>
         <h1>Paid Ads Specialist in UAE: What They Do, What They Manage and How to Choose One</h1>
         <p className="paid-ads-lede">A practical guide to paid advertising for UAE businesses, from Meta Ads and Google Ads to lead quality, CRM, sales and revenue.</p>
-        <div className="paid-ads-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/contact">Work with Ashwin</Link></div>
+        <div className="paid-ads-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/services/meta-ads">Meta Ads</Link><Link to="/contact">Work with Ashwin</Link></div>
       </header>
       <FunnelGraphic />
       <div className="paid-ads-content"><SpecialistGraphic /><div dangerouslySetInnerHTML={{ __html: html }} /><MetricsGraphic /></div>
-      <footer className="paid-ads-cta"><span>PAID ADS SPECIALIST · UAE</span><h2>Want paid advertising connected to real business outcomes?</h2><p>Let us look at your acquisition funnel, identify the biggest constraint and build a clearer path from paid traffic to qualified opportunities, customers and revenue.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <footer className="paid-ads-cta"><span>PAID ADS SPECIALIST · UAE</span><h2>Want paid advertising connected to real business outcomes?</h2><p>Let us look at your acquisition funnel, identify the biggest constraint and build a clearer path from paid traffic to qualified opportunities, customers and revenue.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

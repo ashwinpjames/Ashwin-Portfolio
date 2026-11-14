@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/performance-marketing-salary.md?raw'
 
@@ -92,25 +91,7 @@ function renderMarkdown(markdown) {
 }
 
 export default function PerformanceMarketingSalaryBlog() {
-  useEffect(() => {
-    document.title = 'Performance Marketing Salary in 2026: Dubai Career Guide | Ashwin James'
-    const description = 'Explore performance marketing salary in 2026, Dubai career opportunities, essential skills and how to grow your earning potential.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) {
-      tag = document.createElement('meta')
-      tag.name = 'description'
-      document.head.appendChild(tag)
-    }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.setAttribute('href', 'https://www.ashwinjames.com/blog/performance-marketing-salary')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
 
@@ -124,7 +105,7 @@ export default function PerformanceMarketingSalaryBlog() {
         <div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>10 min read</span><span>•</span><span>September 29, 2026</span></div>
         <h1>Is Performance Marketing a High Paying Career in 2026?</h1>
         <p className="pms-lede">A practical guide to performance marketing salary in Dubai, career progression, essential skills and the factors that can influence earning potential.</p>
-        <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-specialist-in-dubai">Performance Marketing Specialist</Link><Link to="/blog/performance-marketing-dubai">What Is Performance Marketing?</Link><Link to="/contact">Work with Ashwin</Link></div>
+        <div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/blog/performance-marketing-specialist-in-dubai">Performance Marketing Specialist</Link><Link to="/blog/performance-marketing-dubai">What Is Performance Marketing?</Link><Link to="/contact">Work with Ashwin</Link></div>
       </header>
       <div className="pms-article-grid">
         <aside className="pms-toc">
@@ -161,7 +142,7 @@ export default function PerformanceMarketingSalaryBlog() {
         <span>PERFORMANCE MARKETING CAREER</span>
         <h2>Build the skills that connect marketing activity to business outcomes.</h2>
         <p>Use practical campaign experience, analytics, CRM knowledge and measurable results to build a stronger performance marketing career.</p>
-        <div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div>
+        <div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div>
       </footer>
     </article>
   </main>

@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/meta-ads-targeting.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Meta Ads Targeting: Broad vs Detailed Targeting',
   description: 'A practical guide to Meta Ads targeting, comparing broad targeting and detailed targeting, with frameworks for audience testing, creative testing and lead quality.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/meta-ads-targeting',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/meta-ads-targeting',
   keywords: 'Meta Ads targeting, broad targeting Meta, audience targeting, ad creative testing, Facebook Ads testing',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -73,13 +72,7 @@ function ComparisonCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="meta-targeting-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="meta-targeting-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function MetaAdsTargetingBlog() {
-  useEffect(() => {
-    document.title = 'Meta Ads Targeting: Broad vs Detailed Targeting | Ashwin James'
-    const description = 'Learn how to choose between broad and detailed Meta Ads targeting, test audience hypotheses, use creative effectively and measure lead quality.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/meta-ads-targeting')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
     <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">META ADS · TARGETING · AUDIENCE STRATEGY</p><div className="pms-meta"><span>Meta Ads</span><span>•</span><span>14 min read</span><span>•</span><span>September 15, 2026</span></div><h1>Meta Ads Targeting: Broad vs Detailed Targeting</h1><p className="pms-lede">A practical framework for deciding when broad targeting makes sense, when detailed targeting adds useful control and how to test both without confusing audience strategy with creative strategy.</p><div className="pms-links"><Link to="/services/meta-ads">Meta Ads</Link><Link to="/blog/meta-ads-campaign-structure">Campaign Structure</Link><Link to="/blog/creative-is-the-new-targeting">Creative Is the New Targeting</Link><Link to="/resources/meta-ads-launch-checklist">Meta Ads Launch Checklist</Link></div></header>

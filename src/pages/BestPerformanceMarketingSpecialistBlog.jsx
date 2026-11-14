@@ -47,7 +47,7 @@ export default function BestPerformanceMarketingSpecialistBlog() {
         <div className="pms-meta"><span>Marketing Strategy</span><span>•</span><span>Lead Generation</span><span>•</span><span>Dubai, UAE</span></div>
         <h1>Best Performance Marketing Specialist: How to Choose the Right Expert in Dubai</h1>
         <p className="pms-lede">Choosing the best performance marketing specialist is not simply about finding someone who can run advertisements. It is about finding a professional who can connect marketing spend with qualified opportunities and measurable business outcomes.</p>
-        <div className="pms-links"><Link to="/services/performance-marketing-specialist">Performance Marketing Services</Link><Link to="/case-studies/crm-sales-qualified-lead">CRM Case Study</Link><Link to="/contact">Contact Ashwin</Link></div>
+        <div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing Services</Link><Link to="/case-studies/crm-sales-qualified-lead">CRM Case Study</Link><Link to="/contact">Contact Ashwin</Link></div>
       </header>
 
       <section className="pms-funnel" aria-label="Performance marketing funnel">

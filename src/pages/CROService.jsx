@@ -86,6 +86,6 @@ export default function CROService() {
 
     <section className="cro-cta"><div className="container"><p className="cro-eyebrow">Make Your Existing Traffic Work Harder</p><h2>Improve the conversion system before simply buying more traffic.</h2><p>Build a clearer, lower friction journey that turns more of the right visitors into measurable business outcomes.</p><a className="cro-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Start a CRO Conversation <span>↗</span></a></div></section>
 
-    <section className="cro-related"><div className="container"><p className="cro-eyebrow">Related Services</p><div className="cro-related-grid"><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/services/website-development">Website Development</Link></div></div></section>
+    <section className="cro-related"><div className="container"><p className="cro-eyebrow">Related Services</p><div className="cro-related-grid"><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/services/website-development">Website Development</Link></div></div></section>
   </main>
 }

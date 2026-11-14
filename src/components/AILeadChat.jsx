@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { trackEnquiryEvent } from '../utils/analytics.js'
 import { whatsappUrl } from '../utils/contact.js'
 import '../styles/ai-lead-chat.css'
 
@@ -49,6 +50,7 @@ export default function AILeadChat() {
   const [error, setError] = useState('')
   const [emailStatus, setEmailStatus] = useState('')
   const messagesRef = useRef(null)
+  const sendingRef = useRef(false)
   const exitIntentTriggered = useRef(false)
   const dismissedByUser = useRef(false)
   const mountedAt = useRef(Date.now())
@@ -167,6 +169,8 @@ export default function AILeadChat() {
   }
 
   async function submitLead(submittedLead = lead) {
+    if (sendingRef.current) return
+    sendingRef.current = true
     setError('')
     setEmailStatus('sending')
     setComplete(true)
@@ -194,6 +198,7 @@ export default function AILeadChat() {
         templateParams,
         { publicKey: chatbotEmailJS.publicKey },
       )
+      trackEnquiryEvent('generate_lead', 'chatbot')
       setEmailStatus('sent')
       addAssistantMessage('All details are in! I’ll get back to you as soon as I can. You can ask more questions or contact me directly on WhatsApp below.')
     } catch (sendError) {
@@ -201,10 +206,13 @@ export default function AILeadChat() {
       setEmailStatus('failed')
       addAssistantMessage('I couldn’t send the email automatically, but your details are ready. Please use the WhatsApp button below to send them directly.')
       setError('Email notification failed. Please use the WhatsApp option to send your enquiry directly.')
+    } finally {
+      sendingRef.current = false
     }
   }
 
   function startOver() {
+    if (sendingRef.current) return
     setMessages([firstMessage, { role: 'assistant', content: questions[0].prompt }])
     setDraft('')
     setPhoneCountry('+971')
@@ -259,7 +267,7 @@ export default function AILeadChat() {
       {(review || complete) && <>
         <p className="ai-chat-email-status" role="status">{emailStatus === 'sending' ? 'Sending your enquiry by email…' : emailStatus === 'sent' ? 'Your enquiry has been emailed to Ashwin.' : emailStatus === 'failed' ? 'We couldn’t email your enquiry automatically. Please use the WhatsApp option below to send it directly.' : ''}</p>
         <a className="ai-chat-whatsapp" href={whatsappHref} target="_blank" rel="noreferrer">Send details to Ashwin on WhatsApp ↗</a>
-        {complete && <button type="button" className="ai-chat-restart" onClick={startOver}>Ask more / Start again</button>}
+        {complete && <button type="button" className="ai-chat-restart" disabled={emailStatus === 'sending'} onClick={startOver}>Ask more / Start again</button>}
       </>}
       {!review && !complete && <form className="ai-chat-form" onSubmit={submitMessage}>
         <label className="ai-chat-sr-only" htmlFor="ai-chat-input">{activeQuestion?.label || 'Your answer'}</label>

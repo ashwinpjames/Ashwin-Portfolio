@@ -23,11 +23,11 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'SEO Is No Longer Just About Keywords: How Search Engines and AI Understand Websites in 2026',
   description: 'SEO is evolving beyond keywords. Learn how search intent, entities, evidence, authority, topical relevance and AI powered search shape discoverability in 2026.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-08-24',
   dateModified: '2026-08-24',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/seo-ai-search-entity-authority-2026',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/seo-ai-search-entity-authority-2026',
 }
 
 const faqSchema = {

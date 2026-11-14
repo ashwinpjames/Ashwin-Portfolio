@@ -6,11 +6,11 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'There Are No Boring Topics, Only Boring Angles',
   description: 'A practical content strategy framework for turning one topic into multiple useful angles by starting with audience questions, tensions, objections, desires and intent.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-08-24',
   dateModified: '2026-08-24',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/content-angles-strategy',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/content-angles-strategy',
 }
 
 const faq = [

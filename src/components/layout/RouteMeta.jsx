@@ -1,27 +1,31 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { routeMeta } from '../../seo-meta.js'
+import { allRouteMeta, canonicalUrl, getPageMeta, normalizePath, openGraphType } from '../../seo.js'
 
-function setMeta(name, content) {
-  let element = document.head.querySelector(`meta[name="${name}"]`)
-  if (!element) { element = document.createElement('meta'); element.name = name; document.head.appendChild(element) }
+function setMeta(attribute, name, content) {
+  let element = document.head.querySelector(`meta[${attribute}="${name}"]`)
+  if (!element) {
+    element = document.createElement('meta')
+    element.setAttribute(attribute, name)
+    document.head.appendChild(element)
+  }
   element.content = content
-}
-
-function setCanonical(pathname) {
-  let element = document.head.querySelector('link[rel="canonical"]')
-  if (!element) { element = document.createElement('link'); element.rel = 'canonical'; document.head.appendChild(element) }
-  element.href = `https://www.ashwinjames.com${pathname === '/' ? '/' : pathname}`
 }
 
 export default function RouteMeta() {
   const { pathname } = useLocation()
   useEffect(() => {
-    const [title, description] = routeMeta[pathname] || ['Performance Marketing Specialist in UAE | Ashwin James', 'Ashwin James is a performance marketing specialist in the UAE focused on paid advertising, lead generation, analytics, conversion optimisation and measurable business growth.']
+    const [title, description] = getPageMeta(pathname)
     document.title = title
-    setMeta('description', description)
-    setMeta('theme-color', '#050816')
-    setCanonical(pathname)
+    setMeta('name', 'description', description)
+    setMeta('name', 'robots', allRouteMeta[normalizePath(pathname)] ? 'index,follow' : 'noindex,follow')
+    setMeta('property', 'og:type', openGraphType(pathname))
+    setMeta('property', 'og:title', title)
+    setMeta('property', 'og:description', description)
+    setMeta('property', 'og:url', canonicalUrl(pathname))
+    let canonical = document.head.querySelector('link[rel="canonical"]')
+    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
+    canonical.href = canonicalUrl(pathname)
   }, [pathname])
   return null
 }
