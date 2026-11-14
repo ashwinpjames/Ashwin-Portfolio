@@ -31,7 +31,7 @@ html { scroll-padding-top: 6rem; }
   outline-offset: 3px;
 }
 :where(.site-header,.site-footer,main) :where(a,button) {
-  transition-duration: var(--ux-motion);
+  transition: color var(--ux-motion), background-color var(--ux-motion), border-color var(--ux-motion), box-shadow var(--ux-motion);
 }
 :where(main) :where(.container) { min-width: 0; }
 :where(main) :where(.service-card,.case-card,.audience-card,.approach-card,.process-card,.insight-card,.resource-card) {
