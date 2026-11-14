@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/meta-ads-leads-no-sales.md?raw'
 
@@ -7,11 +6,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Why Your Meta Ads Are Generating Leads but Not Sales',
   description: "Meta Ads bringing in leads but not customers? A performance marketing specialist in UAE explains why cheap leads don't convert and how to fix it.",
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-09',
   dateModified: '2026-09-09',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/meta-ads-generating-leads-but-not-sales',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/meta-ads-generating-leads-but-not-sales',
   keywords: 'performance marketing specialist in UAE, Meta Ads lead quality, Meta Ads lead generation, Meta Ads sales funnel, customer acquisition cost',
 }
 
@@ -99,17 +98,7 @@ function MetricsGraphic() {
 }
 
 export default function MetaAdsLeadsNoSalesBlog() {
-  useEffect(() => {
-    document.title = "Meta Ads Generating Leads But No Sales? Here's Why | Performance Marketing Specialist in UAE"
-    const description = "Meta Ads bringing in leads but not customers? A performance marketing specialist in UAE explains why cheap leads don't convert and how to fix it."
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/meta-ads-generating-leads-but-not-sales')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   const [introAndOne, afterOne = ''] = renderedArticle.split('<h2>2. Why Cheap Leads')
@@ -128,7 +117,7 @@ export default function MetaAdsLeadsNoSalesBlog() {
         <div className="meta-sales-meta"><span>Meta Ads</span><span>•</span><span>7 min read</span><span>•</span><span>September 9, 2026</span></div>
         <h1>Why Your Meta Ads Are Generating Leads but Not Sales</h1>
         <p className="meta-sales-lede">Meta Ads bringing in leads but not customers? A performance marketing specialist in UAE explains why cheap leads don't convert and how to fix it.</p>
-        <div className="meta-sales-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div>
+        <div className="meta-sales-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div>
       </header>
 
       <FunnelGraphic />
@@ -154,7 +143,7 @@ export default function MetaAdsLeadsNoSalesBlog() {
         <span>PERFORMANCE MARKETING</span>
         <h2>Stop optimizing for cheap leads. Start optimizing for customers.</h2>
         <p>See how performance marketing connects advertising, lead quality, CRM data and sales outcomes into one measurable acquisition system.</p>
-        <div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Work with Ashwin</Link></div>
+        <div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Work with Ashwin</Link></div>
       </footer>
     </article>
   </main>

@@ -339,7 +339,7 @@ Each system has a job.
 
 The mistake is expecting one platform to answer every question.
 
-If you are working as a **[Performance Marketing Specialist](https://ashwinjames.com/)**, the real advantage comes from understanding how these measurement layers connect rather than memorising every report inside GA4.
+If you are working as a **[Performance Marketing Specialist](https://www.ashwinjames.com/)**, the real advantage comes from understanding how these measurement layers connect rather than memorising every report inside GA4.
 
 ## A simple weekly GA4 routine for performance marketers
 

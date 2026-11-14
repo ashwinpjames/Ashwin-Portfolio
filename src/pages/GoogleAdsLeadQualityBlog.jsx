@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-ads-lead-quality.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'How to Optimise Google Ads for Qualified Leads Instead of More Leads',
   description: 'Learn how to improve Google Ads lead quality by aligning search intent, ad messaging, landing pages, qualification, conversion tracking and CRM outcomes.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/google-ads-lead-quality',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-ads-lead-quality',
   keywords: 'Google Ads lead quality, qualified leads, conversion optimisation',
 }
 
@@ -188,29 +187,7 @@ function FAQSection() {
 }
 
 export default function GoogleAdsLeadQualityBlog() {
-  useEffect(() => {
-    document.title = 'How to Optimise Google Ads for Qualified Leads Instead of More Leads | Ashwin James'
-    const description = 'Learn how to improve Google Ads lead quality by aligning search intent, ad messaging, landing pages, qualification, conversion tracking and CRM outcomes.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) {
-      tag = document.createElement('meta')
-      tag.name = 'description'
-      document.head.appendChild(tag)
-    }
-    tag.setAttribute('content', description)
 
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/google-ads-lead-quality')
-
-    return () => {
-      document.title = 'Performance Marketing Specialist in UAE'
-    }
-  }, [])
 
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
 

@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/performance-marketing-strategy-uae.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'How to Build a Performance Marketing Strategy for a UAE Business',
   description: 'A practical guide to building a performance marketing strategy for a UAE business, covering objectives, audience, channels, conversion tracking, budgets, lead quality, CRM and optimisation.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-14',
   dateModified: '2026-09-14',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/performance-marketing-strategy-uae',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/performance-marketing-strategy-uae',
   keywords: 'performance marketing strategy, performance marketing UAE, digital advertising strategy',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -75,20 +74,14 @@ function DecisionFramework() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="pms-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="pms-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function PerformanceMarketingStrategyUaeBlog() {
-  useEffect(() => {
-    document.title = 'How to Build a Performance Marketing Strategy for a UAE Business'
-    const description = 'Learn how to build a performance marketing strategy for a UAE business, from objectives and audiences to channels, tracking, budgets, lead quality, CRM and optimisation.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/performance-marketing-strategy-uae')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
-    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · UAE · STRATEGY</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 14, 2026</span></div><h1>How to Build a Performance Marketing Strategy for a UAE Business</h1><p className="pms-lede">A practical framework for turning business objectives, customer insight, paid acquisition, conversion tracking and sales data into a measurable growth system.</p><div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-dubai">Performance Marketing in Dubai</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div></header>
+    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · UAE · STRATEGY</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 14, 2026</span></div><h1>How to Build a Performance Marketing Strategy for a UAE Business</h1><p className="pms-lede">A practical framework for turning business objectives, customer insight, paid acquisition, conversion tracking and sales data into a measurable growth system.</p><div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/blog/performance-marketing-dubai">Performance Marketing in Dubai</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div></header>
     <StrategyFlow />
     <div className="pms-article-grid"><aside className="pms-toc"><span>ON THIS PAGE</span><a href="#what-is-a-performance-marketing-strategy">What it is</a><a href="#start-with-the-business-objective">Business objective</a><a href="#understand-the-uae-customer-and-market">UAE customer and market</a><a href="#choose-channels-based-on-customer-behaviour">Channel strategy</a><a href="#set-up-conversion-tracking-properly">Conversion tracking</a><a href="#build-a-measurement-framework">Measurement</a><a href="#improve-lead-quality-not-just-lead-volume">Lead quality</a><a href="#connect-marketing-with-crm-and-sales">CRM and sales</a><a href="#a-practical-performance-marketing-strategy-framework-for-a-uae-business">Framework</a><a href="#conclusion">Conclusion</a></aside><div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} /></div>
     <MetricCards /><DecisionFramework /><FAQSection />
-    <footer className="pms-cta"><span>UAE PERFORMANCE MARKETING</span><h2>Build a strategy around the business, not the advertising dashboard.</h2><p>Define the outcome, understand the customer, measure meaningful conversions, connect marketing with sales, and scale what the economics support.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+    <footer className="pms-cta"><span>UAE PERFORMANCE MARKETING</span><h2>Build a strategy around the business, not the advertising dashboard.</h2><p>Define the outcome, understand the customer, measure meaningful conversions, connect marketing with sales, and scale what the economics support.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
   </article></main>
 }

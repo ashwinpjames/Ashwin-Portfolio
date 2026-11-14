@@ -35,11 +35,11 @@ const articleSchema = {
   '@type': 'Article',
   headline: '17 Marketing Psychology Concepts Every Modern Marketer Should Know',
   description: 'A practical guide to 17 marketing psychology concepts with examples, performance marketing applications, experiments and visual frameworks.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-08-24',
   dateModified: '2026-08-24',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/marketing-concepts-modern-marketers-should-know'
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/marketing-concepts-modern-marketers-should-know'
 }
 
 const faqSchema = {
@@ -75,7 +75,7 @@ export default function MarketingConceptsBlog() {
           <div className="marketing-concepts-meta"><span>Marketing Psychology</span><span>•</span><span>22 min read</span><span>•</span><span>August 24, 2026</span></div>
           <h1>17 Marketing Psychology Concepts Every Modern Marketer Should Know</h1>
           <p className="marketing-concepts-lede">Marketing gets more interesting when you stop asking only what should I run and start asking why a person might notice, remember, choose or act. Here are 17 concepts worth understanding, with practical examples and visual models.</p>
-          <div className="marketing-concepts-links"><Link to="/services/performance-growth-marketing">Performance Marketing</Link><Link to="/case-studies">View case studies</Link></div>
+          <div className="marketing-concepts-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/case-studies">View case studies</Link></div>
         </header>
 
         <div className="marketing-concepts-content">
@@ -136,7 +136,7 @@ export default function MarketingConceptsBlog() {
           <p>They use behavioural ideas to ask better questions: Why did people stop here? Why did they choose this option? Why did they remember this message? Why did they abandon the form?</p>
           <p>That mindset is especially useful in performance marketing because the feedback loop is measurable. A behavioural hypothesis can become a creative test, landing page experiment or funnel change, and the result can be connected to the commercial outcome.</p>
 
-          <div className="marketing-concepts-cta"><h2>Use psychology to improve decisions, not to replace them.</h2><p>The goal is not to find a magic trigger. It is to understand people well enough to create clearer offers, better experiences and stronger experiments.</p><div><Link to="/services/performance-growth-marketing">Explore performance marketing</Link><Link to="/blog">Read more insights</Link></div></div>
+          <div className="marketing-concepts-cta"><h2>Use psychology to improve decisions, not to replace them.</h2><p>The goal is not to find a magic trigger. It is to understand people well enough to create clearer offers, better experiences and stronger experiments.</p><div><Link to="/services/performance-marketing-services">Explore performance marketing</Link><Link to="/blog">Read more insights</Link></div></div>
 
           <h2>Sources and research notes</h2>
           <div className="marketing-concepts-sources">

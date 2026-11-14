@@ -6,11 +6,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'CTR Explained: Why This One Metric Can Make or Break Your Ad Campaign',
   description: "CTR looks simple but gets misread constantly. Learn what click-through rate actually measures, why it matters, and how to improve it the right way.",
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-08-31',
   dateModified: '2026-08-31',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/ctr-explained',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/ctr-explained',
 }
 
 const faq = [
@@ -134,7 +134,7 @@ export default function CTRExplainedBlog() {
         <div className="ctr-blog-meta"><span>Performance Marketing</span><span>•</span><span>10 min read</span><span>•</span><span>August 31, 2026</span></div>
         <h1>CTR Explained: Why This One Metric Can Make or Break Your Ad Campaign</h1>
         <p className="ctr-blog-lede">CTR looks simple but gets misread constantly. Learn what click-through rate actually measures, why it matters, what high and low CTR really indicate, and how to improve it without losing sight of conversions.</p>
-        <div className="ctr-blog-links"><Link to="/services/performance-growth-marketing">Performance Marketing</Link><Link to="/resources">Explore resources</Link></div>
+        <div className="ctr-blog-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/resources">Explore resources</Link></div>
       </header>
       <section className="ctr-visual-grid" aria-label="CTR visual summary">
         {visuals.map(item => <VisualCard key={item.label} item={item} />)}

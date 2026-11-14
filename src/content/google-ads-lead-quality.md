@@ -181,7 +181,7 @@ Google's current documentation describes enhanced conversions for leads as an up
 
 This does not mean every business needs a complex data pipeline. It means the closer your measurable conversion signal is to the actual business outcome, the more useful your optimisation can become.
 
-A useful [Performance Marketing Specialist](https://ashwinjames.com/) should therefore look beyond platform metrics and understand how acquisition data connects with qualification, sales and revenue.
+A useful [Performance Marketing Specialist](https://www.ashwinjames.com/) should therefore look beyond platform metrics and understand how acquisition data connects with qualification, sales and revenue.
 
 ## 7. Use conversion values when lead quality differs materially
 

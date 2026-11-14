@@ -320,7 +320,7 @@ A strong conversion tracking system has several characteristics.
 
 **It is actionable.** The data helps determine what to change in campaigns, creative, landing pages, offers or sales processes.
 
-This is the standard I would expect from a modern [Performance Marketing Specialist](https://ashwinjames.com/) working with paid acquisition: not simply producing a report, but building a measurement system that makes the next decision clearer.
+This is the standard I would expect from a modern [Performance Marketing Specialist](https://www.ashwinjames.com/) working with paid acquisition: not simply producing a report, but building a measurement system that makes the next decision clearer.
 
 ## Conversion tracking and the relationship between marketing and sales
 

@@ -20,11 +20,11 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Steal Like an Artist: What Alex Hormozi’s Meta Ads Strategy Reveals About Creative Targeting',
   description: 'An analysis of Alex Hormozi’s Meta Ads creative strategy, business specific callouts, creative volume, format diversity and the role of Andromeda.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-08-21',
   dateModified: '2026-08-21',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/hormozi-meta-ads-strategy'
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/hormozi-meta-ads-strategy'
 }
 
 const faqSchema = {

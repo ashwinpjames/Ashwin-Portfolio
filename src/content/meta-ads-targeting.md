@@ -411,7 +411,7 @@ Broad targeting can be an efficient starting point when the market is large enou
 
 The strongest campaigns usually connect audience strategy with **ad creative testing**, a clear conversion event and downstream quality measurement. That is why **Facebook Ads testing** should be built around one decision at a time rather than a pile of audience settings and creative variations.
 
-When you are unsure which variables should be controlled and which should be left to the system, a [Performance Marketing Specialist](https://ashwinjames.com/) can help build the testing and measurement framework around the campaign.
+When you are unsure which variables should be controlled and which should be left to the system, a [Performance Marketing Specialist](https://www.ashwinjames.com/) can help build the testing and measurement framework around the campaign.
 
 ## Frequently asked questions
 

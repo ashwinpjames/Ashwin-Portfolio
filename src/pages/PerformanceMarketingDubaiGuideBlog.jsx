@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/performance-marketing-dubai-guide.md?raw'
 import '../styles/performance-marketing-specialist-blog.css'
@@ -17,11 +16,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'What Is Performance Marketing? A Dubai Business Guide',
   description: 'Learn what performance marketing is, how it works, which metrics matter, and how Dubai businesses can build measurable acquisition campaigns.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-14',
   dateModified: '2026-09-14',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/performance-marketing-dubai',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/performance-marketing-dubai',
   keywords: 'performance marketing, performance marketing Dubai, digital performance marketing, performance marketing specialist',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -72,19 +71,13 @@ function MetricCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="pmd-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="pmd-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function PerformanceMarketingDubaiGuideBlog() {
-  useEffect(() => {
-    document.title = 'What Is Performance Marketing? A Dubai Business Guide'
-    const description = 'Learn what performance marketing is, how Google Ads and Meta Ads work, which KPIs matter, and how Dubai businesses can build measurable campaigns.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/performance-marketing-dubai')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
-    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · DUBAI · GROWTH</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>10 min read</span><span>•</span><span>September 14, 2026</span></div><h1>What Is Performance Marketing? A Dubai Business Guide</h1><p className="pms-lede">A practical guide to measurable acquisition, campaign economics, conversion tracking and the metrics Dubai businesses should actually use to evaluate marketing.</p><div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/resources">Marketing Resources</Link><Link to="/contact">Work with Ashwin</Link></div></header>
+    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · DUBAI · GROWTH</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>10 min read</span><span>•</span><span>September 14, 2026</span></div><h1>What Is Performance Marketing? A Dubai Business Guide</h1><p className="pms-lede">A practical guide to measurable acquisition, campaign economics, conversion tracking and the metrics Dubai businesses should actually use to evaluate marketing.</p><div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/resources">Marketing Resources</Link><Link to="/contact">Work with Ashwin</Link></div></header>
     <FunnelGraphic />
     <div className="pms-article-grid"><aside className="pms-toc"><span>ON THIS PAGE</span><a href="#what-is-performance-marketing">What it is</a><a href="#how-does-performance-marketing-work">How it works</a><a href="#performance-marketing-vs-traditional-digital-marketing">Performance vs digital</a><a href="#what-are-the-most-important-performance-marketing-metrics">Metrics</a><a href="#why-conversion-tracking-matters-in-dubai-campaigns">Tracking</a><a href="#a-practical-performance-marketing-framework-for-dubai-businesses">Framework</a><a href="#common-performance-marketing-mistakes">Mistakes</a><a href="#frequently-asked-questions">FAQ</a></aside><div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} /></div>
     <MetricCards /><FAQSection />
-    <footer className="pms-cta"><span>DUBAI PERFORMANCE MARKETING</span><h2>Do not optimize the dashboard. Optimize the business.</h2><p>Connect acquisition, tracking, lead quality, sales and revenue before deciding where the next marketing dirham should go.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+    <footer className="pms-cta"><span>DUBAI PERFORMANCE MARKETING</span><h2>Do not optimize the dashboard. Optimize the business.</h2><p>Connect acquisition, tracking, lead quality, sales and revenue before deciding where the next marketing dirham should go.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
   </article></main>
 }

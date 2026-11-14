@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/lead-quality-connection-rates.md?raw'
 
@@ -161,26 +160,7 @@ function FAQSection() {
 }
 
 export default function LeadQualityConnectionRatesBlog() {
-  useEffect(() => {
-    document.title = pageTitle
-    let description = document.querySelector('meta[name="description"]')
-    if (!description) {
-      description = document.createElement('meta')
-      description.name = 'description'
-      document.head.appendChild(description)
-    }
-    description.setAttribute('content', pageDescription)
 
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.setAttribute('href', pageUrl)
-
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
 
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
 

@@ -552,7 +552,7 @@ The deeper lesson is broader than either platform.
 
 That is where CRM data becomes more than reporting data. It becomes decision data.
 
-For marketers building acquisition systems around measurable business outcomes, the role of a [Performance Marketing Specialist](https://ashwinjames.com/) sits at the intersection of paid media, analytics, CRM and sales feedback.
+For marketers building acquisition systems around measurable business outcomes, the role of a [Performance Marketing Specialist](https://www.ashwinjames.com/) sits at the intersection of paid media, analytics, CRM and sales feedback.
 
 ## Frequently asked questions
 

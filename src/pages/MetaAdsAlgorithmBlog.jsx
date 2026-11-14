@@ -35,7 +35,7 @@ export default function MetaAdsAlgorithmBlog() {
     headline: "How Meta's Ad Algorithm Actually Works in 2026",
     description: "A structured breakdown of Meta Ads retrieval, ranking and auction mechanics for performance marketers.",
     author: { '@type': 'Person', name: 'Ashwin James' },
-    mainEntityOfPage: 'https://ashwinjames.com/blog/how-meta-ads-algorithm-works',
+    mainEntityOfPage: 'https://www.ashwinjames.com/blog/how-meta-ads-algorithm-works',
   }
 
   const faqSchema = {

@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-ads-lead-generation-uae.md?raw'
 
@@ -15,11 +14,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Google Ads for Lead Generation: A Practical Guide for UAE Businesses',
   description: 'A practical guide to Google Ads lead generation for UAE businesses, covering search intent, campaign structure, keywords, landing pages, tracking, lead quality and optimisation.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/google-ads-lead-generation-uae',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-ads-lead-generation-uae',
   keywords: 'Google Ads lead generation, Google Search Ads UAE',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -72,13 +71,7 @@ function MetricCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="google-ads-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="google-ads-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function GoogleAdsLeadGenerationUaeBlog() {
-  useEffect(() => {
-    document.title = 'Google Ads for Lead Generation: A Practical Guide for UAE Businesses | Ashwin James'
-    const description = 'Learn how UAE businesses can use Google Ads for lead generation, from search intent and keywords to landing pages, tracking, lead quality and optimisation.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/google-ads-lead-generation-uae')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
     <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">GOOGLE ADS · LEAD GENERATION · UAE</p><div className="pms-meta"><span>Google Ads</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div><h1>Google Ads for Lead Generation: A Practical Guide for UAE Businesses</h1><p className="pms-lede">A practical framework for turning high intent searches into qualified enquiries by connecting keywords, ads, landing pages, tracking and sales feedback.</p><div className="pms-links"><Link to="/services/google-ads">Google Ads</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/blog/performance-marketing-strategy-uae">UAE Performance Marketing Strategy</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link></div></header>

@@ -340,13 +340,13 @@ This is the difference between simply running advertisements and building a perf
 
 ## The Role of a Performance Marketing Specialist
 
-A strong [Performance Marketing Specialist](https://ashwinjames.com/) should think beyond campaign setup.
+A strong [Performance Marketing Specialist](https://www.ashwinjames.com/) should think beyond campaign setup.
 
 The role can involve strategy, audience research, paid media, creative testing, conversion tracking, landing page analysis, CRM integration, lead quality, budget allocation, reporting, experimentation, and revenue analysis.
 
 The specialist's job is not simply to make an advertising dashboard look better. The deeper responsibility is to help connect marketing activity with the commercial outcome the business actually cares about.
 
-You can also explore the existing [performance marketing service](/services/performance-marketing) if you want to understand how paid acquisition, conversion optimisation, analytics, and business outcomes can be connected.
+You can also explore the existing [performance marketing service](/services/performance-marketing-services) if you want to understand how paid acquisition, conversion optimisation, analytics, and business outcomes can be connected.
 
 ## Frequently Asked Questions
 

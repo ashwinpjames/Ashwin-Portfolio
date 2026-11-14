@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/customer-acquisition-cost-vs-cpl.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'What Is Customer Acquisition Cost and Why Does It Matter More Than CPL?',
   description: 'Understand customer acquisition cost, CAC vs CPL, why a lower CPL can produce a higher CAC, and how to connect paid acquisition with customer outcomes.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/customer-acquisition-cost-vs-cpl',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/customer-acquisition-cost-vs-cpl',
   keywords: 'customer acquisition cost, CAC vs CPL, CAC, CPL, customer acquisition',
 }
 
@@ -102,17 +101,7 @@ function FAQSection() {
 }
 
 export default function CustomerAcquisitionCostVsCplBlog() {
-  useEffect(() => {
-    document.title = 'Customer Acquisition Cost: Why CAC Matters More Than CPL | Ashwin James'
-    const description = 'Understand customer acquisition cost, CAC vs CPL, why a lower CPL can produce a higher CAC, and how to connect paid acquisition with customer outcomes.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/customer-acquisition-cost-vs-cpl')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
 
@@ -126,7 +115,7 @@ export default function CustomerAcquisitionCostVsCplBlog() {
         <div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div>
         <h1>What Is Customer Acquisition Cost and Why Does It Matter More Than CPL?</h1>
         <p className="pms-lede">A low CPL can make a campaign look efficient while the business still struggles to acquire customers profitably. This guide explains why customer acquisition cost matters, how CAC differs from CPL, and how to connect paid acquisition with customer outcomes.</p>
-        <div className="pms-links"><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/cost-per-lead-vs-cost-per-customer">Cost Per Lead vs Cost Per Customer</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link><Link to="/services/performance-marketing">Performance Marketing</Link></div>
+        <div className="pms-links"><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/cost-per-lead-vs-cost-per-customer">Cost Per Lead vs Cost Per Customer</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link><Link to="/services/performance-marketing-services">Performance Marketing</Link></div>
       </header>
       <AcquisitionFlow />
       <div className="pms-article-grid">
@@ -135,7 +124,7 @@ export default function CustomerAcquisitionCostVsCplBlog() {
       </div>
       <MetricCards />
       <FAQSection />
-      <footer className="pms-cta"><span>CAC · CPL · CUSTOMER ECONOMICS</span><h2>Optimise for the customer, diagnose with the lead.</h2><p>Connect paid acquisition, lead quality, CRM outcomes and customer economics so campaign decisions reflect the result the business actually needs.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <footer className="pms-cta"><span>CAC · CPL · CUSTOMER ECONOMICS</span><h2>Optimise for the customer, diagnose with the lead.</h2><p>Connect paid acquisition, lead quality, CRM outcomes and customer economics so campaign decisions reflect the result the business actually needs.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

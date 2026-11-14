@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/why-attribution-matters-performance-marketing.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Why Attribution Matters in Performance Marketing',
   description: 'Understand marketing attribution, attribution models and how attribution should influence performance marketing decisions.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/why-attribution-matters-performance-marketing',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/why-attribution-matters-performance-marketing',
   keywords: 'marketing attribution, attribution models, performance marketing',
 }
 
@@ -88,17 +87,7 @@ function renderMarkdown(markdown) {
 }
 
 export default function MarketingAttributionBlog() {
-  useEffect(() => {
-    document.title = 'Why Attribution Matters in Performance Marketing | Ashwin James'
-    const description = 'Understand marketing attribution, attribution models and how attribution should influence performance marketing decisions.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/why-attribution-matters-performance-marketing')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '').replace(/url[^]*/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
@@ -119,7 +108,7 @@ export default function MarketingAttributionBlog() {
         <aside className="pms-toc"><span>ON THIS PAGE</span><a href="#what-marketing-attribution-actually-means">What attribution means</a><a href="#why-attribution-matters-in-performance-marketing">Why it matters</a><a href="#attribution-models-the-main-approaches-marketers-should-understand">Attribution models</a><a href="#why-no-attribution-model-should-be-treated-as-absolute-truth">Why models are not truth</a><a href="#attribution-and-the-difference-between-conversion-and-business-outcome">Business outcomes</a><a href="#attribution-vs-incrementality">Attribution vs incrementality</a><a href="#a-practical-attribution-framework-for-performance-marketers">Practical framework</a><a href="#conclusion">Conclusion</a></aside>
         <div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} />
       </div>
-      <footer className="pms-cta"><span>MARKETING ATTRIBUTION</span><h2>Measure the journey, not just the final click.</h2><p>Use attribution as a decision framework while connecting acquisition data with lead quality, customers and business outcomes.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <footer className="pms-cta"><span>MARKETING ATTRIBUTION</span><h2>Measure the journey, not just the final click.</h2><p>Use attribution as a decision framework while connecting acquisition data with lead quality, customers and business outcomes.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

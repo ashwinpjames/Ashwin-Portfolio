@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/performance-marketing-metrics.md?raw'
 
@@ -13,8 +12,8 @@ const faq = [
 const articleSchema = {
   '@context': 'https://schema.org', '@type': 'BlogPosting', headline: 'What Should You Measure in Performance Marketing?',
   description: 'A practical guide to performance marketing metrics including CAC, CPL, ROAS, CPA and conversion rate, and how to connect them to business outcomes.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' }, publisher: { '@type': 'Person', name: 'Ashwin James' },
-  datePublished: '2026-09-14', dateModified: '2026-09-14', mainEntityOfPage: 'https://ashwinjames.com/blog/performance-marketing-metrics',
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' }, publisher: { '@type': 'Person', name: 'Ashwin James' },
+  datePublished: '2026-09-14', dateModified: '2026-09-14', mainEntityOfPage: 'https://www.ashwinjames.com/blog/performance-marketing-metrics',
   keywords: 'performance marketing metrics, CAC, CPL, ROAS, CPA, conversion rate',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -69,20 +68,14 @@ function DecisionFramework() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="pms-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="pms-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function PerformanceMarketingMetricsBlog() {
-  useEffect(() => {
-    document.title = 'What Should You Measure in Performance Marketing? | Ashwin James'
-    const description = 'Learn which performance marketing metrics matter, including CAC, CPL, ROAS, CPA and conversion rate, and how to connect them to business outcomes.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/performance-marketing-metrics')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
-    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · METRICS · MEASUREMENT</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>11 min read</span><span>•</span><span>September 14, 2026</span></div><h1>What Should You Measure in Performance Marketing?</h1><p className="pms-lede">A practical framework for understanding CAC, CPL, ROAS, CPA, conversion rate and the relationships that turn advertising data into better business decisions.</p><div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-strategy-uae">Performance Marketing Strategy</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div></header>
+    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · METRICS · MEASUREMENT</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>11 min read</span><span>•</span><span>September 14, 2026</span></div><h1>What Should You Measure in Performance Marketing?</h1><p className="pms-lede">A practical framework for understanding CAC, CPL, ROAS, CPA, conversion rate and the relationships that turn advertising data into better business decisions.</p><div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/blog/performance-marketing-strategy-uae">Performance Marketing Strategy</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div></header>
     <MetricFlow />
     <div className="pms-article-grid"><aside className="pms-toc"><span>ON THIS PAGE</span><a href="#start-with-the-business-outcome">Business outcome</a><a href="#the-core-performance-marketing-metrics">Core metrics</a><a href="#how-these-metrics-work-together">How metrics work together</a><a href="#which-metric-should-you-optimize-for">Which metric to optimize</a><a href="#lead-quality-changes-the-meaning-of-cpl">Lead quality</a><a href="#build-a-performance-marketing-measurement-framework">Measurement framework</a><a href="#common-performance-marketing-measurement-mistakes">Common mistakes</a><a href="#conclusion">Conclusion</a></aside><div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} /></div>
     <MetricCards /><DecisionFramework /><FAQSection />
-    <footer className="pms-cta"><span>PERFORMANCE MARKETING METRICS</span><h2>Measure what helps the business make its next decision.</h2><p>Connect advertising costs, conversion, lead quality, customer acquisition and revenue instead of treating every dashboard number as equally important.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+    <footer className="pms-cta"><span>PERFORMANCE MARKETING METRICS</span><h2>Measure what helps the business make its next decision.</h2><p>Connect advertising costs, conversion, lead quality, customer acquisition and revenue instead of treating every dashboard number as equally important.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
   </article></main>
 }

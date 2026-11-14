@@ -57,6 +57,6 @@ export default function MetaAdsService() {
 
     <section className="meta-service-cta"><div className="container"><p className="meta-service-eyebrow">Ready to look at the account?</p><h2>Find out whether your Meta Ads are attracting the right demand.</h2><p>Book 15 minutes. I will review the biggest potential issues in your current setup and explain what I would prioritise.</p><div className="meta-service-final-actions"><a className="meta-service-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Book a Free 15 Minute Meta Ads Audit <span>↗</span></a><Link className="meta-service-back-button" to="/services">← Back to Services</Link></div></div></section>
 
-    <section className="meta-related"><div className="container"><p className="meta-service-eyebrow">Related services</p><div className="meta-related-grid"><Link to="/services/landing-page-optimisation"><span>Landing Page Optimisation</span><b>→</b></Link><Link to="/services/lead-generation"><span>Lead Generation</span><b>→</b></Link><Link to="/services/hubspot"><span>HubSpot CRM & Automation</span><b>→</b></Link></div></div></section>
+    <section className="meta-related"><div className="container"><p className="meta-service-eyebrow">Related services</p><div className="meta-related-grid"><Link to="/services/cro"><span>Landing Page Optimisation</span><b>→</b></Link><Link to="/services/lead-generation"><span>Lead Generation</span><b>→</b></Link><Link to="/services/hubspot-crm-integration"><span>HubSpot CRM & Automation</span><b>→</b></Link></div></div></section>
   </main>
 }

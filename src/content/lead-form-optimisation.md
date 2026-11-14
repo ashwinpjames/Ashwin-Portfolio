@@ -176,7 +176,7 @@ Consider the funnel as:
 
 A strong acquisition system does not optimise one stage while ignoring the stages after it.
 
-This principle is also central to broader performance marketing. For the wider relationship between paid acquisition, analytics, conversion optimisation and business outcomes, see the [Performance Marketing Specialist](https://ashwinjames.com/) resource.
+This principle is also central to broader performance marketing. For the wider relationship between paid acquisition, analytics, conversion optimisation and business outcomes, see the [Performance Marketing Specialist](https://www.ashwinjames.com/) resource.
 
 ## Common lead form mistakes
 

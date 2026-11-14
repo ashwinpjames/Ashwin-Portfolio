@@ -272,7 +272,7 @@ That means the complete system is:
 
 If the first three stages work but revenue does not move, investigate what happens after the lead enters the CRM.
 
-A useful **Performance Marketing Specialist** should therefore look beyond platform metrics and understand how acquisition data connects with qualification, sales and revenue. [Explore the wider performance marketing approach here.](https://ashwinjames.com/)
+A useful **Performance Marketing Specialist** should therefore look beyond platform metrics and understand how acquisition data connects with qualification, sales and revenue. [Explore the wider performance marketing approach here.](https://www.ashwinjames.com/)
 
 ## FAQ
 

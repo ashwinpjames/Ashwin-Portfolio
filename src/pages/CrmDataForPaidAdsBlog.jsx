@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/crm-data-for-paid-ads.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'How CRM Data Can Improve Meta and Google Ads Optimisation',
   description: 'Learn how CRM data for paid ads connects lead quality, first party data and campaign optimisation across Meta Ads and Google Ads.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/crm-data-for-paid-ads',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/crm-data-for-paid-ads',
   keywords: 'CRM data for paid ads, first party data, campaign optimisation',
 }
 
@@ -88,17 +87,7 @@ function renderMarkdown(markdown) {
 }
 
 export default function CrmDataForPaidAdsBlog() {
-  useEffect(() => {
-    document.title = 'CRM Data for Paid Ads: Improve Meta & Google Ads Optimisation | Ashwin James'
-    const description = 'Learn how CRM data for paid ads connects lead quality, first party data and campaign optimisation across Meta Ads and Google Ads.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/crm-data-for-paid-ads')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '').replace(/url[^]*/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
@@ -113,13 +102,13 @@ export default function CrmDataForPaidAdsBlog() {
         <div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>14 min read</span><span>•</span><span>September 15, 2026</span></div>
         <h1>How CRM Data Can Improve Meta and Google Ads Optimisation</h1>
         <p className="pms-lede">Learn how CRM data for paid ads connects lead quality, first party data and campaign optimisation across Meta Ads and Google Ads.</p>
-        <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link><Link to="/blog/conversion-tracking-performance-marketing">Conversion Tracking</Link><Link to="/blog/google-ads-lead-quality">Google Ads Lead Quality</Link></div>
+        <div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link><Link to="/blog/conversion-tracking-performance-marketing">Conversion Tracking</Link><Link to="/blog/google-ads-lead-quality">Google Ads Lead Quality</Link></div>
       </header>
       <div className="pms-article-grid">
         <aside className="pms-toc"><span>ON THIS PAGE</span><a href="#what-crm-data-changes-about-paid-advertising">The CRM feedback loop</a><a href="#how-crm-data-can-improve-meta-ads-optimisation">Meta Ads</a><a href="#how-crm-data-can-improve-google-ads-optimisation">Google Ads</a><a href="#the-most-important-decision-what-should-count-as-a-conversion">Choosing conversion events</a><a href="#a-practical-campaign-optimisation-framework">Optimisation framework</a><a href="#common-mistakes-with-crm-data-for-paid-ads">Common mistakes</a><a href="#conclusion">Conclusion</a></aside>
         <div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} />
       </div>
-      <footer className="pms-cta"><span>CRM DATA FOR PAID ADS</span><h2>Optimise for what happens after the lead.</h2><p>Connect paid media, CRM qualification and customer outcomes so campaign decisions are based on business value rather than lead volume alone.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <footer className="pms-cta"><span>CRM DATA FOR PAID ADS</span><h2>Optimise for what happens after the lead.</h2><p>Connect paid media, CRM qualification and customer outcomes so campaign decisions are based on business value rather than lead volume alone.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

@@ -2,7 +2,18 @@
   "redirects": [
     {
       "source": "/index.html",
-      "destination": "/",
+      "destination": "https://www.ashwinjames.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ashwinjames.com"
+        }
+      ],
+      "destination": "https://www.ashwinjames.com/:path*",
       "permanent": true
     },
     {
@@ -24,12 +35,24 @@
       "source": "/services/performance-marketing",
       "destination": "/services/performance-marketing-services",
       "permanent": true
+    },
+    {
+      "source": "/services/performance-growth-marketing",
+      "destination": "/services/performance-marketing-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/hubspot-crm-automation",
+      "destination": "/services/hubspot-crm-integration",
+      "permanent": true
+    },
+    {
+      "source": "/services/landing-page-optimisation",
+      "destination": "/services/cro",
+      "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "trailingSlash": false,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }

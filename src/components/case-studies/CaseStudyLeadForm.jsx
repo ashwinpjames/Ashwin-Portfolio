@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { trackEnquiryEvent } from '../../utils/analytics.js'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { emailjsConfig } from '../../config/emailjs.js'
 
@@ -7,18 +8,24 @@ const initial = { name: '', email: '', phone: '', company: '', message: '' }
 export default function CaseStudyLeadForm({ eyebrow = 'Get the next step', title = 'Want a deeper look at your marketing?', description = 'Tell me what you want to improve and I’ll point you toward the most useful next step.', buttonLabel = 'Request a consultation' }) {
   const [form, setForm] = useState(initial)
   const [status, setStatus] = useState('idle')
+  const pending = useRef(false)
   const update = (key, value) => setForm((current) => ({ ...current, [key]: value }))
 
   const submit = async (event) => {
     event.preventDefault()
+    if (pending.current) return
+    pending.current = true
     setStatus('sending')
     try {
       await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, { ...form, service: 'Case study enquiry' }, { publicKey: emailjsConfig.publicKey })
+      trackEnquiryEvent('generate_lead', 'case_study')
       setStatus('success')
       setForm(initial)
     } catch (error) {
       console.error('Case study enquiry failed:', error)
       setStatus('error')
+    } finally {
+      pending.current = false
     }
   }
 

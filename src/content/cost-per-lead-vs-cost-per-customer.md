@@ -157,7 +157,7 @@ That question is much closer to the real business objective than:
 
 **How cheaply can we generate a form submission?**
 
-This is where a [Performance Marketing Specialist](https://ashwinjames.com/) can add value by connecting paid acquisition metrics with conversion behaviour, CRM outcomes and business economics rather than stopping at the advertising dashboard.
+This is where a [Performance Marketing Specialist](https://www.ashwinjames.com/) can add value by connecting paid acquisition metrics with conversion behaviour, CRM outcomes and business economics rather than stopping at the advertising dashboard.
 
 ## CPL, Cost Per Qualified Lead and CAC Work Together
 
@@ -301,7 +301,7 @@ For example, an advertisement that clearly states who an offer is for, what prob
 
 This is one reason it is useful to evaluate creative using downstream lead quality rather than CTR or CPL alone.
 
-You can also explore the broader relationship between messaging and lead quality in [Creative Is the New Targeting](https://ashwinjames.com/blog/creative-is-the-new-targeting).
+You can also explore the broader relationship between messaging and lead quality in [Creative Is the New Targeting](https://www.ashwinjames.com/blog/creative-is-the-new-targeting).
 
 ## How Lead Forms Affect the Economics
 
@@ -311,7 +311,7 @@ A shorter form may reduce friction and increase submissions. But if the removed 
 
 A form should therefore be evaluated as part of the acquisition system rather than as an isolated conversion element.
 
-For a deeper look at this issue, see [How Lead Forms Affect Paid Advertising Performance](https://ashwinjames.com/blog/lead-form-optimisation).
+For a deeper look at this issue, see [How Lead Forms Affect Paid Advertising Performance](https://www.ashwinjames.com/blog/lead-form-optimisation).
 
 The practical question is not simply:
 
@@ -365,7 +365,7 @@ That does not mean Google Ads always produces better leads or Meta Ads always pr
 
 It means the path from impression to customer should be analysed in the context of how each channel creates demand and captures intent.
 
-For channel level context, see [Google Ads vs Meta Ads for Lead Generation](https://ashwinjames.com/blog/google-ads-vs-meta-ads).
+For channel level context, see [Google Ads vs Meta Ads for Lead Generation](https://www.ashwinjames.com/blog/google-ads-vs-meta-ads).
 
 ## How to Decide What to Optimise For
 
@@ -476,7 +476,7 @@ A practical structure could include:
 
 This gives the team enough information to understand both performance and diagnosis.
 
-For a broader measurement framework covering CAC, CPL, ROAS, CPA and conversion rate, see [What Should You Measure in Performance Marketing?](https://ashwinjames.com/blog/performance-marketing-metrics).
+For a broader measurement framework covering CAC, CPL, ROAS, CPA and conversion rate, see [What Should You Measure in Performance Marketing?](https://www.ashwinjames.com/blog/performance-marketing-metrics).
 
 ## Frequently Asked Questions
 
@@ -534,7 +534,7 @@ His approach connects advertising metrics with what happens after the lead is ge
 
 ## Related Articles
 
-* [How to Optimise Google Ads for Qualified Leads Instead of More Leads](https://ashwinjames.com/blog/google-ads-lead-quality)
-* [Why Your Meta Ads Are Generating Leads but Not Sales](https://ashwinjames.com/blog/meta-ads-generating-leads-but-not-sales)
-* [Lead Generation Is About the Right Leads](https://ashwinjames.com/blog/lead-generation-right-leads)
-* [Lead Generation vs Lead Qualification](https://ashwinjames.com/blog/lead-generation-vs-lead-qualification)
+* [How to Optimise Google Ads for Qualified Leads Instead of More Leads](https://www.ashwinjames.com/blog/google-ads-lead-quality)
+* [Why Your Meta Ads Are Generating Leads but Not Sales](https://www.ashwinjames.com/blog/meta-ads-generating-leads-but-not-sales)
+* [Lead Generation Is About the Right Leads](https://www.ashwinjames.com/blog/lead-generation-right-leads)
+* [Lead Generation vs Lead Qualification](https://www.ashwinjames.com/blog/lead-generation-vs-lead-qualification)

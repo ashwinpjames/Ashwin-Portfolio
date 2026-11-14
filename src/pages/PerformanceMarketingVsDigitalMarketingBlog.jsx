@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/performance-marketing-vs-digital-marketing.md?raw'
 
@@ -6,9 +5,9 @@ const articleSchema = {
   '@context': 'https://schema.org', '@type': 'BlogPosting',
   headline: 'Performance Marketing vs Digital Marketing: What Is the Difference?',
   description: 'A practical comparison of performance marketing and digital marketing, including their scope, channels, measurement, use cases and how businesses can combine both approaches.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' }, datePublished: '2026-09-14', dateModified: '2026-09-14',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/performance-marketing-vs-digital-marketing',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/performance-marketing-vs-digital-marketing',
   keywords: 'performance marketing vs digital marketing, digital marketing, performance marketing',
 }
 const faq = [
@@ -76,19 +75,13 @@ function DecisionPath() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="pms-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="pms-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function PerformanceMarketingVsDigitalMarketingBlog() {
-  useEffect(() => {
-    document.title = 'Performance Marketing vs Digital Marketing: What Is the Difference?'
-    const description = 'A practical comparison of performance marketing and digital marketing, including their scope, channels, measurement, use cases and how businesses can combine both approaches.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/performance-marketing-vs-digital-marketing')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
-    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · DIGITAL MARKETING · STRATEGY</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>11 min read</span><span>•</span><span>September 14, 2026</span></div><h1>Performance Marketing vs Digital Marketing: What Is the Difference?</h1><p className="pms-lede">A practical comparison of scope, channels, measurement and strategy, plus how businesses can use both disciplines without treating them as competing choices.</p><div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-specialist">Performance Marketing Specialist</Link><a href="https://ashwinjames.com/">Ashwin James</a></div></header>
+    <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">PERFORMANCE MARKETING · DIGITAL MARKETING · STRATEGY</p><div className="pms-meta"><span>Performance Marketing</span><span>•</span><span>11 min read</span><span>•</span><span>September 14, 2026</span></div><h1>Performance Marketing vs Digital Marketing: What Is the Difference?</h1><p className="pms-lede">A practical comparison of scope, channels, measurement and strategy, plus how businesses can use both disciplines without treating them as competing choices.</p><div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/blog/performance-marketing-specialist-in-dubai">Performance Marketing Specialist</Link><a href="https://www.ashwinjames.com/">Ashwin James</a></div></header>
     <ComparisonGraphic />
     <div className="pms-article-grid"><aside className="pms-toc"><span>ON THIS PAGE</span><a href="#the-short-answer">The short answer</a><a href="#performance-marketing-vs-digital-marketing-the-core-difference">Core difference</a><a href="#what-is-digital-marketing">Digital marketing</a><a href="#what-is-performance-marketing">Performance marketing</a><a href="#how-performance-marketing-is-measured">Measurement</a><a href="#which-one-is-better">Which one is better</a><a href="#how-the-two-approaches-work-together">How they work together</a><a href="#conclusion">Conclusion</a></aside><div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} /></div>
     <MetricCards /><SkillMap /><MistakeCards /><DecisionPath /><FAQSection />
-    <footer className="pms-cta"><span>PERFORMANCE MARKETING</span><h2>Do not choose between labels. Build a marketing system that matches the business.</h2><p>Digital marketing can create visibility and demand. Performance marketing can capture and optimise measurable acquisition. The strongest strategies understand how the two layers work together.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+    <footer className="pms-cta"><span>PERFORMANCE MARKETING</span><h2>Do not choose between labels. Build a marketing system that matches the business.</h2><p>Digital marketing can create visibility and demand. Performance marketing can capture and optimise measurable acquisition. The strongest strategies understand how the two layers work together.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
   </article></main>
 }

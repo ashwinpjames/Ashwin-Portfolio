@@ -7,16 +7,16 @@ export default function CaseStudies() {
   return <main className="case-studies-page">
     <section className="case-hero case-hero-minimal">
       <div className="case-container">
-        <h1 className="case-eyebrow">Performance Marketing Case Studies</h1>
+        <h1 className="case-eyebrow">Performance Marketing Frameworks</h1>
         <div className="case-minimal-heading">
-          <h2>Work that <span>moved the numbers.</span></h2>
-          <p>Selected work across paid acquisition, conversion and marketing operations.</p>
+          <h2>A clearer view of <span>what to improve.</span></h2>
+          <p>Practical approaches to lead qualification, tracking and marketing measurement.</p>
         </div>
       </div>
     </section>
     <section className="case-list-section case-list-minimal">
       <div className="case-container">
-        <div className="case-list-intro"><span>Selected work</span><span>{String(caseStudies.length).padStart(2,'0')} cases</span></div>
+        <div className="case-list-intro"><span>Practical frameworks</span><span>{String(caseStudies.length).padStart(2,'0')} frameworks</span></div>
         <div className="case-minimal-list">
           {caseStudies.map((study,index) => {
             const [metric,label] = study.metrics?.[0] || ['','Selected work']
@@ -29,11 +29,11 @@ export default function CaseStudies() {
                 <div className="case-minimal-focus"><span>Focus</span>{study.focus.split(' · ').map(item => <em key={item}>{item}</em>)}</div>
               </div>
               <div className="case-minimal-result"><strong>{metric}</strong><small>{label}</small></div>
-              <div className="case-minimal-action">{detailSlugs.has(study.slug) ? <Link to={`/case-studies/${study.slug}`}>View case study <span>↗</span></Link> : <span>Selected work</span>}</div>
+              <div className="case-minimal-action">{detailSlugs.has(study.slug) ? <Link to={`/case-studies/${study.slug}`}>Explore framework <span>↗</span></Link> : <span>Practical frameworks</span>}</div>
             </article>
           })}
         </div>
-        <p className="case-privacy">Specific client names and sensitive data are kept private.</p>
+        <p className="case-privacy">These frameworks explain an approach; they do not represent verified client performance results.</p>
       </div>
     </section>
   </main>

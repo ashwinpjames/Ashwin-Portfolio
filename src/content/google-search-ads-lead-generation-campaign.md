@@ -46,7 +46,7 @@ The exact definition should come from the business. Do not copy a generic qualif
 
 This definition later determines which conversions should matter in reporting and optimisation.
 
-If you are building this as part of a broader acquisition system, a [Performance Marketing Specialist](https://ashwinjames.com/) can help connect the paid search activity with lead quality, CRM feedback and the rest of the funnel rather than treating campaign metrics as the final objective.
+If you are building this as part of a broader acquisition system, a [Performance Marketing Specialist](https://www.ashwinjames.com/) can help connect the paid search activity with lead quality, CRM feedback and the rest of the funnel rather than treating campaign metrics as the final objective.
 
 ## Step 2: Research search intent before choosing keywords
 

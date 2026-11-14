@@ -357,4 +357,4 @@ The answer is not to search for a perfect attribution model. The better approach
 
 Use attribution to understand contribution. Use CRM and revenue data to understand business value. Use experiments and incrementality when you need stronger evidence of causality.
 
-That combination creates a much more useful foundation for a [Performance Marketing Specialist](https://ashwinjames.com/) to decide where to invest, what to optimise and what the advertising data actually means.
+That combination creates a much more useful foundation for a [Performance Marketing Specialist](https://www.ashwinjames.com/) to decide where to invest, what to optimise and what the advertising data actually means.

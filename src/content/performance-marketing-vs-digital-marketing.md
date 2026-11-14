@@ -241,9 +241,9 @@ The role can include:
 
 This broader perspective is why businesses should be careful when comparing a general digital marketing role with a specialised performance marketing role.
 
-If you want to understand the role in more detail, see [What Is a Performance Marketing Specialist and What Do They Do?](/blog/performance-marketing-specialist).
+If you want to understand the role in more detail, see [What Is a Performance Marketing Specialist and What Do They Do?](/blog/performance-marketing-specialist-in-dubai).
 
-You can also explore the [performance marketing service](/services/performance-marketing) to see how the discipline can connect paid acquisition, conversion optimisation, analytics, and business outcomes.
+You can also explore the [performance marketing service](/services/performance-marketing-services) to see how the discipline can connect paid acquisition, conversion optimisation, analytics, and business outcomes.
 
 The goal is to work with a **[performance marketing specialist](http://ashwinjames.com/)** who can connect campaign activity with meaningful business outcomes.
 

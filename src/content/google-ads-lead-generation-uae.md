@@ -418,7 +418,7 @@ If the campaign produces cheap leads but weak opportunities, the answer is not a
 
 That is also the right way to think about **Google Search Ads UAE** campaigns: not as an isolated advertising channel, but as one part of a measurable acquisition system.
 
-For businesses that want to connect paid acquisition with lead quality, analytics and broader funnel performance, a [Performance Marketing Specialist](https://ashwinjames.com/) can help build the system around the advertising rather than treating the ads as the entire strategy.
+For businesses that want to connect paid acquisition with lead quality, analytics and broader funnel performance, a [Performance Marketing Specialist](https://www.ashwinjames.com/) can help build the system around the advertising rather than treating the ads as the entire strategy.
 
 ## Frequently asked questions
 

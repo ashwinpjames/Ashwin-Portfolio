@@ -1,7 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { routeMeta } from '../src/seo-meta.js'
-import { extraRouteMeta } from '../src/seo-meta-extra.js'
+import { allRouteMeta } from '../src/seo.js'
 
 const root = process.cwd()
 const publicDir = path.join(root, 'public')
@@ -11,7 +10,6 @@ const excludedRoutes = new Set([
   '/services/performance-growth-marketing',
 ])
 
-const allRouteMeta = { ...routeMeta, ...extraRouteMeta }
 const urls = Object.keys(allRouteMeta)
   .filter((route) => !excludedRoutes.has(route))
   .sort((a, b) => a === '/' ? -1 : b === '/' ? 1 : a.localeCompare(b))

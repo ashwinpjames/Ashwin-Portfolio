@@ -176,7 +176,7 @@ A practical measurement framework should answer at least these questions:
 | What does a customer cost? | CAC |
 | Is acquisition economically viable? | Revenue, ROAS, margin or customer value |
 
-This is where a [Performance Marketing Specialist](https://ashwinjames.com/) should think beyond the ad platform dashboard. The goal is to connect media data with the commercial system that follows it.
+This is where a [Performance Marketing Specialist](https://www.ashwinjames.com/) should think beyond the ad platform dashboard. The goal is to connect media data with the commercial system that follows it.
 
 ## Lead quality is the missing layer in many tracking setups
 

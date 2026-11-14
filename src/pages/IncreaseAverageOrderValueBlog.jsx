@@ -6,11 +6,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: '10 Practical Ways to Increase Average Order Value Without Simply Raising Prices',
   description: 'Learn how to increase average order value with bundles, upsells, cross sells, free shipping thresholds and funnel optimisation without relying on price increases.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-08-24',
   dateModified: '2026-08-24',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/increase-average-order-value',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/increase-average-order-value',
 }
 
 const faq = [
@@ -71,7 +71,7 @@ function renderMarkdown(markdown) {
 
     const heading = line.match(/^(#{1,3})\s+(.+)$/)
     if (heading) {
-      const level = heading[1].length
+      const level = Math.max(2, heading[1].length)
       html.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`)
       i += 1
       continue
@@ -153,7 +153,7 @@ export default function IncreaseAverageOrderValueBlog() {
         <div className="aov-blog-meta"><span>Conversion &amp; Ecommerce</span><span>•</span><span>16 min read</span><span>•</span><span>August 24, 2026</span></div>
         <h1>10 Practical Ways to Increase Average Order Value Without Simply Raising Prices</h1>
         <p className="aov-blog-lede">A practical framework for increasing ecommerce order value through better offers, stronger merchandising and smarter funnel design without treating AOV as a vanity metric.</p>
-        <div className="aov-blog-links"><Link to="/services/performance-growth-marketing">Performance Marketing</Link><Link to="/resources">Explore resources</Link></div>
+        <div className="aov-blog-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/resources">Explore resources</Link></div>
       </header>
       <section className="aov-visual-grid" aria-label="AOV visual summary">
         {visuals.map(item => <VisualCard key={item.label} item={item} />)}

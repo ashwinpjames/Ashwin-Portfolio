@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/ga4-performance-marketing.md?raw'
 
@@ -16,11 +15,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'GA4 for Performance Marketers: What Should You Actually Track?',
   description: 'A practical guide to GA4 for performance marketing, covering acquisition, events, key events, conversion rate, landing pages, attribution, GA4 analytics and business outcomes.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/ga4-performance-marketing',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/ga4-performance-marketing',
   keywords: 'GA4 for performance marketing, GA4 analytics',
 }
 
@@ -102,17 +101,7 @@ function DecisionFramework() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="ga4-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="ga4-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function Ga4PerformanceMarketingBlog() {
-  useEffect(() => {
-    document.title = 'GA4 for Performance Marketers: What Should You Actually Track? | Ashwin James'
-    const description = 'A practical guide to GA4 for performance marketing, covering acquisition, events, key events, conversion rate, landing pages, attribution, GA4 analytics and business outcomes.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/ga4-performance-marketing')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const cleanedMarkdown = articleMarkdown.replace(/cite[^]+/g, '')
   const renderedArticle = renderMarkdown(cleanedMarkdown.replace(/^# .+\n\n/, ''))
@@ -127,7 +116,7 @@ export default function Ga4PerformanceMarketingBlog() {
         <div className="pms-meta"><span>Analytics</span><span>•</span><span>14 min read</span><span>•</span><span>September 15, 2026</span></div>
         <h1>GA4 for Performance Marketers: What Should You Actually Track?</h1>
         <p className="pms-lede">A practical framework for deciding which GA4 signals matter for acquisition, optimisation, lead quality and business outcomes.</p>
-        <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/google-ads-conversion-tracking">Google Ads Conversion Tracking</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link></div>
+        <div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/blog/google-ads-conversion-tracking">Google Ads Conversion Tracking</Link><Link to="/blog/crm-lead-tracking-paid-ads">CRM Lead Tracking</Link></div>
       </header>
       <MeasurementFlow />
       <div className="pms-article-grid">
@@ -137,7 +126,7 @@ export default function Ga4PerformanceMarketingBlog() {
       <MetricCards />
       <DecisionFramework />
       <FAQSection />
-      <footer className="pms-cta"><span>GA4 FOR PERFORMANCE MARKETING</span><h2>Build measurement around decisions, not dashboard volume.</h2><p>Connect acquisition, behaviour, key events, CRM outcomes and revenue so your analytics stack helps you decide what to scale, test and fix.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <footer className="pms-cta"><span>GA4 FOR PERFORMANCE MARKETING</span><h2>Build measurement around decisions, not dashboard volume.</h2><p>Connect acquisition, behaviour, key events, CRM outcomes and revenue so your analytics stack helps you decide what to scale, test and fix.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

@@ -54,7 +54,7 @@ export default function LeadQualityBenchmarksBlog() {
     headline: "More leads walked in. Revenue didn't move.",
     description: 'A look at 2026 funnel benchmarks and why lead quality can matter more than lead volume.',
     author: { '@type': 'Person', name: 'Ashwin James' },
-    mainEntityOfPage: 'https://ashwinjames.com/blog/more-leads-revenue-didnt-move',
+    mainEntityOfPage: 'https://www.ashwinjames.com/blog/more-leads-revenue-didnt-move',
   }
 
   return <main className="lead-quality-blog-page">

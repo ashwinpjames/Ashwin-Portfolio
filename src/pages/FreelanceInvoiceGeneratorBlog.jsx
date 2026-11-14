@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/free-invoice-generator-for-freelancers.md?raw'
 
@@ -7,11 +6,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Free Invoice Generator for Freelancers: Create Professional Invoices',
   description: 'Learn why proper invoicing matters for freelancers, what a professional invoice should include, how to invoice for freelance marketing services and how to build a simple invoicing process.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-14',
   dateModified: '2026-09-14',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/free-invoice-generator-for-freelancers',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/free-invoice-generator-for-freelancers',
   keywords: 'free invoice generator for freelancers, freelance invoice generator, invoice generator for freelancers, professional invoice for freelancers, freelance invoice, how to create an invoice as a freelancer, invoice template for freelancers, freelance marketing services, digital marketing services',
 }
 
@@ -88,7 +87,7 @@ function renderMarkdown(markdown) {
 
     const heading = line.match(/^(#{1,3})\s+(.+)$/)
     if (heading) {
-      const level = heading[1].length
+      const level = Math.max(2, heading[1].length)
       html.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`)
       i += 1
       continue
@@ -143,17 +142,7 @@ function InvoiceFaq() {
 }
 
 export default function FreelanceInvoiceGeneratorBlog() {
-  useEffect(() => {
-    document.title = 'Free Invoice Generator for Freelancers: Create Professional Invoices | Ashwin James'
-    const description = 'Learn why proper invoicing matters for freelancers, what a professional invoice should include, how to invoice for freelance marketing services and how to build a simple invoicing process.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/free-invoice-generator-for-freelancers')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const html = renderMarkdown(normalizeArticleMarkdown(articleMarkdown.replace(/^# .+\n\n/, '')))
 
@@ -168,7 +157,7 @@ export default function FreelanceInvoiceGeneratorBlog() {
         <div className="freelance-consultant-meta"><span>Freelancing</span><span>•</span><span>9 min read</span><span>•</span><span>September 14, 2026</span></div>
         <h1>Free Invoice Generator for Freelancers: Create Professional Invoices</h1>
         <p className="freelance-consultant-lede">A practical guide to professional invoicing, client trust, payment tracking and building a simple invoicing process as a freelancer.</p>
-        <div className="freelance-consultant-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/contact">Work with Ashwin</Link></div>
+        <div className="freelance-consultant-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/contact">Work with Ashwin</Link></div>
       </header>
       <InvoiceSystemGraphic />
       <div className="freelance-consultant-content"><InvoiceVisual /><div dangerouslySetInnerHTML={{ __html: html }} /><InvoiceMetricsGraphic /><InvoiceFaq /></div>

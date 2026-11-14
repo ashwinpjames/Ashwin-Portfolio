@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { trackEnquiryEvent } from '../../utils/analytics.js'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { emailjsConfig } from '../../config/emailjs.js'
 
@@ -7,21 +8,27 @@ const initial = { name: '', email: '', phone: '', company: '', service: '', mess
 export default function ContactForm() {
   const [form, setForm] = useState(initial)
   const [status, setStatus] = useState('idle')
+  const pending = useRef(false)
   const update = (key, value) => setForm((current) => ({ ...current, [key]: value }))
 
   const submit = async (event) => {
     event.preventDefault()
+    if (pending.current) return
+    pending.current = true
     setStatus('sending')
 
     try {
       await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, form, {
         publicKey: emailjsConfig.publicKey,
       })
+      trackEnquiryEvent('generate_lead', 'contact')
       setStatus('success')
       setForm(initial)
     } catch (error) {
       console.error('EmailJS enquiry failed:', error)
       setStatus('error')
+    } finally {
+      pending.current = false
     }
   }
 
@@ -71,7 +78,7 @@ export default function ContactForm() {
 
       <label>
         <span>Briefly tell me about the goal</span>
-        <textarea rows="4" value={form.message} onChange={(event) => update('message', event.target.value)} placeholder="What are you trying to improve?" />
+        <textarea rows="4" value={form.message} onChange={(event) => update('message', event.target.value)} placeholder="Share your website, the service you need and your main growth challenge. If you run ads, you can include your approximate monthly ad spend." />
       </label>
 
       <button type="submit" className="contact-submit" disabled={status === 'sending'}>

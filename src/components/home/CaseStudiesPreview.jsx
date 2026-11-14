@@ -9,8 +9,8 @@ export default function CaseStudiesPreview() {
   return <section id="case-studies" className="home-section case-studies-preview">
     <div className="container">
       <div className="section-heading split-heading reveal-home">
-        <div><p className="home-eyebrow">Selected case studies</p><h2>Work measured in business impact.</h2></div>
-        <Link className="text-link" to="/case-studies">View all case studies <span>→</span></Link>
+        <div><p className="home-eyebrow">Practical frameworks</p><h2>See how the marketing system connects.</h2></div>
+        <Link className="text-link" to="/case-studies">Explore the frameworks <span>→</span></Link>
       </div>
       <div className="case-grid">
         {studies.map((study) => {
@@ -22,7 +22,7 @@ export default function CaseStudiesPreview() {
               <div className="graph-line" aria-hidden="true"><i /></div>
               <div className="case-metrics"><div><small>{label1}</small><strong>{metric1}</strong></div><div><small>{label2}</small><strong>{metric2}</strong></div></div>
             </div>
-            <div className="case-body"><p>{study.focus.replaceAll(' · ', ' · ')}</p><h3>{study.title}</h3><span>{study.summary}</span><Link to={`/case-studies/${study.slug}`}>View case study <span>→</span></Link></div>
+            <div className="case-body"><p>{study.focus.replaceAll(' · ', ' · ')}</p><h3>{study.title}</h3><span>{study.summary}</span><Link to={`/case-studies/${study.slug}`}>Explore framework <span>→</span></Link></div>
           </article>
         })}
       </div>

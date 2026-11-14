@@ -6,11 +6,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: "Lead Generation Is Not About More Leads. It's About the Right Leads.",
   description: "Cheap leads aren't the same as good leads. Learn how targeting, creative, offer, and form design work together as a filtering system for lead quality.",
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-03',
   dateModified: '2026-09-03',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/lead-generation-right-leads',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/lead-generation-right-leads',
 }
 
 const faq = [
@@ -134,7 +134,7 @@ export default function LeadGenerationRightLeadsBlog() {
         <div className="lead-quality-blog-meta"><span>Lead Gen</span><span>•</span><span>9 min read</span><span>•</span><span>September 3, 2026</span></div>
         <h1>Lead Generation Is Not About More Leads. It's About the Right Leads.</h1>
         <p className="lead-quality-blog-lede">Cheap leads aren't the same as good leads. Learn how targeting, creative, offer, and form design work together as a filtering system for lead quality.</p>
-        <div className="lead-quality-blog-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div>
+        <div className="lead-quality-blog-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link></div>
       </header>
       <section className="lead-quality-visual-grid" aria-label="Lead quality visual summary">
         {visuals.map(item => <VisualCard key={item.label} item={item} />)}

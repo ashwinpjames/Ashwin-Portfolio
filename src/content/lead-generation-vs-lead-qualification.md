@@ -74,7 +74,7 @@ The hypothetical example shows why CPL alone cannot determine which campaign is 
 
 The correct conclusion is not that low CPL is bad. CPL is useful. The problem is treating it as the final business metric when the business outcome occurs further down the funnel.
 
-This is why a marketer working as a [Performance Marketing Specialist](https://ashwinjames.com/) should connect acquisition metrics with downstream qualification and sales outcomes whenever the available data allows it.
+This is why a marketer working as a [Performance Marketing Specialist](https://www.ashwinjames.com/) should connect acquisition metrics with downstream qualification and sales outcomes whenever the available data allows it.
 
 ## What makes a lead qualified?
 

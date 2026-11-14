@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/crm-lead-tracking-paid-ads.md?raw'
 
@@ -15,11 +14,11 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'How to Connect Paid Ads With CRM Data for Better Lead Quality',
   description: 'Learn how CRM lead tracking, lead scoring and HubSpot can connect paid advertising with qualification, sales outcomes and customer data to improve lead quality.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
   dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/crm-lead-tracking-paid-ads',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/crm-lead-tracking-paid-ads',
   keywords: 'CRM lead tracking, lead scoring, HubSpot, paid ads, lead quality',
 }
 
@@ -120,17 +119,7 @@ function FAQSection() {
 }
 
 export default function CrmLeadTrackingPaidAdsBlog() {
-  useEffect(() => {
-    document.title = 'How to Connect Paid Ads With CRM Data for Better Lead Quality | Ashwin James'
-    const description = 'Learn how CRM lead tracking, lead scoring and HubSpot can connect paid advertising with qualification, sales outcomes and customer data to improve lead quality.'
-    let tag = document.querySelector('meta[name="description"]')
-    if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }
-    tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.setAttribute('href', 'https://ashwinjames.com/blog/crm-lead-tracking-paid-ads')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
 
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
 
@@ -141,7 +130,7 @@ export default function CrmLeadTrackingPaidAdsBlog() {
       <div className="pms-meta"><span>Lead Gen</span><span>•</span><span>12 min read</span><span>•</span><span>September 15, 2026</span></div>
       <h1>How to Connect Paid Ads With CRM Data for Better Lead Quality</h1>
       <p className="pms-lede">Paid ads can generate leads without generating enough qualified opportunities. Connecting advertising data with CRM outcomes creates the feedback loop needed to optimise for lead quality, not just lead volume.</p>
-      <div className="pms-links"><Link to="/services/performance-marketing">Performance Marketing</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/hubspot">HubSpot CRM</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/case-studies/crm-sales-qualified-lead">CRM Lead Qualification Case Study</Link></div>
+      <div className="pms-links"><Link to="/services/performance-marketing-services">Performance Marketing</Link><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/hubspot-crm-integration">HubSpot CRM</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link><Link to="/case-studies/crm-sales-qualified-lead">CRM Lead Qualification Case Study</Link></div>
     </header>
     <CRMDataFlow />
     <div className="pms-article-grid">
@@ -150,6 +139,6 @@ export default function CrmLeadTrackingPaidAdsBlog() {
     </div>
     <MeasurementCards />
     <FAQSection />
-    <footer className="pms-cta"><span>PAID ADS · CRM · SALES</span><h2>Stop optimising the lead before you know what happens after it.</h2><p>Connect acquisition, qualification and sales outcomes so your next campaign decision is based on lead quality and commercial value.</p><div><Link to="/services/performance-marketing">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+    <footer className="pms-cta"><span>PAID ADS · CRM · SALES</span><h2>Stop optimising the lead before you know what happens after it.</h2><p>Connect acquisition, qualification and sales outcomes so your next campaign decision is based on lead quality and commercial value.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
   </article></main>
 }

@@ -94,6 +94,6 @@ export default function HubSpotCRMService() {
 
     <section className="hs-cta"><div className="container"><p className="hs-eyebrow">Ready to fix the post lead process?</p><h2>Build the CRM system your marketing actually needs.</h2><p>Start with a practical review of your current lead flow, CRM structure and automation opportunities.</p><a className="hs-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Start a HubSpot Conversation <span>↗</span></a></div></section>
 
-    <section className="hs-related"><div className="container"><p className="hs-eyebrow">Related Services</p><div className="hs-related-grid"><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/whatsapp-marketing">WhatsApp Marketing</Link><Link to="/services/performance-marketing">Performance Marketing</Link></div></div></section>
+    <section className="hs-related"><div className="container"><p className="hs-eyebrow">Related Services</p><div className="hs-related-grid"><Link to="/services/lead-generation">Lead Generation</Link><Link to="/services/whatsapp-marketing">WhatsApp Marketing</Link><Link to="/services/performance-marketing-services">Performance Marketing</Link></div></div></section>
   </main>
 }

@@ -227,7 +227,7 @@ First, identify how customers discover the category and what language they use w
 
 Then measure what happens after the form submission or call.
 
-That is the point where a **[Performance Marketing Specialist](https://ashwinjames.com/)** can add value beyond campaign setup by connecting paid acquisition, conversion data, lead quality and business outcomes.
+That is the point where a **[Performance Marketing Specialist](https://www.ashwinjames.com/)** can add value beyond campaign setup by connecting paid acquisition, conversion data, lead quality and business outcomes.
 
 ## FAQ
 

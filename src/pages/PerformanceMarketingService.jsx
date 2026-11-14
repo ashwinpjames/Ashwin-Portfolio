@@ -20,7 +20,7 @@ const included = [
   {
     title: 'CRM & Marketing Automation',
     text: 'Getting a lead is only the start. CRM workflows, lifecycle stages, source tracking, routing and automation help make sure opportunities are captured, followed up and measured instead of disappearing after the first enquiry.',
-    link: ['/services/hubspot', 'HubSpot'],
+    link: ['/services/hubspot-crm-integration', 'HubSpot'],
   },
   {
     title: 'WhatsApp & Conversational Follow-Up',
@@ -63,8 +63,8 @@ function ServiceLink({ href, children }) {
 
 const trustIndicators = [
   { icon: FiMapPin, title: 'UAE Market Experience', subtitle: 'Local Expertise' },
-  { icon: FiStar, title: '5/5 Rated', subtitle: 'Client Satisfaction' },
-  { icon: FiAward, title: '5+ Years', subtitle: 'Industry Experience' },
+  { icon: FiStar, title: 'Direct Collaboration', subtitle: 'Strategy and execution' },
+  { icon: FiAward, title: 'Full Funnel Focus', subtitle: 'Ads, landing pages and CRM' },
 ]
 
 export default function PerformanceMarketingService() {
@@ -99,7 +99,7 @@ export default function PerformanceMarketingService() {
 
     <section className="pm-section pm-fix"><div className="container pm-two-column">
       <div><p className="services-eyebrow">The Fix</p><h2>The Fix: One System, Not Separate Services</h2></div>
-      <div><p>As a <a href="/">Performance Marketing Specialist</a>, I build and manage acquisition systems where the channel, landing page, tracking, and follow up all work toward the same goal: generating qualified leads at a cost you can scale. I plan, launch, and manage paid acquisition across <ServiceLink href="/services/google-ads">Google Ads</ServiceLink> and <ServiceLink href="/services/meta-ads">Meta Ads</ServiceLink>, supported by conversion focused landing pages built on <ServiceLink href="/services/cro">CRO</ServiceLink> principles and CRM systems in <ServiceLink href="/services/hubspot">HubSpot</ServiceLink> that ensure no lead sits unattended. One person, one system, and full visibility into what is actually driving revenue.</p><CTA>See If This Fits Your Business</CTA></div>
+      <div><p>As a <a href="/">Performance Marketing Specialist</a>, I build and manage acquisition systems where the channel, landing page, tracking, and follow up all work toward the same goal: generating qualified leads at a cost you can scale. I plan, launch, and manage paid acquisition across <ServiceLink href="/services/google-ads">Google Ads</ServiceLink> and <ServiceLink href="/services/meta-ads">Meta Ads</ServiceLink>, supported by conversion focused landing pages built on <ServiceLink href="/services/cro">CRO</ServiceLink> principles and CRM systems in <ServiceLink href="/services/hubspot-crm-integration">HubSpot</ServiceLink> that ensure no lead sits unattended. One person, one system, and full visibility into what is actually driving revenue.</p><CTA>See If This Fits Your Business</CTA></div>
     </div></section>
 
     <section className="pm-section pm-included"><div className="container">
@@ -116,6 +116,14 @@ export default function PerformanceMarketingService() {
     <section className="pm-section pm-why"><div className="container pm-two-column">
       <div><p className="services-eyebrow">Why Work With Me</p><h2>One person accountable for the system.</h2></div>
       <ul className="pm-why-list"><li>Based in Dubai, working directly with UAE businesses — no account managers, no hand-offs</li><li>Hands-on across paid media, CRO, CRM, and analytics, managed by one person end-to-end</li><li>Systems-first approach: campaigns, pages, and follow-up are built to work together, not billed as separate line items</li></ul>
+    </div></section>
+
+    <section className="pm-section"><div className="container pm-narrow">
+      <div className="pm-section-heading"><p className="services-eyebrow">Choose a starting point</p><h2>Get help with the constraint that matters now.</h2></div>
+      <h3>Review your current marketing</h3><p>If campaigns are running but the results are unclear, start with the offer, targeting, landing page, conversion tracking and lead feedback. The goal is to agree what to improve first.</p>
+      <h3>Manage a focused acquisition channel</h3><p>For a defined channel need, explore <Link to="/services/google-ads">Google Ads management</Link> or <Link to="/services/meta-ads">Meta Ads management</Link>. We can discuss campaign structure, creative testing and the signals that reflect your business goals.</p>
+      <h3>Connect the enquiry journey</h3><p>When the problem spans several steps, connect <Link to="/services/cro">landing page optimisation</Link> with <Link to="/services/hubspot-crm-integration">CRM qualification and follow up</Link>. Review cost per qualified enquiry alongside lead volume.</p>
+      <p>To start the conversation, share your website, current channels and main growth challenge. We can agree the relevant scope before work begins.</p><CTA>Discuss the Right Starting Point</CTA>
     </div></section>
 
     <section className="pm-section pm-faq"><div className="container pm-narrow">

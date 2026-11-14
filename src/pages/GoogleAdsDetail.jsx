@@ -75,12 +75,12 @@ const faq = [
 ]
 
 const internalLinks = [
-  ['/services/performance-growth-marketing', 'Performance & Growth Marketing'],
+  ['/services/performance-marketing-services', 'Performance & Growth Marketing'],
   ['/services/lead-generation', 'Lead Generation'],
   ['/services/cro', 'CRO'],
   ['/services/seo', 'SEO'],
   ['/services/website-development', 'Website Development'],
-  ['/services/hubspot-crm-automation', 'HubSpot CRM & Automation'],
+  ['/services/hubspot-crm-integration', 'HubSpot CRM & Automation'],
 ]
 
 export default function GoogleAdsDetail() {

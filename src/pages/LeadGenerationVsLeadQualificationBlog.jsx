@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/lead-generation-vs-lead-qualification.md?raw'
 
@@ -15,10 +14,10 @@ const articleSchema = {
   '@context': 'https://schema.org', '@type': 'BlogPosting',
   headline: 'Lead Generation vs Lead Qualification: What Is the Difference?',
   description: 'Understand the difference between lead generation and lead qualification, how they work together, which metrics matter and how to connect marketing with sales outcomes.',
-  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://ashwinjames.com/' },
+  author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15', dateModified: '2026-09-15',
-  mainEntityOfPage: 'https://ashwinjames.com/blog/lead-generation-vs-lead-qualification',
+  mainEntityOfPage: 'https://www.ashwinjames.com/blog/lead-generation-vs-lead-qualification',
   keywords: 'lead qualification, lead generation',
 }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }
@@ -69,13 +68,7 @@ function QualificationCards() {
 function FAQSection() { return <section className="pms-faq" aria-labelledby="lead-qualification-faq-heading"><div className="pms-section-label">FAQ</div><h2 id="lead-qualification-faq-heading">Frequently asked questions</h2><div className="pms-faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><div><p>{answer}</p></div></details>)}</div></section> }
 
 export default function LeadGenerationVsLeadQualificationBlog() {
-  useEffect(() => {
-    document.title = 'Lead Generation vs Lead Qualification: What Is the Difference? | Ashwin James'
-    const description = 'Understand the difference between lead generation and lead qualification, how they work together, which metrics matter and how to connect marketing with sales outcomes.'
-    let tag = document.querySelector('meta[name="description"]'); if (!tag) { tag = document.createElement('meta'); tag.name = 'description'; document.head.appendChild(tag) }; tag.setAttribute('content', description)
-    let canonical = document.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }; canonical.setAttribute('href', 'https://ashwinjames.com/blog/lead-generation-vs-lead-qualification')
-    return () => { document.title = 'Performance Marketing Specialist in UAE' }
-  }, [])
+
   const renderedArticle = renderMarkdown(articleMarkdown.replace(/^# .+\n\n/, ''))
   return <main className="pms-blog-page"><script type="application/ld+json">{JSON.stringify(articleSchema)}</script><script type="application/ld+json">{JSON.stringify(faqSchema)}</script><article className="pms-blog-shell">
     <header className="pms-hero"><Link to="/blog" className="pms-back">Back to all blogs</Link><p className="pms-eyebrow">LEAD GENERATION · LEAD QUALIFICATION · SALES</p><div className="pms-meta"><span>Lead Gen</span><span>•</span><span>10 min read</span><span>•</span><span>September 15, 2026</span></div><h1>Lead Generation vs Lead Qualification: What Is the Difference?</h1><p className="pms-lede">Understand where lead generation ends, where lead qualification begins, and how marketing and sales can connect lead volume with commercially useful opportunities.</p><div className="pms-links"><Link to="/services/lead-generation">Lead Generation</Link><Link to="/resources/lead-quality-framework">Lead Quality Framework</Link><Link to="/blog/lead-generation-right-leads">Lead Generation Is About the Right Leads</Link><Link to="/blog/google-ads-lead-quality">Google Ads Lead Quality</Link><Link to="/blog/performance-marketing-metrics">Performance Marketing Metrics</Link></div></header>
