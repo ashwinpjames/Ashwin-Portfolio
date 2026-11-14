@@ -126,3 +126,15 @@ main .home-hero .home-actions .home-button {
     font-size: .875rem !important;
   }
 }
+
+/* Align all four hero proof pills consistently, including wrapped labels. */
+main .home-hero .hero-proof > span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: .45rem;
+}
+main .home-hero .hero-proof > span .hero-proof-check {
+  flex: 0 0 auto;
+}
