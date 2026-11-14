@@ -1,3 +1,4 @@
+import '../../styles/footer-mobile-refinement.css'
 import { Link } from 'react-router-dom'
 import { emailAddress, whatsappUrl } from '../../utils/contact.js'
 
