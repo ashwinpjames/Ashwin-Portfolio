@@ -21,6 +21,14 @@ export function breadcrumbSchema(crumbs) {
 
 // Curated destination sets connect a reader's problem with an existing service.
 // Keep these bounded and filter against the real route registry, not guessed URLs.
+const curated = {
+  '/services/meta-ads': ['/blog/meta-ads-audit-checklist-uae', '/blog/improve-lead-quality-connection-rates', '/blog/google-ads-vs-meta-ads'],
+  '/services/google-ads': ['/blog/google-ads-search-terms-audit', '/blog/google-ads-conversion-tracking', '/blog/google-ads-document-attestation'],
+  '/services/cro': ['/blog/landing-page-optimisation-lead-generation', '/blog/lead-form-optimisation', '/blog/google-ads-clicks-not-turning-into-leads'],
+  '/services/lead-generation': ['/blog/improve-lead-quality-connection-rates', '/blog/clinic-lead-generation-dubai', '/blog/customer-acquisition-cost-vs-cpl'],
+  '/services/hubspot-crm-integration': ['/blog/crm-lead-tracking-paid-ads', '/blog/crm-data-for-paid-ads', '/blog/customer-acquisition-cost-vs-cpl'],
+  '/services/performance-marketing-services': ['/blog/performance-marketing-services-checklist', '/blog/best-performance-marketing-specialist', '/blog/google-ads-vs-meta-ads'],
+}
 const groups = {
   meta: ['/services/meta-ads', '/blog/cpm-explained', '/blog/meta-ads-campaign-structure', '/blog/improve-lead-quality-connection-rates'],
   google: ['/services/google-ads', '/blog/google-ads-lead-quality', '/blog/google-ads-conversion-tracking', '/blog/google-ads-keyword-intent'],
@@ -40,7 +48,7 @@ export function relatedContentFor(pathname) {
     : /cro|landing|lead-form|conversion-rate/.test(slug) ? 'conversion'
     : /roi|roas|acquisition-cost|analytics|attribution|tracking|metrics/.test(slug) ? 'measurement'
     : 'general'
-  return groups[group].filter((path) => path !== route && allRouteMeta[path]).slice(0, 3).map((path) => ({
+  return (curated[route] || groups[group]).filter((path) => path !== route && allRouteMeta[path]).slice(0, 3).map((path) => ({
     path,
     title: allRouteMeta[path][0].replace(/ \| Ashwin James$/, ''),
     description: allRouteMeta[path][1],

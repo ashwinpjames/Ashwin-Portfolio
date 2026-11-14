@@ -80,6 +80,8 @@ const Contact = lazyWithStyles(() => import('./pages/Contact.jsx'), [() => impor
 const Privacy = lazy(() => import('./pages/Privacy.jsx'))
 const PlaceholderPage = lazy(() => import('./pages/PlaceholderPage.jsx'))
 
+const AcquisitionArticle = lazyWithStyles(() => import('./pages/AcquisitionArticle.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
+
 export default function App() {
   return <Suspense fallback={null}>
     <Routes>
@@ -112,6 +114,12 @@ export default function App() {
         <Route path="/resources/lead-quality-framework" element={<LeadQualityFramework />} />
         <Route path="/resources/blog-prompt-architect" element={<BlogPromptArchitect />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/meta-ads-audit-checklist-uae" element={<AcquisitionArticle />} />
+        <Route path="/blog/landing-page-optimisation-lead-generation" element={<AcquisitionArticle />} />
+        <Route path="/blog/google-ads-search-terms-audit" element={<AcquisitionArticle />} />
+        <Route path="/blog/performance-marketing-services-checklist" element={<AcquisitionArticle />} />
+        <Route path="/blog/clinic-lead-generation-dubai" element={<AcquisitionArticle />} />
+        <Route path="/blog/google-ads-document-attestation" element={<AcquisitionArticle />} />
         <Route path="/blog/creative-is-the-new-targeting" element={<CreativeIsTheNewTargetingBlog />} />
         <Route path="/blog/ctr-explained" element={<CTRExplainedBlog />} />
         <Route path="/blog/cpm-explained" element={<CPMExplainedBlog />} />

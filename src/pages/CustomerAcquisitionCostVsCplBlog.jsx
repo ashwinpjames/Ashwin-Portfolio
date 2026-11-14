@@ -1,3 +1,4 @@
+import EditorialRefresh from '../components/blog/EditorialRefresh.jsx'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/customer-acquisition-cost-vs-cpl.md?raw'
 
@@ -18,7 +19,7 @@ const articleSchema = {
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
-  dateModified: '2026-09-15',
+  dateModified: '2026-11-14',
   mainEntityOfPage: 'https://www.ashwinjames.com/blog/customer-acquisition-cost-vs-cpl',
   keywords: 'customer acquisition cost, CAC vs CPL, CAC, CPL, customer acquisition',
 }
@@ -124,7 +125,8 @@ export default function CustomerAcquisitionCostVsCplBlog() {
       </div>
       <MetricCards />
       <FAQSection />
-      <footer className="pms-cta"><span>CAC · CPL · CUSTOMER ECONOMICS</span><h2>Optimise for the customer, diagnose with the lead.</h2><p>Connect paid acquisition, lead quality, CRM outcomes and customer economics so campaign decisions reflect the result the business actually needs.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+      <EditorialRefresh slug="customer-acquisition-cost-vs-cpl" />
+<footer className="pms-cta"><span>CAC · CPL · CUSTOMER ECONOMICS</span><h2>Optimise for the customer, diagnose with the lead.</h2><p>Connect paid acquisition, lead quality, CRM outcomes and customer economics so campaign decisions reflect the result the business actually needs.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
     </article>
   </main>
 }

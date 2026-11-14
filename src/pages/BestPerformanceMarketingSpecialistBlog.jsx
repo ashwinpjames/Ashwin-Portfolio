@@ -1,3 +1,4 @@
+import EditorialRefresh from '../components/blog/EditorialRefresh.jsx'
 import { Link } from 'react-router-dom'
 
 const articleSchema = {
@@ -201,7 +202,8 @@ export default function BestPerformanceMarketingSpecialistBlog() {
 
       <FAQSection />
 
-      <footer className="pms-cta">
+      <EditorialRefresh slug="best-performance-marketing-specialist" />
+<footer className="pms-cta">
         <span>PERFORMANCE MARKETING · LEAD GENERATION</span>
         <h2>Looking for a performance marketing specialist to improve your lead generation?</h2>
         <p>Discuss your marketing goals, campaign challenges and opportunities for improvement.</p>

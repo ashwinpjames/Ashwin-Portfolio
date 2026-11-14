@@ -1,3 +1,4 @@
+import EditorialRefresh from '../components/blog/EditorialRefresh.jsx'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/lead-quality-connection-rates.md?raw'
 
@@ -23,7 +24,7 @@ const articleSchema = {
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-11-03',
-  dateModified: '2026-11-03',
+  dateModified: '2026-11-14',
   mainEntityOfPage: pageUrl,
   keywords: 'improve lead quality, lead connection rate, lead generation optimization, Meta Ads lead quality, speed to lead, CRM lead management',
 }
@@ -195,6 +196,7 @@ export default function LeadQualityConnectionRatesBlog() {
         <p>Explore how I connect advertising, lead quality, CRM data and conversion outcomes as a <Link to="/">Performance Marketing Specialist</Link>.</p>
         <Link className="lq-cta-link" to="/contact">Start a conversation <span aria-hidden="true">↗</span></Link>
       </footer>
-    </article>
+    <EditorialRefresh slug="improve-lead-quality-connection-rates" />
+</article>
   </main>
 }

@@ -1,3 +1,4 @@
+import '../components/blog/editorial.css'
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { blogPosts } from '../data/blog.js'
@@ -93,7 +94,13 @@ export default function Blog() {
           </h1>
           <p className="blog-hero-sub">Practical notes on performance marketing, analytics, lead generation, conversion and the systems that connect them.</p>
 
-          <div className="blog-hero-pills" aria-label="Blog topics">
+          <nav className="editorial-reading-path" aria-label="Business acquisition reading path"><h2>Start with your business problem</h2><ol>
+<li><Link to="/blog/performance-marketing-services-checklist">Choosing marketing support</Link></li>
+<li><Link to="/blog/improve-lead-quality-connection-rates">Leads are not becoming clients</Link></li>
+<li><Link to="/blog/google-ads-conversion-tracking">Conversions are not measured reliably</Link></li>
+<li><Link to="/blog/landing-page-optimisation-lead-generation">Visitors are not enquiring</Link></li>
+</ol></nav>
+<div className="blog-hero-pills" aria-label="Blog topics">
             {categories.map((category) => <span key={category}>{category}</span>)}
           </div>
 
