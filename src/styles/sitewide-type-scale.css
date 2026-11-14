@@ -1,0 +1,86 @@
+/* Sitewide typography correction, presentation only.
+   Keep all content, semantic heading levels, colors and links unchanged. */
+:root {
+  --type-display: clamp(2.35rem, 4.5vw, 4.5rem);
+  --type-page-title: clamp(2.25rem, 4vw, 3.85rem);
+  --type-section: clamp(1.75rem, 2.8vw, 2.65rem);
+  --type-subsection: clamp(1.2rem, 1.6vw, 1.5rem);
+  --type-body: 1rem;
+  --type-lead: clamp(1rem, 1.2vw, 1.125rem);
+  --type-reading-width: 68ch;
+}
+/* Existing page CSS includes many large per-page clamp values.
+   A single, late-loaded scale deliberately normalizes headings. */
+main h1 {
+  font-size: var(--type-page-title) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.045em !important;
+}
+main h2 {
+  font-size: var(--type-section) !important;
+  line-height: 1.16 !important;
+  letter-spacing: -.035em !important;
+}
+main h3 {
+  font-size: var(--type-subsection);
+  line-height: 1.32;
+}
+main :where(p,li) { line-height: 1.7; }
+main :where(.section-heading,.services-heading,.blog-heading,.resources-heading-row) > p {
+  max-width: var(--type-reading-width);
+}
+/* Homepage keeps a distinct display headline, but no longer dominates the viewport. */
+main .home-hero .home-hero-title,
+main .home-hero h1.hero-headline {
+  font-size: var(--type-display) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.048em !important;
+}
+/* Blog screenshot: 86px headline and forced nowrap caused excess width. */
+main .blog-hero h1 {
+  max-width: 20ch !important;
+  font-size: clamp(2.35rem, 4.2vw, 4.25rem) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -.04em !important;
+}
+main .blog-hero-line-one,
+main .blog-hero-line-two { white-space: normal; }
+main .blog-hero {
+  min-height: auto;
+  padding-block: clamp(6.5rem, 9vw, 8rem) clamp(3rem, 6vw, 5rem);
+}
+main .blog-hero-inner {
+  min-height: 0;
+  padding-top: 0;
+}
+main .blog-hero-copy { max-width: min(100%, 65rem); }
+main .blog-hero-sub { max-width: 60ch; }
+main .blog-hero-pills { margin-bottom: 2rem; }
+/* Keep decorative latest-post card in document flow instead of overlapping
+   category/navigation content on intermediate desktop widths. */
+@media (max-width: 1199px) {
+  main .blog-post-stack {
+    position: relative;
+    inset: auto;
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --type-display: clamp(2rem, 8.5vw, 2.9rem);
+    --type-page-title: clamp(2rem, 8vw, 2.75rem);
+    --type-section: clamp(1.65rem, 6.3vw, 2.2rem);
+    --type-subsection: clamp(1.125rem, 4.5vw, 1.375rem);
+  }
+  main h1, main h2 { overflow-wrap: break-word; }
+  main .blog-hero h1 { font-size: var(--type-page-title) !important; }
+  main .blog-hero { padding-top: 6.5rem; }
+  main .blog-hero-pills { gap: .5rem; }
+  main .blog-hero-pills span { padding: .5rem .75rem; }
+  main .home-hero .home-hero-title,
+  main .home-hero h1.hero-headline {
+    font-size: var(--type-display) !important;
+    line-height: 1.12 !important;
+  }
+}
