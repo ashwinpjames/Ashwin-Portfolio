@@ -138,3 +138,22 @@ main .home-hero .hero-proof > span {
 main .home-hero .hero-proof > span .hero-proof-check {
   flex: 0 0 auto;
 }
+
+/* Mobile proof pills: keep checkmark and wrapped label centered as one unit.
+   A fixed icon column avoids the third card looking off-center. */
+@media (max-width: 767px) {
+  main .home-hero .hero-proof > span {
+    display: grid !important;
+    grid-template-columns: 1rem minmax(0, 1fr) !important;
+    align-items: center !important;
+    justify-content: stretch !important;
+    column-gap: .4rem !important;
+    text-align: center !important;
+    padding-inline: .6rem !important;
+  }
+  main .home-hero .hero-proof > span .hero-proof-check {
+    grid-column: 1;
+    justify-self: center;
+    margin: 0 !important;
+  }
+}
