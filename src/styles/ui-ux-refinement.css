@@ -1,0 +1,60 @@
+/* Presentation-only refinement. Existing content, branding and DOM remain unchanged. */
+:root {
+  --ux-space-1: .25rem;
+  --ux-space-2: .5rem;
+  --ux-space-3: 1rem;
+  --ux-space-4: 1.5rem;
+  --ux-space-5: 2rem;
+  --ux-space-6: 3rem;
+  --ux-space-7: 4rem;
+  --ux-space-8: 6rem;
+  --ux-radius-control: .75rem;
+  --ux-radius-card: 1rem;
+  --ux-focus: #93c5fd;
+  --ux-shadow-card: 0 12px 32px rgba(0,0,0,.16);
+  --ux-motion: 180ms cubic-bezier(.2,0,0,1);
+}
+html { scroll-padding-top: 6rem; }
+:where(main, .site-footer) :where(img,video,svg) { max-width: 100%; }
+:where(main, .site-footer) img { height: auto; }
+:where(main, .site-footer) :where(p,li) { overflow-wrap: break-word; }
+:where(main) :where(input,select,textarea) { max-width: 100%; }
+:where(main) :where(input,select,button,textarea) { font-family: var(--font-body); }
+:where(main) :where(input,select,textarea) { min-height: 44px; }
+:where(main) :where(button,[role="button"],input[type="submit"]) { min-height: 44px; }
+:where(.site-header,.mobile-menu,.mobile-action-bar,.site-footer) a { min-height: 44px; }
+.menu-button { min-width: 44px; min-height: 44px; }
+.mobile-menu a { display: flex; align-items: center; }
+.footer-social-icons a { width: 44px; height: 44px; }
+:where(a,button,input,textarea,select,[tabindex]):focus-visible {
+  outline: 3px solid var(--ux-focus);
+  outline-offset: 3px;
+}
+:where(.site-header,.site-footer,main) :where(a,button) {
+  transition: color var(--ux-motion), background-color var(--ux-motion), border-color var(--ux-motion), box-shadow var(--ux-motion);
+}
+:where(main) :where(.container) { min-width: 0; }
+:where(main) :where(.service-card,.case-card,.audience-card,.approach-card,.process-card,.insight-card,.resource-card) {
+  min-width: 0;
+}
+@media (max-width: 767px) {
+  .container { width: min(100% - 2rem,80rem); }
+  .nav-wrap { padding-inline: 1rem; }
+  .mobile-action-bar { padding-bottom: max(.75rem,env(safe-area-inset-bottom)); }
+  .home-hero .home-hero-title { overflow-wrap: normal; hyphens: none; }
+  .home-hero .home-actions { align-items: stretch; }
+  .footer-grid { gap: 2rem 1rem; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container { width: min(100% - 3rem,80rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cursor-glow { display: none; }
+}
