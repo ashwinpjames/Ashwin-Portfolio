@@ -6,6 +6,7 @@ import '../styles/about-brands.css'
 import '../styles/about-availability.css'
 import '../styles/about-portrait-fix.css'
 import '../styles/ashwin-portrait.css'
+import '../styles/about-mobile-editorial.css'
 
 const principles = [
   ['01', 'Start with the business', 'The market, the sales process, unit economics and the real constraint all come before a channel recommendation.'],
