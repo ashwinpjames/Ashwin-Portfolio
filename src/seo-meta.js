@@ -1,7 +1,7 @@
 export const routeMeta = {
   '/privacy': ['Privacy & Contact | Ashwin James', 'How this portfolio handles enquiry details, external contact services and website measurement, and how to contact Ashwin James with a privacy question.'],
   '/': ['Performance Marketing Specialist in Dubai, UAE | Ashwin James', 'Performance marketing services for UAE businesses: Meta Ads, Google Ads, landing pages and CRM. Work directly with Ashwin James to improve lead quality.'],
-  '/about': ['About Ashwin James | Performance Marketing Specialist', 'Learn about Ashwin James, a UAE based performance marketing specialist focused on paid advertising, lead generation, analytics and measurable business growth.'],
+  '/about': ['About Ashwin James | Performance Marketing Specialist in Dubai', 'Meet Ashwin James, a Dubai-based performance marketing specialist working across Meta Ads, Google Ads, lead generation, HubSpot CRM, analytics and conversion.'],
   '/services': ['Performance Marketing Services in Dubai, UAE | Ashwin James', 'Explore performance marketing services in Dubai including paid ads, lead generation, CRO, analytics and growth systems built around measurable business outcomes.'],
   '/services/google-ads': ['Google Ads Specialist in UAE | Ashwin James', 'Google Ads specialist in UAE helping businesses attract qualified leads through search campaigns, conversion tracking, landing pages and performance optimisation.'],
   '/services/meta-ads': ['Meta Ads Specialist in UAE | Ashwin James', 'Meta Ads specialist in UAE helping businesses generate qualified leads through audience strategy, creative testing, campaign optimisation and conversion focused funnels.'],
