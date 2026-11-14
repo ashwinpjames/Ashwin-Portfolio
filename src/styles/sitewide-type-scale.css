@@ -212,3 +212,23 @@ main .home-hero .hero-proof > span .hero-proof-check {
     padding-top: clamp(3rem, 8vw, 4.5rem) !important;
   }
 }
+
+/* The signature is the About section's sole visual link. */
+main .about-preview .about-signature-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  width: fit-content;
+  border-radius: .5rem;
+  text-decoration: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+main .about-preview .about-signature-link img { display: block; }
+@media (hover: hover) {
+  main .about-preview .about-signature-link:hover { opacity: .82; transform: translateY(-2px); }
+}
+main .about-preview .about-signature-link:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 4px;
+}
