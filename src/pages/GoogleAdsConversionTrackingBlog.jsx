@@ -1,3 +1,4 @@
+import EditorialRefresh from '../components/blog/EditorialRefresh.jsx'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-ads-conversion-tracking.md?raw'
 
@@ -18,7 +19,7 @@ const articleSchema = {
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
-  dateModified: '2026-09-15',
+  dateModified: '2026-11-14',
   mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-ads-conversion-tracking',
   keywords: 'Google Ads conversion tracking, conversion tracking, GA4, Google Tag Manager',
 }
@@ -225,7 +226,8 @@ export default function GoogleAdsConversionTrackingBlog() {
       <MeasurementCards />
       <ImplementationModel />
       <FAQSection />
-      <footer className="pms-cta">
+      <EditorialRefresh slug="google-ads-conversion-tracking" />
+<footer className="pms-cta">
         <span>GOOGLE ADS CONVERSION TRACKING</span>
         <h2>Measure the business outcome, not just the event.</h2>
         <p>Better tracking starts with a clear definition of value and ends with data that can explain which acquisition activity produces customers.</p>

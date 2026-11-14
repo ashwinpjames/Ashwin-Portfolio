@@ -1,3 +1,4 @@
+import EditorialRefresh from '../components/blog/EditorialRefresh.jsx'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/crm-lead-tracking-paid-ads.md?raw'
 
@@ -17,7 +18,7 @@ const articleSchema = {
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
-  dateModified: '2026-09-15',
+  dateModified: '2026-11-14',
   mainEntityOfPage: 'https://www.ashwinjames.com/blog/crm-lead-tracking-paid-ads',
   keywords: 'CRM lead tracking, lead scoring, HubSpot, paid ads, lead quality',
 }
@@ -139,6 +140,7 @@ export default function CrmLeadTrackingPaidAdsBlog() {
     </div>
     <MeasurementCards />
     <FAQSection />
-    <footer className="pms-cta"><span>PAID ADS · CRM · SALES</span><h2>Stop optimising the lead before you know what happens after it.</h2><p>Connect acquisition, qualification and sales outcomes so your next campaign decision is based on lead quality and commercial value.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
+    <EditorialRefresh slug="crm-lead-tracking-paid-ads" />
+<footer className="pms-cta"><span>PAID ADS · CRM · SALES</span><h2>Stop optimising the lead before you know what happens after it.</h2><p>Connect acquisition, qualification and sales outcomes so your next campaign decision is based on lead quality and commercial value.</p><div><Link to="/services/performance-marketing-services">Explore Performance Marketing</Link><Link to="/contact">Start a Conversation</Link></div></footer>
   </article></main>
 }

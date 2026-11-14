@@ -1,3 +1,4 @@
+import EditorialRefresh from '../components/blog/EditorialRefresh.jsx'
 import { Link } from 'react-router-dom'
 import articleMarkdown from '../content/google-ads-vs-meta-ads.md?raw'
 
@@ -17,7 +18,7 @@ const articleSchema = {
   author: { '@type': 'Person', name: 'Ashwin James', url: 'https://www.ashwinjames.com/' },
   publisher: { '@type': 'Person', name: 'Ashwin James' },
   datePublished: '2026-09-15',
-  dateModified: '2026-09-15',
+  dateModified: '2026-11-14',
   mainEntityOfPage: 'https://www.ashwinjames.com/blog/google-ads-vs-meta-ads',
   keywords: 'Google Ads vs Meta Ads, Google Ads UAE, Meta Ads UAE',
 }
@@ -78,6 +79,7 @@ export default function GoogleAdsVsMetaAdsBlog() {
     <ComparisonFlow />
     <div className="pms-article-grid"><aside className="pms-toc"><span>ON THIS PAGE</span><a href="#google-ads-vs-meta-ads-the-fundamental-difference">The difference</a><a href="#when-google-ads-is-usually-the-stronger-choice">Google Ads</a><a href="#when-meta-ads-is-usually-the-stronger-choice">Meta Ads</a><a href="#google-ads-uae-versus-meta-ads-uae">UAE comparison</a><a href="#the-decision-should-start-with-customer-intent">Customer intent</a><a href="#google-ads-versus-meta-ads-for-lead-quality">Lead quality</a><a href="#the-landing-page-can-change-the-result-more-than-the-platform">Landing pages</a><a href="#creative-plays-a-different-role-on-each-platform">Creative</a><a href="#budget-should-follow-the-economics-and-the-available-demand">Budget</a><a href="#should-you-use-google-ads-and-meta-ads-together">Using both</a><a href="#a-practical-decision-framework">Decision framework</a><a href="#conclusion">Conclusion</a></aside><div className="pms-content" dangerouslySetInnerHTML={{ __html: renderedArticle }} /></div>
     <MetricCards /><FAQSection />
-    <footer className="pms-cta"><span>GOOGLE ADS VS META ADS</span><h2>Choose the channel that matches the customer journey.</h2><p>Build the acquisition system around demand, message, lead quality and commercial outcomes instead of choosing a platform by habit.</p><div><Link to="/services/google-ads">Explore Google Ads</Link><Link to="/services/meta-ads">Explore Meta Ads</Link></div></footer>
+    <EditorialRefresh slug="google-ads-vs-meta-ads" />
+<footer className="pms-cta"><span>GOOGLE ADS VS META ADS</span><h2>Choose the channel that matches the customer journey.</h2><p>Build the acquisition system around demand, message, lead quality and commercial outcomes instead of choosing a platform by habit.</p><div><Link to="/services/google-ads">Explore Google Ads</Link><Link to="/services/meta-ads">Explore Meta Ads</Link></div></footer>
   </article></main>
 }
