@@ -157,3 +157,58 @@ main .home-hero .hero-proof > span .hero-proof-check {
     margin: 0 !important;
   }
 }
+
+/* Homepage About preview mobile correction (not the separate /about page).
+   Restore gutters, prevent text clipping and tighten the section handoff. */
+@media (max-width: 767px) {
+  main .about-preview {
+    padding-block: clamp(3rem, 8vw, 4.5rem) !important;
+  }
+  main .about-preview .about-preview-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: min(calc(100% - 2.5rem), 36rem) !important;
+    max-width: 36rem !important;
+    margin-inline: auto !important;
+    gap: 2rem !important;
+    align-items: start !important;
+  }
+  main .about-preview .about-preview-copy {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+  main .about-preview .about-preview-copy :where(h2,p) {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  main .about-preview .about-preview-copy h2 {
+    font-size: clamp(1.75rem, 7vw, 2.25rem) !important;
+    line-height: 1.2 !important;
+  }
+  main .about-preview .about-copy p {
+    font-size: 1rem;
+    line-height: 1.7 !important;
+  }
+  main .about-preview .portrait-frame {
+    width: 100%;
+    max-width: min(100%, 26rem);
+    margin-inline: auto;
+  }
+  main .about-preview .about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  main .about-preview .about-actions img {
+    width: min(9rem, 38vw);
+    max-width: 100%;
+  }
+  main .about-preview + section {
+    padding-top: clamp(3rem, 8vw, 4.5rem) !important;
+  }
+}
