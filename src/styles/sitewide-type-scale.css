@@ -94,7 +94,7 @@ main .home-hero h1.home-eyebrow {
   margin: 0 auto 1.25rem;
   padding: .55rem 1rem;
   font-size: clamp(.75rem, .9vw, .875rem) !important;
-  font-weight: 700;
+  font-weight: 400 !important;
   line-height: 1.4 !important;
   letter-spacing: .025em !important;
   text-align: center;
