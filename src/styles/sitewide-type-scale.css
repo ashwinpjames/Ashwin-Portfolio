@@ -109,3 +109,20 @@ main .home-hero h1.home-eyebrow {
     letter-spacing: .015em !important;
   }
 }
+
+/* Compact homepage CTAs without changing labels, destinations or hierarchy. */
+main .home-hero .home-actions { gap: .75rem; margin-top: 2rem; }
+main .home-hero .home-actions .home-button {
+  min-height: 3rem !important;
+  padding: .75rem 1.15rem !important;
+  border-radius: .75rem !important;
+  font-size: .9rem !important;
+  line-height: 1.35 !important;
+}
+@media (max-width: 767px) {
+  main .home-hero .home-actions .home-button {
+    min-height: 2.875rem !important;
+    padding: .7rem 1rem !important;
+    font-size: .875rem !important;
+  }
+}
