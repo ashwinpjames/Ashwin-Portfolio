@@ -1,5 +1,6 @@
 import { acquisitionArticleMeta } from './acquisitionArticleMeta.js'
 export const blogPosts = [
+  { slug: 'lead-response-time-study', category: 'Lead Generation', title: 'Lead Response Time: How Fast Do Sales Leads Go Cold?', excerpt: 'Explore the HBR lead response study with an animated graph and a practical CRM follow-up framework for better lead qualification.', date: 'Nov 15, 2026', readTime: '8 min read' },
   ...acquisitionArticleMeta.map((article) => ({ slug: article.slug, title: article.title, excerpt: article.description, category: article.category, date: 'Nov 14, 2026', readTime: '4 min read' })),
   { slug: 'meta-andromeda-update-2026', category: 'Meta Ads', title: 'Meta Andromeda Update 2026: What Changed and What Advertisers Should Do', excerpt: 'A practical explanation of Meta’s next-generation Andromeda retrieval engine, the October 2026 technical update and its implications for creative testing and campaign measurement.', date: 'Nov 4, 2026', readTime: '10 min read' },
   { slug: 'improve-lead-quality-connection-rates', category: 'Lead Generation', title: 'Beyond Cost Per Lead: 15 Ways to Improve Lead Quality and Connection Rates', excerpt: 'A practical framework for diagnosing the gaps between an ad click, a valid enquiry, a connected conversation and a paying customer.', date: 'Nov 3, 2026', readTime: '15 min read' },
