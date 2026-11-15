@@ -164,3 +164,75 @@
   .about-page .about-bio-layout { gap: 1.5rem; }
   .about-page .about-expertise-grid { gap: .75rem; }
 }
+
+
+/* Expertise section: tighter editorial hierarchy and calm, consistent service cards. */
+.about-page.about-editorial .about-expertise-section {
+  padding-block: clamp(3.25rem, 5vw, 5rem);
+}
+.about-page.about-editorial .about-expertise-section .about-editorial-heading {
+  max-width: 790px;
+}
+.about-page.about-editorial .about-expertise-section .about-editorial-heading h2 {
+  max-width: 760px;
+  margin: .65rem 0 0;
+  font-size: clamp(1.8rem, 2.7vw, 2.7rem) !important;
+  line-height: 1.16 !important;
+  letter-spacing: -.04em;
+}
+.about-page.about-editorial .about-expertise-section .about-editorial-heading > p:last-child {
+  max-width: 650px;
+  margin-top: .9rem;
+  font-size: clamp(.9rem, 1.1vw, 1rem);
+  line-height: 1.65;
+}
+.about-page.about-editorial .about-expertise-grid {
+  gap: 14px;
+  margin-top: 1.8rem;
+}
+.about-page.about-editorial .about-expertise-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 145px;
+  padding: clamp(1.25rem, 2vw, 1.6rem);
+  border: 1px solid rgba(148,163,184,.14);
+  border-radius: 14px;
+  background: #0d1424;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.about-page.about-editorial .about-expertise-card:hover,
+.about-page.about-editorial .about-expertise-card:focus-within {
+  border-color: rgba(125,163,232,.42);
+  background: #111c30;
+  transform: translateY(-2px);
+}
+.about-page.about-editorial .about-expertise-card h3 {
+  margin: 0 0 .55rem;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -.025em;
+}
+.about-page.about-editorial .about-expertise-card h3 a {
+  color: #e7efff;
+  text-decoration: none;
+}
+.about-page.about-editorial .about-expertise-card h3 a:hover {
+  color: #a8c5ff;
+}
+.about-page.about-editorial .about-expertise-card p {
+  max-width: 55ch;
+  font-size: clamp(.84rem, 1vw, .92rem);
+  line-height: 1.65;
+  color: #aab8ce;
+}
+@media (max-width: 767px) {
+  .about-page.about-editorial .about-expertise-section { padding-block: 3.25rem; }
+  .about-page.about-editorial .about-expertise-grid { gap: 10px; margin-top: 1.5rem; }
+  .about-page.about-editorial .about-expertise-card { min-height: auto; padding: 1.2rem; }
+  .about-page.about-editorial .about-expertise-card:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-page.about-editorial .about-expertise-card { transition: none; }
+}
