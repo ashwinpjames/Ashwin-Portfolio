@@ -9,9 +9,9 @@ export default function Hero() {
     <div className="home-hero-glow" aria-hidden="true" />
     <div className="container home-hero-content">
       <h1 className="home-eyebrow reveal-home">Performance Marketing Specialist in Dubai, UAE</h1>
-      <h2 className="home-hero-title reveal-home" aria-label="Growth Driven By Better Marketing">
-        <span className="hero-title-line">Growth Driven</span>
-        <span className="hero-title-line hero-title-accent">By Better Marketing</span>
+      <h2 className="home-hero-title home-title-blur-reveal" aria-label="Growth Driven By Better Marketing">
+        <span className="hero-title-line" aria-hidden="true"><span className="home-blur-word" style={{ '--word-index': 0 }}>Growth</span>{' '}<span className="home-blur-word" style={{ '--word-index': 1 }}>Driven</span></span>
+        <span className="hero-title-line hero-title-accent" aria-hidden="true"><span className="home-blur-word" style={{ '--word-index': 2 }}>By</span>{' '}<span className="home-blur-word" style={{ '--word-index': 3 }}>Better</span>{' '}<span className="home-blur-word" style={{ '--word-index': 4 }}>Marketing</span></span>
       </h2>
       <p className="home-hero-copy reveal-home">Need better leads from your marketing? I’m Ashwin James, a performance marketing specialist and consultant in Dubai. I connect Meta Ads, Google Ads, landing pages and CRM to help UAE businesses improve lead quality and make better budget decisions.</p>
       <div className="home-actions reveal-home">
