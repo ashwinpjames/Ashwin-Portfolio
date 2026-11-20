@@ -59,3 +59,25 @@
     transform: none;
   }
 }
+
+/* Signature ink reveal on scroll; retains Ashwin's original signature asset. */
+.about-preview .signature-draw-reveal img {
+  display: block;
+  clip-path: inset(0 100% 0 0);
+  opacity: .85;
+}
+.about-preview .signature-draw-reveal.is-visible img {
+  animation: ashwin-signature-write 1.85s cubic-bezier(.36,0,.16,1) both;
+}
+@keyframes ashwin-signature-write {
+  0% { clip-path: inset(0 100% 0 0); opacity: .65; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-preview .signature-draw-reveal img,
+  .about-preview .signature-draw-reveal.is-visible img {
+    animation: none;
+    clip-path: none;
+    opacity: 1;
+  }
+}
