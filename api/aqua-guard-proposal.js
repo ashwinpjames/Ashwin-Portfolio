@@ -19,7 +19,7 @@ export default function handler(req, res) {
   }
 
   const header = req.headers.authorization || "";
-  const match = header.match(/^Basic\\s+(.+)$/i);
+  const match = header.match(/^Basic\s+(.+)$/i);
   let supplied = "";
   if (match) {
     try {
