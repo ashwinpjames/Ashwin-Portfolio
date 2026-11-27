@@ -16,7 +16,7 @@ export default function handler(req, res) {
   const expectedUser = process.env.ECHO_PROPOSAL_USERNAME;
   const expectedPassword = process.env.ECHO_PROPOSAL_PASSWORD;
   if (!expectedUser || !expectedPassword) return res.status(503).send("Private proposal is not configured.");
-  const match = (req.headers.authorization || "").match(/^Basic\\s+(.+)$/i);
+  const match = (req.headers.authorization || "").match(/^Basic\s+(.+)$/i);
   let suppliedUser = "", suppliedPassword = "";
   if (match) {
     const decoded = Buffer.from(match[1], "base64").toString("utf8");
