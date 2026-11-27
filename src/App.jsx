@@ -70,6 +70,7 @@ const RoasVsRoiBlog = lazyWithStyles(() => import('./pages/RoasVsRoiBlog.jsx'), 
 const CrmDataForPaidAdsBlog = lazyWithStyles(() => import('./pages/CrmDataForPaidAdsBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const MarketingAttributionBlog = lazyWithStyles(() => import('./pages/MarketingAttributionBlog.jsx'), [() => import('./styles/blog.css'), () => import('./styles/performance-marketing-specialist-blog.css')])
 const Resources = lazyWithStyles(() => import('./pages/Resources.jsx'), [() => import('./styles/resources.css')])
+const MetaCreativeLibrary = lazyWithStyles(() => import('./pages/MetaCreativeLibrary.jsx'), [() => import('./styles/meta-creative-library.css')])
 const CampaignBudgetCalculator = lazyWithStyles(() => import('./pages/CampaignBudgetCalculator.jsx'), [() => import('./styles/resources.css')])
 const UTMBuilder = lazyWithStyles(() => import('./pages/UTMBuilder.jsx'), [() => import('./styles/resources.css'), () => import('./styles/utm-builder.css')])
 const MetaAdsChecklist = lazyWithStyles(() => import('./pages/MetaAdsChecklist.jsx'), [() => import('./styles/resources.css'), () => import('./styles/meta-checklist.css')])
@@ -109,6 +110,7 @@ export default function App() {
         <Route path="/case-studies/crm-sales-qualified-lead" element={<CrmCaseStudy />} />
         <Route path="/case-studies/meta-pixel-capi-signal-loss" element={<MetaTrackingCaseStudy />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/resources/meta-creative-library" element={<MetaCreativeLibrary />} />
         <Route path="/resources/campaign-budget-calculator" element={<CampaignBudgetCalculator />} />
         <Route path="/resources/utm-builder" element={<UTMBuilder />} />
         <Route path="/resources/meta-ads-launch-checklist" element={<MetaAdsChecklist />} />
